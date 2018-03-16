@@ -3,20 +3,11 @@ package dhg.ccg.tag.learn
 import org.junit.Test
 import dhg.util._
 import org.junit.Assert._
-import dhg.ccg.cat._
 import dhg.ccg.prob._
 import dhg.ccg.tagdict.TagDictionary
 import dhg.ccg.tagdict.SimpleTagDictionary
 
-class CcgCatPriorTests {
-
-  val A = cat"!S!".asInstanceOf[AtomCat]
-  val S = cat"S".asInstanceOf[AtomCat]
-  val NP = cat"NP".asInstanceOf[AtomCat]
-  val N = cat"N".asInstanceOf[AtomCat]
-  val PP = cat"PP".asInstanceOf[AtomCat]
-  val Z = cat"!E!".asInstanceOf[AtomCat]
-  val X = cat"X".asInstanceOf[AtomCat]
+class TagPriorTests {
 
   @Test
   def test_UniformTagPriorInitializer {
@@ -56,54 +47,6 @@ class CcgCatPriorTests {
     assertEqualsLog(LogDouble(1 / 6.0), tp(Z), 1e-9)
     assertEqualsLog(LogDouble(1 / 6.0), tp(X), 1e-9)
     assertEqualsLog(LogDouble(0.0), tp(excludedTag), 1e-9)
-  }
-
-  @Test
-  def test_CatComplexityInitializer_with_CatComplexityLogProbabilityDistribution {
-
-    val s = cat"S".asInstanceOf[AtomCat]
-    val n = cat"N".asInstanceOf[AtomCat]
-
-    val init = new TagPriorTrInitializer[Cat](
-      new CatComplexityInitializer())
-
-    val td = SimpleTagDictionary[Cat](Map(), "<S>", cat"<S>", "<E>", cat"<E>", Set(),
-      Set(n, s / s, s \ s, n / n, n \ n, s \ n, (s \ n) / n))
-
-    val sum = Vector(
-      1.0 / 1, //<S>
-      1.0 / 1, //<E>
-      1.0 / 1, //n
-      1.0 / 3, //s/s
-      1.0 / 3, //s\s
-      1.0 / 3, //n/n
-      1.0 / 3, //n\n
-      1.0 / 3, //s\n
-      1.0 / 5 //(s\n)/n
-      ).sum
-
-    val tr = init.fromRaw(Vector(), td)
-
-    assertEquals((1.0 / 1) / sum, tr(s, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 1) / sum, tr(n, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 1) / sum, tr(cat"S[xb]".asInstanceOf[AtomCat], BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 3) / sum, tr(s / n, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 3) / sum, tr(cat"S[xb]".asInstanceOf[AtomCat] / n, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 3) / sum, tr(s \ n, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 3) / sum, tr(cat"S[xb]".asInstanceOf[AtomCat] \ n, BadCat).toDouble, 1e-5)
-
-    assertEquals((1.0 / 3) / sum, tr(n / n, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 3) / sum, tr(s \ s, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 3) / sum, tr(cat"S[xb]".asInstanceOf[AtomCat] \ s, BadCat).toDouble, 1e-5)
-
-    assertEquals((1.0 / 5) / sum, tr((s \ n) / n, BadCat).toDouble, 1e-5)
-    assertEquals((1.0 / 5) / sum, tr((cat"S[xb]".asInstanceOf[AtomCat] \ n) / n, BadCat).toDouble, 1e-5)
-
-    assertEquals((1.0 / 7) / sum, tr((s \ n) / (s \ n), BadCat).toDouble, 1e-5)
-
-    assertEquals((1.0 / 3) / sum, tr(s / n, cat"<S>").toDouble, 1e-5)
-    assertEquals(0.0, tr(s / n, cat"<E>").toDouble, 1e-5)
-    assertEquals((1.0 / 1) / sum, tr(cat"<E>", BadCat).toDouble, 1e-5)
   }
 
   @Test
