@@ -1,7 +1,7 @@
 package nlp.hmm.gen
 
 import java.util.ArrayList
-import dhg.ccg.tagdict.TagDictionary
+import nlp.hmm.tagdict.TagDictionary
 import dhg.util._
 import junto.algorithm.ModifiedAdsorption
 import junto.config.Edge

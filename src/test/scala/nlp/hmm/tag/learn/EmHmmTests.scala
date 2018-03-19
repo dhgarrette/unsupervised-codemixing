@@ -1,3 +1,5 @@
+// sbt "test:testOnly *EmHmmTests"
+
 package nlp.hmm.tag.learn
 
 import org.junit.Test
@@ -5,11 +7,11 @@ import dhg.util._
 import math.{ abs, pow }
 import org.junit.Assert._
 import Double.NaN
-import dhg.ccg.tag.learn._
-import dhg.ccg.tag._
-import dhg.ccg.prob._
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
+import nlp.hmm.tag.learn._
+import nlp.hmm.tag._
+import nlp.hmm.prob._
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
 
 class EmHmmTests {
 

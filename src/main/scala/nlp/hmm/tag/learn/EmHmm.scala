@@ -7,10 +7,10 @@ import scala.math.exp
 import scala.math.log
 import dhg.util._
 import dhg.util.FastMathUtil._
-import dhg.ccg.prob.ConditionalLogProbabilityDistribution
-import dhg.ccg.tag._
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
+import nlp.hmm.prob.ConditionalLogProbabilityDistribution
+import nlp.hmm.tag._
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
 
 class SimpleTypeSupervisedTaggerTrainer[Tag](
   learner: SemisupervisedTaggerTrainer[Tag],

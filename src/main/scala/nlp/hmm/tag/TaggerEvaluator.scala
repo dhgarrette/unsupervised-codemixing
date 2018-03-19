@@ -5,7 +5,7 @@ import com.typesafe.scalalogging.{ StrictLogging => Logging }
 import math.{ log, exp }
 import scalaz._
 import Scalaz._
-import dhg.ccg.prob._
+import nlp.hmm.prob._
 
 object TaggerEvaluator extends Logging {
   type Word = String

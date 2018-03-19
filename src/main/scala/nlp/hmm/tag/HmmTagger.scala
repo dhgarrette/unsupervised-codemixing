@@ -5,11 +5,11 @@ import com.typesafe.scalalogging.{ StrictLogging => Logging }
 import math.{ log, exp }
 import scalaz._
 import Scalaz._
-import dhg.ccg.prob._
-import dhg.ccg.tag.learn._
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionaryFactory
+import nlp.hmm.prob._
+import nlp.hmm.tag.learn._
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionaryFactory
 
 class HmmTagger[Tag](
   val transitions: ConditionalLogProbabilityDistribution[Tag, Tag],

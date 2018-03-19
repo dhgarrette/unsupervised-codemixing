@@ -3,13 +3,13 @@ package nlp.hmm.tag.learn
 import org.junit.Test
 import dhg.util._
 import org.junit.Assert._
-import dhg.ccg.tag.learn._
-import dhg.ccg.prob._
-import dhg.ccg.tag._
+import nlp.hmm.tag.learn._
+import nlp.hmm.prob._
+import nlp.hmm.tag._
 import org.apache.commons.math3.random.{ MersenneTwister, RandomGenerator }
-import dhg.ccg.test.TestUtil.MockableRandomGenerator
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
+import nlp.hmm.test.TestUtil.MockableRandomGenerator
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
 
 class FfbsHmmTests {
 

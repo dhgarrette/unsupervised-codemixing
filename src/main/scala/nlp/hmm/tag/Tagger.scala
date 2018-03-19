@@ -1,9 +1,9 @@
 package nlp.hmm.tag
 
 import dhg.util._
-import dhg.ccg.prob.ConditionalLogProbabilityDistribution
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
+import nlp.hmm.prob.ConditionalLogProbabilityDistribution
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
 
 trait Tagger[Tag] {
   type Word = String

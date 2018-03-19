@@ -6,8 +6,8 @@ import com.typesafe.scalalogging.{ StrictLogging => Logging }
 import scalaz._
 import Scalaz._
 import scala.collection.breakOut
-import dhg.ccg.prob._
-import dhg.ccg.tagdict.TagDictionary
+import nlp.hmm.prob._
+import nlp.hmm.tagdict.TagDictionary
 
 trait TransitionDistributioner[Tag] {
   type Word = String

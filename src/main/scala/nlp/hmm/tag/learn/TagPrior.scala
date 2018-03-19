@@ -4,8 +4,8 @@ import dhg.util._
 import math.pow
 import scalaz._
 import scalaz.Scalaz._
-import dhg.ccg.prob._
-import dhg.ccg.tagdict.TagDictionary
+import nlp.hmm.prob._
+import nlp.hmm.tagdict.TagDictionary
 
 trait TagPriorInitializer[Tag] {
   type Word = String

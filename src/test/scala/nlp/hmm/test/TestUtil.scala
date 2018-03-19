@@ -1,9 +1,6 @@
 package nlp.hmm.test
 
 import org.apache.commons.math3.random.{ MersenneTwister, RandomGenerator }
-import dhg.ccg.data.TreeBankReader
-import dhg.ccg.parse.CcgTree
-import dhg.ccg.cat.Cat
 
 object TestUtil {
 
@@ -25,20 +22,20 @@ object TestUtil {
     override def nextDouble() = it.next()
   }
 
-  trait MockableTreeBankReader extends TreeBankReader {
-    private[this] type Word = String
-    
-    def tdData(): Iterator[CcgTree] = ???
-    def rawDataDONTUSE: Iterator[CcgTree] = ???
-    def devData(): Iterator[CcgTree] = ???
-    def testData(): Iterator[CcgTree] = ???
-
-    def startWord: Word = ???
-    def startTag: Cat = ???
-    def endWord: Word = ???
-    def endTag: Cat = ???
-    def tagToString: (Cat => String) = ???
-    def tagFromString: (String => Cat) = ???
-  }
+//  trait MockableTreeBankReader extends TreeBankReader {
+//    private[this] type Word = String
+//    
+//    def tdData(): Iterator[CcgTree] = ???
+//    def rawDataDONTUSE: Iterator[CcgTree] = ???
+//    def devData(): Iterator[CcgTree] = ???
+//    def testData(): Iterator[CcgTree] = ???
+//
+//    def startWord: Word = ???
+//    def startTag: Cat = ???
+//    def endWord: Word = ???
+//    def endTag: Cat = ???
+//    def tagToString: (Cat => String) = ???
+//    def tagFromString: (String => Cat) = ???
+//  }
 
 }

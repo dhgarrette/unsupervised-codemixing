@@ -1,13 +1,13 @@
 package nlp.hmm.gen
 
-import dhg.ccg.tagdict.TagDictionary
+import nlp.hmm.tagdict.TagDictionary
 import dhg.util._
 import collection.mutable
 import collection.breakOut
 import math.{ log, exp }
 import scalaz._
 import Scalaz._
-import dhg.ccg.prob._
+import nlp.hmm.prob._
 import scala.annotation.tailrec
 import com.typesafe.scalalogging.Logging
 

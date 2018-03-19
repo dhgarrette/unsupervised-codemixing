@@ -9,7 +9,7 @@ import scala.collection.breakOut
 import scala.util.Random
 import annotation.tailrec
 import java.util.Arrays
-import dhg.ccg.prob._
+import nlp.hmm.prob._
 import org.apache.commons.math3.random.{ MersenneTwister, RandomGenerator }
 
 final class FfbsHmmTaggerTrainer[Tag](

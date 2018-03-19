@@ -13,8 +13,8 @@ import opennlp.tools.util.ObjectStreamUtils
 import opennlp.tools.util.TrainingParameters
 import opennlp.tools.util.model.ModelType
 import opennlp.tools.postag.OpenNlpPosDictionary._
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
 
 /**
  * Train a MEMM from gold-labeled data.

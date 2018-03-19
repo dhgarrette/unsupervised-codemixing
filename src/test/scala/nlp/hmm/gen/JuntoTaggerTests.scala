@@ -4,9 +4,9 @@ import org.junit.Test
 import dhg.util._
 import dhg.util.TestUtil._
 import org.junit.Assert._
-import dhg.ccg.tag._
-import dhg.ccg.tagdict.TagDictionary
-import dhg.ccg.tagdict.SimpleTagDictionary
+import nlp.hmm.tag._
+import nlp.hmm.tagdict.TagDictionary
+import nlp.hmm.tagdict.SimpleTagDictionary
 
 class JuntoTaggerTests {
 

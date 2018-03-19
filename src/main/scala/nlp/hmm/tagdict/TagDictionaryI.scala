@@ -3,8 +3,8 @@ package nlp.hmm.tagdict
 import dhg.util._
 import scalaz._
 import Scalaz._
-// import dhg.ccg.util.Indexer
-import dhg.ccg.util._
+// import nlp.hmm.util.Indexer
+import nlp.hmm.util._
 import scala.collection.immutable.BitSet
 
 object TagDictionaryI {

@@ -3,8 +3,8 @@ package nlp.hmm.tag.learn
 import dhg.util._
 import scalaz._
 import scalaz.Scalaz._
-import dhg.ccg.prob._
-import dhg.ccg.tagdict.TagDictionary
+import nlp.hmm.prob._
+import nlp.hmm.tagdict.TagDictionary
 import com.typesafe.scalalogging.{ StrictLogging => Logging }
 
 /**
