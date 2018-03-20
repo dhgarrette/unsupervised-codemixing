@@ -158,7 +158,153 @@ class EmHmmTests {
     assertEquals(0.0, em("runs", 'Z).toDouble, 1e-9)
     assertEquals(0.0, em("bird", 'Z).toDouble, 1e-9)
     assertEquals(1.0, em("<E>", 'Z).toDouble, 1e-9)
+  }
+  
+  @Test
+  def test_SoftEmHmm_toy_edgerestricted_train_2iterations {
+    val scale = 10
 
+    val sentences = Vector(
+      "a cat chases the dog",
+      "the dog walks",
+      "the man walks the dog",
+      "the man runs").map(_.lsplit(" "))
+    val tagdict = SimpleTagDictionary(Map(
+      "the" -> Set('D),
+      "a" -> Set('D),
+      "every" -> Set('D),
+      "some" -> Set('D),
+      "man" -> Set('N, 'V),
+      "cat" -> Set('N),
+      "bird" -> Set('N),
+      "fox" -> Set('N),
+      "walks" -> Set('V),
+      "flies" -> Set('N, 'V)),
+      "<S>", 'A, "<E>", 'Z)
+      .withWords(sentences.flatten.toSet)
+
+    val trInit =
+      new HardConstraintNonNormalizingConditionalLogProbabilityDistribution(
+        new SimpleConditionalLogProbabilityDistribution[Symbol, Symbol](
+          Map(
+            tagdict.startTag -> new SimpleLogProbabilityDistribution(Map('D -> 0.7, 'N -> 0.2, 'V -> 0.1).mapVals(LogDouble(_))),
+            'D -> new SimpleLogProbabilityDistribution(Map('D -> 0.1, 'N -> 0.7, 'V -> 0.1, tagdict.endTag -> 0.1).mapVals(LogDouble(_))),
+            'N -> new SimpleLogProbabilityDistribution(Map('D -> 0.1, 'N -> 0.3, 'V -> 0.4, tagdict.endTag -> 0.2).mapVals(LogDouble(_))),
+            'V -> new SimpleLogProbabilityDistribution(Map('D -> 0.3, 'N -> 0.2, 'V -> 0.1, tagdict.endTag -> 0.4).mapVals(LogDouble(_))),
+            tagdict.endTag -> LogProbabilityDistribution.empty)),
+        (pt: Symbol) => ((ct: Symbol) => pt != ct))
+    val emInit =
+      new SimpleConditionalLogProbabilityDistribution[Symbol, String](
+        Map(
+          'D -> new SimpleLogProbabilityDistribution(Map("the" -> 0.4, "a" -> 0.3, "dog" -> 0.1, "chases" -> 0.1, "runs" -> 0.1).mapVals(LogDouble(_))),
+          'N -> new SimpleLogProbabilityDistribution(Map("cat" -> 0.2, "man" -> 0.3, "dog" -> 0.2, "chases" -> 0.2, "runs" -> 0.1).mapVals(LogDouble(_))),
+          'V -> new SimpleLogProbabilityDistribution(Map("man" -> 0.2, "dog" -> 0.1, "walks" -> 0.2, "chases" -> 0.3, "runs" -> 0.2).mapVals(LogDouble(_))),
+          tagdict.startTag -> new SimpleLogProbabilityDistribution(Map(tagdict.startWord -> LogDouble.one)),
+          tagdict.endTag -> new SimpleLogProbabilityDistribution(Map(tagdict.endWord -> LogDouble.one))))
+
+    //    val emt = new SimpleTypeSupervisedTrainer(new EmHmmTrainer(2, 1e-10), trInitializer, emInitializer)
+    //    val hmm = emt.train(sentences, tagdict).asInstanceOf[HmmTagger[String, Symbol]]
+
+    val emt = new SoftEmHmmTaggerTrainer[Symbol](2, new UnsmoothedTransitionDistributioner[Symbol](), new UnsmoothedEmissionDistributioner[Symbol](), alphaT = 0.0, alphaE = 0.0, 1e-10)
+    val hmm = emt.train(sentences, tagdict, trInit, emInit).asInstanceOf[HmmTagger[Symbol]]
+
+    val tr = hmm.transitions
+    val em = hmm.emissions
+
+    //    for (t1 <- tagdict.allTags.toVector.sortBy(_.toString))
+    //      println(f"$t1 -> ${tagdict.allTags.toVector.sortBy(_.toString).mapTo(t2 => f"${tr(t2, t1)}%.2f").mkString(" ")}")
+    //    for (t <- tagdict.allTags.toVector.sortBy(_.toString))
+    //      println(f"$t -> ${tagdict.allWords.toVector.sortBy(_.toString).mapTo(w => f"${em(w, t)}%.2f").mkString(" ")}")
+
+    assertEquals(0.0, tr('A, 'A).toDouble, 1e-9)
+    assertEquals(1.0, tr('D, 'A).toDouble, 1e-9)
+    assertEquals(0.0, tr('N, 'A).toDouble, 1e-9)
+    assertEquals(0.0, tr('V, 'A).toDouble, 1e-9)
+    assertEquals(0.0, tr('Z, 'A).toDouble, 1e-9)
+
+    assertEquals(0.0, tr('A, 'D).toDouble, 1e-9)
+    assertEquals(0.0, tr('D, 'D).toDouble, 1e-9)
+    assertEquals(0.9967326346, tr('N, 'D).toDouble, 1e-9)
+    assertEquals(0.0032669133, tr('V, 'D).toDouble, 1e-9)
+    assertEquals(0.0000004520, tr('Z, 'D).toDouble, 1e-9)
+
+    assertEquals(0.0, tr('A, 'N).toDouble, 1e-9)
+    assertEquals(0.0000004282, tr('D, 'N).toDouble, 1e-9)
+    assertEquals(0.0, tr('N, 'N).toDouble, 1e-9)
+    assertEquals(0.6688512913, tr('V, 'N).toDouble, 1e-9)
+    assertEquals(0.3311482804, tr('Z, 'N).toDouble, 1e-9)
+
+    assertEquals(0.0, tr('A, 'V).toDouble, 1e-9)
+    assertEquals(0.4975621370, tr('D, 'V).toDouble, 1e-9)
+    assertEquals(0.0000000032, tr('N, 'V).toDouble, 1e-9)
+    assertEquals(0.0, tr('V, 'V).toDouble, 1e-9)
+    assertEquals(0.5024378598, tr('Z, 'V).toDouble, 1e-9)
+
+    assertEquals(0.0, tr('A, 'Z).toDouble, 1e-9)
+    assertEquals(0.0, tr('D, 'Z).toDouble, 1e-9)
+    assertEquals(0.0, tr('N, 'Z).toDouble, 1e-9)
+    assertEquals(0.0, tr('V, 'Z).toDouble, 1e-9)
+    assertEquals(0.0, tr('Z, 'Z).toDouble, 1e-9)
+
+    assertEquals(1.0, em("<S>", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("a", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("cat", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("chases", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("the", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("dog", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("walks", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("man", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("runs", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("bird", 'A).toDouble, 1e-9)
+    assertEquals(0.0, em("<E>", 'A).toDouble, 1e-9)
+
+    assertEquals(0.0, em("<S>", 'D).toDouble, 1e-9)
+    assertEquals(0.1666665913, em("a", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("cat", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("chases", 'D).toDouble, 1e-9)
+    assertEquals(0.8333329567, em("the", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("dog", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("walks", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("man", 'D).toDouble, 1e-9)
+    assertEquals(0.0000004520, em("runs", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("bird", 'D).toDouble, 1e-9)
+    assertEquals(0.0, em("<E>", 'D).toDouble, 1e-9)
+
+    assertEquals(0.0, em("<S>", 'N).toDouble, 1e-9)
+    assertEquals(0.0, em("a", 'N).toDouble, 1e-9)
+    assertEquals(0.1672129367, em("cat", 'N).toDouble, 1e-9)
+    assertEquals(0.0, em("chases", 'N).toDouble, 1e-9)
+    assertEquals(0.0, em("the", 'N).toDouble, 1e-9)
+    assertEquals(0.4983612150, em("dog", 'N).toDouble, 1e-9)
+    assertEquals(0.0, em("walks", 'N).toDouble, 1e-9)
+    assertEquals(0.3344258461, em("man", 'N).toDouble, 1e-9)
+    assertEquals(0.0000000021, em("runs", 'N).toDouble, 1e-9)
+    assertEquals(0.0, em("bird", 'N).toDouble, 1e-9)
+    assertEquals(0.0, em("<E>", 'N).toDouble, 1e-9)
+
+    assertEquals(0.0, em("<S>", 'V).toDouble, 1e-9)
+    assertEquals(0.0, em("a", 'V).toDouble, 1e-9)
+    assertEquals(0.0, em("cat", 'V).toDouble, 1e-9)
+    assertEquals(0.2487810497, em("chases", 'V).toDouble, 1e-9)
+    assertEquals(0.0, em("the", 'V).toDouble, 1e-9)
+    assertEquals(0.0048764383, em("dog", 'V).toDouble, 1e-9)
+    assertEquals(0.4975620994, em("walks", 'V).toDouble, 1e-9)
+    assertEquals(0.0000000407, em("man", 'V).toDouble, 1e-9)
+    assertEquals(0.2487803718, em("runs", 'V).toDouble, 1e-9)
+    assertEquals(0.0, em("bird", 'V).toDouble, 1e-9)
+    assertEquals(0.0, em("<E>", 'V).toDouble, 1e-9)
+
+    assertEquals(0.0, em("<S>", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("a", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("cat", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("chases", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("the", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("dog", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("walks", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("man", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("runs", 'Z).toDouble, 1e-9)
+    assertEquals(0.0, em("bird", 'Z).toDouble, 1e-9)
+    assertEquals(1.0, em("<E>", 'Z).toDouble, 1e-9)
   }
 
   @Test
@@ -539,7 +685,6 @@ class EmHmmTests {
     assertEquals(0.0, em("runs", 'Z).toDouble, 1e-9)
     assertEquals(0.0, em("bird", 'Z).toDouble, 1e-9)
     assertEquals(1.0, em("<E>", 'Z).toDouble, 1e-9)
-
   }
 
   def assertEquals2dArray(expected: Array[Array[Double]], result: Array[Array[Double]], scale: Int) {

@@ -124,6 +124,8 @@ abstract class SemisupervisedHmmTaggerTrainer[Tag](
 
     val sentsWithTokenTags: Vector[(Array[Int], Array[Array[Int]])] = rawSentencesWithTokenTags.map { sentWithTokenTags =>
       val (s, tokenTags) = sentWithTokenTags.unzip
+      //println(f"sljsoie 1:: sentWithTokenTags.s = ${s.map(_.toString).mkString(", ")}")
+      //println(f"sljsoie 2:: sentWithTokenTags.tokenTags = ${tokenTags.map(_.map(_.toString).mkString(",")).mkString(" | ")}")
       val sent = (tagdict.startWord +: s :+ tagdict.endWord).map(wordIndex).toArray
       val tokTags = (Set(tagdict.startTag) +: tokenTags :+ Set(tagdict.endTag)).map(_.map(tagIndex).toArray.sorted).toArray
       (sent, tokTags)
@@ -282,10 +284,10 @@ class SoftEmHmmTaggerTrainer[Tag](
     ): (Array[Array[Double]], Array[Array[Double]]) = {
 
     val startTime = System.currentTimeMillis()
-    val (expectedTrLogCounts, expectedEmLogCounts, avgLogProb) = reestimate(sentsWithTokenTags, numWords, numTags, rtd, alphaPriorLogTr, alphaPriorLogEm, logTr, logEm)
+    val (expectedTrLogCounts, expectedEmLogCounts, avgLogProb) = reestimate(sentsWithTokenTags, numWords, numTags, alphaPriorLogTr, alphaPriorLogEm, logTr, logEm)
     println(f"iteration ${(iteration + ":").padRight(4)} ${(System.currentTimeMillis() - startTime) / 1000.0}%.3f sec   avgLogProb=${(avgLogProb + ",").padRight(22)} avgProb=${exp(avgLogProb)}")
     //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(expectedTrLogCounts(t1)(t2))}%.4f" else "").mkString("\t"))
-    //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(newLogEm(t)(w))}%.4f" else "").mkString("\t")); println
+    //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(expectedEmLogCounts(t)(w))}%.4f" else "").mkString("\t")); println
     if (iteration >= maxIterations) {
       println(f"MAX ITERATIONS REACHED")
       (expectedTrLogCounts, expectedEmLogCounts)
@@ -301,6 +303,8 @@ class SoftEmHmmTaggerTrainer[Tag](
     }
     else {
       convertLogCountsToProbabilities(expectedTrLogCounts, expectedEmLogCounts, numWords, numTags, rtd)
+      //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(expectedTrLogCounts(t1)(t2))}%.4f" else "").mkString("\t"))
+      //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(expectedEmLogCounts(t)(w))}%.4f" else "").mkString("\t")); println
       // At this point the "counts" are actually log probabilities!!
       iterate(sentsWithTokenTags, numWords, numTags, rtd, alphaPriorLogTr, alphaPriorLogEm, expectedTrLogCounts, expectedEmLogCounts, iteration + 1, avgLogProb)
     }
@@ -309,7 +313,6 @@ class SoftEmHmmTaggerTrainer[Tag](
   private[this] final def reestimate(
     sentsWithTokenTags: Vector[(Array[Int], Array[Array[Int]])],
     numWords: Int, numTags: Int,
-    rtd: Array[Array[Int]],
     alphaPriorLogTr: Array[Array[Double]], alphaPriorLogEm: Array[Array[Double]],
     logTr: Array[Array[Double]], logEm: Array[Array[Double]] //
     ) = {
@@ -327,7 +330,7 @@ class SoftEmHmmTaggerTrainer[Tag](
 
     var logProbSum = 0.0
     for ((s, stags) <- sentsWithTokenTags.seq) {
-      logProbSum += contributeExpectations(expectedTrLogCounts, expectedEmLogCounts, s, stags, numWords, numTags, rtd, logTr, logEm)
+      logProbSum += contributeExpectations(expectedTrLogCounts, expectedEmLogCounts, s, stags, numWords, numTags, logTr, logEm)
     }
 
     //println("\nTRANSITION COUNTS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${expectedTrLogCounts(t1)(t2)}%.4f" else "").mkString("\t"))
@@ -344,7 +347,6 @@ class SoftEmHmmTaggerTrainer[Tag](
     expectedEmLogCounts: Array[Array[Double]],
     w: Array[Int], tokenTags: Array[Array[Int]],
     numWords: Int, numTags: Int,
-    rtd: Array[Array[Int]],
     logTr: Array[Array[Double]], logEm: Array[Array[Double]]): Double = {
 
     assert(w.head == 0 && w.last == 1)
@@ -383,7 +385,7 @@ class SoftEmHmmTaggerTrainer[Tag](
       val curWKsLen = curWKs.length
       val prevKs = tokenTags(i - 1)
       val prevKsLen = prevKs.length
-      assert(prevKsLen > 0, f"prevKsLen = $prevKsLen; td(${w(i - 1)}) = ${tokenTags(i - 1).toVector}") // TODO: REMOVE
+      assert(prevKsLen > 0, f"calculateForward0: prevKsLen = $prevKsLen; td(${w(i - 1)}) = ${tokenTags(i - 1).toVector}") // TODO: REMOVE
 
       var j = 0
       while (j < curWKsLen) {
@@ -391,20 +393,20 @@ class SoftEmHmmTaggerTrainer[Tag](
         var l = 0
         while (l < prevKsLen) {
           val k1 = prevKs(l)
-          //assert(!logTr(k1)(k).isNegInfinity, f"logTr($k1)($k) is infinite") // TODO: REMOVE
-          //assert(!prevLogFwd(k1).isNegInfinity, f"prevLogFwd($k1) is infinite") // TODO: REMOVE
-          val v = logTr(k1)(k) + prevLogFwd(k1)
-          logValueArray(l) = v
+          //assert(!logTr(k1)(k).isNegInfinity, f"calculateForward1: logTr($k1)($k) is infinite") // TODO: REMOVE
+          //assert(!prevLogFwd(k1).isNegInfinity, f"calculateForward2: prevLogFwd($k1) is infinite") // TODO: REMOVE
+          logValueArray(l) = logTr(k1)(k) + prevLogFwd(k1)
           l += 1
         }
-        //assert(!logEm(k)(curW).isNegInfinity, f"logEm($k)($curW) is infinite") // TODO: REMOVE
+        //assert(!logEm(k)(curW).isNegInfinity, f"calculateForward3: logEm($k)($curW) is infinite") // TODO: REMOVE
         curLogFwd(k) = logSum(logValueArray, prevKsLen) + logEm(k)(curW)
-        //assert(!curLogFwd(k).isNegInfinity, f"curLogFwd($k) is infinite; logSum(${logValueArray.toVector}, $prevKsLen) + ${logEm(k)(curW)}") // TODO: REMOVE
+        //assert(!curLogFwd(k).isNegInfinity, f"calculateForward4: curLogFwd($k) is infinite; logSum(${logValueArray.toVector}, $prevKsLen) + ${logEm(k)(curW)}") // TODO: REMOVE
         j += 1
       }
       //println(f"$i%3d: " + curLogFwd.zipWithIndex.map { case (v, k) => if (td(w(i)).contains(k)) exp(v).toString else "" }.map(_.padRight(30)).mkString(" "))
       i += 1
     }
+    //println("\nFORWARD"); for (wi <- 0 until w.length) println((0 until numTags).map(ti => f"${exp(logFwd(wi)(ti))}%.10f").mkString("\t"))
     logFwd
   }
 
@@ -437,15 +439,15 @@ class SoftEmHmmTaggerTrainer[Tag](
         var l = 0
         while (l < nextKsLen) {
           val k2 = nextKs(l)
-          assert(!logTr(k)(k2).isNegInfinity, f"logTr($k)($k2) is infinite") // TODO: REMOVE
-          assert(!logEm(k2)(nextW).isNegInfinity, f"logEm($k2)($nextW) is infinite") // TODO: REMOVE
+          //assert(!logTr(k)(k2).isNegInfinity, f"calculateBackwrd 1: logTr($k)($k2) is infinite") // TODO: REMOVE
+          //assert(!logEm(k2)(nextW).isNegInfinity, f"calculateBackwrd 2: logEm($k2)($nextW) is infinite") // TODO: REMOVE
           logValueArray(l) = logTr(k)(k2) + logEm(k2)(nextW) + nextLogBkd(k2)
           l += 1
         }
         curLogBkd(k) = logSum(logValueArray, nextKsLen)
         j += 1
       }
-      //println(f"$i%3d: " + curLogBkd.zipWithIndex.map { case (v, k) => if (td(w(i)).contains(k)) exp(v).toString else "" }.map(_.padRight(30)).mkString(" "))
+      //println(f"calculateBackwrd 3: $i%3d: " + curLogBkd.zipWithIndex.map { case (v, k) => if (td(w(i)).contains(k)) exp(v).toString else "" }.map(_.padRight(30)).mkString(" "))
       i -= 1
     }
     logBkd
@@ -476,15 +478,16 @@ class SoftEmHmmTaggerTrainer[Tag](
         while (l < nextWKsLen) {
           val k2 = nextWKs(l)
           val logEx = logFwd(i)(k1) + logTr(k1)(k2) + logEm(k2)(nextW) + logBkd(i + 1)(k2)
+          //println(f"giuhrgis 1::  logFwd($i)($k1)=${exp(logFwd(i)(k1))} + logTr($k1)($k2)=${exp(logTr(k1)(k2))} + logEm($k2)($nextW)=${exp(logEm(k2)(nextW))} + logBkd(${i + 1})($k2)=${exp(logBkd(i + 1)(k2))}")
+          //println(f"giuhrgis 2::  expectedTrLogCounts($k1)($k2) = ${exp(logEx - logFwdP)}%.3f")
           exLogTrK1(k2) = logSum(exLogTrK1(k2), logEx - logFwdP)
-          //println(f"giuhrgis::  expectedTrLogCounts($k1)($k2) = ${expectedTrLogCounts(k1)(k2)}")
           l += 1
         }
         j += 1
       }
       i += 1
     }
-    //    println((0 until numTags).flatMap(k1 => (0 until numTags).map(k2 => f"exTr($k1)($k2)=${exTr(k1)(k2)}")).mkString(" "))
+    //println((0 until numTags).flatMap(k1 => (0 until numTags).map(k2 => f"exTr($k1)($k2)=${exp(expectedTrLogCounts(k1)(k2))}")).mkString(" "))
   }
 
   private[this] final def contributeExpectedEmCounts(
@@ -508,7 +511,7 @@ class SoftEmHmmTaggerTrainer[Tag](
         val logEx = logFwd(i)(k) + logBkd(i)(k)
         val exLogEmK = expectedEmLogCounts(k)
         exLogEmK(curW) = logSum(exLogEmK(curW), logEx - logFwdP)
-        assert(!expectedEmLogCounts(k)(curW).isNegInfinity, f"expectedEmLogCounts($k)($curW) is infinite; logEx=$logFwdP-logEx=$logFwdP = ${logEx - logFwdP}; curWKs=${curWKs.mkString("[", ",", "]")}") // TODO: REMOVE
+        //assert(!expectedEmLogCounts(k)(curW).isNegInfinity, f"contributeExpectedEmCounts 1: expectedEmLogCounts($k)($curW) is infinite; logEx=$logFwdP-logEx=$logFwdP = ${logEx - logFwdP}; curWKs=${curWKs.mkString("[", ",", "]")}") // TODO: REMOVE
         j += 1
       }
 

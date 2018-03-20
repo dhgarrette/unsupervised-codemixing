@@ -273,6 +273,20 @@ class ReversingConditionalLogProbabilityDistribution[A, B](delegate: Conditional
   def sample(given: A): B = sys.error("sample not available on ReversingConditionalLogProbabilityDistribution")
 }
 
+class HardConstraintNonNormalizingConditionalLogProbabilityDistribution[A, B](
+    delegate: ConditionalLogProbabilityDistribution[A, B],
+    legalEdges: (A => (B => Boolean)))
+        extends ConditionalLogProbabilityDistribution[A, B] {
+  def apply(x: B, given: A): LogDouble = {
+    if (legalEdges(given)(x))
+      delegate(x, given)
+    else
+      LogDouble.zero
+  }
+  def sample(given: A): B = sys.error("sample not yet implemented for HardConstraintNonNormalizingConditionalLogProbabilityDistribution")
+}
+
+
 object ConditionalLogProbabilityDistribution {
   def empty[A, B] = new SimpleConditionalLogProbabilityDistribution[A, B](Map.empty)
 }
