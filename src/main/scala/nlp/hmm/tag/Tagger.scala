@@ -84,3 +84,21 @@ trait NoisilySupervisedTaggerTrainer[Tag] {
   }
   def noisySupTrainWithSomeGold(noisilyLabeledSentences: Vector[Vector[(Word, Tag)]], goldLabeledSentences: Vector[Vector[(Word, Tag)]], initialTagdict: TagDictionary[Tag]): Tagger[Tag]
 }
+
+//class EdgeRestrictedSemisupervisedTaggerTrainer[Tag](
+//  allowedEdges: (Tag => (Tag => Boolean)),
+//  delegate: SemisupervisedTaggerTrainer[Tag])
+//    extends SemisupervisedTaggerTrainer[Tag] {
+//  def trainWithTagsetsAndSomeGold(
+//      rawSentencesWithTokenTags: Vector[Vector[(Word, Set[Tag])]], goldLabeledSentences: Vector[Vector[(Word, Tag)]], initialTagdict: TagDictionary[Tag],
+//      transitions: ConditionalLogProbabilityDistribution[Tag, Tag], emissions: ConditionalLogProbabilityDistribution[Tag, Word]): Tagger[Tag] = {
+//    val edgeRestrictedRawSentencesWithTokenTags = rawSentencesWithTokenTags.map { rawSentenceWithTokenTags =>
+//      val (words, origTagsets) = rawSentenceWithTokenTags.unzip;
+//      // Computes the set of tags for each token that can be reached from the beginning of the sentence.
+//      val fwdTagsets = origTagsets.tail.scanLeft(origTagsets.head) { (prevTags, currTags) => currTags.filter(ct => prevTags.exists(pt => allowedEdges(pt)(ct))) }
+//      val bwdTagsets = fwdTagsets.init.scanRight(fwdTagsets.last) { (currTags, nextTags) => currTags.filter(ct => nextTags.exists(nt => allowedEdges(ct)(nt))) }
+//      words zipSafe bwdTagsets
+//    }
+//    return delegate.trainWithTagsetsAndSomeGold(edgeRestrictedRawSentencesWithTokenTags, goldLabeledSentences, initialTagdict, transitions, emissions);
+//  }
+//}
