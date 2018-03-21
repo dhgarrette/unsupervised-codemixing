@@ -60,17 +60,17 @@ abstract class SemisupervisedHmmTaggerTrainer[Tag](
     //
     //
 
-    val allActualWords = rawSentences.flatten.toSet.toVector
+    val allActualWords = rawSentences.flatten.toVector.sortBy(_.toString).distinct
     val allWords = tagdict.startWord +: tagdict.endWord +: allActualWords
-    val allTdTags = allActualWords.flatMap(tagdict).distinct // filter out tags that are not used by any word
+    val allTdTags = allActualWords.flatMap(tagdict).sortBy(_.toString).distinct // filter out tags that are not used by any word
     val allTags = tagdict.startTag +: tagdict.endTag +: allTdTags
 
     val numWords = allWords.size
     val numTags = allTags.size
 
     println(f"raw tokens = ${rawSentences.flatten.size}  (${rawSentences.size} sentences)")
-    println("numWords = " + numWords)
-    println("numTags  = " + numTags)
+    println(f"numWords = $numWords;")
+    println(f"numTags  = $numTags; ${allTags.mkString(", ")}")
     println
 
     val wordIndex = allWords.zipWithIndex.toMap
@@ -267,6 +267,9 @@ class SoftEmHmmTaggerTrainer[Tag](
 
     val alphaPriorLogTr = alphaPriorTr.map(_.map(log))
     val alphaPriorLogEm = alphaPriorEm.map(_.map(log))
+      //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(logInitialTr(t1)(t2))}%.4f" else "").mkString("\t"))
+      //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(logInitialEm(t)(w))}%.4f" else "").mkString("\t")); println
+      //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => f"${exp(logInitialEm(t)(w))}%.4f").mkString("\t")); println
     val (expectedTrLogCounts, expectedEmLogCounts) = iterate(sentsWithTokenTags, numWords, numTags, rtd, alphaPriorLogTr, alphaPriorLogEm, logInitialTr, logInitialEm, 1, Double.NegativeInfinity)
     (expectedTrLogCounts, expectedEmLogCounts)
   }
@@ -305,6 +308,7 @@ class SoftEmHmmTaggerTrainer[Tag](
       convertLogCountsToProbabilities(expectedTrLogCounts, expectedEmLogCounts, numWords, numTags, rtd)
       //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(expectedTrLogCounts(t1)(t2))}%.4f" else "").mkString("\t"))
       //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(expectedEmLogCounts(t)(w))}%.4f" else "").mkString("\t")); println
+      //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => f"${exp(expectedEmLogCounts(t)(w))}%.4f").mkString("\t")); println
       // At this point the "counts" are actually log probabilities!!
       iterate(sentsWithTokenTags, numWords, numTags, rtd, alphaPriorLogTr, alphaPriorLogEm, expectedTrLogCounts, expectedEmLogCounts, iteration + 1, avgLogProb)
     }
@@ -450,6 +454,7 @@ class SoftEmHmmTaggerTrainer[Tag](
       //println(f"calculateBackwrd 3: $i%3d: " + curLogBkd.zipWithIndex.map { case (v, k) => if (td(w(i)).contains(k)) exp(v).toString else "" }.map(_.padRight(30)).mkString(" "))
       i -= 1
     }
+    //println("\nBACKWARD"); for (wi <- 0 until w.length) println((0 until numTags).map(ti => f"${exp(logBkd(wi)(ti))}%.10f").mkString("\t"))
     logBkd
   }
 
@@ -560,7 +565,7 @@ class HardEmHmmTaggerTrainer[Tag](
 
     val startTime = System.currentTimeMillis()
     val (expectedTrCounts, expectedEmCounts, avgLogProb) = reestimate(sentsWithTokenTags, numWords, numTags, alphaPriorTr, alphaPriorEm, logTr, logEm)
-    println(f"iteration ${(iteration + ":").padRight(4)} ${(System.currentTimeMillis() - startTime) / 1000.0}%.3f sec   avgLogProb=${(avgLogProb + ",").padRight(22)} avgProb=${exp(avgLogProb)}")
+    //println(f"iteration ${(iteration + ":").padRight(4)} ${(System.currentTimeMillis() - startTime) / 1000.0}%.3f sec   avgLogProb=${(avgLogProb + ",").padRight(22)} avgProb=${exp(avgLogProb)}")
     //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(newLogTr(t1)(t2))}%.4f" else "").mkString("\t"))
     //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (td(w).contains(t)) f"${exp(newLogEm(t)(w))}%.4f" else "").mkString("\t")); println
     if (iteration >= maxIterations) {
