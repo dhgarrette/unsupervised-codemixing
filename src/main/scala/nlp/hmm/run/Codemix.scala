@@ -104,8 +104,6 @@ object Codemix {
       case _ => false
     }
     def isNonX(word: String) = !isX(word)
-//    def getXs(csData: Vector[Vector[(String, String)]]): Set[String] = csData.flatten.map(_._1).filter(isX).toSet
-//    def getNonXs(csData: Vector[Vector[(String, String)]]): Set[String] = csData.flatten.map(_._1).filter(isNonX).toSet
 
     val csAllTypes = (csTrainData ++ csEvalData).flatten.map(_._1).toSet
     val csGoodTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count > 1 => word }.toSet
@@ -113,26 +111,10 @@ object Codemix {
     val monoEsOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
     val csUnkTypes = csAllTypes -- csGoodTypes -- monoEnOnlyTypes -- monoEsOnlyTypes
 
-//    val csAllWords = getNonXs(csTrainData ++ csEvalData)
-//    val csAllXs = getXs(csTrainData ++ csEvalData)
-//    val csGoodWords = csGoodTypes.filter(isNonX) // Words that should not be UNKed
-//    val csGoodXs = csGoodTypes.filter(isX)  // Words that should not be UNKed
-//    val csAllTrainWords = getNonXs(csTrainData)
-//    val csAllEvalWords = getNonXs(csEvalData)
-//    val csGoodEvalWords = csAllEvalWords & csGoodTrainWords  // Words that should not be UNKed
-//    val csGoodXs = csAllXs & csGoodTrainTypes
-    
-//    for (w <- (csTrainData ++ csEvalData).flatten.map { case (word, lang) => (word, lang != "E" && lang != "S") }.groupByKey.mapValues(_.counts).collect { case (word, valueCounts) if valueCounts.size > 1 => (word, valueCounts(true), valueCounts(false)) }.toVector.sorted)
-//      println(s"ambiguous: $w")
-
     val initEmiss = new SimpleConditionalLogProbabilityDistribution(
         Map[Tag, LogProbabilityDistribution[Word]](
             "<S>" -> new SimpleLogProbabilityDistribution(Map("<S>" -> LogDouble(1))),
             "<E>" -> new SimpleLogProbabilityDistribution(Map("<E>" -> LogDouble(1))),
-//            "E"  -> new SimpleLogProbabilityDistribution(csAllTypes.filter(isNonX).mapTo(w => LogDouble(monoEnWordCounts.getOrElse(w, 0) + 1.0)).toMap),
-//            "S"  -> new SimpleLogProbabilityDistribution(csAllTypes.filter(isNonX).mapTo(w => LogDouble(monoEsWordCounts.getOrElse(w, 0) + 1.0)).toMap),
-//            "xE" -> new SimpleLogProbabilityDistribution(csAllTypes.filter(isX).mapTo(w => LogDouble(monoEnWordCounts.getOrElse(w, 0) + 1.0)).toMap),
-//            "xS" -> new SimpleLogProbabilityDistribution(csAllTypes.filter(isX).mapTo(w => LogDouble(monoEsWordCounts.getOrElse(w, 0) + 1.0)).toMap),
             "E"  -> new LaplaceLogProbabilityDistribution(monoEnWordCounts.collect { case (word, count) if isNonX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
             "S"  -> new LaplaceLogProbabilityDistribution(monoEsWordCounts.collect { case (word, count) if isNonX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
             "xE"  -> new LaplaceLogProbabilityDistribution(monoEnWordCounts.collect { case (word, count) if isX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
@@ -148,27 +130,6 @@ object Codemix {
 //            "xS" -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.1), "cat" -> LogDouble(0.1), "walks" -> LogDouble(0.1), "el" -> LogDouble(0.2), "gato" -> LogDouble(0.2), "marche" -> LogDouble(0.2))),
 //        ))
     
-    // TODO: The UNK words appear multiple times......
-//    val enWords  = (csTrainData ++ csEvalData).flatten.toSet[(String, String)].filter(wc => enWordCounts.contains(wc._1)).collect { case (word, lang) if lang == "E" || lang == "S" => word }
-//    val esWords  = (csTrainData ++ csEvalData).flatten.toSet[(String, String)].filter(wc => esWordCounts.contains(wc._1)).collect { case (word, lang) if lang == "E" || lang == "S" => word }
-////    val enXWords = (csTrainData ++ csEvalData).flatten.toSet[(String, String)].filter(wc => enWordCounts.contains(wc._1)).collect { case (word, lang) if lang != "E" && lang != "S" => word }
-////    val esXWords = (csTrainData ++ csEvalData).flatten.toSet[(String, String)].filter(wc => esWordCounts.contains(wc._1)).collect { case (word, lang) if lang != "E" && lang != "S" => word }
-//    val xWords   = (csTrainData ++ csEvalData).flatten.toSet[(String, String)].collect { case (word, lang) if lang != "E" && lang != "S" => word }
-//    val unkWords = (csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count == 1 => word }.toSet ++ csEvalData.flatten.map(_._1))
-//                       .filter(word => !enWords(word) && !esWords(word) && !xWords(word))
-//    val xunkWords = (csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count == 1 => word }.toSet ++ csEvalData.flatten.map(_._1))
-//                       .filter(word => !enWords(word) && !esWords(word) && xWords(word))
-//    val noneOfTheAbove = (csTrainData ++ csEvalData).flatten.map(_._1).toSet[String].filter{ word => !enWords(word) && !esWords(word) && !xWords(word) && !unkWords(word) && !xunkWords(word) }
-//    
-//    for (w <- Vector("i")) println(s"$w :: enWords=${enWords(w)}, esWords=${esWords(w)}, xWords=${xWords(w)}, unkWords=${unkWords(w)}")
-    
-//    println(s"enWords : ${enWords.take(10).mkString(", ")}")
-//    println(s"esWords : ${esWords.take(10).mkString(", ")}")
-//    println(s"xWords : ${xWords.take(10).mkString(", ")}")
-//    println(s"unkWords : ${unkWords.take(10).mkString(", ")}")
-//    println(s"xunkWords : ${xunkWords.take(10).mkString(", ")}")
-//    println(s"none of the above : ${noneOfTheAbove.take(10).mkString(", ")}")
-
     val tagdict = SimpleTagDictionary((csAllTypes.filter(isNonX) & monoEnOnlyTypes).mapToVal(Set("E")).toMap ++ 
                                       (csAllTypes.filter(isNonX) & monoEsOnlyTypes).mapToVal(Set("S")).toMap ++
                                       (csAllTypes.filter(isNonX) -- monoEnOnlyTypes -- monoEsOnlyTypes).mapToVal(Set("E", "S")).toMap ++
@@ -189,13 +150,6 @@ object Codemix {
     }
                               	  
 	  val trainInput = csTrainData.map(replaceUnks)
-//    val trainInput = Vector(Vector("the", "cat", "walks"))
-//    println(s"TRAIN INPUT:\n")
-//    for (s <- Vector(Vector("omgggg")) ++ trainInput.take(10)) {
-//      for (w <- s)
-//        println(s"$w :: en=${enWords(w)}, es=${esWords(w)}, x=${xWords(w)}, unk=${unkWords(w)} neverX=${neverXWords(w)} :: alwaysX=${alwaysXWords(w)} :: ${tagdict(w).map(t => (t, initEmiss(w,t))) }")
-//      println
-//    }
 
 	  val results =
   	  for (maxIter <- (0 to 4) ++ (5 to 20 by 5)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
