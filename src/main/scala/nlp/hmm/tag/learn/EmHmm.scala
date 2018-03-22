@@ -267,11 +267,15 @@ class SoftEmHmmTaggerTrainer[Tag](
 
     val alphaPriorLogTr = alphaPriorTr.map(_.map(log))
     val alphaPriorLogEm = alphaPriorEm.map(_.map(log))
-      //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(logInitialTr(t1)(t2))}%.4f" else "").mkString("\t"))
-      //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(logInitialEm(t)(w))}%.4f" else "").mkString("\t")); println
-      //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => f"${exp(logInitialEm(t)(w))}%.4f").mkString("\t")); println
-    val (expectedTrLogCounts, expectedEmLogCounts) = iterate(sentsWithTokenTags, numWords, numTags, rtd, alphaPriorLogTr, alphaPriorLogEm, logInitialTr, logInitialEm, 1, Double.NegativeInfinity)
-    (expectedTrLogCounts, expectedEmLogCounts)
+    //println("\nTRANSITIONS"); for (t1 <- 0 until numTags) println((0 until numTags).map(t2 => if (t1 != 1 && !(t1 == 0 && t2 <= 1)) f"${exp(logInitialTr(t1)(t2))}%.4f" else "").mkString("\t"))
+    //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => if (tokenTags(i).contains(t)) f"${exp(logInitialEm(t)(w))}%.4f" else "").mkString("\t")); println
+    //println("\nEMISSIONS"); for (t <- 0 until numTags) println((0 until numWords).map(w => f"${exp(logInitialEm(t)(w))}%.4f").mkString("\t")); println
+    if (maxIterations > 0) {
+      val (expectedTrLogCounts, expectedEmLogCounts) = iterate(sentsWithTokenTags, numWords, numTags, rtd, alphaPriorLogTr, alphaPriorLogEm, logInitialTr, logInitialEm, 1, Double.NegativeInfinity)
+      (expectedTrLogCounts, expectedEmLogCounts)
+    } else {
+      (alphaPriorLogTr, alphaPriorLogEm)
+    }
   }
 
   /**
