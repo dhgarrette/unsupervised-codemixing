@@ -156,6 +156,12 @@ class UnconditionalWrappingConditionalLogProbabilityDistribution[A, B](pd: LogPr
   def sample(given: A): B = pd.sample
 }
 
+class MapLogProbabilityDistribution[B](entries: (B => LogDouble)) extends LogProbabilityDistribution[B] {
+  def apply(b: B): LogDouble = entries(b)
+  def sample(): B = ???
+  def defaultProb: LogDouble = ???
+}
+
 //
 //
 //
@@ -254,6 +260,21 @@ object AlphaBetaConditionalLogProbabilityDistribution {
       excludedBs,
       totalAddition)
   }
+}
+
+class InterpolatingLogProbabilityDistribution[A](
+  delegates: Vector[(LogProbabilityDistribution[A], LogDouble)])
+  extends LogProbabilityDistribution[A] {
+
+  val weightSum = delegates.sumBy(_._2)
+  def apply(x: A): LogDouble = {
+    delegates.sumBy { case (d, w) => d(x) * w / weightSum }
+  }
+  
+  val defaultProb = delegates.sumBy { case (d, w) => d.defaultProb * w / weightSum }
+
+  private[this] val pd = new SimpleLogProbabilityDistribution(delegates.toMap)
+  def sample(): A = pd.sample().sample()
 }
 
 class InterpolatingConditionalLogProbabilityDistribution[A, B](

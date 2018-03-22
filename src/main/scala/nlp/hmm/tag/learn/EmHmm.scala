@@ -414,7 +414,7 @@ class SoftEmHmmTaggerTrainer[Tag](
       //println(f"$i%3d: " + curLogFwd.zipWithIndex.map { case (v, k) => if (td(w(i)).contains(k)) exp(v).toString else "" }.map(_.padRight(30)).mkString(" "))
       i += 1
     }
-    //println("\nFORWARD"); for (wi <- 0 until w.length) println((0 until numTags).map(ti => f"${exp(logFwd(wi)(ti))}%.10f").mkString("\t"))
+    //println("\nFORWARD"); for (wi <- 0 until w.length) println((0 until numTags).map(ti => f"${logFwd(wi)(ti)}%.10f").mkString("\t"))
     logFwd
   }
 
