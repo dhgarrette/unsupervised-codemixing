@@ -14,10 +14,15 @@ import scalaz._
 import Scalaz._
 import nlp.hmm.prob.ConditionalLogProbabilityDistribution
 import nlp.hmm.prob.MapLogProbabilityDistribution
+import nlp.hmm.tag.MemmTaggerTrainer
+import scala.collection.mutable.Buffer
 
 object Codemix {
   type Word = String
   type Tag = String
+  
+  val useMemm = true
+  val useMonoForMemm = false
 
   val PuncOnlyRe = raw"[^A-Za-z0-9]+".r
   val AtMentionRe = raw"@.+".r
@@ -26,14 +31,25 @@ object Codemix {
     case w => w
   }
   
-  def countConlluRawWords(filenames: Vector[String]): Map[String, Int] = {
+    def isX(word: String) = word match {
+      case PuncOnlyRe() => true
+//      case AtMentionRe() => true
+      case _ => false
+    }
+    def isNonX(word: String) = !isX(word)
+
+  def readConlluRawData(filenames: Vector[String], lang: String): Vector[Vector[(String, String)]] = {
     filenames.flatMap { filename =>
-      File(filename).readLines.flatMap { line =>
+      File(filename).readLines.splitWhere(_.trim.isEmpty).map(_.flatMap { line =>
         if (line.trim.isEmpty) None
         else if (line.trim.startsWith("#")) None
-        else Some(normalizeWord(line.splitWhitespace(1)))
-      }
-    }.counts
+        else {
+          val word = normalizeWord(line.splitWhitespace(1))
+          if (isNonX(word)) Some((word, lang))
+          else Some((word, "x"+lang))
+        }
+      })
+    }
   }
   
   def wordToChars(word: String, n: Int) = {
@@ -119,8 +135,10 @@ object Codemix {
                 "<E>" -> LogDouble(0.10))),
             ))
 
-    val monoEnWordCounts = countConlluRawWords(Vector("data/ud/UD_English-EWT-master/en-ud-train.conllu"))
-    val monoEsWordCounts = countConlluRawWords(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"))// -- monoEnWordCounts.keys
+    val monoEnData = readConlluRawData(Vector("data/ud/UD_English-EWT-master/en-ud-train.conllu"), "E")
+    val monoEsData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
+    val monoEnWordCounts = monoEnData.flatten.map(_._1).counts
+    val monoEsWordCounts = monoEsData.flatten.map(_._1).counts// -- monoEnWordCounts.keys
     val csTrainData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/train.spl"))
     val csEvalData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/dev.spl"))
     
@@ -140,13 +158,6 @@ object Codemix {
       }
     }
     
-    def isX(word: String) = word match {
-      case PuncOnlyRe() => true
-//      case AtMentionRe() => true
-      case _ => false
-    }
-    def isNonX(word: String) = !isX(word)
-
     val csAllTypes = (csTrainData ++ csEvalData).flatten.map(_._1).toSet
     val csGoodTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count > 1 => word }.toSet
     val monoEnOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
@@ -206,8 +217,8 @@ object Codemix {
 //        (csAllTypes.filter(isNonX) & monoEnOnlyTypes).mapToVal(Set("E")).toMap ++ 
 //        (csAllTypes.filter(isNonX) & monoEsOnlyTypes).mapToVal(Set("S")).toMap ++
 //        (csAllTypes.filter(isNonX) -- monoEnOnlyTypes -- monoEsOnlyTypes).mapToVal(Set("E", "S")).toMap ++
-        csAllTypes.filter(isNonX).mapToVal(Set("E", "S")).toMap ++
-        csAllTypes.filter(isX).mapToVal(Set("xE", "xS")).toMap ++
+        (csAllTypes ++ monoEnWordCounts.keySet ++ monoEsWordCounts.keySet).filter(isNonX).mapToVal(Set("E", "S")).toMap ++
+        (csAllTypes ++ monoEnWordCounts.keySet ++ monoEsWordCounts.keySet).filter(isX).mapToVal(Set("xE", "xS")).toMap ++
         Map("<UNK>" -> Set("E","S"), "<xUNK>" -> Set("xE","xS")),
                               "<S>", "<S>", "<E>", "<E>")
 
@@ -223,48 +234,78 @@ object Codemix {
       case _ => "x"
     }
                               	  
-	  val trainInput = csTrainData.map(replaceUnks)
-	  
-    for (s <- trainInput.drop(20).take(2)) { println; for (w <- s) println(f"${w}%20s  [${tagdict(w).mkString(", ")}]") }
-
-	  val results =
-  	  for (maxIter <- (0 to 4) ++ (5 to 20 by 5) ++ (30 to 30 by 10)) yield {// ++ (30 to 100 by 10)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
-        val emTrainer = new SoftEmHmmTaggerTrainer[Tag](
-                                  	  maxIterations = maxIter,
-                                  	  new UnsmoothedTransitionDistributioner, new UnsmoothedEmissionDistributioner,
-                                  	  alphaT = 0.0, alphaE = 0.0, 1e-10)
-        val emHmm = emTrainer.train(trainInput, tagdict, initTrans, initEmiss)
-        val memm = memmTrainer.train(emHmm.tag(trainCorpus))
-        val goldTags = Vector("<S>", "<E>") ++ csEvalData.flatten.map(_._2).sorted.distinct
-        val goldTagIndex = goldTags.zipWithIndex.toMap
-        val modelTags = Vector("<S>", "<E>") ++ tagdict.allTags.toVector.sorted
-        val modelTagIndex = modelTags.zipWithIndex.toMap
-        val confusionMatrix: Array[Array[Int]] = Array.fill(goldTagIndex.size)(Array.fill(modelTagIndex.size)(0))
-        var numCorrect = 0
-        var totalCount = 0
-        writeUsing(File(f"output/eval_${maxIter}%03d.out")) { f =>
-        for (sentence  <- csEvalData) {
-          val predictedTags = emHmm.tag(replaceUnks(sentence))
-          for (((word, goldLang), predictedLang) <- (sentence zipSafe predictedTags)) {
-            confusionMatrix(goldTagIndex(goldLang))(modelTagIndex(predictedLang)) += 1
-            val cleanGoldLabel = cleanLangLabel(word, goldLang)
-            if (cleanGoldLabel != "x") {  // Just evaluate when the gold annotation is a language label.
-              if (cleanGoldLabel == cleanLangLabel(word, predictedLang)) numCorrect += 1
-          		  totalCount += 1
+    	val trainInput = csTrainData.map(_.map(_._1))
+    	  
+    for (s <- trainInput.drop(20).take(2)) { println; for (w <- s) println(f"${replaceUnk(w)}%20s  [${tagdict(w).mkString(", ")}]") }
+  
+    val results: IndexedSeq[(Int, Double)] =
+    	  for (maxIter <- (5 to 5)) yield {//(0 to 4) ++ (5 to 20 by 5) ++ (30 to 30 by 10)) yield {// ++ (30 to 100 by 10)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
+          val emTrainer = new SoftEmHmmTaggerTrainer[Tag](
+                                    	  maxIterations = maxIter,
+                                    	  new UnsmoothedTransitionDistributioner, new UnsmoothedEmissionDistributioner,
+                                    	  alphaT = 0.0, alphaE = 0.0, 1e-10)
+          val supervisedMemmTrainer = new MemmTaggerTrainer[Tag](maxIterations = 100, cutoff = 100, tdRestricted = true, identity, identity)
+          
+          val emHmm = emTrainer.train(trainInput.map(_.map(replaceUnk)), tagdict, initTrans, initEmiss)
+          val memm = if (useMemm) supervisedMemmTrainer.train(
+                  trainInput.map(sentence => sentence.zipSafe(emHmm.tag(sentence.map(replaceUnk)))) ++
+                    (if (useMonoForMemm) monoEnData ++ monoEsData else Vector.empty), // Also train MEMM on monolingual data
+                  tagdict)
+              else null
+          
+          val goldTags = Vector("<S>", "<E>") ++ csEvalData.flatten.map(_._2).sorted.distinct
+          val goldTagIndex = goldTags.zipWithIndex.toMap
+          val modelTags = Vector("<S>", "<E>") ++ tagdict.allTags.toVector.sorted
+          val modelTagIndex = modelTags.zipWithIndex.toMap
+          val confusionMatrix: Array[Array[Int]] = Array.fill(goldTagIndex.size)(Array.fill(modelTagIndex.size)(0))
+          var numCorrect = 0
+          var totalCount = 0
+          writeUsing(File(f"output/eval_${maxIter}%03d.out")) { f =>
+            for (sentence  <- csEvalData) {
+              val predictedTags =
+                if (useMemm) memm.tag(sentence.map(_._1))
+                else emHmm.tag(replaceUnks(sentence))
+              for (((word, goldLang), predictedLang) <- (sentence zipSafe predictedTags)) {
+                confusionMatrix(goldTagIndex(goldLang))(modelTagIndex(predictedLang)) += 1
+                val cleanGoldLabel = cleanLangLabel(word, goldLang)
+                if (cleanGoldLabel != "x") {  // Just evaluate when the gold annotation is a language label.
+                  if (cleanGoldLabel == cleanLangLabel(word, predictedLang)) numCorrect += 1
+              		  totalCount += 1
+                }
+              }
+              f.writeLine(sentence.zipSafe(replaceUnks(sentence)).zipSafe(predictedTags).map { case (((word, gold), modifiedWord), predicted) => f"$word|$modifiedWord|$predicted|$gold" }.mkString(" "))
             }
           }
-          f.writeLine(sentence.zipSafe(replaceUnks(sentence)).zipSafe(predictedTags).map { case (((word, gold), modifiedWord), predicted) => f"$word|$modifiedWord|$predicted|$gold" }.mkString(" "))
+          val acc = numCorrect / totalCount.toDouble
+          println(f"acc = ($numCorrect/$totalCount) = ${acc}")
+          
+          for (srow <- Vector((Vector("") ++ modelTags.drop(2))) ++ (goldTags zipSafe confusionMatrix).drop(2).map { case (g, row) => Vector(g) ++ row.drop(2).map(_.toString) }) {
+            println(srow.map(scell => f"$scell%10s").mkString(" "))
+          }
+    
+          // Find differences in HMM vs MEMM output
+          if (useMemm) {
+            for (sentence  <- csEvalData) {
+              val hmmPredictedTags = emHmm.tag(replaceUnks(sentence))
+              val memmPredictedTags = memm.tag(sentence.map(_._1))
+              val outputLineParts = Buffer[String]()
+              var containsMismatch = false
+              for (((word, goldLang), (hmmPredictedLang, memmPredictedLang)) <- (sentence zipSafe (hmmPredictedTags zipSafe memmPredictedTags))) {
+                var str = f"$word|$goldLang|$hmmPredictedLang|$memmPredictedLang"
+                if (cleanLangLabel(word, hmmPredictedLang) != cleanLangLabel(word, memmPredictedLang)) {
+                  containsMismatch = true
+                  str = f"**$str**"
+                }
+                outputLineParts += str
+              }
+              if (containsMismatch) {
+                println(outputLineParts.mkString(" "))
+              }
+            }
+          }
+          
+          (maxIter, numCorrect / totalCount.toDouble)
         }
-        }
-        val acc = numCorrect / totalCount.toDouble
-        println(f"acc = ($numCorrect/$totalCount) = ${acc}")
-        
-        for (srow <- Vector((Vector("") ++ modelTags.drop(2))) ++ (goldTags zipSafe confusionMatrix).drop(2).map { case (g, row) => Vector(g) ++ row.drop(2).map(_.toString) }) {
-          println(srow.map(scell => f"$scell%10s").mkString(" "))
-        }
-        
-        (maxIter, numCorrect / totalCount.toDouble)
-      }
 	  for ((maxIter, acc) <- results) {
 	    println(f"$maxIter%3d  ${acc*100}%.2f")
 	  }
