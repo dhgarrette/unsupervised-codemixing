@@ -44,13 +44,13 @@ class HmmTagger[Tag](
    * tags corresponding to each of those words.
    */
   override def tagAndProbWithWeightsFromTagSet(sentence: Vector[(Word, Set[Tag])], us: Vector[Map[Tag, LogDouble]]): (Vector[Tag], LogDouble) = {
-    val forwards =
+    val forwards: Vector[Map[Tag, (LogDouble, Tag)]] =
       ((sentence :+ ((tagdict.endWord, Set(tagdict.endTag)))) zipSafe (us :+ Map.empty))
         .scanLeft(Map(tagdict.startTag -> (LogDouble.one, tagdict.startTag))) {
           case (prevV, ((currWord, potentialTags), u)) =>
             //logger.debug(f"currWord = $currWord")
             //logger.debug(f"  prev viterbi = $prevV")
-            val v =
+            val v: Map[Tag, (LogDouble, Tag)] =
               potentialTags.mapTo { k =>
                 //logger.debug(f"  k=$k")
                 val scores =
@@ -88,6 +88,65 @@ class HmmTagger[Tag](
     (tags, p)
   }
 
+  /**
+   * Accepts a sentence of word tokens and returns a sequence of
+   * tag probabilities corresponding to each of those words.
+   */
+  def tagToProbDistsFromTagSet(sentence: Vector[(Word, Set[Tag])]): Vector[Map[Tag, LogDouble]] = {
+    val forwards =
+      (sentence :+ ((tagdict.endWord, Set(tagdict.endTag))))
+        .scanLeft(Map(tagdict.startTag -> LogDouble.one)) {
+          case (prevV, (currWord, potentialKs)) =>
+            val v =
+              potentialKs.mapTo { k =>
+                val scores =
+                  prevV.map {
+                    case (kprime, kprimeScore) =>
+                      // tr(k' -> k) * forward_{i-1}(k')
+                      transitions(k, kprime)  * kprimeScore
+                  }
+                emissions(currWord, k) * scores.sum
+              }.toMap
+            v
+        }
+    val Coll(_ -> pForward) = forwards.last
+    //println(f"FORWARDS: $pForward")
+    //for (forward <- forwards) {
+    //    println(forward.toVector.map { case (tag, p) => f"$tag: $p" }.mkString(" "))
+    //}
+    println(sentence.map(_._1) :+ tagdict.endWord)
+    println(Set(tagdict.startTag) +: sentence.map(_._2))
+
+    val backwards =
+      //((tagdict.startWord, Set(tagdict.startTag))) +: 
+      ((sentence.map(_._1) :+ tagdict.endWord) zipSafe (Set(tagdict.startTag) +: sentence.map(_._2)))
+        .scanRight(Map(tagdict.endTag -> LogDouble.one)) {
+          case ((nextWord: Word, potentialKs: Set[Tag]), nextV) =>
+            val v =
+              potentialKs.mapTo { k =>
+                val scores =
+                  nextV.map {
+                    case (kprime, kprimeScore) =>
+                      // tr(k -> k') * em(k' -> w_{i+1}) * backward_{i+1}(k')
+                      transitions(kprime, k) * emissions(nextWord, kprime) * kprimeScore
+                }
+                scores.sum
+              }.toMap
+            v
+        }
+    val Coll(_ -> pBackward) = backwards.head
+    //println(f"BACKWARD: $pBackward")
+    //for (backward<- backwards) {
+    //    println(backward.toVector.map { case (tag, p) => f"$tag: $p" }.mkString(" "))
+    //}
+    assert(math.abs((pForward - pBackward).toDouble) < 0.000000001)
+    (sentence zipSafe (forwards zipSafe backwards).drop(1).dropRight(1)).map {
+      case ((_, potentialKs), (currForward, currBackward)) =>
+        potentialKs.mapTo { k =>
+          currForward(k) * currBackward(k) / pForward
+        }.toMap
+    }
+  }
 }
 
 trait SupervisedHmmTaggerTrainer[Tag] extends SupervisedTaggerTrainer[Tag] {
