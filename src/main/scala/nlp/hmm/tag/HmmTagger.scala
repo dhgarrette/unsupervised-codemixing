@@ -110,15 +110,11 @@ class HmmTagger[Tag](
             v
         }
     val Coll(_ -> pForward) = forwards.last
-    //println(f"FORWARDS: $pForward")
-    //for (forward <- forwards) {
-    //    println(forward.toVector.map { case (tag, p) => f"$tag: $p" }.mkString(" "))
-    //}
-    println(sentence.map(_._1) :+ tagdict.endWord)
-    println(Set(tagdict.startTag) +: sentence.map(_._2))
-
+//    println(f"FORWARDS: $pForward")
+//    for ((word, forward) <- (tagdict.startWord +: sentence.map(_._1) :+ tagdict.endWord).zipSafe(forwards)) {
+//        println(f"$word%20s ${forward.toVector.map { case (tag, p) => f"$tag: $p" }.mkString(" ")}")
+//    }
     val backwards =
-      //((tagdict.startWord, Set(tagdict.startTag))) +: 
       ((sentence.map(_._1) :+ tagdict.endWord) zipSafe (Set(tagdict.startTag) +: sentence.map(_._2)))
         .scanRight(Map(tagdict.endTag -> LogDouble.one)) {
           case ((nextWord: Word, potentialKs: Set[Tag]), nextV) =>
@@ -135,11 +131,11 @@ class HmmTagger[Tag](
             v
         }
     val Coll(_ -> pBackward) = backwards.head
-    //println(f"BACKWARD: $pBackward")
-    //for (backward<- backwards) {
-    //    println(backward.toVector.map { case (tag, p) => f"$tag: $p" }.mkString(" "))
-    //}
-    assert(math.abs((pForward - pBackward).toDouble) < 0.000000001)
+//    println(f"BACKWARD: $pBackward")
+//    for ((word, backward) <- (tagdict.startWord +: sentence.map(_._1) :+ tagdict.endWord).zipSafe(backwards)) {
+//        println(f"$word%20s ${backward.toVector.map { case (tag, p) => f"$tag: $p" }.mkString(" ")}")
+//    }
+    assert(math.abs(pForward.toDouble - pBackward.toDouble) < 0.000000001)
     (sentence zipSafe (forwards zipSafe backwards).drop(1).dropRight(1)).map {
       case ((_, potentialKs), (currForward, currBackward)) =>
         potentialKs.mapTo { k =>
