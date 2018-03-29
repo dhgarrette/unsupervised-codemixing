@@ -1,0 +1,313 @@
+congress|hi|NOUN /|hi|. upa|hi|NOUN sarkaar|hi|NOUN ,|univ|. unnao|hi|NOUN ki|hi|ADP baat|hi|NOUN chodo|hi|VERB ,|univ|. aur|hi|CONJ chunav|hi|NOUN ke|hi|ADP bare|hi|ADP me|hi|ADP socho|hi|VERB jai|hi|VERB namo|hi|NOUN
+jivan|hi|NOUN me|hi|ADP jane|hi|VERB wale|hi|PRT ke|hi|ADP saath|hi|ADP bitaaye|hi|VERB huwe|hi|ADP pal|hi|NOUN hi|hi|PRT sath|hi|NOUN hote|hi|VERB he|hi|VERB
+koun|hi|PRON yaha|hi|ADV kise|hi|PRON dil|hi|NOUN mein|hi|ADP jagah|hi|NOUN deta|hi|VERB
+ek|hi|ADJ din|hi|NOUN sapno|hi|NOUN ka|hi|ADP rahi|hi|NOUN chala|hi|VERB jay|hi|VERB sapno|hi|NOUN se|hi|ADP aage|hi|ADP kaha|hi|PRON jindgi|hi|NOUN kaisi|hi|PRON h|hi|VERB paheli|hi|NOUN
+sirji|hi|NOUN aap|hi|PRON ki|hi|ADP saphaltaa|hi|NOUN me|hi|ADP mannaday|hi|NOUN sir|hi|PRT ka|hi|ADP bahut|hi|ADJ yogdan|hi|NOUN raha|hi|VERB hai|hi|VERB aap|hi|PRON kii|hi|ADP janjir|hi|NOUN yaari|hi|NOUN hai|hi|VERB iman|hi|NOUN mra|hi|PRON yar|hi|NOUN meri|hi|PRON jindgi|hi|NOUN ka|hi|ADP git|hi|NOUN bahut|hi|ADJ yadgar|hi|NOUN hai|hi|VERB
+modi|hi|NOUN aa|hi|VERB raha|hi|VERB hai|hi|VERB aap|hi|PRON sahyog|hi|NOUN kare|hi|VERB
+zindagi|hi|NOUN kaisi|hi|PRON hai|hi|VERB paheli|hi|NOUN kabhi|hi|ADV yeh|hi|PRON hansaye|hi|VERB kabhi|hi|ADV yeh|hi|DET rulaye|hi|VERB rip|hi|VERB
+galat|hi|NOUN ka|hi|ADP jawab|hi|NOUN saheeh|hi|NOUN se|hi|ADP
+congress|hi|NOUN ko|hi|ADP jab|hi|PRON har|hi|NOUN ka|hi|ADP khatara|hi|NOUN mandraya|hi|VERB ,|univ|. to|hi|PRT fir|hi|ADP se|hi|ADP sampradayikta|hi|NOUN ka|hi|ADP shor|hi|NOUN machaya|hi|VERB ye|hi|PRON to|hi|PRT wahi|hi|PRON bat|hi|NOUN hui|hi|VERB -|univ|. sher|hi|NOUN aaya|hi|VERB ,|univ|. sher|hi|NOUN aaya|hi|VERB
+har|hi|ADJ dil|hi|NOUN ki|hi|ADP chahta|hi|NOUN mile|hi|VERB ek|hi|NUM sacchi|hi|ADJ mohabbat|hi|NOUN
+aap|hi|PRON soche|hi|VERB desh|hi|NOUN ke|hi|ADP liye|hi|ADP kya|hi|PRON kiya|hi|VERB ?|univ|. desh|hi|NOUN sab|hi|ADJ khuch|hi|PRON deya|hi|VERB aisa|hi|PRON kam|hi|NOUN karo|hi|VERB ke|hi|CONJ dunia|hi|NOUN aap|hi|PRON ko|hi|ADP hamesh|hi|ADV yad|hi|NOUN kare|hi|VERB aap|hi|PRON ke|hi|ADP papaji|hi|NOUN ke|hi|ADP tarah|hi|PRT
+dunia|hi|NOUN se|hi|ADP jaane|hi|VERB wale|hi|PRT jane|hi|ADV chale|hi|VERB jaate|hi|VERB h|hi|VERB kanha|hi|PRON ?|univ|.
+pyar|hi|NOUN wafa|hi|NOUN kasme|hi|NOUN vaade|hi|NOUN vade|hi|NOUN h|hi|VERB vadoo|hi|NOUN ka|hi|ADP kya|hi|PRON
+manna|hi|NOUN dey|hi|NOUN madhushala|hi|NOUN manna|hi|NOUN dey|hi|NOUN
+sab|hi|PRON kaa|hi|ADP khatma|hi|NOUN nahi|hi|PRT denge|hi|VERB nahi|hi|PRT denge|hi|VERB beimano|hi|NOUN ko|hi|ADP desh|hi|NOUN nahi|hi|PRT denge|hi|VERB
+hunkar|hi|NOUN to|hi|PRT ho|hi|VERB chukaa|hi|VERB
+jinhe|hi|PRON yad|hi|NOUN kar|hi|VERB k|hi|VERB muskura|hi|VERB de|hi|VERB ankhe|hi|NOUN ,|univ|. wo|hi|DET log|hi|NOUN dur|hi|ADV hokar|hi|VERB bhi|hi|PRT dur|hi|ADV hote|hi|VERB nahi|hi|PRT
+kaha|hi|PRON pade|hi|VERB ho|hi|VERB chaker|hi|NOUN me|hi|ADP koi|hi|PRON ni|hi|PRT hi|hi|VERB takker|hi|NOUN me|hi|ADP
+ghar|hi|NOUN ke|hi|ADP sheer|hi|NOUN saut|hi|NOUN afriqa|hi|NOUN me|hi|ADP dheer|hi|VERB
+bolne|hi|VERB se|hi|ADP achcha|hi|ADJ krna|hi|VERB sikho|hi|VERB
+pm|hi|NOUN ho|hi|VERB to|hi|PRT modi|hi|NOUN g|hi|PRT
+namo|hi|NOUN ji|hi|PRT iss|hi|DET baar|hi|NOUN hum|hi|PRON sab|hi|PRON aapke|hi|PRON saath|hi|ADP h|hi|VERB jai|hi|NOUN namo|hi|NOUN
+najre|hi|NOUN dekhti|hi|VERB rhti|hi|VERB hai|hi|VERB unhe|hi|PRON
+desh|hi|NOUN ki|hi|ADP janta|hi|NOUN ab|hi|ADV jagi|hi|VERB hai|hi|VERB
+ye|hi|PRON sach|hi|NOUN kah|hi|VERB rahe|hi|VERB hai|hi|VERB
+har|hi|DET taraf|hi|NOUN ab|hi|ADV yehi|hi|PRON afsane|hi|NOUN hain|hi|VERB manna|hi|NOUN dey|hi|NOUN
+be-dard|hi|ADJ lehron|hi|NOUN ne|hi|ADP usey|hi|PRON choom|hi|VERB choom|hi|VERB kar|hi|VERB mita|hi|VERB diya|hi|VERB
+dil|hi|NOUN ka|hi|ADP haal|hi|NOUN sune|hi|VERB dil|hi|NOUN wala|hi|PRT ,|univ|.
+poocho|hi|VERB na|hi|PRT kesay|hi|PRON may|hi|PRON ne|hi|ADP rain|hi|NOUN bitayee|hi|VERB
+khuda|hi|NOUN na|hi|PRT de|hi|VERB kisi|hi|PRON ko|hi|ADP raho|hi|VERB me|hi|ADP ,|univ|.
+tera|hi|PRON baap|hi|NOUN ka|hi|ADP kya|hi|PRON jata|hi|VERB hai|hi|VERB pakistani|hi|ADJ mulle|hi|NOUN
+jaise|hi|PRON mera|hi|NOUN kaa|hi|ADP bhagwan|hi|NOUN sri|hi|PRT krishan|hi|NOUN se|hi|ADP prem|hi|NOUN jo|hi|CONJ raag|hi|NOUN rahit|hi|ADP chinmyah|hi|ADJ prem|hi|NOUN ki|hi|ADP anubhuti|hi|NOUN h|hi|VERB ,|univ|.
+tuk|hi|NOUN tuk|hi|NOUN zindabad|hi|NOUN
+jo|hi|PRON khata|hi|NOUN maine|hi|PRON nahi|hi|PRT ki|hi|VERB uspe|hi|PRON pachtana|hi|VERB pada|hi|VERB ,|univ|.
+kuch|hi|DET bat|hi|NOUN hai|hi|VERB rahulji|hi|NOUN aap|hi|PRON me|hi|ADP
+garjanaaa|hi|NOUN ab|hi|ADV teh|hi|VERB hai|hi|VERB pappu|hi|NOUN ka|hi|ADP marnaaasaa|hi|X
+har|hi|ADJ dil|hi|NOUN ki|hi|ADP chaht|hi|NOUN mile|hi|VERB ek|hi|NUM sacchi|hi|ADJ mohabbat|hi|NOUN beshaq|hi|ADP logo|hi|NOUN ki|hi|ADP najro|hi|NOUN main|hi|ADJ humara|hi|PRON
+rahul|hi|NOUN tu|hi|PRON sirf|hi|PRT bhashan|hi|NOUN dey|hi|VERB ,,|univ|.
+ishwar|hi|NOUN unki|hi|PRON atma|hi|NOUN ko|hi|ADP shanti|hi|NOUN de|hi|VERB aamin|hi|PRT
+seemat|hi|ADJ si|hi|ADP jindgi|hi|NOUN hai|hi|VERB insan|hi|NOUN ki|hi|ADP
+kabhi|hi|PRON waqt|hi|NOUN ki|hi|ADP khamoshi|hi|NOUN me|hi|ADP
+beta|hi|NOUN -|univ|. kha|hi|VERB na|hi|PRT bus|hi|PRT u|hi|PRT hi|hi|PRT dil|hi|NOUN bhar|hi|VERB aya|hi|VERB
+laut|hi|VERB ke|hi|ADP aaja|hi|VERB mai|hi|PRON mit|hi|VERB chuki|hi|VERB
+mat|hi|PRT dekh|hi|VERB uss|hi|PRON azar|hi|NOUN ki|hi|ADP taraf|hi|NOUN jo|hi|PRON tumhe|hi|PRON dekhne|hi|VERB se|hi|ADP inkar|hi|NOUN kartik|hi|NOUN ho|hi|VERB
+shahjade|hi|NOUN modi|hi|NOUN se|hi|ADP mt|hi|PRT takrana|hi|VERB
+sab|hi|PRON ke|hi|ADP najro|hi|NOUN mein|hi|ADP girtey|hi|VERB q|hi|PRON hai|hi|VERB
+modi|hi|NOUN ne|hi|ADP aa|hi|VERB khar|hi|VERB matti|hi|NOUN pit|hi|VERB rakhi|hi|VERB hai|hi|VERB
+ab|hi|ADV ni|hi|PRT aa|hi|VERB skti|hi|VERB congress|hi|NOUN
+zindagi|hi|NOUN kaisi|hi|PRON he|hi|VERB paheli|hi|NOUN hi|hi|PRT ,|univ|. kabhi|hi|PRON yeh|hi|PRON hansaye|hi|VERB kabhi|hi|PRON yeh|hi|PRON rulaye|hi|VERB
+kya|hi|PRON baat|hi|NOUN kya|hi|PRON baat|hi|NOUN kya|hi|PRON baat|hi|NOUN
+jitna|hi|PRON jyada|hi|ADJ kichad|hi|NOUN uchhlega|hi|VERB ,|univ|. kamal|hi|NOUN utna|hi|PRON hi|hi|PRT khilega|hi|VERB /\|univ|X
+dil|hi|NOUN k|hi|ADP dariya|hi|NOUN me|hi|ADP mohabbt|hi|NOUN ki|hi|ADP kashti|hi|NOUN hai|hi|VERB ,|univ|.
+bahut|hi|ADV dukh|hi|NOUN ki|hi|ADP baat|hi|NOUN hai|hi|VERB
+kyo|hi|PRON tumne|hi|PRON hamko|hi|PRON dil|hi|NOUN me|hi|ADP basaya|hi|VERB tha|hi|VERB
+dosti|hi|NOUN ka|hi|ADP rishta|hi|NOUN bada|hi|ADJ paak|hi|NOUN hota|hi|VERB hai|hi|VERB
+modi|hi|NOUN ji|hi|PRT ko|hi|ADP namo|hi|NOUN namo|hi|NOUN
+dhwani|hi|NOUN jeevit|hi|ADJ rahti|hi|VERB hai|hi|VERB
+ek|hi|NUM haseen|hi|ADJ ladki|hi|NOUN raja|hi|NOUN ke|hi|ADP darbar|hi|NOUN
+yun|hi|PRT to|hi|PRT neend|hi|NOUN nahi|hi|PRT aati|hi|VERB hamein|hi|PRON raat|hi|NOUN bhar|hi|ADJ ,|univ|.
+hello|hi|PRT sir|hi|NOUN aap|hi|PRON great|hi|ADJ hai|hi|VERB
+ek|hi|NUM din|hi|NOUN mit|hi|VERB jayega|hi|VERB matti|hi|NOUN k|hi|ADP mol|hi|NOUN jg|hi|NOUN me|hi|ADP rh|hi|VERB jayege|hi|VERB pyare|hi|NOUN tere|hi|PRON bol|hi|NOUN
+mai|hi|ADP aap|hi|PRON se|hi|ADP baate|hi|NOUN kroongi|hi|VERB roj|hi|ADV
+n|en|CONJ wadra|en|NOUN nai|hi|PRT janta|hi|NOUN ki|hi|ADP main|hi|ADP kaun|hi|PRON hoon|hi|VERB ....|univ|. i|en|PRON guess|en|VERB koi|hi|PRON nai|hi|PRT janta|hi|VERB ...|univ|. he|en|X he|en|X .|univ|. :p|en|X
+Puchiyo|hi|NOUN ka|hi|ADP langar|hi|NOUN laga|hi|VERB hai|hi|VERB bhai|hi|NOUN log|hi|NOUN ..|univ|. brush|en|NOUN kr|hi|VERB k|hi|ADP ready|en|ADJ rho|hi|VERB ..|univ|. shayad|hi|ADV kuch|hi|ADJ mil|hi|VERB jaaye|hi|VERB :)|univ|X
+sirf|hi|ADJ SALWAAR|univ|NOUN ????|univ|. Abe|hi|NOUN aese|hi|PRON to|hi|PRT hr|hi|ADJ ldki|hi|NOUN achi|hi|ADJ lgegi|hi|VERB ...|univ|. :p|en|X or|en|CONJ sweating|en|NOUN b|hi|PRT hogi|hi|VERB he|hi|PRT ...|univ|. :D|en|X
+are|hi|NOUN results|en|NOUN ko|hi|ADP chod|hi|VERB ...|univ|. admsn|en|NOUN to|hi|CONJ hua|hi|VERB nhi|hi|PRT abhi|hi|ADV tak|hi|ADP ...|univ|. cut|en|VERB off|en|PRT batani|hi|VERB h|hi|VERB to|hi|CONJ bta|hi|VERB de|hi|VERB
+jo|hi|PRON karna|hi|NOUN jaldi|hi|NOUN karna|hi|NOUN varna|hi|PRT koi|hi|PRON or|en|ADP uda|hi|VERB k|hi|ADP le|hi|VERB jayega|hi|VERB tumhari|hi|PRON dream|en|ADJ girl|en|NOUN ko|hi|ADP .|univ|. Gud|en|ADJ luck|en|NOUN .|univ|.
+dil|hi|NOUN chota|hi|ADJ mat|hi|PRT kar|hi|VERB yaar|hi|NOUN .|univ|. Degree|en|NOUN ki|hi|ADP value|en|NOUN hoti|hi|VERB hai|hi|VERB .|univ|. iski|hi|PRON value|en|NOUN nahi|hi|PRT hoti|hi|VERB ki|hi|ADP kaha|hi|PRON se|hi|ADP li|hi|VERB hai|hi|VERB .|univ|. no|en|DET degree|en|NOUN contains|en|VERB the|en|DET college's|en|NOUN name|en|NOUN .|univ|. bas|hi|VERB university|en|NOUN ka|hi|ADP naam|hi|NOUN hota|hi|VERB hai|hi|VERB .|univ|. And|en|CONJ at|en|ADP the|en|DET end|en|NOUN teri|hi|PRON knowledge|en|NOUN hi|hi|PRT tujhe|hi|PRON aage|hi|NOUN leke|hi|VERB jayegi|hi|VERB ..|univ|. So|en|ADV smile|en|NOUN :)|univ|X
+Love|en|NOUN Your|en|DET nation/pray|en|NOUN for|en|ADP the|en|DET people|en|NOUN in|en|ADP danger/help|en|NOUN them|en|PRON atleast|en|NOUN 4|en|NUM some|en|DET days|en|NOUN .|univ|. Ladki|hi|NOUN se|hi|ADP pyar|hi|NOUN karne|hi|NOUN ko|hi|ADP Zindagi|hi|NOUN padi|hi|VERB hai|hi|VERB Bhai|hi|NOUN .|univ|. Desh|hi|NOUN se|hi|ADP bhi|hi|PRT kuch|hi|ADJ pyar|hi|NOUN kar|hi|VERB lo|hi|VERB ...|univ|.
+Ur|en|PRON so|en|ADV cld|en|VERB boyfrnd|en|NOUN timepas|en|NOUN wid|en|ADP u|en|PRON ...|univ|. jb|hi|ADV use|hi|PRON apna|hi|PRON dil|hi|NOUN bhlana|hi|NOUN hota|hi|VERB h|hi|VERB wo|hi|PRON tmhre|hi|PRON pas|hi|NOUN ajata|hi|VERB ...|univ|. laat|hi|ADJ maro|hi|VERB ase|hi|PRON bf|en|NOUN ko|hi|ADP ...|univ|. dis|en|PRON is|en|VERB nt|en|PRT love|en|NOUN ...|univ|. tmhe|hi|PRON khud|hi|VERB smjh|hi|VERB ni|hi|PRT aya|hi|VERB ye|hi|PRON sb|hi|ADJ dkh|hi|VERB kr|hi|ADP phn|en|NOUN kre|hi|VERB mt|hi|PRT uthao|hi|VERB text|en|NOUN kre|hi|VERB mt|hi|PRT reply|en|VERB do|hi|VERB ...|univ|. huhh|en|NOUN ...|univ|.
+Confessor|en|NOUN tum|hi|PRON sangharsh|hi|NOUN karo|hi|VERB ...|univ|. mai|hi|PRON to|hi|PRT engineering|en|NOUN kar|hi|VERB hi|hi|PRT raha|hi|VERB hun|hi|VERB !!|univ|.
+Tu|hi|PRON to|hi|PRT nsui|en|NOUN ka|hi|ADP hi|hi|PRT pilura|hi|NOUN se|hi|ADP ,|univ|. yo|hi|PRON te|hi|PRON manne|hi|NOUN bera|hi|VERB tha|hi|VERB
+tere|hi|PRON ma|hi|NOUN baap|hi|NOUN ko|hi|ADP us|hi|PRON raat|hi|NOUN so|hi|NOUN jana|hi|VERB chahiye|hi|VERB tha|hi|VERB ....|univ|. 3|en|NUM :)|univ|X
+ji|hi|NOUN internet|en|NOUN ke|hi|ADP paise|hi|NOUN na|hi|PRT kate|hi|ADJ kuch|hi|ADJ aisa|hi|ADV karwa|hi|VERB do|hi|VERB :-)|univ|X :-)|univ|X :-)|univ|X
+bdw|en|X 3rd|en|NUM yr|hi|NOUN m|hi|ADP h|hi|VERB to|hi|PRT trix|en|NOUN ka|hi|ADP xam|en|NOUN kaisa|hi|PRON gaya|hi|VERB ....|univ|. :p|en|X
+Normal|en|NOUN sa|hi|ADP question|en|NOUN tha|hi|VERB ?|univ|. Bus|hi|NOUN aise|hi|ADV hi|hi|ADP attention|en|NOUN dedo|hi|VERB kuch|hi|ADJ b|hi|PRT :|univ|.
+movie|en|NOUN me|hi|ADP banaunga|hi|VERB is|hi|PRON story|en|NOUN pr|hi|ADP ..|univ|. koi|hi|PRON invstor|en|NOUN hai|hi|VERB toh|hi|PRT bolo|hi|VERB ???|univ|.
+is|hi|ADP bachi|hi|NOUN ko|hi|ADP btao|hi|VERB sex|en|NOUN is|en|VERB part|en|NOUN of|en|ADP lif|en|NOUN or|hi|CONJ d.u|en|NOUN m|hi|ADP admisn|en|NOUN mt|hi|PRT lia|hi|VERB kisi|hi|PRON or|en|ADP univrsty|en|NOUN m|hi|ADP jaio|hi|VERB tb|hi|PRON waha|hi|ADV b|hi|PRT yahi|hi|PRON milega|hi|VERB sex|en|NOUN to|hi|PRT kutta|hi|NOUN b|hi|PRT krta|hi|VERB h|hi|VERB vo|hi|PRON to|hi|PRT d.u|en|NOUN ka|hi|ADP studnt|en|NOUN nh|hi|PRT raha|hi|VERB hoga|hi|VERB
+tum|hi|PRON log|hi|NOUN aur|hi|CONJ nakhre|hi|ADJ dikhao|hi|VERB !!|univ|. sab|hi|ADJ log|hi|NOUN convert|en|VERB ho|hi|VERB jayenge|hi|VERB !|univ|. :/|univ|X
+bdhya|hi|ADJ kia|hi|VERB ,|univ|. n|en|CONJ i|en|PRON thnk|en|VERB us|hi|PRON ladki|hi|NOUN ne|hi|ADP 2hr|en|NUM .|univ|. Chudaai|hi|NOUN krva|hi|VERB ke|hi|ADP bill|en|NOUN pe|en|X kia|hi|VERB hoga|hi|VERB .|univ|. Bechari|hi|ADJ ki|hi|ADP choot|univ|. to|hi|PRT fat|hi|NOUN gayi|hi|VERB .|univ|.
+Bhai|hi|NOUN lagta|hi|VERB hai|hi|VERB teri|hi|PRON grammer|en|NOUN correct|en|ADJ karke|hi|VERB sadai|univ|. hai|hi|VERB bohot|hi|ADJ kisi|hi|PRON ne|hi|ADP :D|en|X
+jo|hi|PRON tmh|hi|PRON sahi|hi|ADJ lge|hi|VERB vhi|hi|PRON kro|hi|VERB ....|univ|. .|univ|. dnt|en|VERB cre|en|VERB abt|en|ADP othrz|en|NOUN ..|univ|.
+MODI|en|NOUN .|univ|. a|en|DET dangerous|en|ADJ dimak|hi|NOUN jo|hi|PRON india|en|NOUN ko|hi|ADP khokla|hi|VERB kr|hi|VERB dEga|hi|VERB ..|univ|. :-P|en|X
+Aby|hi|ADJ ye|hi|PRON mms|en|NOUN kon|hi|PRON si|hi|ADP site|en|NOUN pe|en|ADP hai|hi|VERB ,,,,,|univ|. link|en|NOUN dena|hi|VERB koi|hi|PRON ....|univ|.
+un|hi|PRON sabko|hi|PRON maine|hi|PRON or|hi|PRT meri|hi|PRON CID|en|NOUN team|en|NOUN ne|hi|ADP hi|hi|PRT ander|hi|NOUN dala|hi|VERB ha|hi|VERB :)|univ|X
+its|en|PRON Miranda|en|NOUN in|en|ADP evry|en|DET cnfssin|en|NOUN ....|univ|. bribe|en|VERB kia|hi|VERB hai|hi|VERB kya|hi|PRON admin|en|NOUN ko|hi|ADP !|univ|.
+cry|en|NOUN cry|en|VERB itna|hi|NUM cry|en|VERB krtae|hi|VERB ho|hi|VERB kaiko|hi|PRON ...|univ|. har|hi|ADJ pal|hi|NOUN rtae|hi|VERB kaaiko|hi|NOUN !!!|univ|.
+Efforts|en|NOUN mat|hi|PRT laga|hi|VERB ,|univ|. tera|hi|PRON kabhi|hi|PRON koi|hi|PRON boyfrnd|en|NOUN ni|hi|PRT ban|hi|VERB sakta|hi|VERB ......|univ|. :/|univ|X
+tu|hi|PRON sol|en|NOUN ka|hi|ADP aur|hi|CONJ teri|hi|PRON gf|en|NOUN srcc|en|NOUN ki|hi|ADP ...|univ|. bingo|en|ADJ combination|en|NOUN ...|univ|. :p|en|X
+Ohoh|en|X lecture|en|NOUN acha|hi|ADJ h|hi|VERB ..|univ|. ;)|univ|X jis|hi|PRON din|hi|NOUN apni|hi|PRON sis|en|NOUN ko|hi|ADP fredom|en|NOUN doge|hi|VERB us|hi|PRON din|hi|NOUN tmhe|hi|PRON bh|hi|PRT koi|hi|PRON mil|hi|VERB jayegi|hi|VERB ..|univ|. mr.|en|NOUN Lecturer|en|NOUN ...|univ|. Huhu|en|X :/|univ|X
+na|hi|PRT na|hi|PRT ...|univ|. tum|hi|PRON bahut|hi|ADJ chu|univ|. ..|univ|. panti|hi|NOUN ki|hi|ADP harkat|hi|NOUN kiye|hi|VERB :P|en|X :D|en|X
+M|hi|PRON too|hi|PRT narela|en|NOUN m|hi|ADP rahta|hi|VERB hu|hi|VERB .......|univ|. or|hi|CONJ app|hi|PRON ?|univ|. ritu|en|NOUN ji|hi|NOUN ....|univ|.
+hgya|hi|VERB kabada|hi|NOUN ..|univ|. sis|en|NOUN bro|en|NOUN ke|hi|ADP relation|en|NOUN ko|hi|ADP to|hi|PRT baksh|hi|NOUN dete|hi|VERB yaar|hi|NOUN .....|univ|. chal|hi|VERB chodo|hi|VERB tmhare|hi|PRON galti|hi|NOUN ni|hi|PRT hai|hi|VERB .....|univ|. harmonal|en|ADJ disorder|en|NOUN hai|hi|VERB dono|hi|NUM me|hi|ADP :p|en|X
+Jnu|en|NOUN thaa|hi|VERB in|en|ADP raanjhana|en|NOUN not|en|PRT bhu|en|NOUN ...|univ|. Aayien|hi|X he|hi|PRT kuch|hi|ADJ bhi|hi|PRT mtlb|hi|NOUN ...|univ|.
+aise|hi|ADV haar|hi|NOUN maanke|hi|NOUN kuch|hi|PRON ni|hi|PRT hga|hi|VERB ..|univ|. ya|hi|CONJ toh|hi|PRT usi|hi|PRON se|hi|ADP baat|hi|NOUN kro|hi|VERB about|en|ADP ur|en|DET problem|en|NOUN .|univ|. ..|univ|. ya|hi|CONJ fir|hi|ADV khud|hi|VERB koshish|hi|VERB kro|hi|VERB ..|univ|. khud|hi|VERB English|en|NOUN me|en|ADP baat|hi|NOUN krne|hi|NOUN lgoge|hi|VERB toh|hi|PRT dheere|hi|ADV dheere|hi|ADV your|en|DET confidence|en|NOUN will|en|VERB build|en|VERB u|en|PRON :)|univ|X
+worlds|en|NOUN longest|en|ADJ confssn|en|NOUN ....|univ|. GUINNEAS|en|NOUN buk|en|NOUN m|hi|ADP bhijwa|hi|VERB do|hi|VERB is|hi|PRON cnfssion|en|NOUN ko|hi|ADP ...|univ|.
+yr|hi|NOUN tere|hi|PRON liy|hi|VERB ek|hi|NUM hjar|hi|NUM clapping|en|NOUN b|hi|PRT kru|hi|VERB na|hi|PRT to|hi|PRT km|hi|ADJ h|hi|VERB m|hi|ADP isi|hi|PRON situation|en|NOUN ko|hi|ADP face|en|NOUN kr|hi|VERB rh|hi|VERB hu|hi|VERB tune|hi|PRON ose|hi|PRON word|en|NOUN de|hi|VERB diy|hi|VERB osm|en|ADJ
+pay|en|NOUN karna|hi|NOUN thk|hi|ADJ h|hi|VERB agar|hi|CONJ 1st|en|ADJ date|en|NOUN pe|en|ADP wasool|hi|NOUN b|hi|PRT karlo|hi|VERB to|hi|PRT :P|en|X
+India|en|NOUN has|en|VERB never|en|ADV defeated|en|VERB Pakistan|en|NOUN in|en|ADP Champions|en|NOUN Trophy|en|NOUN .|univ|. hope|en|NOUN aj|hi|ADV krde|hi|VERB _/\\_|univ|X
+ladkiyo|hi|NOUN ko|hi|ADP non|en|ADJ virgin|en|NOUN hona|hi|NOUN chahiye|hi|VERB ...|univ|. virgin|en|NOUN to|hi|PRT mobile|en|NOUN bhi|hi|PRT hota|hi|VERB hain|hi|VERB
+Are|hi|NOUN admin|en|NOUN tu|hi|PRON inna|hi|ADJ samajhdar|hi|ADJ h|hi|VERB confessor|en|NOUN ko|hi|ADP samjhajaya|hi|VERB ni|hi|PRT tune|hi|PRON ki|hi|ADP agar|hi|CONJ teri|hi|PRON gf|en|NOUN ne|hi|ADP ye|hi|PRON pdh|hi|VERB lia|hi|VERB to|hi|PRT tu|hi|PRON agla|hi|NOUN confession|en|NOUN rote|hi|NOUN rote|hi|NOUN likhega|hi|VERB
+Mechanical|en|ADJ me|hi|PRON to|hi|PRT fir|hi|ADV bhi|hi|PRT chance|en|NOUN h|hi|VERB or|hi|CONJ engineers|en|NOUN ka|hi|ADP kya|hi|PRON hoga|hi|VERB ......|univ|.
+True|en|ADJ Story|en|NOUN and|en|CONJ ab|hi|PRON normalization|en|NOUN ne|hi|ADP engineering|en|NOUN colleges|en|NOUN ki|hi|ADP b|hi|PRT maar|hi|VERB li|hi|VERB :(|univ|X
+#DUMEM|en|X 03|en|NUM .|univ|. .|univ|. \|univ|. "|univ|. Last|en|ADJ year|en|NOUN january|en|NOUN m|hi|ADP coleg|en|NOUN jate|hi|VERB time|en|NOUN maine|hi|PRON LSR|en|NOUN ki|hi|ADP ek|hi|NUM ldki|hi|NOUN ko|hi|ADP bus|en|NOUN stand|en|NOUN par|hi|ADP dekha|hi|VERB tha|hi|VERB ,|univ|. dekhte|hi|VERB hi|hi|PRT ghantiya|hi|NOUN bjne|hi|NOUN lgi|hi|VERB dil|hi|NOUN m|hi|ADP .|univ|. Vo|hi|PRON meri|hi|PRON bus|hi|NOUN m|hi|ADP hi|hi|PRT chadi|hi|VERB aur|hi|CONJ mere|hi|PRON paas|hi|NOUN ake|hi|VERB khadi|hi|VERB ho|hi|VERB gai|hi|VERB ,|univ|. aisa|hi|ADV bhot|hi|ADJ bar|hi|NOUN hua|hi|VERB par|hi|CONJ m|hi|PRON kbi|hi|PRON usse|hi|PRON bat|hi|NOUN nahi|hi|PRT kr|hi|VERB paya|hi|VERB .|univ|. Session|en|NOUN end|en|VERB hua|hi|VERB aur|hi|CONJ start|en|NOUN hua|hi|VERB 3-4|en|NUM ho|hi|VERB gye|hi|VERB the|hi|VERB session|en|NOUN start|en|VERB hue|hi|VERB .|univ|. M|hi|PRON apne|hi|PRON ek|hi|NUM frnd|en|NOUN k|hi|ADP sath|hi|ADP cntn|en|NOUN k|hi|ADP bahr|hi|NOUN baith|hi|VERB k|hi|ADP usi|hi|PRON bndi|hi|ADJ k|hi|ADP bare|hi|PRT m|hi|ADP bat|hi|NOUN kr|hi|VERB rha|hi|VERB tha|hi|VERB k|hi|ADP m|hi|PRON dekhta|hi|VERB hu|hi|VERB vo|hi|PRON bndi|hi|ADJ mere|hi|PRON coleg|en|NOUN k|hi|ADP ek|hi|NUM ldke|hi|NOUN k|hi|PRT sath|hi|ADP bilkul|hi|ADV chipak|hi|NOUN k|hi|ADP ,|univ|. bahon|hi|NOUN m|hi|ADP bahe|hi|NOUN dalke|hi|VERB cntn|en|NOUN se|hi|ADP bahar|hi|NOUN aa|hi|VERB rhi|hi|VERB h|hi|VERB .|univ|. Bc|en|NOUN mere|hi|PRON dil|hi|NOUN k|hi|ADP tukde|hi|NOUN nahi|hi|PRT powder|en|NOUN bn|hi|VERB gya|hi|VERB tha|hi|VERB us|hi|PRON time|en|NOUN .|univ|. .|univ|. Dbc\|en|X "|univ|.
+logon|hi|NOUN ko|hi|ADP RIP|en|VERB english|en|NOUN likhne|hi|NOUN ki|hi|ADP itni|hi|ADJ aag|hi|ADJ kya|hi|PRON hti|hi|VERB hai|hi|VERB ...|univ|. :/|univ|X :/|univ|X ek|hi|ADJ word|en|NOUN mistyp|en|NOUN b|hi|PRT hgya|hi|VERB to|hi|PRT rip|en|NOUN english|en|NOUN as|en|ADP if|en|ADP khud|hi|VERB to|hi|PRT shakspere|en|NOUN ki|hi|ADP aulaad|hi|NOUN hn|hi|VERB ...|univ|. huhhh|en|X ...!!!|univ|.
+Ek|hi|ADJ suggestion|en|NOUN or|hi|CONJ lele|hi|VERB :|univ|. deo|en|NOUN lgake|hi|VERB jaaiyo|hi|VERB .|univ|. .|univ|. bhar|hi|NOUN garmi|hi|NOUN bht|hi|ADJ h|hi|VERB !!|univ|. :-P|en|X #OldMonk|en|X :|univ|. admin|en|NOUN summers|en|NOUN mei|hi|ADP bullet|en|NOUN proof|en|NOUN jacket|en|NOUN tu|hi|PRON pehan|hi|VERB k|hi|ADP jata|hi|VERB h|hi|VERB kya|hi|PRON date|en|NOUN pe|hi|ADP :-D|en|X
+i|en|PRON thnk|en|VERB u|en|PRON shud|en|VERB nt|en|PRT thnk|en|VERB much|en|ADJ abt|en|ADP abt|en|ADP x|en|X .|univ|. .|univ|. n|en|CONJ vo|hi|PRON iss|hi|PRON layak|hi|ADJ bhi|hi|PRT nhi|hi|PRT h|hi|VERB ki|hi|ADP tum|hi|PRON usse|hi|PRON luv|en|VERB kro|hi|VERB .|univ|. .|univ|. jb|hi|ADV vo|hi|PRON tumhari|hi|PRON respct|en|NOUN hi|hi|PRT nhi|hi|PRT krta|hi|VERB tw|hi|PRT kya|hi|PRON khaak|hi|ADJ luv|en|NOUN krega|hi|VERB .|univ|. .|univ|. n|en|CONJ jesa|hi|ADV tumne|hi|PRON kha|hi|VERB ki|hi|ADP vo|hi|PRON kisi|hi|PRON aur|hi|CONJ k|hi|ADP sath|hi|ADP h|hi|VERB tw|hi|PRT fir|hi|ADV vo|hi|PRON avei|hi|ADV hoga|hi|VERB .|univ|. .|univ|. tympas|en|NOUN sbke|hi|PRON sath|hi|ADP so|en|ADV u|en|PRON also|en|ADV ,|univ|. jst|en|ADJ move|en|VERB on|en|ADP bhul|hi|VERB jao|hi|VERB us|hi|PRON stupid|en|ADJ ko|hi|ADP
+Condom|en|NOUN ke|hi|ADP add|en|NOUN par|hi|ADP agar|hi|CONJ tere|hi|PRON ghar|hi|NOUN walo|hi|PRT ne|hi|ADP channel|en|NOUN change|en|VERB na|hi|PRT kiya|hi|VERB hota|hi|VERB to|hi|PRT tu|hi|PRON bach|hi|NOUN skta|hi|VERB tha|hi|VERB :-P|en|X
+Koi|hi|PRON baat|hi|NOUN nhi|hi|PRT yaar|hi|NOUN vaise|hi|PRON bhi|hi|PRT parents|en|NOUN k|hi|ADP pause|hi|NOUN jaane|hi|NOUN hi|hi|ADP the|hi|VERB ab|hi|PRON tuition|en|NOUN nhi|hi|PRT tof|hi|PRT shoppng|en|NOUN shi|hi|VERB .....|univ|. :-)|univ|X
+Bc|en|NOUN main|hi|PRON 20|en|NUM saal|hi|NOUN ka|hi|ADP ho|hi|VERB gya|hi|VERB ek|hi|ADJ bi|hi|PRT gf|en|NOUN nai|hi|PRT aur|hi|CONJ tne|hi|PRON 4th|en|NUM me|hi|ADP hi|hi|PRT bna|hi|VERB li|hi|VERB kamine|hi|ADJ .|univ|.
+Bhai|hi|NOUN aisi|hi|PRON English|en|NOUN mein|hi|ADP toh|hi|PRT tera|hi|PRON baap|hi|NOUN bhi|hi|PRT NDA|en|NOUN mein|hi|ADP select|en|NOUN naa|hi|PRT ho|hi|VERB sake|hi|VERB ..!!|univ|. Get|en|VERB a|en|DET life|en|NOUN man|en|NOUN :-/|univ|X
+I|en|PRON am|en|VERB a|en|DET super|en|ADJ duper|en|ADJ idiot|en|NOUN ..|univ|. bs|hi|NOUN yehi|hi|PRON dkhke|hi|VERB samajh|hi|VERB gaya|hi|VERB ki|hi|ADP kuch|hi|ADJ bakwas|hi|NOUN hi|hi|PRT likha|hi|VERB hoga|hi|VERB tmne|hi|PRON :p|en|X
+ladki|hi|NOUN ki|hi|ADP baat|hi|NOUN chood|hi|VERB yaar|hi|NOUN aur|hi|CONJ ye|hi|PRON bata|hi|VERB yaar|hi|NOUN woh|hi|PRON jo|hi|PRON 3rd|en|ADJ question|en|NOUN tha|hi|VERB ..|univ|. uska|hi|PRON ans|en|NOUN kya|hi|PRON tha|hi|VERB ..|univ|.
+bob|en|NOUN marley|en|NOUN bhi|hi|PRT confessions|en|NOUN snd|en|NOUN krne|hi|NOUN lg|hi|VERB gya|hi|VERB is|hi|PRON page|en|NOUN pe|en|ADP kya|hi|PRON bt|hi|NOUN hai|hi|VERB page|en|NOUN trakki|hi|NOUN pe|hi|PRT hai|hi|VERB 3|en|NUM :)|univ|X
+uncle|en|NOUN dur|hi|ADJ hi|hi|PRT rhana|hi|VERB ....|univ|. vrna|hi|CONJ me|hi|PRON apne|hi|PRON pas|hi|ADP pistol|en|NOUN rkhta|hi|VERB hu|hi|VERB ....|univ|. sari|hi|ADJ goliya|hi|NOUN g#|en|X #d|en|X me|hi|ADP utar|hi|VERB dunga|hi|VERB
+seriously|en|ADV yr|hi|NOUN divya|en|NOUN m|en|PRON proud|en|ADJ of|en|PRT u|en|PRON har|hi|PRON ladki|hi|NOUN teri|hi|PRON jaisi|hi|ADV ho|hi|VERB jaye|hi|VERB toh|hi|PRT koi|hi|PRON kuvh|hi|PRON bol|hi|VERB he|hi|PRT nhi|hi|PRT skta|hi|VERB
+So|en|ADV foreign|en|ADJ logo|hi|NOUN ki|hi|ADP tarah|hi|PRT rule|en|NOUN kaun|hi|PRON follow|en|NOUN krta|hi|VERB h|hi|VERB yaha|hi|PRON ?.|univ|. .|univ|. Sala|hi|ADJ red|en|ADJ light|en|NOUN par|hi|ADP 2|en|NUM min|en|NOUN ruk|hi|VERB to|hi|PRT skta|hi|VERB h|hi|VERB nahi|hi|PRT koi|hi|PRON .|univ|. .|univ|. Jaha|hi|ADV dekho|hi|VERB rule|en|NOUN todte|hi|NOUN h|hi|VERB .|univ|. .|univ|. Kutto|hi|NOUN ne|hi|ADP dailogue|en|NOUN b|hi|PRT bna|hi|NOUN dia|hi|VERB k|hi|ADP rule|en|NOUN to|hi|PRT todne|hi|NOUN k|hi|ADP liye|hi|ADP hote|hi|VERB h|hi|VERB .|univ|. .|univ|. rules|en|NOUN hamare|hi|PRON benifit|en|NOUN k|hi|ADP liye|hi|ADP hi|hi|PRT hote|hi|VERB h|hi|VERB .|univ|. .|univ|. Kbi|hi|PRON suna|hi|VERB h|hi|VERB k|hi|ADP ek|hi|ADJ bike|en|NOUN wala|hi|PRT red|en|ADJ light|en|NOUN par|hi|ADP ruka|hi|VERB aur|hi|CONJ truck|en|NOUN se|hi|ADP kuchla|hi|VERB gya|hi|VERB ?.|univ|. .|univ|. Nahi|hi|PRT na|hi|PRT truck|en|NOUN se|hi|ADP vahi|hi|PRON mrta|hi|NOUN h|hi|VERB jo|hi|PRON signal|en|NOUN cross|en|VERB krta|hi|VERB h|hi|VERB .|univ|. .|univ|. Problem|en|NOUN hmare|hi|PRON rules|en|NOUN todne|hi|NOUN se|hi|ADP hi|hi|PRT shuru|hi|ADJ hoti|hi|VERB h|hi|VERB
+yr|hi|NOUN tabhi|hi|ADV mene|hi|PRON jamia|en|NOUN miliya|en|NOUN m|hi|ADP adm|en|NOUN .|univ|. Nhi|hi|PRT lia|hi|VERB even|en|ADV mera|hi|PRON entrace|en|NOUN v|hi|PRT clear|en|ADJ ho|hi|VERB gya|hi|VERB tha|hi|VERB bt|en|CONJ jo|hi|PRON v|hi|PRT ho|hi|VERB du|en|NOUN iz|en|VERB best|en|ADJ ..|univ|. :)|univ|X
+mostly|en|ADV gls|en|NOUN k|hi|ADP parents|en|NOUN aise|hi|PRON hi|hi|PRT hote|hi|VERB h|hi|VERB ...|univ|. or|hi|CONJ ye|hi|PRON tumhe|hi|PRON pehli|hi|ADJ br|hi|PRT pta|hi|VERB chla|hi|VERB h|hi|VERB kya|hi|PRON jb|hi|PRON itna|hi|PRON feel|en|NOUN hota|hi|VERB h|hi|VERB to|hi|PRT log|hi|NOUN bf|en|NOUN q|hi|PRON bnate|hi|VERB h|hi|VERB itne|hi|ADJ sare|hi|ADJ ....|univ|. nautanki|hi|NOUN ....|univ|.
+oye|hi|NOUN tnsn|en|NOUN na|hi|PRT le|hi|VERB yar|hi|NOUN m|hi|PRON b|hi|PRT mbbs|en|NOUN wala|hi|PRT hu|hi|VERB ....|univ|. .|univ|. back|en|NOUN lagna|hi|NOUN koi|hi|PRON galat|hi|ADJ baat|hi|NOUN ni|hi|PRT hai|hi|VERB mujhe|hi|PRON b|hi|PRT aayi|hi|VERB thi|hi|VERB ..|univ|. mbbs|en|NOUN me|hi|ADP aa|hi|VERB ?|univ|. baat|hi|NOUN hai|hi|VERB ye|hi|PRON so|en|ADV get|en|VERB over|en|ADP it|en|PRON n|en|CONJ tell|en|VERB to|en|PRT ur|en|DET dad|en|NOUN ....|univ|. isse|hi|PRON pahle|hi|NOUN unko|hi|PRON khud|hi|VERB pta|hi|NOUN chal|hi|VERB jaye|hi|VERB
+kal|hi|NOUN gandhi|hi|NOUN maidan|hi|NOUN me|hi|ADP blast|en|NOUN hote|hi|VERB rha|hi|VERB or|hi|CONJ log|hi|NOUN modi|hi|NOUN ji|hi|PRT ka|hi|ADP bhasad|hi|NOUN sunte|hi|VERB rhe|hi|VERB u|en|PRON r|en|VERB great|en|ADJ sir|en|NOUN namo|hi|NOUN india|hi|NOUN
+5|en|NUM ho|hi|VERB chuki|hi|VERB h|hi|VERB mrne|hi|VERB walon|hi|PRT ki|hi|ADP sankhya|hi|NOUN
+sir|hi|NOUN jivan|hi|NOUN he|hi|VERB to|hi|PRT kucha|hi|PRON naya|hi|ADJ hojay|en|VERB
+hi|en|PRT gud|en|ADJ afternoon|en|NOUN sir|en|NOUN aap|hi|PRON jaisa|hi|PRON koi|hi|PRON nhi|hi|PRT
+manmohan|hi|NOUN ki|hi|ADP is|hi|ADP naponsak|hi|ADJ sarkar|hi|NOUN ka|hi|ADP time|en|NOUN kaya|hi|VERB
+make|en|VERB modi|en|NOUN india|en|NOUN pm|en|NOUN jai|hi|NOUN hind|hi|NOUN
+muslim|hi|NOUN sudar|hi|VERB jao|hi|VERB abhi|hi|PRT time|en|NOUN
+bhag|hi|VERB bhag|hi|VERB re|hi|PRT bhag|hi|VERB upa|en|NOUN narendra|hi|NOUN modi|hi|NOUN ji|hi|PRT aye|hi|VERB
+sabse|hi|ADJ ache|hi|ADJ wale|hi|PRT look|en|NOUN ki|hi|ADP toh|hi|PRT photo|en|NOUN dali|hi|VERB hi|hi|PRT nahi|hi|PRT yar|hi|NOUN
+ddlj|en|NOUN still|en|ADV josh|hi|NOUN i|en|PRON loved|en|VERB it|en|PRON
+right|en|ADV now|en|ADV watching|en|VERB silsila|hi|NOUN on|en|ADP max|en|NOUN you|en|PRON looks|en|VERB best|en|ADJ in|en|ADP this|en|DET movie|en|NOUN
+beware|en|PRT dangerous|en|ADJ pappu|hi|NOUN police|en|NOUN is|en|VERB watching|en|VERB your|en|PRON comments|en|NOUN in|en|ADP case|en|NOUN we|en|PRON see|en|VERB you|en|PRON commenting|en|VERB against|en|PRT congress|en|NOUN or|en|CONJ rahul|en|NOUN sir|en|NOUN pappu|hi|NOUN jail|en|NOUN is|en|VERB waiting|en|VERB for|en|ADP you|en|PRON
+shame|en|NOUN pappu|hi|NOUN ,|univ|. shame|en|NOUN congress|en|NOUN
+ya|en|PRT u|en|CONJ r|en|VERB ryt|en|ADJ sir|en|NOUN ji|hi|PRT
+2014|en|NUM me|hi|ADP to|hi|PRT bjp|hi|NOUN hi|hi|PRT ayegi|hi|VERB
+dilli|hi|NOUN me|hi|ADP samman|hi|NOUN milta|hi|VERB hai|hi|VERB aur|hi|CONJ husband|en|NOUN mar|hi|VERB gaya|hi|VERB to|hi|PRT sati|hi|NOUN ka|hi|ADP samman|hi|NOUN milta|hi|VERB hai|hi|VERB
+the|en|DET real|en|ADJ badshah|hi|NOUN khan|en|NOUN of|en|ADP bollywood|en|NOUN
+svi|hi|ADJ purane|hi|ADJ artists|en|NOUN ka|hi|ADP intkal|hi|NOUN a|hi|VERB rha|hi|VERB h|hi|VERB
+haa|hi|PRT haa|hi|PRT haa|hi|PRT arre|hi|PRT nalayak|hi|ADJ mad|en|ADJ mohan|hi|NOUN ye|hi|PRON tujhse|hi|PRON to|hi|PRT kya|hi|PRON kisi|hi|PRON se|hi|ADP nahi|hi|PRT hoga|hi|VERB ,|univ|. modi|hi|NOUN aayenge|hi|VERB tab|hi|PRON dekh|hi|VERB lenge|hi|VERB
+nitish|hi|NOUN keep|hi|X failure|en|NOUN ko|hi|ADP darashata|hi|VERB hain|hi|VERB ki|hi|CONJ apani|hi|PRON janata|hi|NOUN ki|hi|ADP surksha|hi|NOUN nahi|hi|PRT karl|hi|VERB sakate|hi|VERB
+narender|hi|NOUN modi|hi|NOUN lao|hi|VERB rahul|hi|NOUN ghandi|hi|NOUN ko|hi|ADP bhagao|hi|VERB manmohan|hi|NOUN to|hi|PRT ek|hi|NUM robet|en|NOUN h|hi|VERB ,|univ|. modi|hi|NOUN ji|hi|PRT ham|hi|PRON sab|hi|ADJ ko|hi|ADP aapse|hi|PRON bahur|hi|ADJ umeed|hi|NOUN h|hi|VERB ,|univ|.
+congratulation|en|NOUN sir|en|NOUN for|en|ADP third|en|ADJ mangeshkar|hi|NOUN award|en|NOUN
+sonia|hi|NOUN ney|hi|ADP cbi|en|NOUN ki|hi|ADP janch|hi|NOUN ki|hi|ADP mang|hi|NOUN ki|hi|VERB hai|hi|VERB
+whatever|en|PRON shahzaada|hi|NOUN said|en|VERB during|en|ADP his|en|PRON rally|en|NOUN in|en|ADP rajasthan|en|NOUN was|en|VERB not|en|PRT understood|en|VERB even|en|PRT by|en|ADP the|en|DET congress|en|NOUN members|en|NOUN themselves|en|PRON
+amit|en|NOUN ji|hi|PRT good|en|ADJ morning|en|NOUN ,|univ|. u|en|PRON r|en|VERB gr8|en|ADJ that|en|PRON is|en|VERB why|en|PRON ur|en|PRON are|en|VERB the|en|DET boss|en|NOUN of|en|ADP film|en|NOUN industry|en|NOUN some|en|ADJ times|en|NOUN write|en|VERB about|en|ADP babuji|hi|NOUN
+commonwealth|en|NOUN gotala|hi|NOUN kiya|hi|VERB he|hi|VERB na|hi|PRT bada|hi|ADJ kam|hi|NOUN
+koi|hi|PRON ni|hi|PRT agla|hi|ADJ match|en|NOUN jeet|hi|VERB jayege|hi|VERB
+sorry|en|PRT bat|hi|NOUN samaj|hi|VERB nahi|hi|PRT aae|hi|VERB
+congressiyon|hi|NOUN kursi|hi|NOUN chorho|en|VERB
+maa|hi|NOUN -|univ|. beta|en|NOUN tum|hi|PRON kyu|hi|PRON ro|hi|VERB rhe|hi|VERB ho|hi|VERB ?|univ|.
+vishwanath|hi|NOUN k|hi|ADP saamne|en|ADV se|hi|ADP aake|hi|VERB dekao|hi|VERB
+are|hi|PRT bhai|hi|NOUN 1947|en|NUM se|hi|ADP desh|hi|NOUN ko|hi|ADP lut|hi|VERB rahe|hi|VERB ho|hi|VERB ab|hi|ADV to|hi|PRT chod|en|VERB do|hi|VERB
+ham|hi|PRON patakhon|en|NOUN se|hi|ADP nahi|hi|PRT darte|hi|VERB hain|hi|VERB
+hahaha|hi|PRT maro|hi|VERB gol|en|NOUN
+rahulbaba|en|NOUN say|en|VERB to|en|ADP n|en|NOUN ,|univ|. m|en|NOUN do|en|VERB not|en|PRT call|en|VERB me|en|PRON shehjada|hi|NOUN but|en|CONJ call|en|VERB me|en|PRON patvikuvar|en|NOUN
+sabka|hi|PRON malik|hi|NOUN ek|hi|NUM only|en|ADJ modi|hi|NOUN ji|hi|PRT
+i|en|PRON was|en|VERB ur|en|PRON fan|en|NOUN modi|en|NOUN ji|hi|PRT
+modi|hi|NOUN ji|hi|PRT ka|hi|ADP copy|en|NOUN paste|en|NOUN kar|hi|VERB liya|hi|VERB yahan|hi|ADV
+rahul|en|NOUN gandhi|en|NOUN at|en|ADP kerala|en|NOUN yaathra|hi|NOUN
+china|hi|NOUN kuch|hi|ADJ salo|hi|NOUN me|hi|PRON amerika|en|NOUN ko|hi|ADP bhi|hi|PRT pichhe|hi|NOUN
+amar|hi|NOUN chand|hi|NOUN ko|hi|ADP kya|hi|PRON maloom|hi|VERB ,|univ|. chahta|hi|VERB he|hi|VERB use|hi|PRON koi|hi|PRON chkore|hi|NOUN ,|univ|. wo|hi|PRON to|hi|PRT bechara|hi|ADJ door|hi|ADV se|hi|ADP dekhe|hi|VERB kre|hi|VERB me|hi|PRON hu|hi|VERB fan|en|NOUN me|hi|PRON hu|hi|VERB fan|en|NOUN ka|hi|ADP sore|hi|NOUN
+shahrukh|en|NOUN khan|en|NOUN -|univ|. baap|hi|NOUN of|en|ADP bollywood|en|NOUN
+amitab|hi|NOUN h|hi|VERB to|hi|PRT boliwod|en|NOUN h|hi|VERB bad|hi|ADP me|hi|ADP sab|hi|PRON khtam|hi|NOUN
+6th|en|ADJ blast|en|NOUN bhid|hi|NOUN kam|hi|ADJ karne|hi|VERB ka|hi|ADP irada|hi|NOUN h|hi|VERB bt|en|CONJ aur|hi|ADJ bhid|hi|NOUN hoge|hi|VERB
+isme|hi|DET 100|en|NUM congress|hi|NOUN ka|hi|ADP haath|hi|NOUN to|hi|PRT h|hi|VERB ,|univ|. aur|hi|CONJ police|en|NOUN aur|hi|CONJ kise|hi|DET party|en|NOUN ka|hi|ADP haath|hi|NOUN jaroor|hi|ADV h|hi|VERB ,|univ|.
+muslims|en|NOUN naver|en|PRT hate|en|VERB narendr|en|NOUN modi|en|NOUN ji|hi|PRT
+yes|en|PRT ,|univ|. but|en|CONJ all|en|ADJ the|en|DET madarsha|hi|NOUN must|en|PRT be|en|VERB shut|en|VERB to|en|ADP stop|en|VERB jehad|hi|NOUN training|en|NOUN
+yaar|hi|NOUN gf|en|NOUN kisi|hi|PRON k|hi|ADP liye|hi|ADP kisi|hi|PRON ko|hi|ADP v|hi|PRT chod|hi|VERB sakti|hi|VERB hai|hi|VERB
+modi|hi|NOUN ka|hi|ADP jadu|hi|NOUN ish|hi|DET tarh|hi|NOUN ka|hi|ADP hai|hi|VERB ki|hi|CONJ log|hi|NOUN film|en|NOUN star|en|NOUN aur|hi|CONJ cricket|en|NOUN playar|en|NOUN se|hi|ADP jyada|hi|ADJ log|hi|NOUN modi|hi|NOUN ji|hi|PRT ko|hi|ADP sunne|hi|VERB aate|hi|VERB hai|hi|VERB
+kyaa|hi|PRON comment|en|NOUN karen|hi|VERB big|en|ADJ bee|en|NOUN ke|hi|ADP liye|hi|ADP mein|hi|PRON unke|hi|PRON samaksh|hi|ADP baunaa|hi|NOUN mahsoos|hi|NOUN kartaa|hi|VERB hoon|hi|VERB
+those|en|PRON who|en|PRON support|en|VERB the|en|DET opposition|en|NOUN kabhi|hi|ADV muzaffarnagar|hi|NOUN akar|hi|VERB dekho|hi|VERB ki|hi|CONJ jab|hi|CONJ chote|en|ADJ chote|en|ADJ bacho|hi|NOUN ko|hi|ADP talwaro|hi|NOUN se|hi|ADP kat|hi|VERB diya|hi|VERB jaata|hi|VERB hai|hi|VERB to|hi|CONJ woh|hi|PRON nazara|hi|NOUN kaisa|hi|PRON hota|hi|VERB hai|hi|PRT
+rajniti|hi|NOUN ho|hi|VERB rhi|hi|VERB h|hi|VERB yeh|hi|DET sb|hi|PRON n|hi|PRT yeh|hi|DET ministr|en|NOUN ne|hi|ADP krvaya|hi|VERB hoga|hi|VERB rali|en|NOUN rokne|hi|VERB ke|hi|ADP liye|hi|ADP
+vote|en|NOUN ke|hi|ADP liye|hi|ADP ye|hi|DET kahan|hi|ADV tk|hi|ADP ja|hi|VERB sakta|hi|VERB hai|hi|VERB ye|hi|DET modi|hi|NOUN ganda|hi|ADJ insann|hi|NOUN
+chief|en|ADJ minister|en|NOUN who|en|PRON the|en|DET shahzada|hi|NOUN does|en|VERB not|en|PRT
+jay|hi|NOUN ho|hi|VERB bharat|hi|NOUN mata|hi|NOUN ki|hi|ADP and|en|CONJ bjp|hi|NOUN
+sir|en|NOUN aap|hi|PRON ne|hi|ADP hindi|hi|NOUN me|hi|ADP likha|hi|VERB hume|hi|PRON bahut|hi|ADJ khushi|hi|NOUN hua|hi|VERB
+isi|hi|PRON liye|hi|ADP india|en|NOUN me|hi|ADP sabse|hi|ADV jada|hi|ADJ hindo|hi|NOUN larkiyon|hi|NOUN ka|hi|ADP balatkar|hi|NOUN hota|hi|VERB hai|hi|VERB aur|hi|CONJ balatkar|hi|NOUN karne|hi|VERB wale|hi|PRT sabse|hi|ADV jada|hi|ADJ hindo|hi|NOUN hain|hi|VERB
+sir|en|NOUN sab|hi|PRON ko|hi|ADP ek|hi|ADJ din|hi|NOUN jaana|hi|VERB hai|hi|VERB aapko|hi|PRON humko|hi|ADP sabhi|hi|PRON ko|hi|ADP
+we|en|PRON are|en|VERB all|en|ADV about|en|ADP everything|en|PRON stupid|en|ADJ going|en|VERB on|en|PRT in|en|ADP our|en|PRON country|en|NOUN from|en|ADP politics|en|NOUN to|en|ADP economy|en|NOUN which|en|PRON forces|en|VERB us|en|PRON to|en|PRT say|en|VERB our|en|PRON unofficial|en|ADJ national|en|ADJ word|en|NOUN ghanttaaa|hi|NOUN
+sahi|hi|ADJ kaha|hi|VERB ahmed|hi|NOUN bhai|hi|NOUN rahul|hi|NOUN hi|hi|PRT agla|hi|ADJ pm|en|NOUN hi|hi|VERB
+congress|hi|NOUN mukt|hi|ADJ bharat|hi|NOUN banao|hi|VERB sir|en|NOUN
+payag|hi|NOUN ka|hi|ADP rate|en|NOUN badana|hi|VERB congress|hi|NOUN ke|hi|ADP chal|hi|NOUN hai|hi|VERB ,|univ|. taki|hi|CONJ kud|hi|PRON pyag|hi|NOUN kam|hi|ADJ dam|hi|NOUN me|hi|ADP bech|hi|VERB kar|hi|VERB janta|hi|NOUN ka|hi|ADP sahanuvuti|hi|NOUN le|hi|VERB sake|hi|VERB
+nitish|hi|NOUN mullaaa|hi|NOUN tu|hi|PRON bom|en|NOUN sai|hi|NOUN ab|hi|ADV hinduo|hi|NOUN ko|hi|ADP nhi|hi|PRT rok|hi|VERB skta|hi|VERB
+sorry|en|ADJ to|en|PRT say|en|VERB that|en|PRON but|en|CONJ srk|en|NOUN looks|en|VERB old|en|ADJ it|en|PRON seems|en|VERB that|en|CONJ anushka|en|NOUN is|en|VERB enjoing|en|VERB a|en|DET ride|en|NOUN with|en|ADP his|en|PRON chacha|hi|NOUN
+bhaiyo|hi|NOUN plz|en|PRT visit|en|VERB dis|en|DET luckys|en|NOUN profyl|en|NOUN
+aisa|hi|PRON profyl|en|NOUN sirf|hi|ADJ ek|hi|NUM congress|hi|NOUN wale|hi|ADP ka|hi|ADP hi|hi|ADP ho|hi|VERB sakta|hi|VERB hai|hi|VERB profyl|en|NOUN dekho|hi|VERB baki|hi|ADP sab|hi|PRON samaj|hi|VERB jaoge|hi|VERB
+right|en|ADJ sir|en|NOUN ek|hi|NUM din|hi|NOUN har|hi|ADJ kisi|hi|PRON ko|hi|ADP chale|hi|VERB jana|hi|VERB hai|hi|VERB
+last|en|ADJ 5|en|NUM years|en|NOUN everytime|en|ADV connected|en|VERB with|en|ADP our|en|PRON constituency|en|NOUN attend|en|VERB every|en|ADJ marriege|en|NOUN antim|hi|ADJ ardas|en|X and|en|CONJ all|en|ADJ caltural|en|ADJ programmes|en|NOUN also|en|PRT have|en|VERB done|en|VERB many|en|ADJ works|en|NOUN of|en|ADP our|en|PRON area|en|NOUN
+zindagi|hi|NOUN kaisi|hi|PRON hey|hi|VERB paheli|hi|NOUN very|en|ADV sad|en|ADJ
+aap|hi|PRON hi|hi|ADP pm|en|NOUN bnoge|hi|VERB rahul|hi|NOUN sir|en|NOUN baaki|hi|ADJ sb|hi|ADJ to|hi|PRT bs|hi|PRT bhokte|hi|VERB hai|hi|VERB
+app|hi|PRON thik|hi|ADJ keh|hi|VERB rahe|hi|VERB sir|en|NOUN
+but|en|CONJ mp|hi|NOUN me|hi|ADP higher|en|ADJ education|en|NOUN ke|hi|ADP liye|hi|ADP aap|hi|PRON ke|hi|ADP pas|hi|ADP kya|hi|PRON pllaning|en|NOUN hai|hi|VERB
+articipation|en|NOUN certificates|en|NOUN de|hi|VERB do|hi|VERB tum|hi|PRON dono|hi|PRON wrna|hi|CONJ bachhe|hi|NOUN tumhara|hi|PRON mazak|hi|NOUN bna|hi|VERB denge|hi|VERB
+amithab|hi|NOUN g|hi|PRT parnam|hi|NOUN mein|hi|PRON mumbay|hi|NOUN aakar|hi|VERB ek|hi|ADJ bar|hi|NOUN aapse|hi|PRON milkar|hi|VERB kuch|hi|ADP batana|hi|VERB chahata|hi|VERB hun|hi|VERB pls|en|PRT mera|hi|PRON help|en|NOUN kare|hi|VERB
+true|en|ADJ man|en|NOUN modi|en|NOUN jai|hi|NOUN hind|hi|NOUN
+rip|en|X mannadey|en|NOUN ji|hi|PRT ,|univ|. prayers|en|NOUN
+congres|hi|NOUN ne|hi|ADP sabhi|hi|ADJ ejinciyo|en|NOUN ko|hi|ADP bapu|hi|NOUN ji|hi|PRT ke|hi|ADP piche|hi|ADV lagaya|hi|VERB hai|hi|VERB to|hi|PRT desh|hi|NOUN ki|hi|ADP khabar|hi|NOUN kaun|hi|PRON dega|hi|VERB
+good|en|ADJ saudi|hi|ADJ women|en|NOUN men|en|NOUN driving|en|NOUN kar|hi|VERB saktaa|hi|VERB hai|hi|VERB to|hi|CONJ women|en|NOUN kiu|hi|PRON nahi|hi|PRT ?|univ|.
+islam|hi|NOUN main|hi|ADP lady|en|NOUN ke|hi|ADP ijjat|hi|NOUN
+toh|hi|PRT main|hi|ADJ kismat|hi|NOUN ki|hi|ADP line|en|NOUN me|hi|ADP khada|hi|VERB kismat|hi|NOUN le|hi|VERB raha|hi|VERB tha|hi|VERB
+congress|hi|NOUN ke|hi|ADP zol|hi|NOUN bas|hi|PRT ek|hi|NUM namo|hi|NOUN ka|hi|ADP gol|en|NOUN
+modi|en|NOUN g|hi|PRT is|en|VERB a|en|DET perfect|en|ADJ person|en|NOUN for|en|ADP pm|en|NOUN india|en|NOUN
+ab|hi|ADV tum|hi|PRON hi|hi|PRT ho|hi|VERB ab|hi|ADV tum|hi|PRON hi|hi|PRT ho|hi|VERB best|en|ADJ pm|en|NOUN
+jo|hi|PRON bi|hi|PRT hai|hi|VERB us|hi|PRON ky|hi|ADP bina|hi|ADP trolling|en|VERB ka|hi|ADP maza|hi|NOUN nhi|hi|PRT aata|hi|VERB
+leader|en|NOUN to|hi|PRT congress|hi|NOUN main|hi|ADP bhi|hi|PRT aaye|hi|VERB par|hi|CONJ unko|hi|PRON is|hi|DET pariwar|hi|NOUN ne|hi|ADP theekane|hi|NOUN laga|hi|VERB diya|hi|VERB
+ae|hi|PRT mere|hi|PRON pyare|hi|ADJ watan|hi|NOUN and|en|CONJ ae|hi|PRT meri|hi|PRON johrajabi|hi|NOUN songs|en|NOUN are|en|VERB my|en|PRON favourite|en|ADJ and|en|CONJ we|en|PRON missing|en|VERB very|en|ADJ much|en|ADJ manna|en|NOUN de|hi|NOUN
+sir|en|NOUN ,|univ|. u|en|PRON r|en|VERB the|en|DET true|en|ADJ koohinoor|hi|NOUN of|en|ADP india|en|NOUN
+khalil|en|NOUN bhai|hi|NOUN u|en|PRON r|en|VERB the|en|DET example|en|NOUN of|en|ADP decent|en|ADJ human|en|NOUN being|en|NOUN
+mulk|hi|NOUN kharab|hi|ADJ nahi|hi|PRT hota|hi|VERB waha|hi|PRON k|hi|ADP log|hi|NOUN use|hi|PRON kharab|hi|ADJ bana|hi|VERB dete|hi|VERB he|hi|VERB gande|hi|ADJ comment|en|NOUN karke|hi|VERB
+today|en|NOUN is|en|VERB very|en|ADV sad|en|ADJ day|en|NOUN in|en|ADP sangit|hi|NOUN life|en|NOUN
+dhoni|hi|NOUN nay|hi|ADP apeal|en|NOUN kar|hi|VERB di|hi|VERB last|hi|ADJ odi|en|NOUN india|hi|NOUN shift|en|NOUN kar|hi|VERB dain|hi|VERB
+jaye|hi|VERB or|hi|CONJ lakho|hi|ADJ logo|hi|NOUN ki|hi|ADP jaan|hi|NOUN jaye|hi|VERB or|hi|CONJ rally|en|NOUN
+tum|hi|PRON jeo|hi|VERB hazaro|hi|ADJ sal|hi|NOUN sir|en|NOUN ji|hi|PRT
+ye|hi|DET lokh|hi|NOUN ko|hi|ADP kya|hi|PRON ,|univ|. culture|en|NOUN nehi|hi|PRT ?|univ|. nikhil|hi|NOUN ko|hi|ADP kya|hi|PRON ma|hi|NOUN behan|hi|NOUN nehi|hi|PRT ?|univ|.
+tigar|en|NOUN ko|hi|ADP dekh|hi|VERB kar|hi|VERB too|hi|PRT tigar|en|NOUN banne|hi|VERB ki|hi|ADP koshish|hi|NOUN kro|hi|VERB jai|hi|NOUN hind|hi|NOUN only|en|ADJ modi|hi|NOUN
+pappu|hi|NOUN you|en|PRON are|en|VERB the|en|DET greatest|en|ADJ dunghead|en|NOUN
+takkar|hi|NOUN de|hi|VERB rahe|hi|VERB he|hi|VERB with|en|ADP comedy|en|NOUN
+befitting|en|ADJ reply|en|NOUN to|hi|PRT mere|hi|PRON papa|en|NOUN ko|hi|ADP mara|hi|VERB ,|univ|. meri|hi|PRON dadi|hi|NOUN ko|hi|ADP mara|hi|VERB ,|univ|. mujhey|hi|PRON palak|hi|NOUN acha|hi|ADV nahi|hi|PRT lagta|hi|VERB ,|univ|. mujhey|hi|PRON padai|hi|NOUN acha|hi|ADV nahi|hi|PRT lagti|hi|VERB
+pethetic|en|ADJ fool|en|NOUN get|en|VERB out|en|PRT of|en|ADP my|en|PRON country|en|NOUN
+y|en|PRON ppl|en|NOUN show|en|VERB this|en|DET sell|en|NOUN every|en|ADJ page|en|NOUN here|en|ADV also|en|PRT
+health|en|ADJ tips|en|NOUN by|en|ADP dr|en|PRT monikaa|en|NOUN
+don't|en|VERB give|en|VERB wrong|en|ADJ commitment|en|NOUN pls|en|PRT
+u|en|PRON have|en|VERB also|en|PRT started|en|VERB doing|en|VERB same|en|DET vote|en|NOUN bank|en|NOUN politics|en|NOUN
+the|en|DET immortal|en|ADJ voice|en|NOUN shall|en|VERB live|en|VERB on|en|PRT rip|en|X legend|en|NOUN
+end|en|ADJ of|en|ADP an|en|DET era|en|NOUN but|en|CONJ legends|en|NOUN never|en|ADV die|en|VERB
+srk|en|NOUN is|en|VERB in|en|ADP the|en|DET no|en|NOUN 1|en|NUM celebrity|en|NOUN from|en|ADP 4|en|NUM aug|en|NOUN 2010|en|NUM last|en|ADJ week|en|NOUN he|en|PRON was|en|VERB in|en|ADP no|en|NOUN 2|en|NUM position|en|NOUN see|en|VERB more|en|ADV
+i|en|PRON am|en|VERB with|en|ADP you|en|PRON to|en|PRT kill|en|VERB congress|en|NOUN
+hurry|en|VERB up|en|PRT friend|en|NOUN and|en|CONJ tell|en|VERB ur|en|PRON
+you|en|PRON are|en|VERB the|en|DET true|en|ADJ leader|en|NOUN sir|en|NOUN yes|en|PRT we|en|PRON want|en|VERB to|en|PRT fight|en|VERB poverty|en|NOUN and|en|CONJ not|en|PRT any|en|ADJ religion|en|NOUN
+justt|en|ADV sign|en|VERB up|en|VERB here|en|PRON and|en|CONJ get|en|VERB that|en|DET recharge|en|NOUN within|en|ADP 24|en|NUM hrs|en|NOUN
+i|en|PRON am|en|VERB a|en|DET great|en|ADJ fan|en|NOUN but|en|CONJ would|en|VERB like|en|VERB to|en|PRT know|en|VERB how|en|PRON much|en|ADV of|en|ADP your|en|PRON wealth|en|NOUN you|en|PRON give|en|VERB to|en|ADP the|en|DET poor|en|ADJ and|en|CONJ sick|en|ADJ
+create|en|VERB it|en|PRON ,|univ|. you|en|PRON are|en|VERB in|en|ADP govt|en|NOUN ,|univ|. who|en|PRON is|en|VERB aksing|en|VERB you|en|PRON not|en|PRT to|en|PRT do|en|VERB ?|univ|. why|en|PRON the|en|DET hello|en|NOUN you|en|PRON are|en|VERB talking|en|VERB like|en|CONJ opposition|en|NOUN dude|en|NOUN ?|univ|.
+truely|en|ADV heart|en|NOUN touch|en|VERB song|en|NOUN
+if|en|CONJ you|en|PRON are|en|VERB really|en|ADV honest|en|ADJ and|en|CONJ really|en|ADV want|en|VERB to|en|PRT do|en|VERB good|en|ADJ ,|univ|. you|en|PRON should|en|ADP begin|en|VERB by|en|ADP returning|en|VERB all|en|ADJ the|en|DET wealth|en|NOUN stolen|en|VERB through|en|ADP robert|en|NOUN vadra|en|NOUN and|en|CONJ hoarded|en|VERB in|en|ADP swiss|en|ADJ banks|en|NOUN
+just|en|ADV ask|en|VERB each|en|DET voter|en|NOUN they|en|PRON want|en|VERB looter|en|NOUN ??|univ|. or|en|CONJ nation|en|NOUN builder|en|NOUN congress|en|NOUN acts|en|VERB like|en|CONJ obama|en|NOUN act|en|VERB as|en|ADP the|en|DET savior|en|NOUN of|en|ADP humanity|en|NOUN and|en|CONJ annihilate|en|VERB the|en|DET muslims|en|NOUN to|en|PRT grab|en|VERB thier|en|PRON oil|en|NOUN fields|en|NOUN
+salman|en|NOUN khan|en|NOUN rockx|en|VERB plz|en|PRT like|en|VERB my|en|PRON page|en|NOUN plzzz|en|PRT
+other|en|ADJ parties|en|NOUN r|en|VERB afraid|en|NOUN of|en|ADP namo|en|NOUN
+do|en|VERB not|en|PRT talk|en|VERB politics|en|NOUN here|en|ADV ,|univ|. when|en|ADV one|en|PRON points|en|VERB finger|en|NOUN at|en|ADP another|en|PRON ,|univ|. three|en|NUM point|en|VERB at|en|ADP you|en|PRON
+modi|en|NOUN is|en|VERB comming|en|VERB ---|univ|. rahl|en|NOUN
+reply|en|VERB to|en|PRT mr|en|PRT gandhi|en|NOUN for|en|ADP his|en|PRON day|en|NOUN before|en|ADP yesterday|en|ADV s|en|ADP speech|en|NOUN
+it|en|PRON s|en|VERB very|en|ADV sad|en|ADJ may|en|VERB god|en|NOUN bless|en|VERB his|en|PRON soul|en|NOUN
+one|en|NUM of|en|ADP my|en|PRON favourite|en|ADJ singer|en|NOUN
+u|en|PRON r|en|VERB best|en|ADJ
+well|en|ADV strike|en|VERB
+a|en|DET solutn|en|NOUN also|en|PRT of|en|ADP that|en|DET problm|en|NOUN
+modi|en|NOUN kick|en|VERB in|en|PRT banana|en|NOUN shoot|en|NOUN
+the|en|DET end|en|NOUN of|en|ADP a|en|DET legend|en|NOUN
+mmrys|en|NOUN lst|en|VERB ever|en|ADV
+rahul|en|NOUN my|en|PRON grand|en|ADJ father|en|NOUN and|en|CONJ grand|en|ADJ mother|en|NOUN ,|univ|. father|en|NOUN were|en|VERB prime|en|ADJ ministers|en|NOUN
+oh|en|PRT that|en|PRON is|en|VERB bad|en|ADJ ,|univ|. it|en|PRON feels|en|VERB one|en|NUM generation|en|NOUN is|en|VERB gone|en|VERB ,|univ|. may|en|VERB god|en|NOUN rest|en|VERB his|en|PRON soul|en|NOUN in|en|ADP peace|en|NOUN
+no|en|PRT one|en|PRON is|en|VERB coming|en|VERB up|en|PRT with|en|ADP the|en|DET talent|en|NOUN to|en|PRT fill|en|VERB the|en|DET void|en|NOUN left|en|VERB by|en|ADP these|en|DET legends|en|NOUN
+great|en|ADJ loss|en|NOUN may|en|VERB he|en|PRON rip|en|X
+totally|en|ADV agree|en|VERB with|en|ADP you|en|PRON ,|univ|. light|en|NOUN brings|en|VERB a|en|DET positive|en|ADJ energy|en|NOUN within|en|ADP
+i|en|PRON love|en|NOUN to|en|ADP breathe|en|VERB in|en|ADP the|en|DET morning|en|NOUN sunlight|en|NOUN it|en|PRON feels|en|VERB so|en|ADV full|en|ADJ of|en|ADP positivity|en|NOUN
+i|en|PRON am|en|VERB your|en|PRON big|en|ADJ fan|en|NOUN ,|univ|. name|en|NOUN raju|en|NOUN from|en|ADP uk|en|NOUN add|en|VERB me|en|PRON thanks|en|NOUN
+cant|en|VERB belive|en|VERB he|en|PRON is|en|VERB no|en|PRT more|en|ADJ so|en|ADV sad|en|ADJ to|en|PRT miss|en|VERB him|en|PRON
+only|en|ADV one|en|NUM and|en|CONJ one|en|ADJ name|en|NOUN mr|en|PRT rahul|en|NOUN gandhi|en|NOUN is|en|VERB the|en|DET next|en|ADJ prime|en|NOUN minister|en|NOUN
+manna|en|NOUN dey|en|NOUN was|en|VERB a|en|DET very|en|ADJ good|en|ADJ singer|en|NOUN
+u|en|PRON r|en|VERB the|en|DET voice|en|NOUN choice|en|NOUN of|en|ADP india|en|NOUN
+go|en|VERB ahead|en|ADV and|en|CONJ move|en|VERB to|en|ADP 7|en|NUM rcr|en|NOUN soon|en|ADV
+god|en|NOUN bless|en|VERB u|en|PRON
+2|en|NUM -|univ|. why|en|PRON is|en|VERB the|en|DET book|en|NOUN
+after|en|ADP papa|en|NOUN ,|univ|. mummy|en|NOUN ,|univ|. stories|en|NOUN now|en|ADV these|en|DET jokes|en|NOUN ?|univ|.
+will|en|VERB you|en|PRON ever|en|ADV even|en|PRT talk|en|VERB wise|en|ADJ ?|univ|.
+you|en|PRON stupids|en|NOUN have|en|VERB ruined|en|VERB india|en|NOUN ,|univ|.
+shame|en|NOUN on|en|ADP you|en|PRON fake|en|ADJ gandhies|en|NOUN
+this|en|DET is|en|VERB the|en|DET best|en|ADJ proof|en|NOUN to|en|ADP understand|en|VERB modi|en|NOUN ,|univ|.
+u|en|PRON r|en|VERB always|en|ADV right|en|ADJ sir|en|NOUN
+heads|en|NOUN of|en|ADP 2|en|ADP u|en|PRON
+we|en|PRON indulge|en|VERB in|en|ADP scams|en|NOUN so|en|CONJ that|en|CONJ we|en|PRON have|en|VERB perpetual|en|ADJ supply|en|NOUN of|en|ADP money|en|NOUN to|en|PRT keep|en|VERB fooling|en|VERB t|en|PRT see|en|VERB more|en|ADJ
+a|en|DET positive|en|ADJ change|en|NOUN
+dont|en|VERB use|en|VERB abusive|en|ADJ language|en|NOUN we|en|PRON are|en|VERB muslims|en|NOUN
+he|en|PRON was|en|VERB my|en|PRON favorite|en|ADJ singer|en|NOUN
+rip|en|X his|en|PRON soul|en|NOUN a|en|DET jewel|en|NOUN on|en|ADP music|en|NOUN s|en|ADP crown|en|NOUN
+if|en|CONJ this|en|PRON is|en|VERB what|en|PRON nitish|en|NOUN and|en|CONJ congi|en|NOUN security|en|NOUN means|en|VERB why|en|PRON not|en|PRT they|en|PRON make|en|VERB way|en|NOUN for|en|ADP modiji|en|NOUN
+sunlight|en|NOUN is|en|ADP a|en|DET gud|en|ADJ source|en|NOUN of|en|ADP vitamin-d|en|NOUN
+wht|en|PRON is|en|ADP ur|en|PRON corrupt|en|ADJ govt|en|NOUN doing|en|VERB you|en|PRON cant|en|VERB even|en|PRT speak|en|VERB the|en|DET country|en|NOUN s|en|ADP heart|en|NOUN without|en|ADP having|en|VERB the|en|DET paper|en|NOUN before|en|ADP you|en|PRON
+rajasthan|en|NOUN is|en|VERB seeking|en|VERB an|en|DET election|en|NOUN ticket|en|NOUN ,|univ|. he|en|PRON
+it|en|PRON shows|en|VERB hands|en|NOUN in|en|ADP the|en|DET gloves|en|NOUN of|en|ADP government|en|NOUN
+rahul|en|NOUN u|en|PRON will|en|VERB be|en|VERB the|en|DET pm|en|NOUN of|en|ADP 2014|en|NUM
+kedi|en|NOUN s|en|ADP cant|en|VERB ruled|en|VERB this|en|DET country|en|NOUN
+its|en|PRON rly|en|ADV very|en|ADV sad|en|ADJ day|en|NOUN for|en|ADP us|en|PRON ,|univ|.
+kick|en|VERB on|en|ADP the|en|DET butt|en|NOUN first|en|ADJ and|en|CONJ start|en|VERB the|en|DET game|en|NOUN
+list|en|NOUN of|en|ADP massacres|en|NOUN in|en|ADP india|en|NOUN -|univ|. wikipedia|en|NOUN ,|univ|. the|en|DET free|en|ADJ encyclopedia|en|NOUN
+in|en|ADP memory|en|NOUN of|en|ADP manna|en|NOUN dey|en|NOUN
+varun|en|NOUN anand|en|NOUN onion|en|NOUN is|en|VERB cost|en|NOUN more|en|ADJ than|en|CONJ a|en|DET bear|en|NOUN
+applying|en|VERB for|en|ADP mla|en|NOUN ticket|en|NOUN from|en|ADP 1998|en|NUM ,|univ|. 2003|en|NUM ,|univ|. 2008|en|NUM and|en|CONJ now|en|ADV
+thanks|en|NOUN body|en|NOUN
+father`s|en|NOUN name|en|NOUN mr|en|NOUN b|en|NOUN p|en|NOUN nautiyal|en|NOUN
+pls|en|PRT like|en|VERB my|en|PRON fb|en|NOUN page|en|NOUN for|en|ADP free|en|ADJ registered|en|ADJ softwares|en|NOUN ,|univ|. latest|en|ADJ movies|en|NOUN ,|univ|. movies|en|NOUN songs|en|NOUN ,|univ|. live|en|ADJ tv|en|NOUN ,|univ|. live|en|ADJ cricket|en|NOUN ,|univ|. ebooks|en|NOUN and|en|CONJ many|en|ADJ more|en|ADJ things|en|NOUN
+the|en|DET superior|en|ADJ person|en|NOUN waits|en|VERB for|en|ADP wisdom|en|NOUN and|en|CONJ clarity|en|NOUN before|en|ADP exacting|en|VERB justice|en|NOUN ,|univ|. then|en|PRON lets|en|VERB no|en|PRT protest|en|VERB sway|en|VERB him|en|PRON
+may|en|ADP his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN he|en|PRON will|en|VERB be|en|VERB remembered|en|VERB for|en|ADP his|en|PRON melodious|en|ADJ songs|en|NOUN
+vote|en|VERB for|en|ADP the|en|DET dream|en|ADJ team|en|NOUN bjp|en|NOUN and|en|CONJ it|en|PRON s|en|ADP allies|en|NOUN ,|univ|. nda|en|NOUN and|en|CONJ kick|en|VERB the|en|DET butt|en|NOUN of|en|ADP the|en|DET dirty|en|ADJ team|en|NOUN ,|univ|. i$e|en|ADP congress|en|NOUN /|univ|. upa|en|NOUN in|en|ADP the|en|DET ensuing|en|ADJ 2014|en|NUM polls|en|NOUN
+namo|en|NOUN india|en|NOUN nxt|en|ADJ pm|en|NOUN modi|en|NOUN
+add|en|VERB me|en|PRON add|en|VERB me|en|PRON add|en|VERB me|en|PRON add|en|VERB me|en|PRON plzzz|en|PRT send|en|VERB mmmeee|en|PRON requesttt|en|NOUN
+m|en|VERB surly|en|ADV gonna|en|VERB to|en|ADV vote|en|VERB u|en|PRON ,|univ|. if|en|CONJ u|en|PRON hadn't|en|VERB came|en|VERB thn|en|DET too|en|PRT
+great|en|ADJ mr|en|PRT modi|en|NOUN it|en|PRON s|en|VERB you|en|PRON spirit|en|NOUN for|en|ADP our|en|PRON nation|en|NOUN
+then|en|PRON what|en|PRON is|en|VERB this|en|DET ?|univ|.
+one|en|NUM more|en|ADJ legend|en|NOUN has|en|VERB left|en|VERB us|en|PRON may|en|VERB his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN he|en|PRON ll|en|VERB always|en|ADV be|en|VERB with|en|ADP us|en|PRON with|en|ADP his|en|PRON golden|en|ADJ voice|en|NOUN
+may|en|ADP his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|ADV
+what|en|DET you|en|PRON couldn't|en|VERB do|en|VERB so|en|ADV far|en|ADV ,|univ|. it|en|PRON is|en|VERB about|en|ADP
+i|en|PRON don't|en|VERB think|en|VERB your|en|PRON bf|en|NOUN will|en|VERB have|en|VERB a|en|DET problem|en|NOUN with|en|ADP that|en|DET
+undoubtedly|en|ADV s|en|NOUN r|en|NOUN k|en|NOUN rokx|en|VERB
+modi|en|NOUN vll|en|VERB come|en|VERB n|en|CONJ through|en|VERB ur|en|PRON corrupt|en|ADJ govt|en|NOUN
+admin|en|NOUN plz|en|PRT promote|en|VERB this|en|DET page|en|NOUN
+the|en|DET real|en|ADJ thiger|en|NOUN of|en|ADP india|en|NOUN nomo|en|NOUN
+love|en|VERB the|en|DET way|en|NOUN you|en|PRON explain|en|VERB things|en|NOUN ,|univ|. bachchan|en|NOUN sir|en|NOUN
+sir|en|NOUN ,|univ|. we|en|PRON are|en|VERB watching|en|VERB for|en|ADP jhansi|en|NOUN rally|en|NOUN speech|en|NOUN
+gone|en|VERB but|en|CONJ not|en|PRT forgotten|en|VERB i|en|PRON agree|en|VERB with|en|ADP kalpana|en|NOUN that|en|ADP his|en|PRON melodious|en|ADJ songs|en|NOUN will|en|VERB always|en|ADV be|en|VERB with|en|ADP us|en|PRON as|en|ADP a|en|DET constant|en|ADJ reminder|en|NOUN of|en|ADP the|en|DET talent|en|NOUN and|en|CONJ versatility|en|NOUN
+we|en|PRON loose|en|VERB the|en|DET diamond|en|NOUN of|en|ADP india|en|NOUN -|univ|. manna|en|NOUN dey|en|NOUN
+very|en|ADV sad|en|ADJ news|en|NOUN ,|univ|. but|en|CONJ you|en|PRON said|en|VERB it|en|PRON right|en|ADJ sir|en|NOUN ,|univ|.
+super|en|ADJ kick|en|NOUN it|en|PRON should|en|VERB be|en|VERB final|en|ADJ kick|en|NOUN
+my|en|PRON his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN

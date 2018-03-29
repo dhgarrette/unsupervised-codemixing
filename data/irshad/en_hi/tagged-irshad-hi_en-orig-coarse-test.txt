@@ -1,0 +1,225 @@
+Women|en|NOUN 's|en|PART day|en|NOUN ki|hi|ADP khushi|hi|NOUN mein|hi|ADP koi|hi|PRON aik|hi|NUM aadh|hi|NUM million|en|NUM dollars|en|NOUN gift|en|NOUN kar|hi|VERB de|hi|AUX .|un|PUNCT
+Salman|ne|PROPN Khan|ne|PROPN has|en|VERB to|en|PART work|en|VERB hard|en|ADV for|en|ADP growing|en|VERB beard|en|NOUN Aur|hi|CCONJ yaha|hi|PRON saala|hi|NOUN har|hi|DET hafte|hi|NOUN shaving|en|NOUN karwaane|hi|VERB aana|hi|VERB padta|hi|AUX hai|hi|AUX 😭😭|un|INTJ
+Kuch|hi|DET log|hi|NOUN kitna|hi|DET time|en|NOUN or|hi|CCONJ money|en|NOUN dono|hi|PRON waste|en|NOUN kerte|hi|VERB hai|hi|AUX 😂😂😆|un|INTJ
+Yeh|hi|DET Samit|ne|PROPN Patel|ne|PROPN kis|hi|DET Amul|ne|PROPN Dairy|en|NOUN ka|hi|ADP dudh|hi|NOUN peeta|hi|VERB hai|hi|AUX ,|un|PUNCT dats|en|PRON the|en|DET question|en|NOUN nation|en|NOUN wants|en|VERB to|en|PART know|en|VERB .|un|PUNCT
+Aadha|hi|DET gand|hi|NOUN to|hi|PART in|hi|DET 10|un|NUM Rs|en|NOUN tweet|en|NOUN kamaane|hi|VERB waale|hi|ADP so|en|ADV called|en|VERB social|en|ADJ media|en|NOUN influencers|en|NOUN ne|hi|ADP faila|hi|VERB rakha|hi|AUX hai|hi|AUX .|un|PUNCT
+Is|en|VERB it|en|PRON Bharat|ne|PROPN Mata|hi|PROPN ki|hi|ADP jai|hi|NOUN or|hi|CCONJ Ghai|hi|NOUN ki|hi|ADP jai|hi|NOUN ,|un|PUNCT I|en|PRON 'm|en|VERB confused|en|ADJ .|un|PUNCT
+@_gujjubaba|un|PROPN am|en|AUX not|en|PART upset|en|ADJ bus|hi|ADV ek|hi|NUM hi|hi|PART tarah|hi|NOUN ke|hi|ADP political|en|ADJ ya|hi|CCONJ shayaris|hi|NOUN ke|hi|ADP tweets|en|NOUN dekh|hi|VERB dekh|hi|VERB kar|hi|AUX pakk|hi|VERB gai|hi|AUX thi|hi|AUX :D|un|INTJ so|en|ADV thought|en|VERB to|en|PART try|en|VERB something|en|NOUN new|en|ADJ
+Khuda|hi|NOUN k|hi|ADP waste|hi|ADP genuine|en|ADJ wicket|en|NOUN keeper|en|NOUN sarfraz|ne|PROPN ahmed|ne|PROPN ko|hi|ADP team|en|NOUN me|hi|ADP khila|hi|VERB lo|hi|AUX ...|un|PUNCT
+Byeee|en|NOUN frndsss|en|NOUN me|hi|PRON movies|en|NOUN dekhne|hi|VERB chala|hi|AUX mobile|en|NOUN data|en|NOUN ko|hi|ADP off|en|ADV karke|hi|ADP 😉😉😉|un|INTJ
+"|un|PUNCT Weekends|en|NOUN are|en|VERB the|en|DET god|en|NOUN 's|en|PART way|en|NOUN of|en|ADP saying|en|VERB Jaa|hi|VERB jee|hi|VERB le|hi|AUX apni|hi|PRON zindagi|hi|NOUN "|un|PUNCT
+Subah|hi|NOUN ko|hi|ADP 5|un|NUM se|hi|ADP 7|un|NUM peak|en|ADJ time|en|NOUN hai|hi|VERB meri|hi|PRON family|en|NOUN deaths|en|NOUN ka|hi|ADP .|un|PUNCT
+Darasal|hi|ADV baat|hi|NOUN ye|hi|PRON he|hi|VERB ke|hi|SCONJ life|en|NOUN is|en|VERB a|en|DET bitch|en|NOUN !|un|PUNCT
+Today|en|NOUN Parliament|en|PROPN will|en|AUX function|en|VERB smoothly|en|ADV coz|en|SCONJ bomb|en|NOUN Congress|ne|PROPN ke|hi|ADP sir|hi|NOUN pe|hi|ADP phata|hi|VERB hai|hi|AUX !|un|PUNCT
+sir|en|PROPN shami|ne|PROPN test|en|NOUN series|en|NOUN shuroo|hi|VERB hotay|hi|AUX hi|hi|PART cold|en|ADJ shoulder|en|NOUN de|hi|VERB rahay|hi|AUX hain|hi|AUX ....|un|PUNCT
+but|en|CCONJ ap|hi|PRON nonsense|en|NOUN ko|hi|ADP define|en|NOUN kasy|hi|PRON karo|hi|VERB gay|hi|AUX
+Pehly|hi|ADV dunya|hi|NOUN mei|hi|ADP two|en|NUM faced|en|ADJ loagon|hi|NOUN ki|hi|ADP kami|hi|NOUN nhi|hi|PART thi|hi|VERB jo|hi|SCONJ yeh|hi|DET ab|hi|ADV Face|en|NOUN swap|hi|NOUN bhi|hi|PART agay|hi|VERB hai|hi|AUX .|un|PUNCT
+According|en|VERB to|en|ADP Girls|en|NOUN Baalon|hi|NOUN ka|hi|ADP tootna|hi|VERB hurts|en|VERB more|en|ADJ than|en|ADP Dil|hi|NOUN ka|hi|ADP Tootna|hi|VERB .|un|PUNCT
+Radha|ne|PROPN ka|hi|ADP sawal|hi|NOUN sab|hi|PRON uthayen|hi|VERB ,|un|PUNCT taaki|hi|SCONJ public|en|ADJ ,|un|PUNCT corruption|en|NOUN ,|un|PUNCT crime|en|NOUN our|hi|CCONJ poverty|en|NOUN bhul|hi|VERB jayen|hi|AUX
+Street|en|NOUN lights|en|NOUN lagwane|hi|VERB ke|hi|ADP liye|hi|ADP thank|en|VERB you|en|PRON everyone|en|NOUN ,|un|PUNCT ab|hi|PRON please|en|INTJ street|en|NOUN fans|en|NOUN bhi|hi|PART lagwa|hi|VERB do|hi|AUX koi|hi|PRON
+Kis|hi|DET gadhey|hi|NOUN ne|hi|ADP kaha|hi|VERB tha|hi|AUX that|en|SCONJ time|en|NOUN is|en|VERB money|en|NOUN ?|un|PUNCT
+4000|un|NUM crore|en|NOUN housing|en|NOUN scheme|en|NOUN mein|hi|ADP 10|un|NUM -|un|PUNCT 15|un|NUM ghar|hi|NOUN finance|en|NOUN minister|en|NOUN ke|hi|ADP hi|hi|PART honge|hi|VERB :p|un|INTJ
+Khi|ne|PROPN steel|ne|NOUN town|ne|NOUN k|hi|ADP qareeb|hi|ADP rao|ne|PROPN anwar|ne|PROPN aek|hi|NUM or|hi|ADJ fake|en|ADJ encounter|en|NOUN k|hi|ADP sath|hi|ADP hero|en|NOUN ban|hi|VERB jaengay|hi|AUX
+@_Khaadi|un|PROPN is|hi|PRON ki|hi|ADP price|en|NOUN Bhi|hi|PART bata|hi|VERB dain|hi|AUX so|en|SCONJ that|en|SCONJ apni|hi|PRON car|en|NOUN girvi|hi|NOUN rakh|hi|VERB k|hi|AUX I|en|PRON can|en|AUX purchase|en|VERB it|en|PRON 😂😂😂|un|INTJ
+Have|en|AUX n't|en|PART eaten|en|VERB anything|en|PRON since|en|ADP morning|en|NOUN except|en|ADP for|en|ADP logon|hi|NOUN k|hi|ADP taanay|hi|NOUN aur|hi|CCONJ galiyaan|hi|NOUN aur|hi|CCONJ bughaz|hi|NOUN .|un|PUNCT
+NS|ac|PROPN is|en|VERB slave|en|NOUN of|en|ADP USA|ac|PROPN an|en|CCONJ sab|hi|PRON uski|hi|PRON marzi|hi|NOUN se|hi|ADP hora|hi|VERB h|hi|AUX
+Aaj|hi|NOUN maine|hi|PRON sabhi|hi|PRON ko|hi|ADP literally|en|ADV bagaya|hi|VERB ghar|hi|NOUN se|hi|ADP so|en|SCONJ that|en|SCONJ I|en|PRON can|en|AUX watch|en|VERB in|en|ADP peace|en|NOUN :p|un|INTJ
+If|en|SCONJ u|en|PRON do|en|AUX n't|en|PART have|en|VERB time|en|NOUN for|en|ADP me|en|PRON then|en|SCONJ tum|hi|PRON Phir|hi|ADV apni|hi|PRON zindagi|hi|NOUN main|hi|ADP raho|hi|VERB
+Garmi|hi|NOUN mai|hi|ADP melt|en|NOUN ho|hi|VERB k|hi|AUX 2|un|NUM kilo|en|NOUN weight|en|NOUN lose|en|ADJ kr|hi|VERB liya|hi|AUX .|un|PUNCT
+"|un|PUNCT If|en|SCONJ you|en|PRON are|en|AUX having|en|VERB a|en|DET bad|en|ADJ day|en|NOUN toh|hi|SCONJ Main|hi|PRON kiya|hi|PRON karun|hi|VERB ?|un|PUNCT "|un|PUNCT
+aadhe|hi|DET log|hi|NOUN to|hi|PART peer|en|ADJ pressure|en|NOUN me|en|ADP pokemon|ne|PROPN go|ne|PROPN khel|hi|VERB rahe|hi|AUX hai|hi|AUX 😂😂😂😂|un|INTJ
+confusion|en|NOUN hi|hi|PART confusion|en|NOUN he|hi|VERB solution|en|NOUN kuch|hi|PRON pata|hi|NOUN nahi|hi|PART ...|un|PUNCT
+Theon|ne|PROPN Greyjoy|ne|PROPN is|en|VERB always|en|ADV sad|en|ADJ kyunki|hi|SCONJ uske|hi|PRON paas|hi|ADP nahi|hi|PART Happiness|en|NOUN .|un|PUNCT 😏|un|INTJ
+Kejriwal|ne|PROPN ke|hi|ADP interview|en|NOUN Friday|ne|PROPN ko|hi|ADP theatres|en|NOUN mei|hi|ADP release|en|NOUN hone|hi|VERB chahiye|hi|AUX
+Floor|en|NOUN test|en|NOUN me|hi|ADP to|hi|PART pit|hi|VERB gaye|hi|AUX Kaka|hi|NOUN 😂|un|INTJ Ab|hi|ADV degree|en|NOUN test|en|NOUN me|hi|ADP b|hi|PART pitne|hi|VERB wale|hi|AUX hain|hi|AUX 😈|un|INTJ
+ABP|ac|PROPN News|en|PROPN ki|hi|ADP website|en|NOUN pe|hi|ADP specially|en|ADV Arvind|ne|PROPN Kejriwal|ne|PROPN ke|hi|ADP tweets|en|NOUN kyo|hi|ADV dikha|hi|VERB rahe|hi|AUX hain|hi|AUX ?|un|PUNCT
+"|un|PUNCT Abu|hi|NOUN ki|hi|ADP ghussay|hi|NOUN ki|hi|ADP ""|un|PUNCT Nigah|hi|NOUN ""|un|PUNCT speaks|en|VERB louder|en|ADV than|en|ADP Ami|hi|NOUN ki|hi|ADP flying|en|VERB chappal|hi|NOUN .|un|PUNCT "|un|PUNCT
+Bumrah|ne|PROPN has|en|AUX decided|en|VERB that|en|SCONJ pehle|hi|ADV hi|hi|PART pitwa|hi|VERB dun|hi|AUX taki|hi|SCONJ baad|hi|ADV me|hi|ADP does|en|AUX n't|en|PART seem|en|VERB like|en|VERB a|en|DET big|en|ADJ deal|en|NOUN .|un|PUNCT
+Honey|en|NOUN lemon|en|NOUN hot|en|ADJ mix|en|NOUN water|en|NOUN zeher|hi|NOUN jaisa|hi|ADP lagta|hi|VERB hai|hi|AUX taste|en|NOUN me|en|ADP .|un|PUNCT
+Masters|en|NOUN in|en|ADP Intellectualism|en|PROPN ki|hi|ADP degree|en|NOUN kaun|hi|PRON si|hi|PART website|en|NOUN par|hi|ADP milti|hi|VERB hai|hi|AUX ???|un|PUNCT
+A|en|DET moment|en|NOUN of|en|ADP silence|en|NOUN for|en|ADP those|en|DET people|en|NOUN jo|hi|PRON doston|hi|NOUN se|hi|ADP bhi|hi|PART aap|hi|PRON aap|hi|PRON kar|hi|VERB kay|hi|ADP bat|hi|NOUN karty|hi|VERB hain|hi|AUX
+"|un|PUNCT In|en|ADP spirituality|en|NOUN it|en|PRON is|en|VERB ""|un|PUNCT buri|hi|ADJ nazar|hi|NOUN wale|hi|ADP tera|hi|PRON dil|hi|NOUN kala|hi|ADJ ""|un|PUNCT .|un|PUNCT "|un|PUNCT
+@__Amnna__|un|X wo|hi|PRON thek|hi|NOUN hai|hi|VERB but|en|CCONJ I|en|PRON 'm|en|AUX trying|en|VERB to|en|PART figure|en|VERB out|en|PART Bhabi|hi|NOUN ko|hi|ADP support|en|NOUN karne|hi|VERB ka|hi|ADP reason|en|NOUN .|un|PUNCT 😂|un|INTJ
+My|en|PRON government|en|NOUN in|en|ADP particular|en|ADJ is|en|AUX focussed|en|VERB on|en|ADP '|un|PUNCT Garibon|hi|NOUN Ki|hi|ADP Unnati|hi|NOUN '|un|PUNCT ,|un|PUNCT '|un|PUNCT Kisano|hi|NOUN Ki|hi|ADP Samridhi|hi|NOUN '|un|PUNCT and|en|CCONJ '|un|PUNCT Yuvaon|hi|NOUN Ka|hi|ADP Rozgar|hi|NOUN '|un|PUNCT :|un|PUNCT President|en|PROPN Mukherjee|ne|PROPN
+Yeah|en|INTJ ,|un|PUNCT not|en|PART the|en|DET first|en|ADJ monsoon|en|NOUN really|en|ADV but|en|CCONJ shaadi|hi|NOUN k|hi|ADP baad|hi|ADP to|hi|PART pehla|hi|ADJ hi|hi|PART hai|hi|VERB na|hi|PART !|un|PUNCT
+I|en|PRON have|en|VERB a|en|DET friend|en|NOUN who|en|PRON calls|en|VERB teabag|en|NOUN wali|hi|ADP chai|hi|NOUN as|en|SCONJ taweez|hi|PROPN wali|hi|ADP chai|hi|NOUN .|un|PUNCT
+not|en|PART to|en|PART belittle|en|VERB but|en|CCONJ athiya|ne|PROPN shetty|ne|PROPN ko|hi|ADP kisi|hi|DET beauty|en|NOUN product|en|NOUN ka|hi|ADP brand|en|NOUN ambassador|en|NOUN kyon|hi|PRON nahi|hi|PART banata|hi|VERB koi|hi|PRON ?|un|PUNCT
+Newly|en|ADV married|en|VERB ki|hi|ADP couples|en|NOUN ki|hi|ADP eid|ne|PROPN k|hi|ADP agae|hi|ADP hum|hi|DET singles|en|NOUN ki|hi|ADP eid|ne|PROPN tou|hi|PART kuch|hi|PRON b|hi|PART nahi|hi|PART hai|hi|VERB bhai|hi|NOUN
+"|un|PUNCT No|en|DET Indian|ne|ADJ wedding|en|NOUN is|en|VERB complete|en|ADJ without|en|ADP the|en|DET Relatives|en|NOUN taunt|en|NOUN ""|un|PUNCT ladka|hi|NOUN dekh|hi|VERB liya|hi|AUX aur|hi|CCONJ humein|hi|PRON btaya|hi|VERB tak|hi|ADP nahi|hi|PART """|un|PUNCT
+Koi|hi|PRON btaye|hi|VERB ga|hi|AUX mujy|hi|PRON twitter|ne|PROPN account|en|NOUN deactivate|en|NOUN kesy|hi|PRON krty|hi|VERB ?|un|PUNCT
+Abhi|hi|ADV 5|un|NUM minute|en|NOUN bhi|hi|PART nahin|hi|PART hoye|hi|VERB mujhe|hi|PRON chand|hi|PROPN wale|hi|ADP jokes|en|NOUN crack|en|NOUN karte|hi|VERB hoye|hi|AUX keh|hi|SCONJ my|en|PRON family|en|NOUN has|en|AUX told|en|VERB me|en|PRON to|en|PART stop|en|VERB .|un|PUNCT
+Shirt|en|NOUN mein|hi|ADP even|en|ADJ number|en|NOUN of|en|ADP holes|en|NOUN ho|hi|VERB toh|hi|SCONJ ventilation|en|NOUN achi|hi|ADJ hoti|hi|VERB hai|hi|AUX .|un|PUNCT
+Fielding|en|NOUN ke|hi|ADP time|en|NOUN pe|hi|ADP twitter|ne|PROPN pe|hi|ADP live|en|ADJ commentary|en|NOUN low|en|ADJ ho|hi|VERB jati|hi|AUX hain|hi|AUX ...|un|PUNCT
+Jo|hi|PRON marzi|hi|PART jeety|hi|VERB yar|hi|NOUN hamara|hi|PRON National|en|ADJ game|en|NOUN to|en|PART hockey|en|NOUN ha|hi|VERB 😜|un|INTJ
+As|en|ADP of|en|ADP now|en|ADV ,|un|PUNCT AAP|ac|PROPN is|en|AUX winning|en|VERB Punjab|ne|PROPN and|en|CCONJ this|en|DET dharm|hi|NOUN ka|hi|ADP darr|hi|NOUN wo|en|AUX n't|en|PART help|en|VERB BJP|ac|PROPN or|en|CCONJ Cong|ne|PROPN
+Warm|en|VERB up|en|ADP match|en|NOUN kon|hi|PRON c|hi|PART site|en|NOUN py|hi|ADP live|en|NOUN a|hi|VERB rha|hi|AUX hai|hi|AUX ???|un|PUNCT
+IK|ac|PROPN finally|en|ADV says|en|VERB that|en|SCONJ Musharaf|ne|PROPN was|en|VERB better|en|ADJ than|en|ADP NS|ac|NOUN !|un|PUNCT dil|hi|NOUN ki|hi|ADP baat|hi|NOUN sun|hi|VERB li|hi|AUX !|un|PUNCT
+Baji|hi|PROPN ne|hi|ADP abhi|hi|PRON Iftar|hi|NOUN wale|hi|ADP bartan|hi|NOUN dhoye|hi|VERB nahi|hi|PART &|en|CCONJ tweeting|en|VERB like|en|ADP a|en|DET boss|en|NOUN about|en|ADP Pak-Af|ne|ADJ border|en|NOUN tension|en|NOUN
+Now|en|ADV we|en|PRON 're|en|VERB in|en|ADP 4th|en|ADJ semester|en|NOUN ...|un|PUNCT Padhaai|hi|VERB bhi|hi|PART Zaruri|hi|ADJ hai|hi|VERB thodi|hi|ADJ life|en|NOUN mein|hi|ADP ...|un|PUNCT
+According|en|VERB to|en|ADP my|en|PRON parents|en|NOUN mjhy|hi|PRON khansi|hi|NOUN bhi|hi|PART mobile|en|NOUN zyada|hi|ADJ use|hi|NOUN kerny|hi|VERB se|hi|ADP ati|hi|VERB hai|hi|AUX 😒😐|un|INTJ
+akhilesh|ne|PROPN yadav|ne|PROPN ko|hi|ADP bhi|hi|PART shoot|en|VERB at|en|ADP sight|en|NOUN ka|hi|ADP order|en|NOUN de|hi|VERB dena|hi|AUX cahiye|hi|AUX
+I|en|PRON am|en|VERB a|en|DET part|en|NOUN of|en|ADP this|en|DET society|en|NOUN ,|un|PUNCT par|hi|CCONJ kisi|hi|DET society|en|NOUN mein|hi|ADP guard|en|NOUN ghusne|hi|VERB nahi|hi|PART deta|hi|AUX .|un|PUNCT
+"|un|PUNCT DU|ac|PROPN ke|hi|ADP cutoff|en|NOUN ke|hi|ADP wajah|hi|ADP se|hi|ADP hi|hi|PART ""|un|PUNCT The|en|DET World|en|NOUN Is|en|VERB At|en|ADP Sharda|ne|PROPN University|ne|PROPN """|un|PUNCT
+I|en|PRON just|en|ADV realized|en|VERB ke|hi|SCONJ jaldi|hi|ADV uthne|hi|VERB ka|hi|ADP koi|hi|DET faida|hi|NOUN nae|hi|PART he|hi|VERB ,|un|PUNCT I|en|PRON should|en|AUX go|en|VERB back|en|ADV to|en|PART sleep|en|VERB !|un|PUNCT
+Barri|hi|ADV perfect|en|ADJ timing|en|NOUN hai|hi|VERB Adele|ne|PROPN k|hi|ADP new|en|ADJ breakup|en|NOUN song|en|NOUN ki|hi|ADP aur|hi|CCONJ Imran|ne|PROPN Khan|ne|PROPN ki|hi|ADP divorce|en|NOUN ki|hi|ADP .|un|PUNCT
+"|un|PUNCT Mushkiloun|hi|NOUN main|hi|ADP ana|hi|VERB Part|en|NOUN of|en|ADP Life|en|NOUN hay|hi|VERB Aur|hi|CCONJ un|hi|PRON main|hi|ADP say|hi|ADP nikalna|hi|VERB Art|en|NOUN of|en|ADP Life|en|NOUN hay|hi|VERB "|un|PUNCT
+Yr|en|NOUN ye|hi|DET Business|en|NOUN Ethics|en|NOUN and|en|CCONJ Corporate|en|NOUN Governance|en|NOUN ka|hi|ADP syllabus|en|NOUN khatam|hi|ADJ nhi|hi|PART horaha|hi|VERB
+Eid|ne|NOUN so|en|ADV boring|en|ADJ that|en|SCONJ for|en|ADP a|en|DET moment|en|NOUN ,|un|PUNCT I|en|PRON forgot|en|VERB ke|hi|SCONJ is|hi|DET eid|ne|NOUN pe|hi|ADP eidi|hi|PROPN bhi|hi|PART milti|hi|VERB he|hi|AUX !|un|PUNCT
+Stack|en|NOUN register|en|NOUN mein|hi|PRON direct|en|ADJ initialize|en|NOUN nahi|hi|PART karwa|hi|VERB saktay|hi|AUX .|un|PUNCT
+Yaar|hi|NOUN khud|hi|NOUN follow|en|NOUN kartay|hi|VERB hain|hi|AUX ,|un|PUNCT follow|en|NOUN back|en|PART leynay|hi|VERB per|hi|ADP unfollow|en|NOUN kar|hi|VERB dety|hi|AUX hain|hi|AUX ?|un|PUNCT what|en|PRON r|en|VERB diz|en|DET notti|en|ADJ ppls|en|NOUN
+Allah|en|PROPN kisi|hi|PRON ko|hi|ADP bemar|hi|ADJ na|hi|PART kare|hi|VERB magar|hi|CCONJ Allah|en|PROPN also|en|ADV has|en|VERB mysterious|en|ADJ way|en|NOUN to|en|PART punish|en|VERB sinners|en|NOUN .|un|PUNCT
+"|un|PUNCT Rahul|ne|PROPN Gandhi|ne|PROPN left|en|VERB Lok|ne|PROPN Sabha|ne|PROPN in|en|ADP search|en|NOUN for|en|ADP ""|un|PUNCT Chullu|hi|NOUN bhar|hi|PART paani|hi|NOUN ""|un|PUNCT .|un|PUNCT "|un|PUNCT
+Ronaldo|ne|PROPN or|hi|CCONJ Afridi|ne|PROPN sirf|hi|ADV league|en|NOUN matches|en|NOUN mei|hi|ADP hi|hi|PART chalty|hi|VERB hen|hi|AUX bus|en|ADV .|un|PUNCT
+"|un|PUNCT Exam|en|NOUN hall|en|NOUN me|hi|ADP dusro|hi|NOUN ko|hi|ADP lkhte|hi|VERB dkhna|hi|AUX Seriously|en|ADV bhut|hi|DET headache|en|NOUN hota|hi|VERB h|hi|AUX 😐|un|INTJ "|un|PUNCT
+"|un|PUNCT Suraj|ne|PROPN ne|hi|ADP APJAK|ac|PROPN ki|hi|ADP yaad|hi|NOUN dila|hi|VERB di|hi|AUX And|en|CCONJ i|en|PRON am|en|VERB a|en|DET bit|en|NOUN of|en|ADP emotional|en|ADJ now|en|ADV "|un|PUNCT
+Sheela|ne|PROPN ji|hi|PART should|en|AUX not|en|PART resign|en|VERB ab|hi|PRON is|hi|DET umar|hi|NOUN mein|hi|ADP CWG|ac|PROPN enquiry|en|NOUN ?|un|PUNCT
+For|en|ADP Shikhar|ne|PROPN Dhawan|ne|PROPN ,|un|PUNCT David|ne|PROPN Warner|ne|PROPN is|en|VERB like|en|ADP the|en|DET big|en|ADJ Brother|en|NOUN who|en|PRON says|en|VERB ,|un|PUNCT '|un|PUNCT Chal|hi|VERB chotu|hi|NOUN mai|hi|PRON dekhta|hi|VERB hun|hi|AUX tujhe|hi|PRON kaun|hi|PRON out|en|ADV karta|hi|VERB hia|hi|AUX '|un|PUNCT :P|un|INTJ
+Ca|en|AUX n't|en|PART i|en|PRON just|en|ADV rewind|en|VERB my|en|PRON life|en|NOUN to|en|ADP the|en|DET point|en|NOUN jab|hi|PRON hum|hi|PRON pal|hi|NOUN bhar|hi|PART mein|hi|ADP so|hi|VERB jatey|hi|AUX they|hi|AUX !|un|PUNCT
+Ronaldo|ne|PROPN Football|ne|PROPN chor|hi|VERB day|hi|AUX to|hi|SCONJ acting|en|VERB be|hi|PART karsakta|hi|VERB hai|hi|AUX waisayy|hi|ADV .|un|PUNCT
+Yahan|hi|PRON se|hi|ADP haar|hi|VERB gaye|hi|AUX na|hi|PART to|hi|SCONJ seriously|en|ADV I|en|PRON will|en|AUX do|en|AUX rioting|en|VERB and|en|CCONJ stuff|en|NOUN
+Pehle|hi|ADJ option|en|NOUN par|hi|ADP vote|en|NOUN karne|hi|VERB walon|hi|ADP ,|un|PUNCT reveal|en|VERB yourself|en|PRON .|un|PUNCT 😂😂|un|INTJ
+Aaj|hi|NOUN tu|hi|PART Boom|ne|PROPN Boom|ne|PROPN Bubble|ne|NOUN Gum|ne|NOUN ki|hi|ADP record|en|NOUN Sale|en|NOUN ho|hi|VERB rahi|hi|AUX hai|hi|AUX
+What|en|PRON 's|en|VERB the|en|DET fancy|en|ADJ word|en|NOUN for|en|ADP '|un|PUNCT gardan|hi|NOUN mein|hi|ADP chuk|hi|NOUN aana|hi|VERB '|un|PUNCT ?|un|PUNCT
+When|en|ADV Yami|ne|PROPN Gautam|ne|PROPN was|en|AUX born|en|VERB ,|un|PUNCT the|en|DET doctors|en|NOUN said|en|VERB '|un|PUNCT Badhai|hi|NOUN Ho|hi|VERB !|un|PUNCT aapko|hi|PRON rabri|ne|PROPN hui|hi|VERB hai|hi|AUX '|un|PUNCT .|un|PUNCT
+National|en|ADJ council|en|NOUN meet|en|NOUN me|hi|ADP sathiyo|hi|NOUN she|hi|ADP mulakat|hi|NOUN huee|hi|VERB
+"|un|PUNCT The|en|DET Awkward|en|ADJ moment|en|NOUN when|en|ADV you|en|PRON realize|en|VERB k|hi|SCONJ ap|hi|PRON ne|hi|ADP kaaloun|hi|PROPN ko|hi|ADP whitewash|en|NOUN kardia|hi|VERB hai|hi|AUX .|un|PUNCT "|un|PUNCT
+Yeh|hi|DET pmdc|ac|PROPN ka|hi|ADP degree|en|NOUN form|en|NOUN kahan|hi|PRON sey|hi|ADP download|en|NOUN hota|hi|VERB hai|hi|AUX ..|un|PUNCT Any|en|DET idea|en|NOUN 😑|un|INTJ ??|un|PUNCT
+Is|hi|DET saalay|hi|NOUN ko|hi|ADP duck|en|NOUN pay|hi|ADP out|en|ADV karo|hi|VERB baaki|hi|ADV sab|hi|PRON does|en|AUX n't|en|PART matter|en|VERB .|un|PUNCT
+No|en|DET tweet|en|NOUN from|en|ADP kejriwal|ne|PROPN sir|en|INTJ ,|un|PUNCT lagta|hi|VERB hai|hi|AUX Aaj|hi|NOUN Raman|ne|PROPN Raghav|ne|PROPN Ka|hi|ADP review|en|NOUN milega|hi|VERB !|un|PUNCT
+Shayad|hi|ADV meri|hi|PRON tweets|en|NOUN ma|hi|ADP retweet|en|NOUN ka|hi|ADP option|en|NOUN nai|hi|PART ata|hi|VERB .|un|PUNCT
+"|un|PUNCT I|en|PRON think|en|VERB Hrithik|ne|PROPN shouldnt|en|AUX have|en|AUX agreed|en|VERB to|en|PART do|en|VERB a|en|DET film|en|NOUN with|en|ADP Sanjay|ne|PROPN Gupta|ne|PROPN ,|un|PUNCT Sanjay|ne|PROPN ne|hi|ADP poori|hi|ADJ zindagi|hi|NOUN chori|hi|NOUN ke|hi|ADP shiva|hi|ADP kiya|hi|VERB bhi|hi|PART kya|hi|PRON hai|hi|VERB "|un|PUNCT
+Punjab|ne|PROPN should|en|AUX have|en|AUX won|en|VERB this|en|PRON but|en|CCONJ umpire|en|NOUN nay|hi|ADP ungli|hi|NOUN dikha|hi|VERB k|hi|AUX kaam|hi|NOUN kharab|hi|ADJ kar|hi|VERB dia|hi|AUX
+Awards|en|NOUN ceremony|en|NOUN pe|hi|ADP black|en|ADJ ya|hi|CCONJ white|en|ADJ dress|en|NOUN pehanna|hi|VERB farz|hi|NOUN hai|hi|VERB .|un|PUNCT
+On|en|ADP completely|en|ADV different|en|ADJ note|en|NOUN ,|un|PUNCT kya|hi|PRON aapko|hi|PRON dekh|hi|VERB kar|hi|AUX roti|hi|NOUN jali|hi|VERB hai|hi|AUX ?|un|PUNCT
+Mei|hi|PRON ne|hi|ADP Twitter|ne|NOUN pe|hi|ADP extra|en|ADJ success|en|NOUN hasil|hi|ADJ kiya|hi|VERB 😂|un|INTJ pehle|hi|ADV Amaal|ne|PROPN ka|hi|ADP retweet|en|NOUN ,|un|PUNCT phir|hi|ADV bohat|hi|ADV saare|hi|ADJ replies|en|NOUN and|en|CCONJ retweets|en|NOUN ,|un|PUNCT and|en|CCONJ finally|en|ADV blocked|en|VERB by|en|ADP Amaal|ne|PROPN 😂😂😂😂|un|INTJ
+Overheard|en|NOUN at|en|ADP a|en|DET dhaba|hi|NOUN ,|un|PUNCT '|un|PUNCT bhai|hi|NOUN ek|hi|NUM plate|en|NOUN Chickenguniya|ne|NOUN dena|hi|VERB '|un|PUNCT .|un|PUNCT
+Aajkal|hi|ADV train|en|NOUN se|hi|ADP jyada|hi|ADJ tiers|en|NOUN to|hi|PART competitive|en|ADJ exams|en|NOUN me|hi|ADP hote|hi|VERB hain|hi|AUX .|un|PUNCT 😂😭|un|INTJ
+With|en|ADP a|en|DET priceless|en|ADJ kohinoor|ne|PROPN like|en|ADP rahul|ne|PROPN gandhi|ne|PROPN ,|un|PUNCT britain|ne|PROPN ki|hi|ADP toh|hi|PART nikal|hi|VERB padi|hi|AUX !|un|PUNCT ;)|un|INTJ )|un|PUNCT )|un|PUNCT rofl|ac|INTJ rofl|ac|INTJ .|un|PUNCT
+Does|en|AUX drinking|en|VERB nimbu|ne|NOUN sharbat|hi|NOUN and|en|CCONJ mirchi|ne|NOUN ka|hi|ADP achaar|hi|NOUN keeps|en|VERB demons|en|NOUN away|en|ADV ?|un|PUNCT
+Ab|hi|PRON woman|en|NOUN 's|en|PART team|en|NOUN kary|hi|VERB ge|hi|AUX Men|en|NOUN 's|en|PART team|en|NOUN ky|hi|ADP sath|hi|ADP dance|en|NOUN 💃😘😘😘😘😘|un|INTJ
+Kehtain|hi|VERB hain|hi|AUX jinki|hi|PRON duaien|hi|NOUN qabool|hi|NOUN nahi|hi|PART hoti|hi|VERB wo|hi|PRON baray|hi|ADJ qismat|hi|NOUN walay|hi|ADP hoty|hi|VERB hain|hi|AUX ,|un|PUNCT and|en|CCONJ I|en|PRON am|en|VERB surely|en|ADV one|en|NUM of|en|ADP those|en|DET luckiest|en|ADJ people|en|NOUN on|en|ADP earth|en|NOUN .|un|PUNCT
+Grad|en|NOUN week|en|NOUN mae|hi|ADP group|en|NOUN photos|en|NOUN kum|hi|ADJ ,|un|PUNCT couple|en|NOUN photos|en|NOUN ziyada|hi|ADJ hoti|hi|VERB hai|hi|AUX .|un|PUNCT :')|un|INTJ
+Do|en|AUX n't|en|PART know|en|VERB muje|hi|PRON aur|hi|ADV kitne|hi|DET problems|en|NOUN mile|hi|VERB ge|hi|AUX life|en|NOUN me|hi|ADP
+Locked|en|VERB instagram|ne|NOUN profile|en|NOUN walon|hi|ADP ,|un|PUNCT Twitter|ne|PROPN pe|hi|ADP link|en|NOUN share|en|NOUN kyu|hi|PRON karte|hi|VERB ho|hi|AUX ?|un|PUNCT
+"|un|PUNCT If|en|SCONJ people|en|NOUN start|en|VERB getting|en|VERB jealous|en|ADJ of|en|ADP you|en|PRON ,|un|PUNCT Samaj|hi|VERB Lena|hi|AUX ki|hi|SCONJ tum|hi|PRON sahi|hi|ADJ ja|hi|VERB rahe|hi|AUX ho|hi|AUX "|un|PUNCT
+Aaj|hi|NOUN haare|hi|VERB to|hi|SCONJ bohat|hi|DET time|en|NOUN baad|hi|ADP EA|ac|PROPN cricket|en|NOUN open|en|NOUN karunga|hi|VERB
+child|en|NOUN is|en|AUX too|en|ADV scared|en|VERB and|en|CCONJ is|en|AUX saying|en|VERB ki|hi|SCONJ baba|hi|NOUN mujhe|hi|PRON ghar|hi|NOUN se|hi|ADP leke|hi|VERB aaye|hi|AUX .|un|PUNCT
+People|en|NOUN have|en|VERB problems|en|NOUN even|en|ADV with|en|ADP VandeMataram|ne|PROPN n|en|CCONJ Bharatmata|ne|PROPN ki|hi|ADP Jai|hi|NOUN
+Aaj|hi|NOUN dawat|hi|NOUN hai|hi|VERB ghar|hi|NOUN mein|hi|ADP and|en|CCONJ I|en|PRON 'm|en|AUX not|en|PART even|en|ADV invited|en|VERB
+I|en|PRON do|en|AUX n't|en|PART give|en|VERB a|en|DET damn|en|NOUN kyuki|hi|SCONJ usko|hi|PRON dene|hi|VERB me|hi|ADP bhi|hi|PART aajkal|hi|NOUN paise|hi|NOUN lagte|hi|VERB hain|hi|AUX 😱😂|un|INTJ
+Umer|ne|PROPN Akmal|ne|PROPN k|hi|ADP sir|hi|NOUN ki|hi|ADP lines|en|NOUN Piston|en|NOUN k|hi|ADP compression|en|NOUN ring|en|NOUN aur|hi|CCONJ oil|en|NOUN ring|en|NOUN lg|hi|VERB rhy|hi|AUX hain|hi|AUX
+Arrange|en|NOUN marriage|en|NOUN karne|hi|VERB ke|hi|ADP paise|hi|NOUN nahi|hi|PART the|hi|VERB isiliye|hi|PRON love|en|NOUN marriage|en|NOUN karni|hi|VERB padi|hi|AUX .|un|PUNCT
+1987|un|PROPN WC|ac|NOUN ke|hi|ADP time|en|NOUN paida|hi|ADJ nahi|hi|PART hua|hi|VERB tha|hi|AUX lekin|hi|CCONJ defending|en|VERB champions|en|NOUN wali|hi|ADP feeling|en|NOUN awesome|en|ADJ hai|hi|VERB
+Log|hi|NOUN kehte|hi|VERB hai|hi|AUX Tweet|en|VERB more|en|ADJ to|en|PART get|en|VERB followers|en|NOUN BC|ac|NOUN 3400|un|NUM tweet|en|NOUN kar|hi|VERB diye|hi|AUX Followers|en|NOUN kaha|hi|ADV hai|hi|AUX 😐😥|un|INTJ
+Mere|hi|PRON future|en|NOUN se|hi|ADP jyada|hi|ADV bright|en|ADJ to|hi|ADP mere|en|ADJ I|en|PROPN iphone|ne|PROPN ki|hi|ADP screen|en|NOUN hai|hi|VERB 😑😏😉😎|un|INTJ
+Afridi|ne|PROPN said|en|VERB next|en|ADJ time|en|NOUN se|hi|ADP hmlog|hi|PRON ek|hi|NUM spinner|en|NOUN or|hi|ADJ le|hi|VERB k|hi|AUX khelenge|hi|VERB 😂😂😂😂|un|INTJ
+oh|en|INTJ thanx|en|VERB my|en|PRON dear|en|ADJ 2000|un|NUM followers|en|NOUN ye|hi|PRON mere|hi|PRON liye|hi|ADP 2|un|NUM lakh|hi|NUM hai|hi|VERB
+koi|hi|PRON meray|hi|PRON screenshots|en|NOUN leak|en|NOUN kerday|hi|VERB maine|hi|PRON twitter|ne|PROPN delete|en|NOUN kerna|hi|VERB hai|hi|AUX
+Before|en|ADP elections|en|NOUN I|en|PRON wanted|en|VERB BJP|ac|PROPN to|en|PART form|en|VERB govt|en|NOUN ab|hi|PRON lagta|hi|VERB hai|hi|AUX chor|hi|NOUN congress|ne|PROPN better|en|ADJ thi|hi|VERB
+Malik|ne|PROPN is|en|VERB the|en|DET only|en|ADJ man|en|NOUN on|en|ADP this|en|DET earth|en|NOUN jo|hi|PRON susral|hi|NOUN mein|hi|ADP susral|hi|NOUN ko|hi|ADP maar|hi|VERB sakta|hi|AUX hai|hi|AUX .|un|PUNCT
+Wese|hi|ADV Twitter|ne|PROPN New|en|ADJ Look|en|NOUN Mujhy|hi|PRON Android|ne|PROPN Kay|hi|ADP Play|ne|PROPN Store|ne|PROPN Jesa|hi|ADP Lag|hi|VERB Raha|hi|AUX Hai|hi|AUX :D|un|INTJ
+Thanks|en|VERB God|en|PROPN match|en|NOUN ka|hi|ADP faisla|hi|NOUN Kamaran|ne|PROPN Akml|ne|PROPN ke|hi|ADP batting|en|NOUN pa|hi|ADP ni|hi|PART ayaa|hi|VERB
+I|en|PRON wish|en|VERB twitter|ne|PROPN par|hi|ADP video|en|NOUN call|en|NOUN sab|hi|PRON kar|hi|VERB sakte|hi|AUX .|un|PUNCT
+Yrrr|hi|NOUN ye|hi|DET Amaal|ne|PROPN n|en|CCONJ Arman|ne|PROPN bade|hi|ADV dashing|en|ADJ smartie|en|ADJ boys|en|NOUN hai|hi|VERB 😍😍😍|un|INTJ
+Eid|ne|PROPN Mubarak|hi|ADJ everyone|en|PRON !!|un|PUNCT Dua|hi|NOUN mein|hi|ADP yaad|hi|NOUN rakhna|hi|VERB 😊|un|INTJ and|en|CCONJ somebody|en|NOUN pls|en|INTJ send|en|VERB sevaiyyan|hi|NOUN ☺️|un|INTJ 🙈|un|INTJ
+kal|hi|NOUN ka|hi|ADP Eid|ne|NOUN ka|hi|ADP chutti|hi|NOUN has|en|AUX been|en|AUX postponed|en|VERB to|en|ADP padso|hi|NOUN 😭😭😭😭|un|INTJ
+Which|en|DET type|en|NOUN of|en|ADP guy|en|NOUN do|en|AUX you|en|PRON like|en|VERB wale|hi|ADP polls|en|NOUN par|hi|ADP ladkiyon|hi|NOUN se|hi|ADP jyada|hi|ADJ ladke|hi|NOUN vote|en|NOUN kar|hi|VERB rahe|hi|AUX hai|hi|AUX
+Some|en|DET People|en|NOUN need|en|VERB to|en|PART learn|en|VERB Insaan|hi|NOUN ban|hi|VERB 'na|hi|AUX achievement|en|NOUN hai|hi|VERB Insane|en|NOUN ban|hi|VERB 'na|hi|AUX nahi|hi|PART .|un|PUNCT
+Abhi|hi|PRON kha|hi|VERB ke|hi|AUX aya|hi|VERB hoon|hi|AUX ,|un|PUNCT and|en|CCONJ i|en|PRON 'm|en|VERB hungry|en|ADJ again|en|ADV !|un|PUNCT
+Areeba|ne|PROPN daily|en|ADJ routine|en|NOUN ki|hi|ADP tarah|hi|ADP meri|hi|PRON day|en|NOUN bar|hi|PART ki|hi|ADP tweets|en|NOUN ko|hi|ADP Like|en|NOUN Krte|hi|VERB Howe|hi|AUX XD|ac|SYM
+"|un|PUNCT The|en|DET Only|en|ADV good|en|ADJ thing|en|NOUN about|en|ADP the|en|DET match|en|NOUN was|en|VERB Boss|en|NOUN ne|hi|ADP 10k|ac|NOUN ki|hi|ADP ticket|en|NOUN kharidi|hi|VERB thi|hi|AUX #IndvsWI"|un|X
+15th|en|ADJ Feb|ne|PROPN Ko|hi|ADP Fire|en|NOUN Work|en|NOUN ka|hi|ADP bhi|hi|PART scene|en|NOUN hai|hi|VERB .|un|PUNCT 😆|un|INTJ
+Life|en|NOUN ka|hi|ADP adha|hi|NUM time|en|NOUN to|hi|PART mera|hi|PRON headphones|en|NOUN dhoondne|hi|VERB mai|hi|ADP hi|hi|PART chala|hi|VERB jayega|hi|AUX
+Bas|hi|ADV ek|hi|NUM do|hi|NUM over|en|NOUN aur|hi|ADJ aise|hi|PRON and|en|CCONJ we|en|PRON will|en|AUX win|en|VERB easy|en|ADJ
+How|en|ADV do|en|AUX I|en|PRON explain|en|VERB to|en|ADP my|en|PRON family|en|NOUN ke|hi|SCONJ jab|hi|PRON tak|hi|ADP full|en|ADJ awaaz|hi|NOUN karke|hi|VERB match|en|NOUN na|hi|PART dekhoon|hi|VERB to|hi|PART feel|en|NOUN nahi|hi|PART ata|hi|VERB hai|hi|AUX ?|un|PUNCT
+Height|en|NOUN of|en|ADP zyadti|hi|NOUN ;|un|PUNCT twitter|ne|PROPN mey|hi|ADP like|en|NOUN aur|hi|CCONJ unlike|en|NOUN ka|hi|ADP button|en|NOUN nahi|hi|PART hai|hi|VERB :(|un|INTJ
+WhatsApp|ne|PROPN pe|hi|ADP being|en|VERB sidians|en|PROPN group|en|NOUN join|en|NOUN karna|hi|VERB hoto|hi|AUX plz|en|INTJ btao|hi|VERB
+"|un|PUNCT I|en|PRON 'm|en|VERB single|en|ADJ Kio|hi|SCONJ ky|hi|SCONJ baby|en|NOUN ko|hi|ADP koi|hi|DET aur|hi|NOUN pasand|hi|NOUN hai|hi|VERB 😉|un|INTJ "|un|PUNCT
+"|un|PUNCT I|en|PRON am|en|VERB just|en|ADV so|en|ADV sad|en|ADJ Rona|hi|NOUN bhi|hi|PART nahi|hi|PART aaraha|hi|VERB "|un|PUNCT
+Bollywood|ne|PROPN has|en|AUX taught|en|VERB us|en|PRON that|en|SCONJ Goa|ne|PROPN mai|hi|ADP har|hi|DET bande|hi|NOUN ka|hi|ADP last|en|ADJ name|en|NOUN 'D|ne|PROPN souza|ne|PROPN '|un|PUNCT hota|hi|VERB hai|hi|AUX
+I|en|PRON want|en|VERB to|en|PART exercise|en|VERB in|en|ADP the|en|DET morning|en|NOUN but|en|CCONJ dawn|en|NOUN ko|hi|ADP pakadna|hi|VERB mushkil|hi|ADJ hi|hi|PART nahin|hi|PART na|hi|PART mumkin|hi|ADJ bhi|hi|PART hai|hi|VERB !|un|PUNCT
+I|en|PRON 'm|en|VERB not|en|PART that|en|DET person|en|NOUN ju|hi|PRON Eid|ne|PROPN ka|hi|ADP din|hi|NOUN so|hi|VERB ka|hi|AUX Guzar|hi|VERB deta|hi|AUX hai|hi|AUX
+Mujhe|hi|PRON private|en|ADJ group|en|NOUN ke|hi|ADP 10|un|NUM members|en|NOUN se|hi|ADP prob|en|NOUN he|hi|VERB
+Awwww|un|INTJ ,|un|PUNCT feeling|en|VERB so|en|ADV bad|en|ADJ for|en|ADP all|en|DET those|en|DET Pakistani|ne|ADJ supporters|en|NOUN jinhone|hi|PRON Pakistan|ne|PROPN ki|hi|ADP jeet|hi|NOUN celebrate|en|NOUN karne|hi|VERB ke|hi|ADP liye|hi|ADP PATAKHE|hi|NOUN kharid|hi|VERB rakhe|hi|AUX the|hi|AUX :-D|un|INTJ
+Aj|hi|NOUN kal|hi|NOUN ki|hi|ADP relationships|en|NOUN b|hi|PART TV|ac|NOUN k|hi|ADP channels|en|NOUN ki|hi|ADP trha|hi|ADP change|en|NOUN hoti|hi|VERB hain|hi|AUX 😒|un|INTJ
+I|en|PRON just|en|ADV love|en|VERB my|en|PRON hair|en|NOUN and|en|CCONJ dc|ac|NOUN ka|hi|ADP head|en|NOUN to|hi|PART peechay|hi|ADV hi|hi|PART par|hi|VERB gaya|hi|AUX hai|hi|AUX ..|un|PUNCT
+Ab|hi|ADV kitni|hi|DET dair|hi|NOUN wait|en|NOUN karna|hi|VERB hoga|hi|AUX for|en|ADP Sherlocks|ne|PROPN next|en|ADJ episode|en|NOUN !|un|PUNCT
+Sunday|en|PROPN ko|hi|ADP Procurement|en|NOUN ka|hi|ADP exam|en|NOUN hai|hi|VERB and|en|CCONJ parhnay|hi|VERB k|hi|ADP lye|hi|ADP motivation|en|NOUN 0|un|NUM hai|hi|VERB .|un|PUNCT
+Read|en|VERB 3|un|NUM novels|en|NOUN in|en|ADP the|en|DET past|en|ADJ week|en|NOUN mei|hi|PRON pagal|hi|ADJ ho|hi|VERB gaya|hi|AUX hon|hi|AUX sum1|en|PRON sve|en|VERB meh|en|PRON .|un|PUNCT
+Pehle|hi|ADV West|ne|PROPN Indies|ne|PROPN waale|hi|ADP fast|en|ADJ bowler|en|NOUN bouncer|en|NOUN maarte|hi|VERB the|hi|AUX to|hi|SCONJ use|hi|DET perfume|en|NOUN ball|en|NOUN bolte|hi|VERB the|hi|AUX :)|un|INTJ ki|hi|SCONJ Naak|hi|NOUN ke|hi|ADP paas|en|ADP se|hi|ADP nikalti|hi|VERB hai|hi|AUX and|en|CCONJ you|en|PRON can|en|AUX smell|en|VERB it|en|PRON .|un|PUNCT
+Am|en|VERB i|en|PRON the|en|DET only|en|ADJ one|en|NUM jou|hi|PRON freezer|en|NOUN khol|hi|VERB k|hi|AUX Thandi|hi|ADJ hawayen|hi|NOUN leta|hi|VERB hai|hi|AUX aj|hi|NOUN kal|hi|NOUN :/|un|INTJ
+Am|en|VERB I|en|PRON The|en|DET only|en|ADJ one|en|NUM jisey|hi|PRON bohat|hi|ADV bhook|hi|NOUN lagti|hi|VERB ..|un|PUNCT Raat|hi|NOUN me|hi|ADP
+who|en|PRON the|en|DET hell|en|NOUN plays|en|VERB this|en|DET picture|en|NOUN wali|hi|ADP game|en|NOUN subah|hi|NOUN ke|hi|ADP 6|un|NUM bajay|hi|NOUN
+In|en|ADP next|en|ADJ rally|en|NOUN Rahul|ne|PROPN Gandhi|ne|PROPN may|en|AUX scream|en|VERB :|un|PUNCT Is|hi|DET desh|hi|NOUN me|hi|ADP snooping|en|NOUN kaun|hi|PRON leke|hi|VERB aaya|hi|AUX ;)|un|PUNCT
+Muje|hi|PRON parhna|hi|VERB chahiye|hi|AUX and|en|CCONJ here|en|ADV I|en|PRON am|en|VERB ,|un|PUNCT watching|en|VERB The|ne|DET Jugde|ne|PROPN .|un|PUNCT
+Looking|en|VERB at|en|ADP your|en|PRON maths|en|NOUN teacher|en|NOUN and|en|CCONJ thinking|en|VERB k|hi|SCONJ isko|hi|PRON iskay|hi|PRON ghar|hi|NOUN walay|hi|ADP kaisay|hi|PRON bardasht|hi|ADJ kerty|hi|VERB hn|hi|AUX gy|hi|AUX 😒😓|un|INTJ
+Me|en|PRON replaying|en|VERB every|en|DET snap|en|NOUN is|en|VERB the|en|DET reason|en|NOUN why|en|ADV my|en|PRON mom|en|NOUN says|en|VERB ek|hi|NUM dafa|hi|NOUN ki|hi|ADP bat|hi|NOUN samaj|hi|VERB nahi|hi|PART ati|hi|AUX hay|hi|AUX
+I|en|PRON really|en|ADV love|en|VERB mehndi|hi|PROPN but|en|CCONJ i|en|PRON wasnt|en|AUX expecting|en|VERB aj|hi|NOUN eid|ne|PROPN hogi|hi|VERB
+"|un|PUNCT Average|en|ADJ 20|un|NUM to|en|ADP 30|un|NUM year|en|NOUN old|en|ADJ male|en|NOUN thaught|en|VERB aaj|hi|NOUN shave|en|NOUN karu|hi|VERB ki|hi|CCONJ na|hi|PART karu|hi|VERB ....|un|PUNCT "|un|PUNCT
+Areeba|ne|PROPN mujhe|hi|PRON bohat|hi|ADV zaida|hi|ADJ ignore|en|NOUN karti|hi|VERB hain|hi|AUX 😢|un|INTJ and|en|CCONJ it|en|PRON hurts|en|VERB badly|en|ADV
+If|en|SCONJ Aishwarya|ne|PROPN does|en|VERB more|en|ADJ movies|en|NOUN like|en|ADP this|en|PRON ,|un|PUNCT baki|hi|DET sab|hi|DET actresses|en|NOUN ki|hi|ADP chutti|hi|NOUN ho|hi|VERB jayegi|hi|AUX ...|un|PUNCT
+Amir|hi|PROPN isko|hi|PRON out|en|NOUN kar|hi|VERB k|hi|ADP batao|hi|VERB k|hi|SCONJ u|en|PRON r|en|VERB a|en|DET normal|en|ADJ batsmen|en|NOUN
+181|un|NUM do|hi|NUM matches|en|NOUN mila|hi|VERB kar|hi|AUX bana|hi|VERB lengy|hi|AUX hum|hi|PRON ,|un|PUNCT no|en|DET tension|en|NOUN .|un|PUNCT
+Aur|hi|CCONJ phr|hi|ADV kch|hi|DET yun|hi|PRON hua|hi|VERB k|hi|SCONJ twitter|ne|PROPN update|en|NOUN hogaya|hi|VERB 😋|un|INTJ
+Chalo|hi|VERB btaoo|hi|VERB kon|hi|DET kon|hi|DET c|hi|PART fit|en|ADJ movie|en|NOUN release|en|NOUN hoi|hi|VERB thiii|hi|AUX last|en|ADJ month|en|NOUN main|hi|ADP 😜😜|un|INTJ
+Am|en|VERB I|en|PRON the|en|DET only|en|ADJ one|en|NOUN jisse|hi|PRON Ali|ne|PROPN Zafar|ne|PROPN bilkul|hi|ADV nahi|hi|PART pasand|hi|NOUN ?|un|PUNCT
+Whenever|en|ADV I|en|PRON see|en|VERB a|en|DET girl|en|NOUN passing|en|VERB by|en|ADP ,|un|PUNCT mera|hi|PRON dhyaan|hi|NOUN buttock|hi|VERB jaata|hi|AUX hai|hi|AUX .|un|PUNCT
+its|en|PRON ok|en|ADJ to|en|PART fall|en|VERB in|en|ADP love|en|NOUN but|en|CCONJ itna|hi|ADV kon|hi|PRON girta|hi|VERB hai|hi|AUX ?|un|PUNCT ._.|un|INTJ
+Kuch|hi|DET kam|hi|NOUN nhi|hi|PART to|hi|PART phone|en|NOUN off|en|NOUN and|en|CCONJ on|en|NOUN kar|hi|VERB lu|hi|AUX 😜😜|un|INTJ
+Sardana|ne|PROPN ke|hi|ADP ek|hi|NUM open|en|ADJ letter|en|NOUN ne|hi|ADP hazaron|hi|NUM tolerant|en|ADJ logon|hi|NOUN ka|hi|ADP tolerance|en|NOUN check|en|NOUN kar|hi|VERB lia|hi|AUX .|un|PUNCT
+Decided|en|VERB to|en|PART listen|en|VERB to|en|ADP this|en|DET playlist|en|NOUN on|en|ADP soundcloud|ne|PROPN and|en|CCONJ eik|hi|NUM k|hi|ADP bad|hi|ADP eik|hi|NUM depressing|en|ADJ gana|hi|NOUN hai|hi|VERB .|un|PUNCT
+My|en|PRON stream|en|NOUN is|en|VERB slow|en|ADJ idhar|hi|ADV abhi|hi|PRON Sarfraz|ne|PROPN batting|en|NOUN kar|hi|VERB raha|hi|AUX hai|hi|AUX .|un|PUNCT
+Lohey|hi|NOUN Ko|hi|ADP loha|hi|NOUN he|hi|PART kaat|hi|VERB ta|hi|AUX hai|hi|AUX does|en|AUX n't|en|PART work|en|VERB for|en|ADP farts|en|NOUN .|un|PUNCT
+"|un|PUNCT Black|en|ADJ pehno|hi|NOUN ya|hi|CCONJ white|en|ADJ Larki|hi|NOUN Gaari|hi|NOUN sey|hi|ADP impress|en|NOUN honi|hi|VERB hai|hi|AUX in|en|ADP the|en|DET end|en|NOUN .|un|PUNCT "|un|PUNCT
+Zimbabwe|ne|PROPN player|en|NOUN bullet|en|NOUN proof|en|NOUN jacket|en|NOUN ke|hi|ADP sath|hi|ADP fielding|en|NOUN kese|hi|PRON karengay|hi|VERB ?|un|PUNCT
+India|ne|PROPN will|en|AUX surly|en|ADV win|en|VERB ,|un|PUNCT yaar|hi|NOUN appna|hi|PRON Rajnikant|ne|PROPN stadium|en|NOUN mai|hi|ADP hai|hi|VERB .|un|PUNCT
+"|un|PUNCT Boys|en|NOUN k|hi|ADP future|en|NOUN se|hi|ADP zeyada|hi|ADV to|hi|PART Girls|en|NOUN ki|hi|ADP avi|ac|PROPN bright|en|ADJ hoti|hi|VERB ha|hi|AUX "|un|PUNCT
+Whenever|en|ADV I|en|PRON come|en|VERB back|en|ADV on|en|ADP twitter|ne|NOUN ,|un|PUNCT aik|hi|NUM new|en|ADJ team|en|NOUN start|en|NOUN ho|hi|VERB chuki|hi|AUX hoti|hi|AUX hai|hi|AUX 😄|un|INTJ
+I|en|PRON thought|en|VERB tht|en|SCONJ winter|en|NOUN will|en|AUX gently|en|ADV pass|en|VERB ,|un|PUNCT but|en|CCONJ yeh|hi|PRON thandh|hi|NOUN h|hi|VERB ki|hi|SCONJ manta|hi|VERB nahi|hi|PART ....|un|PUNCT jai|hi|ADJ ho|hi|VERB
+"|un|PUNCT zindagi|hi|NOUN hai|hi|VERB ya|hi|CCONJ saza|hi|NOUN i|en|PRON have|en|VERB no|en|DET idea|en|NOUN "|un|PUNCT
+On|en|ADP days|en|NOUN like|en|ADP these|en|PRON ,|un|PUNCT all|en|PRON you|en|PRON need|en|VERB is|en|VERB maa|hi|NOUN ke|hi|ADP haath|hi|NOUN ki|hi|ADP dal-roti|hi|NOUN .|un|PUNCT
+By|en|ADP God|en|PROPN ,|un|PUNCT saari|hi|DET business|en|NOUN studies|en|NOUN sar|hi|NOUN ke|hi|ADP upar|hi|ADP se|hi|ADP ja|hi|VERB rahi|hi|AUX hai|hi|AUX 😭|un|INTJ
+All|en|PRON i|en|PRON am|en|AUX thinking|en|VERB is|en|VERB '|un|PUNCT Sabr|hi|NOUN ka|hi|ADP phal|hi|NOUN meetha|hi|ADJ hota|hi|VERB hai|hi|AUX '|un|PUNCT !!|un|PUNCT
+LJ|ac|PROPN ka|hi|ADP gif|ac|NOUN option|en|NOUN and|en|CCONJ sadia|ne|PROPN ka|hi|ADP poll|en|NOUN option|en|NOUN should|en|AUX be|en|AUX removed|en|VERB 🙏🏻🙏🏻😒|un|INTJ
+ohh|un|INTJ sorry|en|ADJ ,|un|PUNCT Olympics|ne|PROPN me|hi|ADP gane-bajane|hi|VERB &|en|CCONJ nachne|hi|VERB ka|hi|ADP competition|en|NOUN nahi|hi|PART hota|hi|VERB !!|un|PUNCT
+"|un|PUNCT this|en|DET female|en|ADJ newscaster|en|NOUN is|en|AUX saying|en|VERB ""|un|PUNCT shadeed|hi|ADJ jhatkay|hi|NOUN mehsoos|hi|ADJ kiye|hi|VERB gaye|hi|AUX hain|hi|AUX ""|un|PUNCT 😂😂|un|INTJ "|un|PUNCT
+Jaane|hi|VERB kyu|hi|PRON dil|hi|NOUN jaanta|hi|VERB hai|hi|AUX tu|hi|PRON hai|hi|VERB to|hi|SCONJ I|en|PRON will|en|AUX be|en|VERB alright|en|ADJ <|un|SYM 3|un|NUM .|un|PUNCT
+Launch|en|NOUN concert|en|NOUN me|hi|ADP Komal|ne|PROPN Riviz|ne|PROPN har|hi|DET Kissi|hi|PRON Kay|hi|ADP saath|hi|ADP selfie|en|NOUN legi|hi|VERB 😎|un|INTJ
+Going|en|VERB through|en|ADP pictures|en|NOUN of|en|ADP MUNIST|ac|PROPN and|en|CCONJ itni|hi|DET nostalgia|en|NOUN feels|en|NOUN aa|hi|VERB rahi|hi|AUX hain|hi|AUX
+Bas|hi|ADV pyaar|hi|NOUN ka|hi|ADP naam|hi|NOUN na|hi|PART lena|hi|VERB I|en|PRON hate|en|VERB love|en|NOUN stories|en|NOUN 💃💃|un|INTJ
+zindagi|hi|NOUN ma|hi|ADP bht|hi|DET gunnah|hi|NOUN kiye|hi|VERB is|hi|PRON liye|hi|ADP exams|en|NOUN ma|hi|ADP examiner|en|NOUN meri|hi|PRON seat|en|NOUN change|en|NOUN krty|hi|VERB rehty|hi|AUX xD|un|INTJ
+So|en|ADV Bhagwat|ne|PROPN 's|en|PART Ek|hi|NUM Bhasha|hi|NOUN ,|un|PUNCT Ek|hi|NUM blah|en|NOUN blah|en|NOUN added|en|VERB to|en|ADP BJP|ac|PROPN 's|en|PART Delhi|ne|PROPN defeat|en|NOUN too|en|ADV !|un|PUNCT
+I|en|PRON think|en|VERB college|en|NOUN mein|hi|ADP mere|hi|PRON jaga|hi|NOUN mere|hi|PRON parents|en|NOUN ne|hi|ADP admission|en|NOUN leya|hi|VERB hai|hi|AUX
+Pata|hi|NOUN nahi|hi|PART log|hi|NOUN kesy|hi|PRON time|en|NOUN manage|en|NOUN karty|hi|VERB hen|hi|AUX k|hi|SCONJ her|en|DET movie|en|NOUN /|un|PUNCT season|en|NOUN dekh|hi|VERB lety|hi|AUX hen|hi|AUX aur|hi|CCONJ her|en|DET book|en|NOUN parh|hi|VERB lety|hi|AUX hen|hi|AUX .|un|PUNCT
+Suresh|ne|PROPN Raina|ne|PROPN lupt|hi|ADJ hone|hi|VERB ki|hi|ADP kagar|hi|NOUN par|hi|ADP ,|un|PUNCT as|en|SCONJ india|ne|PROPN going|en|VERB to|en|PART play|en|VERB max|en|ADJ test|en|NOUN matches|en|NOUN this|en|DET year|en|NOUN .|un|PUNCT
+The|en|DET samosa|hi|NOUN waala|hi|ADP played|en|VERB priyanka|ne|PROPN 's|en|PART father|en|NOUN in|en|ADP Mary|ne|PROPN Kom|ne|PROPN !|un|PUNCT
+"|un|PUNCT Sometimes|en|ADV all|en|PRON you|en|PRON need|en|VERB to|en|PART say|en|VERB is|en|VERB BHAAR|hi|NOUN ME|hi|ADP JAO|hi|VERB YAR|hi|NOUN .|un|PUNCT "|un|PUNCT
+u|en|PRON know|en|VERB k|hi|SCONJ meri|hi|PRON life|en|NOUN ka|hi|ADP bas|hi|ADV aik|hi|NUM simple|en|ADJ sa|hi|PART rule|en|NOUN hai|hi|VERB
+"|un|PUNCT One|en|NUM of|en|ADP my|en|PRON Libtard|en|PROPN friends|en|NOUN was|en|AUX saying|en|VERB ""|un|PUNCT Ye|hi|DET gore|hi|ADJ firang|hi|ADJ log|hi|NOUN bahot|hi|ADV racist|en|ADJ hote|hi|VERB hain|hi|AUX ..|un|PUNCT """|un|PUNCT
+Truth|en|NOUN is|en|VERB the|en|DET most|en|ADV difficult|en|ADJ thing|en|NOUN to|en|PART digest|en|VERB ,|un|PUNCT baaki|hi|ADJ sab|hi|PRON ke|hi|ADP liye|hi|ADP Hajmola|ne|PROPN hai|hi|VERB na|hi|PART !|un|PUNCT
+Am|en|VERB sleepy|en|ADJ but|en|CCONJ mobile|en|NOUN ko|hi|ADP akela|hi|ADJ kaisa|hi|ADV choru|hi|VERB woh|hi|PRON bore|en|NOUN hoi|hi|VERB ga|hi|AUX ..|un|PUNCT 😂|un|INTJ
+Yeh|hi|DET Bollywood|ne|PROPN actors|en|NOUN ki|hi|ADP cover|en|ADJ photos|en|NOUN laganay|hi|VERB walay|hi|ADP mujhe|hi|PRON kabhi|hi|ADV samajh|hi|VERB nahi|hi|PART ay|hi|AUX .|un|PUNCT 😑|un|INTJ
+Mere|hi|PRON drawing|en|NOUN room|en|NOUN aur|hi|CCONJ bedroom|en|NOUN ke|hi|ADP beech|hi|ADP mein|hi|ADP bohat|hi|DET traffic|en|NOUN hai|hi|VERB .|un|PUNCT
+Innocent|en|ADJ Sonia|ne|PROPN ji|hi|PART may|en|AUX not|en|PART be|en|VERB aware|en|ADJ of|en|ADP the|en|DET word|en|NOUN zahar|hi|NOUN ki|hi|ADP kheti|hi|NOUN
+Mere|hi|PRON class|en|NOUN ke|hi|ADP bullies|en|NOUN exam|en|NOUN mein|hi|ADP bahut|hi|ADV zyada|hi|ADJ Knuckle|hi|NOUN karte|hi|VERB hai|hi|AUX .|un|PUNCT
+"|un|PUNCT I|en|PRON thnk|en|VERB I|en|PRON shud|en|AUX say|hi|VERB sorry|en|NOUN But|en|CCONJ ego|en|NOUN a|hi|VERB jati|hi|AUX hai|hi|AUX bich|hi|NOUN me|hi|ADP "|un|PUNCT
+Can|en|AUX you|en|PRON guess|en|VERB ARY|ac|PROPN Digital|ne|PROPN par|hi|ADP is|hi|DET waqt|hi|NOUN konsa|hi|DET drama|en|NOUN chal|hi|VERB raha|hi|AUX hai|hi|AUX ?|un|PUNCT ;)|un|INTJ
+Karachi|ne|PROPN ko|hi|ADP Sindh|ne|PROPN se|hi|ADP Juda|hi|ADJ karne|hi|VERB wale|hi|ADP living|en|VERB in|en|ADP fools|en|NOUN paradise|en|NOUN .|un|PUNCT
+Monday|en|PROPN should|en|AUX be|en|VERB like|en|ADP 29th|en|PROPN of|en|ADP February|ne|PROPN .|un|PUNCT 4|un|NUM saal|hi|NOUN baad|hi|ADP hi|hi|PART aaya|hi|VERB kray|hi|AUX .|un|PUNCT
+Agar|hi|SCONJ 175|un|NUM pe|hi|ADP all|en|DET out|en|ADP hogaye|hi|VERB to|hi|SCONJ MATLAB|hi|NOUN MAC|ne|PROPN theek|hi|ADJ kehraha|hi|VERB tha|hi|AUX and|en|CCONJ match|en|NOUN Fixed|en|ADJ hai|hi|VERB .|un|PUNCT
+Swamy|hi|PROPN ke|hi|ADP bheje|hi|NOUN mein|hi|ADP full|en|ADJ on|en|ADP chemical|en|ADJ locha|hi|NOUN hai|hi|VERB boss|en|NOUN 😂|un|INTJ
+I|en|PRON think|en|VERB Telenor|ne|PROPN 3G|ac|PROPN k|hi|ADP saampon|hi|NOUN walay|hi|ADP ad|en|NOUN se|hi|ADP zaida|hi|ADV stupid|en|ADJ ad|en|NOUN mei|hi|PRON ne|hi|ADP aajtak|hi|NOUN nahi|hi|PART dekha|hi|VERB !|un|PUNCT Who|en|PRON came|en|VERB up|en|PART with|en|ADP that|en|DET ad|en|NOUN ?|un|PUNCT
+Pata|hi|VERB naee|hi|PART test|en|NOUN match|en|NOUN color|en|NOUN kits|en|NOUN mai|hi|ADP kyun|hi|PRON khail|hi|VERB rahay|hi|AUX hain|hi|AUX .|un|PUNCT
+That|en|DET moment|en|NOUN jb|hi|PRON ap|hi|PRON kisi|hi|PRON se|hi|ADP baat|hi|NOUN b|hi|PART krna|hi|VERB chah|hi|VERB rhy|hi|AUX ho|hi|AUX and|en|CCONJ you|en|PRON do|en|AUX n't|en|PART know|en|VERB what|en|PRON to|en|PART talk|en|VERB .|un|PUNCT
+Discussing|en|VERB the|en|DET screenplay|en|NOUN of|en|ADP '|un|PUNCT Suraj|hi|NOUN ka|hi|ADP saatwan|hi|ADJ Ghoda|hi|NOUN '|un|PUNCT
+Root|en|PROPN dikhta|hi|VERB hai|hi|AUX sweet|en|ADJ innocent|en|ADJ swamy|hi|NOUN type|en|NOUN ka|hi|ADP par|hi|CCONJ hai|hi|VERB bohat|hi|ADV baday|hi|ADJ harami|hi|NOUN type|en|NOUN ka|hi|ADP .|un|PUNCT
+Koi|hi|PRON mjhsy|hi|PRON mera|hi|PRON password|en|NOUN lykar|hi|VERB mera|hi|PRON account|en|NOUN deactivate|en|NOUN kardyga|hi|VERB ?|un|PUNCT 😊|un|INTJ
+Samnay|hi|NOUN ground|en|NOUN me|hi|ADP match|en|NOUN 4|un|NUM second|en|NOUN late|en|ADV chal|hi|VERB raha|hi|AUX hai|hi|AUX
+Koi|hi|PRON brasil|ne|PROPN kay|hi|ADP match|en|NOUN ka|hi|ADP live|en|NOUN streaming|en|VERB link|en|NOUN de|hi|VERB do|hi|AUX ..|un|PUNCT
+hum|hi|PRON apko|hi|PRON us|hi|DET Tweet|en|NOUN ka|hi|ADP screen|en|NOUN shot|en|NOUN day|hi|VERB sakty|hi|AUX hai|hi|AUX
+BHARAT|ne|PROPN MATA|hi|PROPN KI|hi|ADP JAI|hi|PROPN is|en|VERB the|en|DET new|en|ADJ SI|ac|PROPN unit|en|NOUN to|en|PART measure|en|VERB DESHPREM|hi|NOUN across|en|ADP world|en|NOUN .|un|PUNCT
+Ye|hi|DET left|en|ADJ collarbone|en|NOUN men|hi|ADP pain|en|NOUN hone|hi|VERB ka|hi|ADP kia|hi|DET scene|en|NOUN hai|hi|VERB ?|un|PUNCT
+"|un|PUNCT Tax|en|NOUN chori|hi|NOUN Money|en|NOUN laundering|en|NOUN Yeh|hi|PRON siasat|hi|NOUN hain|hi|VERB nawaz|ne|PROPN league|ne|PROPN ki|hi|ADP "|un|PUNCT
+Aaj|hi|NOUN 1|un|NUM year|en|NOUN ho|hi|VERB gaya|hi|AUX but|en|CCONJ no|en|PART justice|en|NOUN for|en|ADP Pujay|ne|PROPN bapu|ne|PROPN ji|ne|PART
+Ab|hi|ADV World|en|PROPN cup|en|PROPN ka|hi|ADP qualifying|en|VERB round|en|NOUN kailna|hi|VERB parhy|hi|AUX ga|hi|AUX
+Hafeez|ne|PROPN ny|hi|ADP test|en|NOUN series|en|NOUN mai|hi|ADP runs|en|NOUN kum|hi|ADJ kiay|hi|VERB hain|hi|AUX catch|en|NOUN zeyada|hi|ADJ drop|en|NOUN kiay|hi|VERB hain|hi|AUX .|un|PUNCT
