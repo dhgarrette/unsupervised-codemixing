@@ -267,7 +267,7 @@ object Codemix {
     for (s <- trainInput.drop(20).take(2)) { println; for (w <- s) println(f"${replaceUnk(w)}%20s  [${tagdict(w).mkString(", ")}]") }
   
     val results: IndexedSeq[(Int, Double)] =
-    	  for (maxIter <- (100 to 100)) yield {//(0 to 4) ++ (5 to 20 by 5) ++ (30 to 30 by 10)) yield {// ++ (30 to 100 by 10)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
+    	  for (maxIter <- (1000 to 1000)) yield {//(0 to 4) ++ (5 to 20 by 5) ++ (30 to 30 by 10)) yield {// ++ (30 to 100 by 10)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
           val emTrainer = new SoftEmHmmTaggerTrainer[Tag](
                                     	  maxIterations = maxIter,
                                     	  new UnsmoothedTransitionDistributioner, new UnsmoothedEmissionDistributioner,
@@ -287,12 +287,13 @@ object Codemix {
               f.writeLine(sentence.zipSafe(tagProbs).map {
                 case ((word, goldLang), modelOutputLangDist) =>
                   val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
-                  f"$word|$goldLang|${filteredProbs.map { case (t,p) => f"${t match {
-                    case "E" => "en"
-                    case "xE" => "en"
-                    case "S" => "hi"
-                    case "xS" => "hi"
-                      }}:${p}%.3f" }.mkString(",")}"//%.3f
+                  val tagDistString = filteredProbs.map { case (t,p) => f"${t match {
+                          case "E" => "en"
+                          case "xE" => "en"
+                          case "S" => "hi"
+                          case "xS" => "hi"
+                      }}:${p}%.3f" }.mkString(",")
+                  f"$word|$goldLang|$tagDistString"
               }.mkString(" "))
             }
           }
