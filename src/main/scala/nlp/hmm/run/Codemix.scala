@@ -90,7 +90,7 @@ object Codemix {
     val product = ngrams.map { case (context, head) => model(head, context) }.product
     val perplexity = new LogDouble((LogDouble(1.0) / product).logValue * (1.0 / ngrams.size))
     val invertedPerplexity = (LogDouble(1) / perplexity)
-    invertedPerplexity * invertedPerplexity  // squared
+    LogDouble(math.E ** invertedPerplexity.toDouble)  // When wrapped in the probability distribution, it will be: softmax(1/perplexity)
   }
   
   def readLangTaggedSplFile(filenames: Vector[String], numColumns: Int) = {
@@ -108,6 +108,18 @@ object Codemix {
     }
   }
   
+  def readRawSentences(filenames: Vector[String], lang: String): Vector[Vector[(String, String)]] = {
+    filenames.flatMap { filename =>
+      File(filename).readLines.map { line =>
+        line.splitWhitespace.map { token =>
+          val word = normalizeWord(token)
+          if (isNonX(word)) (word, lang)
+          else (word, "x"+lang)
+        }
+      }
+    }
+  }
+
   def main(args: Array[String]) = {
     // Tags:  <S>, <E>, E, xE, S, xS 
     val initTrans = new SimpleConditionalLogProbabilityDistribution(
@@ -140,9 +152,11 @@ object Codemix {
                 "<E>" -> LogDouble(0.10))),
             ))
 
-    val monoEnData = readConlluRawData(Vector("data/ud/UD_English-EWT-master/en-ud-train.conllu"), "E")
-    //val monoEsData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
-    val monoEsData = readConlluRawData(Vector("data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
+//    val monoEnData = readConlluRawData(Vector("data/ud/UD_English-EWT-master/en-ud-train.conllu"), "E")
+//    //val monoEsData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
+//    val monoEsData = readConlluRawData(Vector("data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
+    val monoEnData = readRawSentences(Vector("data/ud/UD_English-EWT-master/train_latn.spl"), "E")
+    val monoEsData = readRawSentences(Vector("data/ud/UD_Hindi-HDTB-master/train_latn.spl"), "S")// -- monoEnWordCounts.keys
     val monoEnWordCounts = monoEnData.flatten.map(_._1).counts
     val monoEsWordCounts = monoEsData.flatten.map(_._1).counts// -- monoEnWordCounts.keys
 //    val csTrainData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/train.spl"), 2)
@@ -151,14 +165,14 @@ object Codemix {
                                                    "data/fire/en_hi/dev.spl",
                                                    "data/icon/en_hi/dev.spl",
                                                    "data/msr/en_hi/dev.spl"), 2)
-    val csEvalData = csTrainData
+    val csEvalData = readLangTaggedSplFile(Vector("data/irshad/en_hi/dev.spl"), 2)
     
     val perplexityCheckWords = Vector("acceleration", "dhg", "dhgg", "aardvark", "aardvarks", "why", "telephone", "who", "how", "when", "where", "what", "the", "a", "szozezizjzfzso")
     def checkPerplexities(charNgramOrder: Int, model: ConditionalLogProbabilityDistribution[Vector[String], String]) = {
       println("\ncheckPerplexities")
-      val wordPerplexities = perplexityCheckWords.mapTo { w => charSequenceProbability(w, charNgramOrder, model).toDouble }
-      for ((w,p) <- wordPerplexities.sortBy(-_._2)) {
-        println(f"$w%20s = $p%25.8f")
+      val wordProbs = perplexityCheckWords.mapTo { w => charSequenceProbability(w, charNgramOrder, model) }.normalizeValues
+      for ((w,p) <- wordProbs.sortBy(_._2).reverse) {
+        println(f"$w%20s = ${p.toDouble}%25.8f")
       }
     }
     def checkPerplexities2(model: ConditionalLogProbabilityDistribution[String, String]) = {
@@ -170,7 +184,7 @@ object Codemix {
     }
     
     val csAllTypes = (csTrainData ++ csEvalData).flatten.map(_._1).toSet
-  		val csCutoffTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count <= unkCutoffCount => word }.toVector.take(2500)  // I don't know why this is necessary :-(
+  		val csCutoffTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count <= unkCutoffCount => word }.toVector//.take(2500)  // I don't know why this is necessary :-(
   		println("csCutoffTypes.size() = " + csCutoffTypes.size)
     val csGoodTypes = csTrainData.flatten.map(_._1).toSet -- csCutoffTypes
     val monoEnOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
@@ -196,10 +210,10 @@ object Codemix {
           Map[Tag, LogProbabilityDistribution[Word]](
               "<S>" -> new SimpleLogProbabilityDistribution(Map("<S>" -> LogDouble(1))),
               "<E>" -> new SimpleLogProbabilityDistribution(Map("<E>" -> LogDouble(1))),
-              "E"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEnNgramModel)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-              "S"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEsNgramModel)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-              "xE"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEnNgramModel)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-              "xS"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEsNgramModel)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+              "E"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEnNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+              "S"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEsNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+              "xE"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEnNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+              "xS"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEsNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
 //              "E"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
 //              "S"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
 //              "xE"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
@@ -267,8 +281,8 @@ object Codemix {
                   tagdict)
               else null
               
-          writeUsing(File(f"output/unsup_train_dist_tagged_${maxIter}%03d.out")) { f =>
-            for (sentence <- csTrainData) {
+          writeUsing(File(f"output/unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+            for (sentence <- csEvalData) {
               val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (w,t) => replaceUnk(w) -> tagdict(w) })
               f.writeLine(sentence.zipSafe(tagProbs).map {
                 case ((word, goldLang), modelOutputLangDist) =>
