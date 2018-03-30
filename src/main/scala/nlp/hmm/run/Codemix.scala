@@ -17,6 +17,7 @@ import nlp.hmm.prob.MapLogProbabilityDistribution
 import nlp.hmm.tag.MemmTaggerTrainer
 import scala.collection.mutable.Buffer
 import nlp.hmm.tag.HmmTagger
+import nlp.hmm.prob.SimpleExpProbabilityDistribution
 
 object Codemix {
   type Word = String
@@ -184,8 +185,8 @@ object Codemix {
     }
     
     val csAllTypes = (csTrainData ++ csEvalData).flatten.map(_._1).toSet
-  		val csCutoffTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count <= unkCutoffCount => word }.toVector//.take(2500)  // I don't know why this is necessary :-(
-  		println("csCutoffTypes.size() = " + csCutoffTypes.size)
+      val csCutoffTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count <= unkCutoffCount => word }.toVector//.take(2500)  // I don't know why this is necessary :-(
+      println("csCutoffTypes.size() = " + csCutoffTypes.size)
     val csGoodTypes = csTrainData.flatten.map(_._1).toSet -- csCutoffTypes
     val monoEnOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
     val monoEsOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
@@ -228,7 +229,7 @@ object Codemix {
         (initEmissCharNgrams(charNgramOrder), LogDouble(1 - initEmissInterpUnigramWeight))))
     }
     val initEmiss = initEmissInterpUnigramWordCharNgrams(0.75, 3)
-  		checkPerplexities2(initEmiss)
+      checkPerplexities2(initEmiss)
     
 //    val initEmiss = new SimpleConditionalLogProbabilityDistribution(
 //        Map[Tag, LogProbabilityDistribution[Word]](
@@ -262,16 +263,16 @@ object Codemix {
       case _ => "x"
     }
 
-    	val trainInput = csTrainData.map(_.map(_._1))
-    	  
+      val trainInput = csTrainData.map(_.map(_._1))
+        
     for (s <- trainInput.drop(20).take(2)) { println; for (w <- s) println(f"${replaceUnk(w)}%20s  [${tagdict(w).mkString(", ")}]") }
   
     val results: IndexedSeq[(Int, Double)] =
-    	  for (maxIter <- (1000 to 1000)) yield {//(0 to 4) ++ (5 to 20 by 5) ++ (30 to 30 by 10)) yield {// ++ (30 to 100 by 10)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
+        for (maxIter <- (1000 to 1000)) yield {//(0 to 4) ++ (5 to 20 by 5) ++ (30 to 30 by 10)) yield {// ++ (30 to 100 by 10)) yield {  //(0 to 10) ++ (15 to 50 by 5)) yield {
           val emTrainer = new SoftEmHmmTaggerTrainer[Tag](
-                                    	  maxIterations = maxIter,
-                                    	  new UnsmoothedTransitionDistributioner, new UnsmoothedEmissionDistributioner,
-                                    	  alphaT = 0.0, alphaE = 0.0, 1e-10)
+                                        maxIterations = maxIter,
+                                        new UnsmoothedTransitionDistributioner, new UnsmoothedEmissionDistributioner,
+                                        alphaT = 0.0, alphaE = 0.0, 1e-10)
           val supervisedMemmTrainer = new MemmTaggerTrainer[Tag](maxIterations = 100, cutoff = 100, tdRestricted = true, identity, identity)
           
           val emHmm = emTrainer.train(trainInput.map(_.map(replaceUnk)), tagdict, initTrans, initEmiss)
@@ -281,20 +282,42 @@ object Codemix {
                   tagdict)
               else null
               
-          writeUsing(File(f"output/unsup_dist_tagged_${maxIter}%03d.out")) { f =>
-            for (sentence <- csEvalData) {
-              val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (w,t) => replaceUnk(w) -> tagdict(w) })
-              f.writeLine(sentence.zipSafe(tagProbs).map {
-                case ((word, goldLang), modelOutputLangDist) =>
-                  val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
-                  val tagDistString = filteredProbs.map { case (t,p) => f"${t match {
-                          case "E" => "en"
-                          case "xE" => "en"
-                          case "S" => "hi"
-                          case "xS" => "hi"
-                      }}:${p}%.3f" }.mkString(",")
-                  f"$word|$goldLang|$tagDistString"
-              }.mkString(" "))
+          {
+            for (csUnsupFile <- Vector("fire", "icon", "irshad", "msr")) {
+              val csUnsupData = readLangTaggedSplFile(Vector(s"data/$csUnsupFile/en_hi/dev.spl"), 2)
+              val allWords = csEvalData.flatMap(_.map(_._1)).toSet
+              val wordTranslits: Map[String, Vector[SimpleExpProbabilityDistribution[String]]] = 
+                  File("data/translit/latn2deva.txt").readLines
+                      .map(_.splitWhitespace).collect { 
+                        case Seq(w, translitsString) if allWords(w) => w -> Vector(
+                            new SimpleExpProbabilityDistribution(Map(translitsString.lsplit(":", 2).head -> 1.0)),
+                            new SimpleExpProbabilityDistribution(translitsString.lsplit(",").map(_.lsplit(":")).map { case Seq(v,p) => (v,p.toDouble) }.toMap))
+                      }.toMap
+              for (pd <- Seq(0,1)) {
+                writeUsing(File(f"data/$csUnsupFile/en_hi/dev_unsup_labels_${pd match { case 0 => "onebest"; case 1 => "sampled" }}.spl")) { f =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                  for (sentence <- csEvalData) {
+                    val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (w,t) => replaceUnk(w) -> tagdict(w) })
+                    f.writeLine(sentence.zipSafe(tagProbs).map {
+                      case ((word, goldLang), modelOutputLangDist) =>
+                        val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
+                        val goldTag = goldLang match {
+                                case "E" => "en"
+                                case "xE" => "en"
+                                case "S" => "hi"
+                                case "xS" => "hi"
+                                case t => t
+                        }
+                        val tagDistString = filteredProbs.map { case (t,p) => f"${t match {
+                                case "E" => "en"
+                                case "xE" => "en"
+                                case "S" => "hi"
+                                case "xS" => "hi"
+                            }}:${p}%.3f" }.mkString(",")
+                        f"$word|$goldTag|$tagDistString|${wordTranslits.get(word).map(_(pd).sample()).getOrElse(word)}"
+                    }.mkString(" "))
+                  }
+                }
+              }
             }
           }
 
@@ -322,7 +345,7 @@ object Codemix {
                   val cleanGoldLabel = cleanLangLabel(word, goldLang)
                   if (cleanGoldLabel != "x") {  // Just evaluate when the gold annotation is a language label.
                     if (cleanGoldLabel == cleanLangLabel(word, predictedLang)) numCorrect += 1
-                		  totalCount += 1
+                      totalCount += 1
                   }
                 }
                 f.writeLine(sentence.zipSafe(replaceUnks(sentence)).zipSafe(predictedTags).map { case (((word, gold), modifiedWord), predicted) => f"$word|$modifiedWord|$predicted|$gold" }.mkString(" "))
@@ -362,8 +385,8 @@ object Codemix {
           doEvaluate(csTrainData, "train", outputTagDistributions = false)
           doEvaluate(csEvalData, "eval", outputTagDistributions = false)
         }
-	  for ((maxIter, acc) <- results) {
-	    println(f"$maxIter%3d  ${acc*100}%.2f")
-	  }
+    for ((maxIter, acc) <- results) {
+      println(f"$maxIter%3d  ${acc*100}%.2f")
+    }
   }
 }
