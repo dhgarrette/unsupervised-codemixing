@@ -291,30 +291,37 @@ object Codemix {
                       .map(_.splitWhitespace).collect { 
                         case Seq(w, translitsString) if allWords(w) => w -> Vector(
                             new SimpleExpProbabilityDistribution(Map(translitsString.lsplit(":", 2).head -> 1.0)),
-                            new SimpleExpProbabilityDistribution(translitsString.lsplit(",").map(_.lsplit(":")).map { case Seq(v,p) => (v,p.toDouble) }.toMap))
+                            new SimpleExpProbabilityDistribution(translitsString.lsplit(",").map(_.lsplit(":")).map { case Seq(v,p) => (v,p.toDouble) }.toMap),
+                            null)
                       }.toMap
               for (pd <- Seq(0,1)) {
-                writeUsing(File(f"data/$csUnsupFile/en_hi/dev_unsup_labels_${pd match { case 0 => "onebest"; case 1 => "sampled" }}.spl")) { f =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
-                  for (sentence <- csEvalData) {
-                    val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (w,t) => replaceUnk(w) -> tagdict(w) })
-                    f.writeLine(sentence.zipSafe(tagProbs).map {
-                      case ((word, goldLang), modelOutputLangDist) =>
-                        val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
-                        val goldTag = goldLang match {
-                                case "E" => "en"
-                                case "xE" => "en"
-                                case "S" => "hi"
-                                case "xS" => "hi"
-                                case t => t
-                        }
-                        val tagDistString = filteredProbs.map { case (t,p) => f"${t match {
-                                case "E" => "en"
-                                case "xE" => "en"
-                                case "S" => "hi"
-                                case "xS" => "hi"
-                            }}:${p}%.3f" }.mkString(",")
-                        f"$word|$goldTag|$tagDistString|${wordTranslits.get(word).map(_(pd).sample()).getOrElse(word)}"
-                    }.mkString(" "))
+                for (oracle <- Seq(false, true)) {
+                  writeUsing(File(f"data/$csUnsupFile/en_hi/dev_unsup_labels_${pd match { case 0 => "onebest"; case 1 => "sampled" }}${if (oracle) "_oracle" else ""}.spl")) { f =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                    for (sentence <- csEvalData) {
+                      val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (w,t) => replaceUnk(w) -> tagdict(w) })
+                      f.writeLine(sentence.zipSafe(tagProbs).map {
+                        case ((word, goldLang), modelOutputLangDist) =>
+                          val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
+                          val goldTag = goldLang match {
+                                  case "E" => "en"
+                                  case "xE" => "en"
+                                  case "S" => "hi"
+                                  case "xS" => "hi"
+                                  case t => t
+                          }
+                          val tagDistString = 
+                            if (oracle)
+                              f"${goldTag match { case "hi" => "hi"; case _ => "en" }}:1.000"
+                            else
+                              filteredProbs.map { case (t,p) => f"${t match {
+                                    case "E" => "en"
+                                    case "xE" => "en"
+                                    case "S" => "hi"
+                                    case "xS" => "hi"
+                                }}:${p}%.3f" }.mkString(",")
+                            f"$word|$goldTag|$tagDistString|${wordTranslits.get(word).map(_(pd).sample()).getOrElse(word)}"
+                      }.mkString(" "))
+                    }
                   }
                 }
               }
