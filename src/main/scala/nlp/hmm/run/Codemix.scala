@@ -55,11 +55,11 @@ object Codemix {
     }
   }
   
-  def wordToChars(word: String, n: Int) = {
-    Vector.fill(n - 1)("<S>") ++ word.map(_.toString) ++ Vector("<E>")
+  def wordToChars(word: String, n: Int): Vector[String] = {
+    Vector.fill(n - 1)("<S>") ++ word.map(_.toString.toLowerCase) ++ Vector("<E>")
   }
   
-  def wordToCharNgrams(word: String, n: Int) = {
+  def wordToCharNgrams(word: String, n: Int): Vector[(Vector[String], String)] = {
     wordToChars(word, n).sliding(n).map { case context :+ c => (context, c) }.toVector
   }
 
@@ -98,12 +98,12 @@ object Codemix {
     filenames.flatMap { filename =>
       File(filename).readLines.map { line =>
         line.splitWhitespace.map(token => (numColumns, token.rsplit(raw"\|", numColumns)) match {
-          case (2, Vector(word, "en")) => (normalizeWord(word), "E")
-          case (2, Vector(word, "es")) => (normalizeWord(word), "S")
-          case (2, Vector(word, lang)) => (normalizeWord(word), lang)
-          case (3, Vector(word, "en", _)) => (normalizeWord(word), "E")
-          case (3, Vector(word, "es", _)) => (normalizeWord(word), "S")
-          case (3, Vector(word, lang, _)) => (normalizeWord(word), lang)
+          case (2, Vector(word, "en")) => (normalizeWord(word), "E", word)
+          case (2, Vector(word, "es")) => (normalizeWord(word), "S", word)
+          case (2, Vector(word, lang)) => (normalizeWord(word), lang, word)
+          case (3, Vector(word, "en", _)) => (normalizeWord(word), "E", word)
+          case (3, Vector(word, "es", _)) => (normalizeWord(word), "S", word)
+          case (3, Vector(word, lang, _)) => (normalizeWord(word), lang, word)
         })
       }
     }
@@ -256,7 +256,7 @@ object Codemix {
                                      case word if csUnkTypes(word) && isX(word) => "<xUNK>"
                                      case word => word
                                    }
-    def replaceUnks(sentence: Vector[(String, String)]): Vector[String] = sentence.map { case (word, lang) => replaceUnk(word) }
+    def replaceUnks(sentence: Vector[(String, String, String)]): Vector[String] = sentence.map { case (word, lang, originalWord) => replaceUnk(word) }
     def cleanLangLabel(word: String, lang: String): String = lang match {
       case _ if isX(word) => "x"
       case "E" | "S" => lang
@@ -284,43 +284,61 @@ object Codemix {
               
           {
             for (csUnsupFile <- Vector("fire", "icon", "irshad", "msr")) {
+              val hiKnownEmbWords: Set[String] = File("data/emb/emb-polyglot-hi.txt").readLines.map(_.splitWhitespace.head).toSet
               val csUnsupData = readLangTaggedSplFile(Vector(s"data/$csUnsupFile/en_hi/dev.spl"), 2)
               val allWords = csEvalData.flatMap(_.map(_._1)).toSet
-              val wordTranslits: Map[String, Vector[SimpleExpProbabilityDistribution[String]]] = 
+              val wordTranslits: Map[String, Map[Boolean, Map[Boolean, SimpleExpProbabilityDistribution[String]]]] = 
                   File("data/translit/latn2deva.txt").readLines
                       .map(_.splitWhitespace).collect { 
-                        case Seq(w, translitsString) if allWords(w) => w -> Vector(
-                            new SimpleExpProbabilityDistribution(Map(translitsString.lsplit(":", 2).head -> 1.0)),
-                            new SimpleExpProbabilityDistribution(translitsString.lsplit(",").map(_.lsplit(":")).map { case Seq(v,p) => (v,p.toDouble) }.toMap),
-                            null)
+                        case Seq(w, translitsString) if allWords(w) => w -> {
+                          val translitsAndProbs: Vector[(String, Double)] = translitsString.lsplit(",").map(_.lsplit(":")).map { case Seq(v,p) => (v,p.toDouble) }
+                          val allOnebest = new SimpleExpProbabilityDistribution(Map(translitsAndProbs.head._1 -> 1.0))
+                          val allSampled = new SimpleExpProbabilityDistribution(translitsAndProbs.toMap)
+                          Map(  // Maps preferKnownTranslit -> onebest -> probDist
+                            false -> 
+                              Map(true -> allOnebest, false -> allSampled),
+                            true -> {
+                              val knownTranslitsAndProbs = translitsAndProbs.filter { case (w,p) => hiKnownEmbWords(w) }
+                              if (knownTranslitsAndProbs.nonEmpty) {
+                                val knownOnebest = new SimpleExpProbabilityDistribution(Map(knownTranslitsAndProbs.head._1 -> 1.0))
+                                val knownSampled = new SimpleExpProbabilityDistribution(knownTranslitsAndProbs.toMap)
+                                Map(true -> knownOnebest, false -> knownSampled)
+                              } else {
+                                // None of the transliterations have known embeddings.
+                                Map(true -> allOnebest, false -> allSampled)
+                              }
+                            })
+                        }
                       }.toMap
-              for (pd <- Seq(0,1)) {
-                for (oracle <- Seq(false, true)) {
-                  writeUsing(File(f"data/$csUnsupFile/en_hi/dev_unsup_labels_${pd match { case 0 => "onebest"; case 1 => "sampled" }}${if (oracle) "_oracle" else ""}.spl")) { f =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
-                    for (sentence <- csEvalData) {
-                      val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (w,t) => replaceUnk(w) -> tagdict(w) })
-                      f.writeLine(sentence.zipSafe(tagProbs).map {
-                        case ((word, goldLang), modelOutputLangDist) =>
-                          val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
-                          val goldTag = goldLang match {
-                                  case "E" => "en"
-                                  case "xE" => "en"
-                                  case "S" => "hi"
-                                  case "xS" => "hi"
-                                  case t => t
-                          }
-                          val tagDistString = 
-                            if (oracle)
-                              f"${goldTag match { case "hi" => "hi"; case _ => "en" }}:1.000"
-                            else
-                              filteredProbs.map { case (t,p) => f"${t match {
+              for (onebest <- Seq(false, true)) {
+                for (preferKnownTranslit <- Seq(false, true)) {
+                	  for (oracle <- Seq(false, true)) {
+                    writeUsing(File(f"data/$csUnsupFile/en_hi/dev_unsup_labels_${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.spl")) { f =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                      for (sentence <- csEvalData) {
+                        val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (nw,t,ow) => replaceUnk(nw) -> tagdict(nw) })
+                        f.writeLine(sentence.zipSafe(tagProbs).map {
+                          case ((word, goldLang, originalWord), modelOutputLangDist) =>
+                            val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
+                            val goldTag = goldLang match {
                                     case "E" => "en"
                                     case "xE" => "en"
                                     case "S" => "hi"
                                     case "xS" => "hi"
-                                }}:${p}%.3f" }.mkString(",")
-                            f"$word|$goldTag|$tagDistString|${wordTranslits.get(word).map(_(pd).sample()).getOrElse(word)}"
-                      }.mkString(" "))
+                                    case t => t
+                            }
+                            val tagDistString = 
+                              if (oracle)
+                                f"${goldTag match { case "hi" => "hi"; case _ => "en" }}:1"
+                              else
+                                filteredProbs.map { case (t,p) => f"${t match {
+                                      case "E" => "en"
+                                      case "xE" => "en"
+                                      case "S" => "hi"
+                                      case "xS" => "hi"
+                                  }}:${p}%.3f" }.mkString(",")
+                              f"$originalWord|$goldTag|$tagDistString|${wordTranslits.get(word).map(_(preferKnownTranslit)).map(_(onebest).sample()).getOrElse(word)}"
+                        }.mkString(" "))
+                      }
                     }
                   }
                 }
@@ -328,7 +346,7 @@ object Codemix {
             }
           }
 
-          def doEvaluate(evalData: Vector[Vector[(String, String)]], outputFilePrefix: String, outputTagDistributions: Boolean = false) = {
+          def doEvaluate(evalData: Vector[Vector[(String, String, String)]], outputFilePrefix: String, outputTagDistributions: Boolean = false) = {
             val goldTags = Vector("<S>", "<E>") ++ evalData.flatten.map(_._2).sorted.distinct
             val goldTagIndex = goldTags.zipWithIndex.toMap
             val modelTags = Vector("<S>", "<E>") ++ tagdict.allTags.toVector.sorted
@@ -347,7 +365,7 @@ object Codemix {
                     else emHmm.tag(replaceUnks(sentence))
                   }
                 }
-                for (((word, goldLang), predictedLang) <- (sentence zipSafe predictedTags)) {
+                for (((word, goldLang, originalWord), predictedLang) <- (sentence zipSafe predictedTags)) {
                   confusionMatrix(goldTagIndex(goldLang))(modelTagIndex(predictedLang)) += 1
                   val cleanGoldLabel = cleanLangLabel(word, goldLang)
                   if (cleanGoldLabel != "x") {  // Just evaluate when the gold annotation is a language label.
@@ -355,7 +373,7 @@ object Codemix {
                       totalCount += 1
                   }
                 }
-                f.writeLine(sentence.zipSafe(replaceUnks(sentence)).zipSafe(predictedTags).map { case (((word, gold), modifiedWord), predicted) => f"$word|$modifiedWord|$predicted|$gold" }.mkString(" "))
+                f.writeLine(sentence.zipSafe(replaceUnks(sentence)).zipSafe(predictedTags).map { case (((word, gold, originalWord), modifiedWord), predicted) => f"$originalWord|$modifiedWord|$predicted|$gold" }.mkString(" "))
               }
             }
             val acc = numCorrect / totalCount.toDouble
@@ -372,8 +390,8 @@ object Codemix {
                 val memmPredictedTags = memm.tag(sentence.map(_._1))
                 val outputLineParts = Buffer[String]()
                 var containsMismatch = false
-                for (((word, goldLang), (hmmPredictedLang, memmPredictedLang)) <- (sentence zipSafe (hmmPredictedTags zipSafe memmPredictedTags))) {
-                  var str = f"$word|$goldLang|$hmmPredictedLang|$memmPredictedLang"
+                for (((word, goldLang, originalWord), (hmmPredictedLang, memmPredictedLang)) <- (sentence zipSafe (hmmPredictedTags zipSafe memmPredictedTags))) {
+                  var str = f"$originalWord|$goldLang|$hmmPredictedLang|$memmPredictedLang"
                   if (cleanLangLabel(word, hmmPredictedLang) != cleanLangLabel(word, memmPredictedLang)) {
                     containsMismatch = true
                     str = f"**$str**"
