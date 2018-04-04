@@ -40,37 +40,49 @@ writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad
 }
 
 
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/latn_wordlist_spl.txt")) { f=>
- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/fire/en_hi/dev.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/fire/en_hi/test.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/icon/en_hi/dev.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/icon/en_hi/test.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/dev.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/test.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/dev.spl",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/test.spl").flatMap { fn =>
-  println(fn)
-  File(fn).readLines.flatMap(_.splitWhitespace.map(_.rsplit(raw"\|",2).head))
- }.collect { case w @ WordRe() => w.toLowerCase }.collect { case w @ WordRe() => w }.toVector.sorted.distinct.foreach(f.writeLine)
+writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/latn_vocab.txt")) { f =>
+ val splWords: Set[String] =
+   Set("/Users/dhgarrette/workspace/unsupervised-codemixing/data/fire/en_hi/dev.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/fire/en_hi/test.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/icon/en_hi/dev.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/icon/en_hi/test.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/dev.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/test.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/dev.spl",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/test.spl").flatMap { fn =>
+    println(fn)
+    File(fn).readLines.flatMap(_.splitWhitespace.map(_.rsplit(raw"\|",2).head))
+   }
+ val conllWords: Set[String] =
+   Set("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-dev.conllu",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-test.conllu",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-train.conllu").flatMap { fn =>
+    println(fn)
+    File(fn).readLines.filterNot(_.startsWith("#")).filter(_.nonEmpty).map(_.splitWhitespace(1))
+   }
+ val embWords: Set[String] =
+    Set("/Users/dhgarrette/workspace/codemix-pos/data/clean/emb-polyglot-en.txt").flatMap { fn =>
+     println(fn)
+     File(fn).readLines.map(_.splitWhitespace(0))
+    }
+ (splWords ++ conllWords ++ embWords).toVector.sorted.distinct.foreach(f.writeLine)
 }
 
-val WordRe = raw"[a-z]+".r
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/latn_wordlist_ud.txt")) { f=>
- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-dev.conllu",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-test.conllu",
-        "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-train.conllu").flatMap { fn =>
-  println(fn)
-  File(fn).readLines.filterNot(_.startsWith("#")).filter(_.nonEmpty).map(_.splitWhitespace(1))
- }.collect { case w @ WordRe() => w.toLowerCase }.toVector.sorted.distinct.foreach(f.writeLine)
+writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/deva_vocab.txt")) { f =>
+ val conllWords: Set[String] =
+   Set("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-dev.conllu",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-test.conllu",
+       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu").flatMap { fn =>
+    println(fn)
+    File(fn).readLines.filterNot(_.startsWith("#")).filter(_.nonEmpty).map(_.splitWhitespace(1))
+   }
+ val embWords: Set[String] =
+    Set("/Users/dhgarrette/workspace/codemix-pos/data/clean/emb-polyglot-hi.txt").flatMap { fn =>
+     println(fn)
+     File(fn).readLines.map(_.splitWhitespace(0))
+    }
+ (conllWords ++ embWords).toVector.sorted.distinct.foreach(f.writeLine)
 }
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/latn_wordlist-emb.txt")) { f=>
- Vector("/Users/dhgarrette/workspace/codemix-pos/data/clean/emb-polyglot-en.txt").flatMap { fn =>
-  println(fn)
-  File(fn).readLines.map(_.splitWhitespace(0))
- }.collect { case w @ WordRe() => w }.toVector.sorted.distinct.foreach(f.writeLine)
-}
-
 
 
 
