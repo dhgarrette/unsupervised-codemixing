@@ -153,6 +153,7 @@ object Codemix {
                 "<E>" -> LogDouble(0.10))),
             ))
 
+    val evalset = "dev"
 //    val monoEnData = readConlluRawData(Vector("data/ud/UD_English-EWT-master/en-ud-train.conllu"), "E")
 //    //val monoEsData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
 //    val monoEsData = readConlluRawData(Vector("data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
@@ -161,11 +162,17 @@ object Codemix {
     val monoEnWordCounts = monoEnData.flatten.map(_._1).counts
     val monoEsWordCounts = monoEsData.flatten.map(_._1).counts// -- monoEnWordCounts.keys
 //    val csTrainData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/train.spl"), 2)
-//    val csEvalData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/dev.spl"), 2)
+//    val csEvalData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/$evalset.spl"), 2)
     val csTrainData = readLangTaggedSplFile(Vector("data/irshad/en_hi/dev.spl",
                                                    "data/fire/en_hi/dev.spl",
                                                    "data/icon/en_hi/dev.spl",
-                                                   "data/msr/en_hi/dev.spl"), 2)
+                                                   "data/msr/en_hi/dev.spl") ++ (
+                                                       if (evalset=="test") 
+                                                         Vector("data/irshad/en_hi/test.spl",
+                                                                "data/fire/en_hi/test.spl",
+                                                                "data/icon/en_hi/test.spl",
+                                                                "data/msr/en_hi/test.spl")
+                                                       else Vector.empty), 2)
     val csEvalData = readLangTaggedSplFile(Vector("data/irshad/en_hi/dev.spl"), 2)
     
     val perplexityCheckWords = Vector("acceleration", "dhg", "dhgg", "aardvark", "aardvarks", "why", "telephone", "who", "how", "when", "where", "what", "the", "a", "szozezizjzfzso")
@@ -283,14 +290,14 @@ object Codemix {
               else null
               
           {
-            for (csUnsupFile <- Vector("fire", "icon", "irshad", "msr")) {
+            for (dataset <- Vector(/*"fire",*/ "icon", "irshad", "msr")) {
               val hiKnownEmbWords: Set[String] = File("data/emb/emb-polyglot-hi.txt").readLines.map(_.splitWhitespace.head).toSet
-              val csUnsupData = readLangTaggedSplFile(Vector(s"data/$csUnsupFile/en_hi/dev.spl"), 2)
-              val allWords = csEvalData.flatMap(_.map(_._1)).toSet
+              val csPos = File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/${dataset}/en_hi/tagged-${dataset}-hi_en-orig-coarse-${evalset}.txt").readLines.map(_.splitWhitespace.map(_.rsplit("\\|",3).toTuple3)).toVector
+              val allWords = csPos.flatMap(_.map(_._1.toLowerCase)).toSet
               val wordTranslits: Map[String, Map[Boolean, Map[Boolean, SimpleExpProbabilityDistribution[String]]]] = 
                   File("data/translit/latn2deva.txt").readLines
-                      .map(_.splitWhitespace).collect { 
-                        case Seq(w, translitsString) if allWords(w) => w -> {
+                      .map(_.splitWhitespace).collect {
+                        case Seq(w, translitsString) if allWords(w.toLowerCase) => w -> {
                           val translitsAndProbs: Vector[(String, Double)] = translitsString.lsplit(",").map(_.lsplit(":")).map { case Seq(v,p) => (v,p.toDouble) }
                           val allOnebest = new SimpleExpProbabilityDistribution(Map(translitsAndProbs.head._1 -> 1.0))
                           val allSampled = new SimpleExpProbabilityDistribution(translitsAndProbs.toMap)
@@ -313,11 +320,15 @@ object Codemix {
               for (onebest <- Seq(false, true)) {
                 for (preferKnownTranslit <- Seq(false, true)) {
                 	  for (oracle <- Seq(false, true)) {
-                    writeUsing(File(f"data/$csUnsupFile/en_hi/dev_unsup_labels_${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.spl")) { f =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
-                      for (sentence <- csEvalData) {
-                        val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map { case (nw,t,ow) => replaceUnk(nw) -> tagdict(nw) })
-                        f.writeLine(sentence.zipSafe(tagProbs).map {
-                          case ((word, goldLang, originalWord), modelOutputLangDist) =>
+                    writeUsing(File(f"data/$dataset/en_hi/${evalset}_unsup_labels_${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.spl")) { splOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                    writeUsing(File(f"data/$dataset/en_hi/${evalset}-unsup-${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.conllu")) { conllOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                    writeUsing(File(f"data/$dataset/en_hi/${evalset}-oracle-unsup-${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.conllu")) { conllOracleOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                      for (sentence <- csPos) {
+                        val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map {
+                          case (originalWord, goldLang, goldPos) => replaceUnk(normalizeWord(originalWord)) -> tagdict(normalizeWord(originalWord))
+                        })
+                        splOut.writeLine(sentence.zipSafe(tagProbs).zipWithIndex.map {
+                          case (((originalWord, goldLang, goldPos), modelOutputLangDist), i) =>
                             val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
                             val goldTag = goldLang match {
                                     case "E" => "en"
@@ -336,11 +347,30 @@ object Codemix {
                                       case "S" => "hi"
                                       case "xS" => "hi"
                                   }}:${p}%.3f" }.mkString(",")
-                              f"$originalWord|$goldTag|$tagDistString|${wordTranslits.get(word).map(_(preferKnownTranslit)).map(_(onebest).sample()).getOrElse(word)}"
+                            
+                            val devafiedWord = wordTranslits.get(normalizeWord(originalWord)).map(_(preferKnownTranslit)).map(_(onebest).sample()).getOrElse(normalizeWord(originalWord))
+
+                            val guessedLang = tagDistString.lsplit(":",2).head
+                            val oracleWord = guessedLang match {
+                              case "en" => originalWord
+                              case "hi" => devafiedWord
+//                              case _ =>
+//                                println(s"tagDistString=[$tagDistString]")
+//                                "xxxx"
+                            }
+                            conllOut.writeLine(f"${i+1}\t$originalWord\t$originalWord\t$goldPos\t$goldPos\tOriginal=$originalWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
+                            conllOracleOut.writeLine(f"${i+1}\t$oracleWord\t$oracleWord\t$goldPos\t$goldPos\tOriginal=$originalWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
+                            //conllOracleOut.writeLine(f"${i+1}\t$guessedLang:$oracleWord\t$guessedLang:$oracleWord\t$goldPos\t$goldPos\tOriginal=$originalWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
+                                  
+                            f"$originalWord|$goldTag|$tagDistString|$devafiedWord"
                         }.mkString(" "))
+                        conllOut.writeLine()
+                        conllOracleOut.writeLine()
                       }
                     }
                   }
+                	 }
+                	 }
                 }
               }
             }

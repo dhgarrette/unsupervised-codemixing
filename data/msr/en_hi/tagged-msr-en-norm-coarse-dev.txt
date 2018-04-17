@@ -1,0 +1,96 @@
+Rahul|en|NOUN Gandhi|en|NOUN campaigning|en|NOUN In|en|ADP Gujrat|en|NOUN Elections|en|NOUN is|en|VERB Like|en|ADP Rajpal|en|NOUN Yadav|en|NOUN Trying|en|VERB To|en|PRT Win|en|VERB over|en|ADP Angelina|en|NOUN Jolie|en|NOUN From|en|ADP Brad|en|NOUN Pitt|en|NOUN ....|univ|.
+modi|en|NOUN i|en|PRON don't|en|VERB have|en|VERB fear|en|NOUN of|en|ADP death|en|NOUN
+check|en|ADJ out|en|ADJ this|en|DET link|en|NOUN start|en|VERB earning|en|VERB
+not|en|PRT been|en|VERB seen|en|VERB few|en|ADJ minutes|en|NOUN me|en|PRON see|en|VERB cool|en|ADJ air|en|NOUN
+hi|en|PRT sir|en|NOUN
+i|en|PRON salute|en|VERB people|en|NOUN of|en|ADP bihar|en|NOUN who|en|PRON came|en|VERB to|en|ADP hear|en|VERB namo|en|NOUN while|en|CONJ blast|en|NOUN happened|en|VERB
+please|en|NOUN like|en|VERB page|en|NOUN and|en|CONJ share|en|VERB it|en|PRON
+6|en|NUM enjoy|en|VERB your|en|PRON friend|en|NOUN requestsin|en|NOUN
+best|en|ADJ of|en|ADP luck|en|NOUN for|en|ADP your|en|PRON new|en|ADJ movie|en|NOUN
+sir|en|NOUN it|en|PRON is|en|VERB good|en|ADJ that|en|CONJ you|en|PRON want|en|VERB the|en|DET relationship|en|NOUN between|en|CONJ rich|en|ADJ poor|en|ADJ
+may|en|VERB his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN
+too|en|ADV slow|en|ADJ
+you|en|PRON are|en|VERB superb|en|ADJ sir|en|NOUN love|en|VERB you|en|PRON good|en|ADJ night|en|NOUN
+end|en|ADJ of|en|ADP an|en|DET era|en|NOUN but|en|CONJ his|en|PRON voice|en|NOUN will|en|VERB be|en|VERB echoing|en|VERB rip|en|VERB
+yeah|en|PRT it|en|PRON will|en|VERB be|en|VERB a|en|DET certain|en|ADJ goal|en|NOUN no|en|PRT power|en|NOUN can|en|VERB stop|en|VERB winning|en|VERB goal|en|NOUN
+you|en|PRON are|en|VERB super|en|ADJ
+such|en|ADV a|en|DET magical|en|ADJ voice|en|NOUN he|en|PRON had|en|VERB immortal|en|ADJ manna|en|NOUN dey|en|NOUN rip|en|VERB
+miss|en|VERB you|en|PRON manna|en|NOUN dey|en|NOUN sir|en|NOUN
+may|en|ADP his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN
+i|en|PRON want|en|VERB to|en|ADP participate|en|NOUN in|en|ADP kbc|en|NOUN sir|en|NOUN please|en|PRT call|en|VERB me|en|PRON 09838709391|en|NUM
+so|en|ADV sad|en|ADJ ,|univ|. rip|en|VERB manna|en|NOUN dey|en|NOUN
+only|en|ADJ modi|en|NOUN ji|en|PRT pm|en|NOUN candidate|en|NOUN
+young|en|ADJ uttarakhand|en|NOUN
+i|en|PRON want|en|VERB to|en|ADP share|en|VERB 1|en|NUM topic|en|NOUN
+king|en|NOUN of|en|ADP romance|en|NOUN srk|en|NOUN bollywood|en|NOUN has|en|VERB been|en|VERB entertaining|en|VERB us|en|PRON for|en|ADP the|en|DET last|en|ADJ 100|en|NUM years|en|NOUN
+please|en|PRT like|en|VERB my|en|PRON page|en|NOUN friend|en|NOUN
+vote|en|VERB for|en|ADP congress|en|NOUN phirse|en|ADP congress|en|NOUN
+the|en|DET name|en|NOUN is|en|VERB enough|en|ADJ narendra|en|NOUN modi|en|NOUN
+actor|en|NOUN ,|univ|. model|en|NOUN ,|univ|. producer|en|NOUN ,|univ|. tv|en|NOUN host|en|NOUN ,|univ|. father|en|NOUN ,|univ|. son|en|NOUN ,|univ|. husband|en|NOUN ,|univ|. brother|en|NOUN mentor|en|NOUN
+because|en|CONJ you|en|PRON are|en|VERB the|en|DET foreigner|en|NOUN in|en|ADP this|en|DET setting|en|NOUN ,|univ|. you|en|PRON have|en|VERB no|en|PRT history|en|NOUN to|en|PRT acquit|en|VERB you|en|PRON
+hello|en|PRT every|en|ADJ one|en|PRON hit|en|VERB like|en|NOUN my|en|PRON page|en|NOUN it|en|PRON is|en|VERB about|en|ADP every|en|ADJ thing|en|NOUN you|en|PRON want|en|VERB in|en|ADP your|en|PRON life|en|NOUN and|en|CONJ i|en|PRON am|en|VERB sure|en|ADJ that|en|CONJ you|en|PRON guys|en|NOUN will|en|VERB love|en|VERB it|en|PRON
+congress|en|NOUN issues|en|VERB clarification|en|NOUN apparently|en|ADJ for|en|ADP rahul|en|NOUN ,|univ|. anyone|en|PRON with|en|ADP an|en|DET average|en|ADJ iq|en|NOUN is|en|ADP from|en|ADP the|en|DET intelligence|en|NOUN bureau|en|NOUN
+we|en|PRON all|en|ADJ pray|en|VERB god|en|NOUN to|en|ADP give|en|VERB his|en|PRON family|en|NOUN strength|en|NOUN during|en|ADP this|en|DET distress|en|NOUN time|en|NOUN
+sir|en|NOUN you|en|PRON are|en|VERB right|en|ADJ sir|en|NOUN
+same|en|ADJ as|en|ADP you|en|PRON say|en|VERB we|en|PRON should|en|VERB never|en|ADV ignore|en|VERB light|en|NOUN i|en|PRON will|en|VERB say|en|VERB we|en|PRON should|en|VERB never|en|ADV ignore|en|VERB the|en|DET glimpse|en|NOUN of|en|ADP you|en|PRON the|en|DET whole|en|ADJ day|en|NOUN sir|en|NOUN
+first|en|ADJ time|en|NOUN in|en|ADP my|en|PRON life|en|NOUN i|en|PRON am|en|VERB reading|en|VERB such|en|ADJ a|en|DET wise|en|ADJ statement|en|NOUN from|en|ADP a|en|DET politician|en|NOUN ,|univ|.
+very|en|ADV sorry|en|ADJ for|en|ADP manna|en|NOUN dey|en|NOUN
+stupid|en|ADJ people|en|NOUN fighting|en|VERB against|en|ADP our|en|PRON own|en|PRON country|en|NOUN people|en|NOUN in|en|ADP our|en|PRON own|en|PRON country|en|NOUN how|en|PRON can|en|VERB someone|en|PRON hate|en|VERB modi|en|NOUN ??|univ|. he|en|PRON is|en|VERB too|en|ADV good|en|ADJ enough|en|ADJ for|en|ADP anyone|en|PRON to|en|ADP dislike|en|VERB him|en|PRON common|en|ADJ sense|en|NOUN
+omg|en|PRT ,|univ|. my|en|PRON dad|en|NOUN loves|en|VERB him|en|PRON my|en|PRON dad|en|NOUN doesn't|en|VERB know|en|VERB yet|en|CONJ my|en|PRON dad|en|NOUN has|en|VERB close|en|ADJ personal|en|ADJ photos|en|NOUN with|en|ADP manna|en|NOUN dey|en|NOUN rip|en|X
+good|en|ADJ morning|en|NOUN sir|en|NOUN to|en|ADP you|en|PRON
+another|en|ADJ great|en|ADJ loss|en|NOUN may|en|VERB his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN love|en|VERB his|en|PRON songs|en|NOUN
+only|en|ADJ namo|en|NOUN can|en|VERB change|en|VERB the|en|DET tradition|en|NOUN of|en|ADP politics|en|NOUN and|en|CONJ have|en|VERB the|en|DET power|en|NOUN to|en|PRT grow|en|VERB the|en|DET india|en|NOUN at|en|ADP the|en|DET apex|en|NOUN of|en|ADP the|en|DET world|en|NOUN
+always|en|ADV alive|en|NOUN in|en|ADP hearts|en|NOUN of|en|ADP music|en|NOUN lovers|en|NOUN with|en|ADP his|en|PRON songs|en|NOUN
+what|en|PRON education|en|NOUN ?|univ|. many|en|ADJ type|en|NOUN of|en|ADP education|en|NOUN in|en|ADP you|en|PRON mean|en|VERB school|en|NOUN education|en|NOUN if|en|CONJ i|en|PRON not|en|PRT support|en|VERB you|en|PRON
+fans|en|NOUN of|en|ADP shah|en|NOUN rukh|en|NOUN khan|en|NOUN
+we|en|PRON support|en|VERB him|en|PRON in|en|ADP his|en|PRON fight|en|VERB against|en|ADP poverty|en|NOUN
+kejriwal|en|NOUN -|univ|. i|en|PRON will|en|VERB make|en|VERB system|en|NOUN
+rahul|en|NOUN you|en|PRON are|en|VERB totally|en|ADV failed|en|VERB in|en|ADP poltics|en|NOUN and|en|CONJ because|en|CONJ you|en|PRON face|en|VERB a|en|DET great|en|ADJ competitor|en|NOUN narendra|en|NOUN modi|en|NOUN future|en|ADJ pm|en|NOUN
+slow|en|ADJ and|en|CONJ steady|en|ADJ wins|en|VERB the|en|DET race|en|NOUN ,|univ|. wish|en|VERB you|en|PRON will|en|VERB become|en|VERB pm|en|NOUN in|en|ADP 2014|en|NUM ,|univ|. hope|en|VERB you|en|PRON will|en|VERB take|en|VERB appropriate|en|ADJ step|en|NOUN ,|univ|. but|en|CONJ be|en|VERB careful|en|ADJ
+at|en|ADP first|en|ADJ tamilnadu|en|NOUN peoples|en|NOUN should|en|ADP be|en|VERB surelyakanum|en|NOUN
+his|en|PRON all|en|ADJ songs|en|NOUN are|en|VERB hit|en|ADJ and|en|CONJ meaningful|en|ADJ may|en|ADP his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN
+draws|en|VERB a|en|DET loud|en|ADJ no|en|NOUN from|en|ADP his|en|PRON audience|en|NOUN
+hi|en|PRT sir|en|NOUN how|en|PRON are|en|VERB you|en|PRON good|en|ADJ morning|en|NOUN have|en|VERB a|en|DET nice|en|ADJ day|en|NOUN specially|en|ADV for|en|ADP you|en|PRON
+inc|en|NOUN is|en|VERB the|en|DET dna|en|NOUN of|en|ADP india|en|NOUN
+congress|en|NOUN vice|en|NOUN president|en|NOUN rahul|en|NOUN gandhi|en|NOUN seems|en|VERB to|en|PRT have|en|VERB invited|en|VERB trouble|en|NOUN with|en|ADP his|en|PRON isi|en|NOUN see|en|VERB more|en|ADJ
+poor|en|ADJ hindu|en|NOUN and|en|CONJ poor|en|ADJ muslim|en|NOUN do|en|VERB not|en|PRT want|en|VERB to|en|PRT fight|en|VERB each|en|PRON other|en|PRON but|en|CONJ they|en|PRON want|en|VERB to|en|PRT fight|en|VERB poverty|en|NOUN
+hi|en|PRT friends|en|NOUN support|en|VERB my|en|PRON brother|en|NOUN please|en|PRT give|en|VERB your|en|PRON one|en|PRON likes|en|NOUN to|en|ADP him|en|PRON open|en|VERB the|en|DET pic|en|NOUN and|en|CONJ like|en|VERB it|en|PRON thank|en|VERB you|en|PRON
+sheila|en|NOUN is|en|VERB the|en|DET best|en|ADJ cm|en|NOUN among|en|ADP all|en|PRON
+there|en|PRON is|en|ADP huge|en|ADJ anger|en|NOUN in|en|ADP indians|en|NOUN against|en|ADP congress|en|NOUN
+yes|en|PRT yes|en|PRT you|en|PRON please|en|PRT like|en|VERB this|en|DET page|en|NOUN
+we|en|PRON have|en|VERB lost|en|VERB a|en|DET melodious|en|ADJ singer|en|NOUN
+what|en|PRON it|en|PRON costs|en|VERB now|en|ADV today|en|ADV the|en|DET costliest|en|ADJ
+my|en|PRON mental|en|ADJ condition|en|NOUN same|en|ADP as|en|ADP you|en|PRON feeling|en|VERB ,|univ|. we|en|PRON are|en|VERB missing|en|VERB the|en|DET golden|en|ADJ star|en|NOUN of|en|ADP voice|en|NOUN /|univ|. singers|en|NOUN ,,,|univ|.
+may|en|PRT his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|ADV
+look|en|VERB mr|en|PRT rahul|en|NOUN our|en|PRON lion|en|NOUN
+no|en|PRT we|en|PRON expect|en|VERB the|en|DET pm|en|NOUN to|en|PRT vote|en|VERB for|en|ADP modi|en|NOUN in|en|ADP the|en|DET upcoming|en|ADJ election|en|NOUN
+very|en|ADV sad|en|ADJ news|en|NOUN may|en|VERB god|en|NOUN rest|en|VERB his|en|PRON soul|en|NOUN in|en|ADP peace|en|NOUN
+it|en|PRON is|en|VERB a|en|DET big|en|ADJ loss|en|NOUN to|en|ADP the|en|DET music|en|NOUN world|en|NOUN may|en|VERB his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN
+beauty|en|NOUN gets|en|VERB the|en|DET attention|en|NOUN ,|univ|. personality|en|NOUN gets|en|VERB the|en|DET heart|en|NOUN
+beautiful|en|ADJ songs|en|NOUN he|en|PRON has|en|VERB given|en|VERB us|en|PRON may|en|VERB manna|en|NOUN da|en|NOUN s|en|X l|en|X rest|en|VERB in|en|ADP peace|en|NOUN
+srk|en|NOUN is|en|VERB just|en|ADV awesome|en|ADJ in|en|ADP each|en|PRON and|en|CONJ every|en|PRON look|en|NOUN
+sir|en|NOUN what|en|PRON about|en|PRT dharmendra|en|NOUN i|en|PRON have|en|VERB not|en|PRT been|en|VERB hearing|en|VERB from|en|ADP him|en|PRON is|en|VERB it|en|PRON old|en|ADJ age|en|NOUN ?|univ|.
+a|en|DET wonderfully|en|ADJ great|en|ADJ feelings|en|NOUN -|univ|. light|en|NOUN
+he|en|PRON will|en|VERB live|en|VERB in|en|ADP his|en|PRON songs|en|NOUN
+congrats|en|PRT to|en|ADP all|en|ADJ the|en|DET grass-roots|en|NOUN workers|en|NOUN of|en|ADP bjp|en|NOUN
+king|en|NOUN of|en|ADP all|en|ADJ the|en|DET world|en|NOUN
+i|en|PRON want|en|VERB see|en|VERB really|en|ADV mr|en|PRT modi|en|NOUN as|en|ADP pm|en|NOUN fed|en|VERB up|en|PRT from|en|ADP congress|en|NOUN go|en|VERB to|en|ADP hell|en|NOUN congress|en|NOUN
+narendra|en|NOUN modi|en|NOUN a|en|DET unique|en|ADJ personality|en|NOUN and|en|CONJ next|en|ADJ prime|en|ADJ minister|en|NOUN of|en|ADP india|en|NOUN
+but|en|CONJ you|en|PRON have|en|VERB spoken|en|VERB such|en|DET words|en|NOUN that|en|PRON are|en|VERB intolerable|en|ADJ
+namo|en|NOUN my|en|PRON foot|en|NOUN will|en|VERB never|en|ADV help|en|VERB poor|en|ADJ hindus|en|NOUN or|en|CONJ muslims|en|NOUN but|en|CONJ will|en|VERB kill|en|VERB poor|en|ADJ hindus|en|NOUN and|en|CONJ muslims|en|NOUN vote|en|VERB for|en|PRON AAP|en|NOUN
+my|en|PRON 6|en|NUM years|en|NOUN old|en|ADJ daughter|en|NOUN can|en|VERB bowl|en|VERB better|en|ADJ than|en|ADP umesh|en|NOUN yadav|en|NOUN
+only|en|ADJ to|en|PRT get|en|VERB your|en|PRON glimpse|en|NOUN we|en|PRON can|en|VERB wait|en|VERB for|en|ADP whole|en|ADJ day|en|NOUN we|en|PRON love|en|VERB you|en|PRON sir|en|NOUN
+sir|en|NOUN all|en|ADJ girls|en|NOUN should|en|VERB support|en|VERB you|en|PRON sir|en|NOUN they|en|PRON are|en|VERB running|en|VERB behind|en|ADP that|en|DET bloody|en|ADJ culprit|en|NOUN rahul|en|NOUN gandhi|en|NOUN i|en|PRON request|en|VERB all|en|ADJ females|en|NOUN to|en|PRT vote|en|VERB modi|en|NOUN not|en|PRT this|en|DET bloody|en|ADJ gandhi|en|NOUN family|en|NOUN
+this|en|DET will|en|VERB always|en|ADV be|en|VERB there|en|ADV in|en|CONJ fact|en|CONJ it|en|PRON is|en|VERB increasing|en|VERB day|en|NOUN by|en|ADP day|en|NOUN
+great|en|ADJ to|en|PRT see|en|VERB you|en|PRON sir|en|NOUN
+keep|en|VERB it|en|PRON up|en|PRT
+anyways|en|CONJ good|en|ADJ night|en|NOUN sir|en|NOUN take|en|VERB care|en|VERB
+very|en|ADV nice|en|ADJ
+mr|en|PRT narendrabhai|en|NOUN modi|en|NOUN rocking|en|VERB at|en|ADP udaipur|en|NOUN rajasthan|en|NOUN and|en|CONJ he|en|PRON got|en|VERB million|en|NOUN of|en|ADP people|en|NOUN there|en|ADV
+we|en|PRON the|en|DET fans|en|NOUN love|en|VERB you|en|PRON ,|univ|. sirji|en|NOUN
+shahrukh|en|NOUN khan|en|NOUN amir|en|NOUN khan|en|NOUN salman|en|NOUN khan|en|NOUN rajnikanth|en|NOUN sir|en|NOUN kamal|en|NOUN hassan|en|NOUN sir|en|NOUN others|en|PRON indian|en|ADJ film|en|NOUN industry|en|NOUN universal|en|ADJ stars|en|NOUN 50|en|NUM of|en|ADP amitabh|en|NOUN bachchan|en|NOUN
+dear|en|ADJ sir|en|NOUN i|en|PRON am|en|PRON a|en|DET big|en|ADJ fan|en|NOUN of|en|ADP your|en|PRON acting|en|NOUN just|en|ADV want|en|VERB to|en|PRT say|en|VERB you|en|PRON are|en|PRON awesome|en|ADJ artist|en|NOUN
+may|en|VERB his|en|PRON soul|en|NOUN rest|en|VERB in|en|ADP peace|en|NOUN
+we|en|PRON lost|en|VERB another|en|DET gems|en|NOUN of|en|ADP our|en|PRON collections|en|NOUN so|en|ADV sad|en|ADJ
+modi|en|NOUN real|en|ADJ hero|en|NOUN of|en|ADP india|en|NOUN common|en|ADJ guys|en|NOUN we|en|PRON are|en|VERB all|en|PRON help|en|VERB to|en|ADP modiji|en|NOUN
+vote|en|VERB for|en|ADP the|en|DET dream|en|ADJ team|en|NOUN bjp|en|NOUN /|univ|. nda|en|NOUN under|en|ADP the|en|DET leadership|en|NOUN of|en|ADP namo|en|NOUN

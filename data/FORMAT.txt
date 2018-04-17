@@ -1,0 +1,16 @@
+CONLLU:
+1. word to look up in wemb  (prefixed, standard script)
+2. #1 again
+3. POS
+4. POS
+
+
+
+
+
+
+1. original word
+2. 
+
+
+([^|])\|([^|])\|([^|])\|([^|])
