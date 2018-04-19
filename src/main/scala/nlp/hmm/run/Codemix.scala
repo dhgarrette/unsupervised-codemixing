@@ -47,7 +47,7 @@ object Codemix {
         if (line.trim.isEmpty) None
         else if (line.trim.startsWith("#")) None
         else {
-          val word = normalizeWord(line.splitWhitespace(1))
+          val word = normalizeWord(line.splitWhitespace.apply(1))
           if (isNonX(word)) Some((word, lang))
           else Some((word, "x"+lang))
         }
@@ -99,10 +99,10 @@ object Codemix {
       File(filename).readLines.map { line =>
         line.splitWhitespace.map(token => (numColumns, token.rsplit(raw"\|", numColumns)) match {
           case (2, Vector(word, "en")) => (normalizeWord(word), "E", word)
-          case (2, Vector(word, "es")) => (normalizeWord(word), "S", word)
+          case (2, Vector(word, "es")) => (normalizeWord(word), "H", word)
           case (2, Vector(word, lang)) => (normalizeWord(word), lang, word)
           case (3, Vector(word, "en", _)) => (normalizeWord(word), "E", word)
-          case (3, Vector(word, "es", _)) => (normalizeWord(word), "S", word)
+          case (3, Vector(word, "es", _)) => (normalizeWord(word), "H", word)
           case (3, Vector(word, lang, _)) => (normalizeWord(word), lang, word)
         })
       }
@@ -122,45 +122,45 @@ object Codemix {
   }
 
   def main(args: Array[String]) = {
-    // Tags:  <S>, <E>, E, xE, S, xS 
+    // Tags:  <S>, <E>, E, xE, S, xH 
     val initTrans = new SimpleConditionalLogProbabilityDistribution(
         Map[Tag, LogProbabilityDistribution[Tag]](
             "<S>" -> new SimpleLogProbabilityDistribution(Map(
                 "E"  -> LogDouble(0.25),
                 "xE" -> LogDouble(0.25),
-                "S"  -> LogDouble(0.25),
-                "xS" -> LogDouble(0.25))),
+                "H"  -> LogDouble(0.25),
+                "xH" -> LogDouble(0.25))),
             "<E>" -> new SimpleLogProbabilityDistribution(Map()),
             "E" -> new SimpleLogProbabilityDistribution(Map(
                 "E"  -> LogDouble(0.65),
                 "xE" -> LogDouble(0.24),
-                "S"  -> LogDouble(0.01),
+                "H"  -> LogDouble(0.01),
                 "<E>" -> LogDouble(0.10))),
             "xE" -> new SimpleLogProbabilityDistribution(Map(
                 "E"  -> LogDouble(0.80),
                 "xE" -> LogDouble(0.15),
-                "S"  -> LogDouble(0.05),
+                "H"  -> LogDouble(0.05),
                 "<E>" -> LogDouble(0.10))),
-            "S" -> new SimpleLogProbabilityDistribution(Map(
+            "H" -> new SimpleLogProbabilityDistribution(Map(
                 "E"  -> LogDouble(0.01),
-                "S"  -> LogDouble(0.65),
-                "xS" -> LogDouble(0.24),
+                "H"  -> LogDouble(0.65),
+                "xH" -> LogDouble(0.24),
                 "<E>" -> LogDouble(0.10))),
-            "xS" -> new SimpleLogProbabilityDistribution(Map(
+            "xH" -> new SimpleLogProbabilityDistribution(Map(
                 "E"  -> LogDouble(0.05),
-                "S"  -> LogDouble(0.80),
-                "xS" -> LogDouble(0.15),
+                "H"  -> LogDouble(0.80),
+                "xH" -> LogDouble(0.15),
                 "<E>" -> LogDouble(0.10))),
             ))
 
     val evalset = "dev"
 //    val monoEnData = readConlluRawData(Vector("data/ud/UD_English-EWT-master/en-ud-train.conllu"), "E")
-//    //val monoEsData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
-//    val monoEsData = readConlluRawData(Vector("data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu"), "S")// -- monoEnWordCounts.keys
+//    //val monoHiData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "H")// -- monoEnWordCounts.keys
+//    val monoHiData = readConlluRawData(Vector("data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu"), "H")// -- monoEnWordCounts.keys
     val monoEnData = readRawSentences(Vector("data/ud/UD_English-EWT-master/train_latn.spl"), "E")
-    val monoEsData = readRawSentences(Vector("data/ud/UD_Hindi-HDTB-master/train_latn.spl"), "S")// -- monoEnWordCounts.keys
+    val monoHiData = readRawSentences(Vector("data/ud/UD_Hindi-HDTB-master/train_latn.spl"), "H")// -- monoEnWordCounts.keys
     val monoEnWordCounts = monoEnData.flatten.map(_._1).counts
-    val monoEsWordCounts = monoEsData.flatten.map(_._1).counts// -- monoEnWordCounts.keys
+    val monoHiWordCounts = monoHiData.flatten.map(_._1).counts// -- monoEnWordCounts.keys
 //    val csTrainData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/train.spl"), 2)
 //    val csEvalData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/$evalset.spl"), 2)
     val csTrainData = readLangTaggedSplFile(Vector("data/irshad/en_hi/dev.spl",
@@ -195,22 +195,22 @@ object Codemix {
       val csCutoffTypes = csTrainData.flatten.map(_._1).counts.collect{ case (word, count) if count <= unkCutoffCount => word }.toVector//.take(2500)  // I don't know why this is necessary :-(
       println("csCutoffTypes.size() = " + csCutoffTypes.size)
     val csGoodTypes = csTrainData.flatten.map(_._1).toSet -- csCutoffTypes
-    val monoEnOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
-    val monoEsOnlyTypes = monoEnWordCounts.keySet -- monoEsWordCounts.keySet
-    val csUnkTypes = csAllTypes -- csGoodTypes -- monoEnOnlyTypes -- monoEsOnlyTypes
+    val monoEnOnlyTypes = monoEnWordCounts.keySet -- monoHiWordCounts.keySet
+    val monoHiOnlyTypes = monoEnWordCounts.keySet -- monoHiWordCounts.keySet
+    val csUnkTypes = csAllTypes -- csGoodTypes -- monoEnOnlyTypes -- monoHiOnlyTypes
 
     val initEmissUnigramWord = new SimpleConditionalLogProbabilityDistribution(
         Map[Tag, LogProbabilityDistribution[Word]](
             "<S>" -> new SimpleLogProbabilityDistribution(Map("<S>" -> LogDouble(1))),
             "<E>" -> new SimpleLogProbabilityDistribution(Map("<E>" -> LogDouble(1))),
             "E"  -> new LaplaceLogProbabilityDistribution(monoEnWordCounts.collect { case (word, count) if isNonX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
-            "S"  -> new LaplaceLogProbabilityDistribution(monoEsWordCounts.collect { case (word, count) if isNonX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
+            "H"  -> new LaplaceLogProbabilityDistribution(monoHiWordCounts.collect { case (word, count) if isNonX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
             "xE"  -> new LaplaceLogProbabilityDistribution(monoEnWordCounts.collect { case (word, count) if isX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
-            "xS"  -> new LaplaceLogProbabilityDistribution(monoEsWordCounts.collect { case (word, count) if isX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
+            "xH"  -> new LaplaceLogProbabilityDistribution(monoHiWordCounts.collect { case (word, count) if isX(word) => (word, LogDouble(count)) }, None, excludedBs = Some(Set("<S>", "<E>")), LogDouble(1.0), LogDouble(1.0)),
         ))
     def initEmissCharNgrams(charNgramOrder: Int) = {
       val monoEnNgramModel = makeNgramModel(charNgramOrder, monoEnWordCounts)
-      val monoEsNgramModel = makeNgramModel(charNgramOrder, monoEsWordCounts)
+      val monoHiNgramModel = makeNgramModel(charNgramOrder, monoHiWordCounts)
       checkPerplexities(charNgramOrder, monoEnNgramModel)
       val allTypes = csAllTypes ++ perplexityCheckWords
       val model =
@@ -219,13 +219,13 @@ object Codemix {
               "<S>" -> new SimpleLogProbabilityDistribution(Map("<S>" -> LogDouble(1))),
               "<E>" -> new SimpleLogProbabilityDistribution(Map("<E>" -> LogDouble(1))),
               "E"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEnNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-              "S"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEsNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+              "H"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoHiNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
               "xE"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEnNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-              "xS"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoEsNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+              "xH"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => charSequenceProbability(word, charNgramOrder, monoHiNgramModel)).toMap.normalizeValues ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
 //              "E"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-//              "S"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+//              "H"  -> new MapLogProbabilityDistribution((allTypes.filter(isNonX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
 //              "xE"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
-//              "xS"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
+//              "xH"  -> new MapLogProbabilityDistribution((allTypes.filter(isX).mapTo(word => LogDouble(1e-5)).toMap ++ Set("<UNK>", "<xUNK>").mapToVal(LogDouble(1e-10))).withDefaultValue(LogDouble.zero)),// ++ Set("<S>", "<E>").mapToVal(LogDouble.zero)),
           ))
       checkPerplexities2(model)
       model
@@ -244,17 +244,17 @@ object Codemix {
 //            "<E>" -> new SimpleLogProbabilityDistribution(Map("<E>" -> LogDouble(1))),
 //            "E"  -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.2), "cat" -> LogDouble(0.2), "walks" -> LogDouble(0.2), "el" -> LogDouble(0.1), "gato" -> LogDouble(0.1), "marche" -> LogDouble(0.1))),
 //            "xE" -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.2), "cat" -> LogDouble(0.2), "walks" -> LogDouble(0.2), "el" -> LogDouble(0.1), "gato" -> LogDouble(0.1), "marche" -> LogDouble(0.1))),
-//            "S"  -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.1), "cat" -> LogDouble(0.1), "walks" -> LogDouble(0.1), "el" -> LogDouble(0.2), "gato" -> LogDouble(0.2), "marche" -> LogDouble(0.2))),
-//            "xS" -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.1), "cat" -> LogDouble(0.1), "walks" -> LogDouble(0.1), "el" -> LogDouble(0.2), "gato" -> LogDouble(0.2), "marche" -> LogDouble(0.2))),
+//            "H"  -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.1), "cat" -> LogDouble(0.1), "walks" -> LogDouble(0.1), "el" -> LogDouble(0.2), "gato" -> LogDouble(0.2), "marche" -> LogDouble(0.2))),
+//            "xH" -> new SimpleLogProbabilityDistribution(Map("the" -> LogDouble(0.1), "cat" -> LogDouble(0.1), "walks" -> LogDouble(0.1), "el" -> LogDouble(0.2), "gato" -> LogDouble(0.2), "marche" -> LogDouble(0.2))),
 //        ))
     
     val tagdict = SimpleTagDictionary(
 //        (csAllTypes.filter(isNonX) & monoEnOnlyTypes).mapToVal(Set("E")).toMap ++ 
-//        (csAllTypes.filter(isNonX) & monoEsOnlyTypes).mapToVal(Set("S")).toMap ++
-//        (csAllTypes.filter(isNonX) -- monoEnOnlyTypes -- monoEsOnlyTypes).mapToVal(Set("E", "S")).toMap ++
-        (csAllTypes ++ monoEnWordCounts.keySet ++ monoEsWordCounts.keySet).filter(isNonX).mapToVal(Set("E", "S")).toMap ++
-        (csAllTypes ++ monoEnWordCounts.keySet ++ monoEsWordCounts.keySet).filter(isX).mapToVal(Set("xE", "xS")).toMap ++
-        Map("<UNK>" -> Set("E","S"), "<xUNK>" -> Set("xE","xS")),
+//        (csAllTypes.filter(isNonX) & monoHiOnlyTypes).mapToVal(Set("H")).toMap ++
+//        (csAllTypes.filter(isNonX) -- monoEnOnlyTypes -- monoHiOnlyTypes).mapToVal(Set("E", "H")).toMap ++
+        (csAllTypes ++ monoEnWordCounts.keySet ++ monoHiWordCounts.keySet).filter(isNonX).mapToVal(Set("E", "H")).toMap ++
+        (csAllTypes ++ monoEnWordCounts.keySet ++ monoHiWordCounts.keySet).filter(isX).mapToVal(Set("xE", "xH")).toMap ++
+        Map("<UNK>" -> Set("E","H"), "<xUNK>" -> Set("xE","xH")),
                               "<S>", "<S>", "<E>", "<E>")
 
     // TODO: Can we set things up to always use the char-ngram prob instead of using UNK?
@@ -266,7 +266,7 @@ object Codemix {
     def replaceUnks(sentence: Vector[(String, String, String)]): Vector[String] = sentence.map { case (word, lang, originalWord) => replaceUnk(word) }
     def cleanLangLabel(word: String, lang: String): String = lang match {
       case _ if isX(word) => "x"
-      case "E" | "S" => lang
+      case "E" | "H" => lang
       case _ => "x"
     }
 
@@ -285,7 +285,7 @@ object Codemix {
           val emHmm = emTrainer.train(trainInput.map(_.map(replaceUnk)), tagdict, initTrans, initEmiss)
           val memm = if (useMemm) supervisedMemmTrainer.train(
                   trainInput.map(sentence => sentence.zipSafe(emHmm.tag(sentence.map(replaceUnk)))) ++
-                    (if (useMonoForMemm) monoEnData ++ monoEsData else Vector.empty), // Also train MEMM on monolingual data
+                    (if (useMonoForMemm) monoEnData ++ monoHiData else Vector.empty), // Also train MEMM on monolingual data
                   tagdict)
               else null
               
@@ -333,8 +333,8 @@ object Codemix {
                             val goldTag = goldLang match {
                                     case "E" => "en"
                                     case "xE" => "en"
-                                    case "S" => "hi"
-                                    case "xS" => "hi"
+                                    case "H" => "hi"
+                                    case "xH" => "hi"
                                     case t => t
                             }
                             val tagDistString = 
@@ -344,8 +344,8 @@ object Codemix {
                                 filteredProbs.map { case (t,p) => f"${t match {
                                       case "E" => "en"
                                       case "xE" => "en"
-                                      case "S" => "hi"
-                                      case "xS" => "hi"
+                                      case "H" => "hi"
+                                      case "xH" => "hi"
                                   }}:${p}%.3f" }.mkString(",")
                             
                             val devafiedWord = wordTranslits.get(normalizeWord(originalWord)).map(_(preferKnownTranslit)).map(_(onebest).sample()).getOrElse(normalizeWord(originalWord))

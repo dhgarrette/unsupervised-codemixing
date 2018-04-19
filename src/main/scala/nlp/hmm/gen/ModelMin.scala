@@ -240,9 +240,9 @@ class HighProbSoftToHardTagger[Tag]() extends SoftToHardTagger[Tag] {
     softTaggedSentences.map { s =>
       s.mapVals { ts =>
         if (ts.nonEmpty)
-          ts.toVector.shuffle.maxBy(_._2)._1
+          ts.toVector.shuffled.maxBy(_._2)._1
         else
-          initialTagdict.allTags.toVector.shuffle.head
+          initialTagdict.allTags.toVector.shuffled.head
       }
     }
   }

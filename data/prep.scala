@@ -26,8 +26,8 @@ writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en
 
 val NumRe = raw"\d+".r
 writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/deva_wordlist.txt")) { f=>
- for (fn <- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/TWEETS-dev-v2_utf.conllu",
-                   "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/TWEETS-test-v2_utf.conllu")) {
+ for (fn <- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/original-en_hi/dev.conllu",
+                   "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/original-en_hi/test.conllu")) {
   println(fn)
   File(fn).readLines.map(_.trim).collect {
    case line if !line.trim.startsWith("#") && line.nonEmpty =>
@@ -152,7 +152,7 @@ val latn2devaTranslitDists =
   }.toMap
 
 val devaEmbeddings: Map[String, String] =
-  File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot/hi.emb").readLines.map { line =>
+  File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/hi.emb").readLines.map { line =>
     	line.lsplit("\\s+", 2).toTuple2
   }.toMap
 
@@ -160,7 +160,8 @@ val latnVocab: Set[String] = File("/Users/dhgarrette/workspace/unsupervised-code
 
 import nlp.hmm.prob.SimpleExpProbabilityDistribution
 val LatnRe = raw"[\d\p{Punct}A-za-z]+".r
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot/hi_latn.emb")) { f =>
+writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/hi_latn.emb")) { f =>
+  val ConstantTypes = Vector("<UNK>", "<S>", "</S>", "<PAD>")
   val variants: Iterator[(String, (String, Double))] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
     devaEmbeddings.iterator.flatMap { case (originalWord, emb) =>
       originalWord match {
@@ -188,8 +189,10 @@ writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/po
       variants.groupByKey.mapVals(variantEmbs => new SimpleExpProbabilityDistribution(variantEmbs.toMap))
   println(s"variantEmbSamplers.size() = ${variantEmbSamplers.size}")
   for (latnWord <- ConstantTypes) {
+    println("TRYING TO HANDLE CONSTANT " + latnWord)
     variantEmbSamplers.get(latnWord).foreach { d =>
 	    f.writeLine(s"$latnWord ${d.sample()}")
+	    println("HANDLED CONSTANT " + latnWord)
     }
   }
   for ((latnWord, embDist) <- variantEmbSamplers) {
@@ -224,9 +227,9 @@ writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/en_
   (en ++ hi).shuffle.foreach(s => f.writeLine(s.mkString("\n")+"\n"))
 }
 
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot/en_hi_latn.emb")) { f => 
-  val en = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot/en.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
-  val hi = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot/hi_latn.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
+writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/en_hi_latn.emb")) { f => 
+  val en = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/en.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
+  val hi = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/hi_latn.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
   val consts = Vector("<UNK>", "<S>", "</S>", "<PAD>")
   val averagedConstLines = consts.mapTo(w => (en(w).splitWhitespace zipSafe hi(w).splitWhitespace).map { case (ee, he) => f"${(ee.toDouble + he.toDouble) / 2}%.7f" }.mkString(" "))
   (averagedConstLines ++ ((en -- consts).toVector ++ (hi -- consts)).shuffle).map{case (w,e) => s"$w $e"}.foreach(f.writeLine)

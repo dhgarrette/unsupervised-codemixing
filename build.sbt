@@ -17,7 +17,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "dhg" % "scala-util_2.12" % "0.0.3-SNAPSHOT",
+  "dhg" % "scala-util_2.12" % "0.0.4-SNAPSHOT",
   "org.scalanlp" % "breeze_2.12" % "1.0-RC2",
   "org.scalanlp" % "breeze-natives_2.12" % "1.0-RC2",
   "org.apache.opennlp" % "opennlp-tools" % "1.5.2-incubating",
