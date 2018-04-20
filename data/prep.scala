@@ -1,211 +1,185 @@
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/dev.spl")) { f=>
- File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/tagged-msr-hi_en-orig-coarse-dev.txt").readLines.foreach { line =>
-  f.writeLine(line.splitWhitespace.map { _.rsplit(raw"\|") match {
-    case Vector(word, "en", _) => s"$word|en"
-    case Vector(word, "hi", _) => s"$word|es"
-    case Vector(word, lang, _) => s"$word|$lang"
-   }
-  }.mkString(" "))
- }
-}
-
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/deva_wordlist-emb.txt")) { f=>
- for (fn <- Vector("/Users/dhgarrette/workspace/codemix-pos/data/clean/emb-polyglot-hi.txt")) {
-  println(fn)
-  File(fn).readLines.map(_.splitWhitespace(0)).toVector.sorted.distinct.foreach(f.writeLine)
- }
-}
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/deva_wordlist.txt")) { f=>
- for (fn <- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/MSR-POSData.txt")) {
-  println(fn)
-  File(fn).readLines.flatMap(_.splitWhitespace.map(_.rsplit("=")).collect { case Vector(_, deva) if deva.trim.nonEmpty => deva.trim }).toVector.sorted.distinct.foreach(f.writeLine)
- }
-}
-
-val NumRe = raw"\d+".r
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/deva_wordlist.txt")) { f=>
- for (fn <- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/original-en_hi/dev.conllu",
-                   "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/original-en_hi/test.conllu")) {
-  println(fn)
-  File(fn).readLines.map(_.trim).collect {
-   case line if !line.trim.startsWith("#") && line.nonEmpty =>
-    line.splitWhitespace(1)
-    //.map { line =>
-     //line.replaceAll(raw"[^(),.]+", "")
-    //}.filter { case NumRe() => false; case _ => true }
-  }
- }.toVector.sorted.distinct.foreach(f.writeLine)
-}
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/latn_vocab.txt")) { f =>
- val splWords: Set[String] =
-   Set("/Users/dhgarrette/workspace/unsupervised-codemixing/data/fire/en_hi/dev.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/fire/en_hi/test.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/icon/en_hi/dev.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/icon/en_hi/test.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/dev.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/irshad/en_hi/test.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/dev.spl",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/msr/en_hi/test.spl").flatMap { fn =>
-    println(fn)
-    File(fn).readLines.flatMap(_.splitWhitespace.map(_.rsplit(raw"\|",2).head))
-   }
- val conllWords: Set[String] =
-   Set("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-dev.conllu",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-test.conllu",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-train.conllu").flatMap { fn =>
-    println(fn)
-    File(fn).readLines.filterNot(_.startsWith("#")).filter(_.nonEmpty).map(_.splitWhitespace(1))
-   }
- val embWords: Set[String] =
-    Set("/Users/dhgarrette/workspace/codemix-pos/data/clean/emb-polyglot-en.txt").flatMap { fn =>
-     println(fn)
-     File(fn).readLines.map(_.splitWhitespace(0))
-    }
- (splWords ++ conllWords ++ embWords).toVector.sorted.distinct.foreach(f.writeLine)
-}
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/deva_vocab.txt")) { f =>
- val conllWords: Set[String] =
-   Set("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-dev.conllu",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-test.conllu",
-       "/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu").flatMap { fn =>
-    println(fn)
-    File(fn).readLines.filterNot(_.startsWith("#")).filter(_.nonEmpty).map(_.splitWhitespace(1))
-   }
- val embWords: Set[String] =
-    Set("/Users/dhgarrette/workspace/codemix-pos/data/clean/emb-polyglot-hi.txt").flatMap { fn =>
-     println(fn)
-     File(fn).readLines.map(_.splitWhitespace(0))
-    }
- (conllWords ++ embWords).toVector.sorted.distinct.foreach(f.writeLine)
-}
-
-
-
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/train_latn.spl")) { f=>
- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-train.conllu").foreach { fn =>
-  println(fn)
-  File(fn).readLines.filterNot(_.startsWith("#")).splitWhere(_.trim.isEmpty).foreach { sentenceLines => 
-      f.writeLine(sentenceLines.map(_.splitWhitespace(1).toLowerCase).mkString(" "))
-    }
- }
-}
-
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/train_latn.spl")) { f=>
- val wordCounts: Map[String, Int] = 
-   Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu").flatMap { fn =>
-      println(fn)
-      File(fn).readLines.filterNot(_.startsWith("#")).filter(_.nonEmpty).map(_.splitWhitespace(1))
-     }.map { _.toLowerCase }.counts
- val samplers =
-   File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/deva2latn.txt").readLines.map(_.splitWhitespace)
-     .collect { case input @ Vector(word, translitsString) if wordCounts.contains(word)  =>
-       println(input)
-       val d = new SimpleLogProbabilityDistribution[String](
-                         translitsString
-                             .lsplit(",")
-                             .map(_.rsplit(":",2))
-                             .map { case Seq(variant, prob) => (variant, LogDouble(prob.toDouble / 100)) }.toMap)
-       (word, d)
-     }.toMap
- Vector("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu").foreach { fn =>
-    println(fn)
-    File(fn).readLines.filterNot(_.startsWith("#")).splitWhere(_.trim.isEmpty).foreach { sentenceLines => 
-      f.writeLine(sentenceLines.map(_.splitWhitespace(1).toLowerCase).flatMap(samplers.get).map(_.sample()).mkString(" "))
-    }
-   }
-}
-
-
-val ConstantTypes = Vector("</S> </S>|1", "<UNK> <UNK>|1", "<PAD> <PAD>|1", "<S> <S>|1")
-
 import nlp.hmm.prob.SimpleExpProbabilityDistribution
+
+val devaChars = ((0 until 128).map(i => "\\u0" + Integer.toHexString(0x0900 + i)) ++ Vector("।")).mkString
+val DevaRe = raw"[\d\p{Punct}${devaChars}]*[${devaChars}][\d\p{Punct}${devaChars}]*".r
+val LatnRe = raw"[\d\p{Punct}A-za-z]*[A-za-z][\d\p{Punct}A-za-z]*".r
+val NumRe = raw"\d+".r
+val datadir = "/Users/dhgarrette/workspace/unsupervised-codemixing/data"
+val ConstantTypes = Vector("<UNK>", "<S>", "</S>", "<PAD>")
+
+def removePunc(s: String) = s.toLowerCase.replaceAll(raw"[\d\p{Punct}।]", "")
+
+
+
+
+
+writeUsing(File(s"$datadir/latn_wordlist.txt")) { f =>
+  val embWords: Vector[String] =
+    for {
+      fn <- Vector(
+          s"$datadir/emb/polyglot/en.emb",
+          s"$datadir/emb/polyglot-shared/en.emb"
+      )
+      line <- File(fn).readLines
+      word = line.splitWhitespace.apply(0)
+      if LatnRe.matches(word)
+    } yield word
+  val cmWords: Vector[String] =
+    for {
+      fn <- Vector(
+          s"$datadir/fire/en_hi/dev.langid.spl",
+          s"$datadir/fire/en_hi/test.langid.spl",
+          s"$datadir/icon/en_hi/dev.langid.spl",
+          s"$datadir/icon/en_hi/test.langid.spl",
+          s"$datadir/irshad/en_hi/dev.langid.spl",
+          s"$datadir/irshad/en_hi/test.langid.spl",
+          s"$datadir/irshad/en_hi/train.langid.spl",
+          s"$datadir/irshad/en_hi_normalized_oracle/dev.langid.spl",
+          s"$datadir/irshad/en_hi_normalized_oracle/test.langid.spl",
+          s"$datadir/irshad/en_hi_normalized_oracle/train.langid.spl",
+          s"$datadir/msr/en_hi/dev.langid.spl",
+          s"$datadir/msr/en_hi/test.langid.spl",
+      )
+      line <- File(fn).readLines
+      item <- line.splitWhitespace
+      Vector(word, lang) = item.rsplit("\\|", 2)
+      if LatnRe.matches(word)
+    } yield word
+  val udWords: Vector[String] =
+    for {
+      dataset <- Vector("train", "dev", "test")
+      fn <- Vector(
+          s"$datadir/ud/UD_English-EWT-master/$dataset.conllu",
+      )
+      line <- File(fn).readLines
+      if line.nonEmpty
+      if !line.startsWith("#")
+      word = line.splitWhitespace.apply(1)
+      if LatnRe.matches(word)
+    } yield word
+  (embWords ++ cmWords ++ udWords).flatMap(w => Vector(w, w.toLowerCase, removePunc(w))).filter(_.nonEmpty).sorted.distinct.foreach(f.writeLine)
+}
+
+writeUsing(File(s"$datadir/deva_wordlist.txt")) { f =>
+  val embWords: Vector[String] =
+    for {
+      fn <- Vector(
+          s"$datadir/emb/polyglot/hi.emb",
+          s"$datadir/emb/polyglot-shared/hi.emb",
+      )
+      line <- File(fn).readLines
+      word = line.splitWhitespace.apply(0)
+      if DevaRe.matches(word)
+    } yield word
+  val cmWords: Vector[String] =
+    for {
+      fn <- Vector(
+          s"$datadir/irshad/en_hi_normalized_oracle/dev.langid.spl",
+          s"$datadir/irshad/en_hi_normalized_oracle/test.langid.spl",
+          s"$datadir/irshad/en_hi_normalized_oracle/train.langid.spl",
+      )
+      line <- File(fn).readLines
+      item <- line.splitWhitespace
+      Vector(word, lang) = item.rsplit("\\|", 2)
+      if DevaRe.matches(word)
+    } yield word
+  val udWords: Vector[String] =
+    for {
+      dataset <- Vector("train", "dev", "test")
+      fn <- Vector(
+          s"$datadir/ud/UD_Hindi-HDTB-master/$dataset.conllu",
+      )
+      line <- File(fn).readLines
+      if line.nonEmpty
+      if !line.startsWith("#")
+      word = line.splitWhitespace.apply(1)
+      if DevaRe.matches(word)
+    } yield word
+  (embWords ++ cmWords ++ udWords).flatMap(w => Vector(w, w.toLowerCase, removePunc(w))).filter(_.nonEmpty).sorted.distinct.foreach(f.writeLine)
+}
+
 val deva2latnTranslitDists =
-  (File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/deva2latn.txt").readLines ++ Vector("। .:1") ++ ConstantTypes).flatMap { line =>
+  (File(s"$datadir/translit/deva2latn.txt").readLines ++ Vector("। .:1") ++ ConstantTypes.map(w => s"$w $w|1")).flatMap { line =>
   	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
   	  val translits = translitsString.lsplit(",")
                         .map(_.rsplit(":", 2).map(_.trim))
                         .collect { case Vector(word, prob) => (word, prob.toDouble) }
                         .toVector
     if (translits.nonEmpty)
-      Some(deva -> (translits, new SimpleExpProbabilityDistribution(translits.toMap)))
+      Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
     else
       None
   }.toMap
 
-import nlp.hmm.prob.SimpleExpProbabilityDistribution
 val latn2devaTranslitDists =
-  (File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/latn2deva.txt").readLines ++ ConstantTypes).flatMap { line =>
+  (File(s"$datadir/translit/latn2deva.txt").readLines ++ ConstantTypes.map(w => s"$w $w|1")).flatMap { line =>
   	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
   	  val translits = translitsString.lsplit(",")
                         .map(_.lsplit(":").map(_.trim))
                         .collect { case Vector(word, prob) => (word, prob.toDouble) }
                         .toVector
     if (translits.nonEmpty)
-      Some(deva -> (translits, new SimpleExpProbabilityDistribution(translits.toMap)))
+      Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
     else
       None
   }.toMap
 
-val devaEmbeddings: Map[String, String] =
-  File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/hi.emb").readLines.map { line =>
-    	line.lsplit("\\s+", 2).toTuple2
-  }.toMap
+val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
+  
+for (embset <- Vector("polyglot", "polyglot-shared")) {
+  val devaEmbeddings: Map[String, String] =
+    File(s"$datadir/emb/$embset/hi.emb").readLines.map { line =>
+      	line.lsplit("\\s+", 2).toTuple2
+    }.toMap
 
-val latnVocab: Set[String] = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/translit/latn_vocab.txt").readLines.flatMap(w => Set(w, w.toLowerCase)).toSet
-
-import nlp.hmm.prob.SimpleExpProbabilityDistribution
-val LatnRe = raw"[\d\p{Punct}A-za-z]+".r
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/hi_latn.emb")) { f =>
-  val ConstantTypes = Vector("<UNK>", "<S>", "</S>", "<PAD>")
-  val variants: Iterator[(String, (String, Double))] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
-    devaEmbeddings.iterator.flatMap { case (originalWord, emb) =>
-      originalWord match {
-      	  case _ if ConstantTypes.contains(originalWord) =>
-      	    Set(originalWord -> (emb, 100.0))
-        case LatnRe() =>
-          //if (latnVocab(originalWord))
-            Set(originalWord -> (emb, 100.0))
-          //else
-          //   Set.empty[(String, (String, Double))]
-        case _ =>
-          deva2latnTranslitDists.get(originalWord).map { case (ts, d) =>
-            val tsToKeep =
-              ts.collect { case (v, p) => //if latnVocab.contains(v) =>
+  writeUsing(File(s"$datadir/emb/$embset/hi_latn.emb")) { f =>
+    val variants: Iterator[(String, (String, Double))] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
+      devaEmbeddings.iterator.flatMap { case (devaWord, emb) =>
+        devaWord match {
+        	  case _ if ConstantTypes.contains(devaWord) =>
+        	    Set(devaWord -> (emb, 100.0))
+          case LatnRe() =>
+            //if (latnVocab(devaWord))
+              Set(devaWord -> (emb, 100.0))
+            //else
+            //   Set.empty[(String, (String, Double))]
+          case _ =>
+            deva2latnTranslitDists.get(devaWord).map { case (ts, d) =>
+              ts.flatCollect { case (v, p) => //if latnVocab.contains(v) =>
                 // Do a weighted coin flip for each weighted variant produced by the transliteration model.
                 new SimpleExpProbabilityDistribution(Map(Some(v -> (emb, p)) -> p, None -> (100-p))).sample()
-              }.flatten
-            //if (tsToKeep.size > 1)
-            //  println(s"tsToKeep: ${originalWord} -> ${tsToKeep.map(_._1)}")
-            tsToKeep
-          }.getOrElse(Set.empty)
+              }
+            }.getOrElse(Set.empty)
+        }
+      }
+    val variantEmbSamplers: Map[String, SimpleExpProbabilityDistribution[String]] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
+        variants.groupByKey.mapVals(variantEmbs => new SimpleExpProbabilityDistribution(variantEmbs.toMap))
+    for (latnWord <- ConstantTypes) {
+      variantEmbSamplers.get(latnWord).foreach { d =>
+    	    f.writeLine(s"$latnWord ${d.sample()}")
       }
     }
-  val variantEmbSamplers: Map[String, SimpleExpProbabilityDistribution[String]] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
-      variants.groupByKey.mapVals(variantEmbs => new SimpleExpProbabilityDistribution(variantEmbs.toMap))
-  println(s"variantEmbSamplers.size() = ${variantEmbSamplers.size}")
-  for (latnWord <- ConstantTypes) {
-    println("TRYING TO HANDLE CONSTANT " + latnWord)
-    variantEmbSamplers.get(latnWord).foreach { d =>
-	    f.writeLine(s"$latnWord ${d.sample()}")
-	    println("HANDLED CONSTANT " + latnWord)
+    for ((latnWord, embDist) <- variantEmbSamplers) {
+      if (!ConstantTypes.contains(latnWord)) {
+    	    f.writeLine(s"$latnWord ${embDist.sample()}")
+      }
     }
   }
-  for ((latnWord, embDist) <- variantEmbSamplers) {
-    if (!ConstantTypes.contains(latnWord)) {
-	    f.writeLine(s"$latnWord ${embDist.sample()}")
-    }
+
+  writeUsing(File(s"$datadir/emb/$embset/en-hi_latn.emb")) { f => 
+    val en = File(s"$datadir/emb/$embset/en.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
+    val hi = File(s"$datadir/emb/$embset/hi_latn.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
+    val averagedConstLines = ConstantTypes.mapTo(w => (en(w).splitWhitespace zipSafe hi(w).splitWhitespace)
+                                                          .map { case (ee, he) => f"${(ee.toDouble + he.toDouble) / 2}%.7f" }
+                                                          .mkString(" "))
+    (averagedConstLines ++ ((en -- ConstantTypes).toVector ++ (hi -- ConstantTypes)).shuffled).map{case (w,e) => s"$w $e"}.foreach(f.writeLine)
   }
 }
 
 val OkayRe = raw"[\d\p{Punct}]+".r
 for (set <- Vector("train", "dev", "test")) {
-  writeUsing(File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi_latn-ud-$set.conllu")) { f =>
-    for (line <- File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-$set.conllu").readLines) {
+  writeUsing(File(s"$datadir/ud/UD_Hindi-HDTB-master_Latn/$set.conllu")) { f =>
+    for (line <- File(s"$datadir/ud/UD_Hindi-HDTB-master/$set.conllu").readLines) {
       if (line.startsWith("#")) f.writeLine(line)
       else if (line.trim().isEmpty) f.writeLine(line)
       else {
@@ -221,16 +195,25 @@ for (set <- Vector("train", "dev", "test")) {
   }
 }
 
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/en_hi/train.conll")) { f => 
-  val en = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_English-EWT-master/en-ud-train.conllu").readLines.splitWhere(_.isEmpty).toVector
-  val hi = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu").readLines.splitWhere(_.isEmpty).toVector
-  (en ++ hi).shuffle.foreach(s => f.writeLine(s.mkString("\n")+"\n"))
+writeUsing(File(s"$datadir/ud/en_hi/train.conllu")) { f => 
+  val en = File(s"$datadir/ud/UD_English-EWT-master/train.conllu").readLines.splitWhere(_.isEmpty).toVector
+  val hi = File(s"$datadir/ud/UD_Hindi-HDTB-master/train.conllu").readLines.splitWhere(_.isEmpty).toVector
+  (en ++ hi).shuffled.foreach(s => f.writeLine(s.mkString("\n")+"\n"))
 }
 
-writeUsing(File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/en_hi_latn.emb")) { f => 
-  val en = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/en.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
-  val hi = File("/Users/dhgarrette/workspace/unsupervised-codemixing/data/emb/polyglot-shared/hi_latn.emb").readLines.map(_.lsplit("\\s+",2).toTuple2).toMap
-  val consts = Vector("<UNK>", "<S>", "</S>", "<PAD>")
-  val averagedConstLines = consts.mapTo(w => (en(w).splitWhitespace zipSafe hi(w).splitWhitespace).map { case (ee, he) => f"${(ee.toDouble + he.toDouble) / 2}%.7f" }.mkString(" "))
-  (averagedConstLines ++ ((en -- consts).toVector ++ (hi -- consts)).shuffle).map{case (w,e) => s"$w $e"}.foreach(f.writeLine)
+writeUsing(File(s"$datadir/ud/en-hi_latn/train.conllu")) { f => 
+  val en = File(s"$datadir/ud/UD_English-EWT-master/train.conllu").readLines.splitWhere(_.isEmpty).toVector
+  val hi = File(s"$datadir/ud/UD_Hindi-HDTB-master_Latn/train.conllu").readLines.splitWhere(_.isEmpty).toVector
+  (en ++ hi).shuffled.foreach(s => f.writeLine(s.mkString("\n")+"\n"))
+}
+
+for (langdir <- Vector("UD_English-EWT-master", "UD_Hindi-HDTB-master_Latn")) {
+  writeUsing(File(s"$datadir/ud/$langdir/train_latn.spl")) { f =>
+    Vector(s"$datadir/ud/$langdir/train.conllu").foreach { fn =>
+      println(fn)
+      File(fn).readLines.filterNot(_.startsWith("#")).splitWhere(_.trim.isEmpty).foreach { sentenceLines => 
+        f.writeLine(sentenceLines.map(_.splitWhitespace.apply(1).toLowerCase).mkString(" "))
+      }
+    }
+  }
 }

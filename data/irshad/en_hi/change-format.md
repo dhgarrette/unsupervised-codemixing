@@ -1,8 +1,3 @@
-original word:          splitConlluLine[2]
-token language ({E,H}): splitConlluLine[8].last 
-normalized word:        lang match { case "E" => splitConlluLine[2]; case "H" => splitConlluLine[1] }
-
-
     val LatnRe = raw"[\d\p{Punct}A-za-z]+".r
     val datadir = "/Users/dhgarrette/workspace/unsupervised-codemixing/data"
 
@@ -40,7 +35,9 @@ normalized word:        lang match { case "E" => splitConlluLine[2]; case "H" =>
       for (evalset <- Vector("dev", "test")) {
         writeUsing(File(s"$datadir/irshad/$dataset/$evalset.langid.spl")) { w =>
           for (sentenceLines <- File(s"$datadir/irshad/$dataset/${evalset}.conllu").readLines.splitWhere(_.isEmpty).filter(_.nonEmpty)) {
-            w.writeLine(sentenceLines.map(_.splitWhitespace).map { case cols => s"${cols(1)}|${cols.last.lsplit(",").map(_.rsplit("=").toTuple2).toMap.apply("Lang")}" }.mkString(" "))
+            w.writeLine(sentenceLines.map(_.splitWhitespace)
+                                     .map { case cols => s"${cols(1)}|${cols.last.lsplit(",").map(_.rsplit("=").toTuple2).toMap.apply("Lang")}" }
+                                     .mkString(" "))
           }
         }
       }
