@@ -1,4 +1,5 @@
 /data/emb/
+/data/*/*/unsup-*.conllu
 
 *.class
 *.log

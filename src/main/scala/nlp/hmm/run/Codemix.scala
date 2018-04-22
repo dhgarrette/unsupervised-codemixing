@@ -99,10 +99,10 @@ object Codemix {
       File(filename).readLines.map { line =>
         line.splitWhitespace.map(token => (numColumns, token.rsplit(raw"\|", numColumns)) match {
           case (2, Vector(word, "en")) => (normalizeWord(word), "E", word)
-          case (2, Vector(word, "es")) => (normalizeWord(word), "H", word)
+          case (2, Vector(word, "hi")) => (normalizeWord(word), "H", word)
           case (2, Vector(word, lang)) => (normalizeWord(word), lang, word)
           case (3, Vector(word, "en", _)) => (normalizeWord(word), "E", word)
-          case (3, Vector(word, "es", _)) => (normalizeWord(word), "H", word)
+          case (3, Vector(word, "hi", _)) => (normalizeWord(word), "H", word)
           case (3, Vector(word, lang, _)) => (normalizeWord(word), lang, word)
         })
       }
@@ -158,22 +158,23 @@ object Codemix {
 //    //val monoHiData = readConlluRawData(Vector("data/ud/UD_Spanish-GSD-master/es-ud-train.conllu"), "H")// -- monoEnWordCounts.keys
 //    val monoHiData = readConlluRawData(Vector("data/ud/UD_Hindi-HDTB-master/hi-ud-train.conllu"), "H")// -- monoEnWordCounts.keys
     val monoEnData = readRawSentences(Vector("data/ud/UD_English-EWT-master/train_latn.spl"), "E")
-    val monoHiData = readRawSentences(Vector("data/ud/UD_Hindi-HDTB-master/train_latn.spl"), "H")// -- monoEnWordCounts.keys
+    val monoHiData = readRawSentences(Vector("data/ud/UD_Hindi-HDTB-master_Latn/train_latn.spl"), "H")// -- monoEnWordCounts.keys
     val monoEnWordCounts = monoEnData.flatten.map(_._1).counts
     val monoHiWordCounts = monoHiData.flatten.map(_._1).counts// -- monoEnWordCounts.keys
-//    val csTrainData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/train.spl"), 2)
-//    val csEvalData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/$evalset.spl"), 2)
-    val csTrainData = readLangTaggedSplFile(Vector("data/irshad/en_hi/dev.spl",
-                                                   "data/fire/en_hi/dev.spl",
-                                                   "data/icon/en_hi/dev.spl",
-                                                   "data/msr/en_hi/dev.spl") ++ (
+//    val csTrainData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/train.langid.spl"), 2)
+//    val csEvalData = readLangTaggedSplFile(Vector("data/wcacs16/en_es/$evalset.langid.spl"), 2)
+    val csTrainData = readLangTaggedSplFile(Vector("data/irshad/en_hi/train.langid.spl",
+                                                   "data/irshad/en_hi/dev.langid.spl",
+                                                   "data/fire/en_hi/dev.langid.spl",
+                                                   "data/icon/en_hi/dev.langid.spl",
+                                                   "data/msr/en_hi/dev.langid.spl") ++ (
                                                        if (evalset=="test") 
-                                                         Vector("data/irshad/en_hi/test.spl",
-                                                                "data/fire/en_hi/test.spl",
-                                                                "data/icon/en_hi/test.spl",
-                                                                "data/msr/en_hi/test.spl")
+                                                         Vector("data/irshad/en_hi/test.langid.spl",
+                                                                "data/fire/en_hi/test.langid.spl",
+                                                                "data/icon/en_hi/test.langid.spl",
+                                                                "data/msr/en_hi/test.langid.spl")
                                                        else Vector.empty), 2)
-    val csEvalData = readLangTaggedSplFile(Vector("data/irshad/en_hi/dev.spl"), 2)
+    val csEvalData = readLangTaggedSplFile(Vector(s"data/irshad/en_hi/${evalset}.langid.spl"), 2)
     
     val perplexityCheckWords = Vector("acceleration", "dhg", "dhgg", "aardvark", "aardvarks", "why", "telephone", "who", "how", "when", "where", "what", "the", "a", "szozezizjzfzso")
     def checkPerplexities(charNgramOrder: Int, model: ConditionalLogProbabilityDistribution[Vector[String], String]) = {
@@ -291,8 +292,18 @@ object Codemix {
               
           {
             for (dataset <- Vector(/*"fire",*/ "icon", "irshad", "msr")) {
-              val hiKnownEmbWords: Set[String] = File("data/emb/emb-polyglot-hi.txt").readLines.map(_.splitWhitespace.head).toSet
-              val csPos = File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/${dataset}/en_hi/tagged-${dataset}-hi_en-orig-coarse-${evalset}.txt").readLines.map(_.splitWhitespace.map(_.rsplit("\\|",3).toTuple3)).toVector
+              val hiKnownEmbWords: Set[String] = File("data/emb/polyglot/hi.emb").readLines.map(_.splitWhitespace.head).toSet
+              val csPos: Vector[Vector[(String, String, String)]] =  // word, lang, pos
+                  File(s"data/$dataset/en_hi/${evalset}.conllu").readLines.splitWhere(_.isEmpty).filter(_.nonEmpty)
+                      .map { sentenceLines =>
+                        sentenceLines.map { line =>
+                          val cols = line.splitWhitespace
+                          val lang: String = cols.last.lsplit(",")
+                                                 .map(_.rsplit("=").toTuple2)
+                                                 .toMap.apply("Lang")
+                          (cols(1), lang, cols(3))
+                        }
+                      }.toVector
               val allWords = csPos.flatMap(_.map(_._1.toLowerCase)).toSet
               val wordTranslits: Map[String, Map[Boolean, Map[Boolean, SimpleExpProbabilityDistribution[String]]]] = 
                   File("data/translit/latn2deva.txt").readLines
@@ -320,15 +331,16 @@ object Codemix {
               for (onebest <- Seq(false, true)) {
                 for (preferKnownTranslit <- Seq(false, true)) {
                 	  for (oracle <- Seq(false, true)) {
-                    writeUsing(File(f"data/$dataset/en_hi/${evalset}_unsup_labels_${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.spl")) { splOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
-                    writeUsing(File(f"data/$dataset/en_hi/${evalset}-unsup-${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.conllu")) { conllOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
-                    writeUsing(File(f"data/$dataset/en_hi/${evalset}-oracle-unsup-${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.conllu")) { conllOracleOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                    //writeUsing(File(f"data/$dataset/en_hi/-unsup-${evalset}_labels_${if (onebest) "onebest" else "sampled"}${if (preferKnownTranslit) "_known" else ""}${if (oracle) "_oracle" else ""}.spl")) { splOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                	   val builtFilename = s"${if (onebest) "onebest" else "sampled"}_devafied-${if (preferKnownTranslit) "preferknown" else "anytranslit"}_deva-${if (oracle) "oracle" else "gussed"}_langdist"
+                    writeUsing(File(f"data/$dataset/en_hi/unsup-${evalset}-orig_word-${builtFilename}.conllu")) { conllOrigwordOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
+                    //writeUsing(File(f"data/$dataset/en_hi/unsup-${evalset}-norm_word-${builtFilename}.conllu")) { conllNormwordOut =>  // unsup_dist_tagged_${maxIter}%03d.out")) { f =>
                       for (sentence <- csPos) {
                         val tagProbs = emHmm.asInstanceOf[HmmTagger[Tag]].tagToProbDistsFromTagSet(sentence.map {
-                          case (originalWord, goldLang, goldPos) => replaceUnk(normalizeWord(originalWord)) -> tagdict(normalizeWord(originalWord))
+                          case (origWord, goldLang, goldPos) => replaceUnk(normalizeWord(origWord)) -> tagdict(normalizeWord(origWord))
                         })
-                        splOut.writeLine(sentence.zipSafe(tagProbs).zipWithIndex.map {
-                          case (((originalWord, goldLang, goldPos), modelOutputLangDist), i) =>
+                        val splOutLine = sentence.zipSafe(tagProbs).zipWithIndex.map {
+                          case (((origWord, goldLang, goldPos), modelOutputLangDist), i) =>
                             val filteredProbs = modelOutputLangDist.mapVals(_.toDouble).filter(_._2 >= 0.001).normalizeValues.toVector.sortBy(-_._2);
                             val goldTag = goldLang match {
                                     case "E" => "en"
@@ -348,29 +360,30 @@ object Codemix {
                                       case "xH" => "hi"
                                   }}:${p}%.3f" }.mkString(",")
                             
-                            val devafiedWord = wordTranslits.get(normalizeWord(originalWord)).map(_(preferKnownTranslit)).map(_(onebest).sample()).getOrElse(normalizeWord(originalWord))
+                            val devafiedWord = wordTranslits.get(normalizeWord(origWord)).map(_(preferKnownTranslit)).map(_(onebest).sample()).getOrElse(normalizeWord(origWord))
 
-                            val guessedLang = tagDistString.lsplit(":",2).head
-                            val oracleWord = guessedLang match {
-                              case "en" => originalWord
-                              case "hi" => devafiedWord
-//                              case _ =>
-//                                println(s"tagDistString=[$tagDistString]")
-//                                "xxxx"
-                            }
-                            conllOut.writeLine(f"${i+1}\t$originalWord\t$originalWord\t$goldPos\t$goldPos\tOriginal=$originalWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
-                            conllOracleOut.writeLine(f"${i+1}\t$oracleWord\t$oracleWord\t$goldPos\t$goldPos\tOriginal=$originalWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
-                            //conllOracleOut.writeLine(f"${i+1}\t$guessedLang:$oracleWord\t$guessedLang:$oracleWord\t$goldPos\t$goldPos\tOriginal=$originalWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
+//                            val guessedLang = tagDistString.lsplit(":", 2).head
+//                            val normWord = guessedLang match {
+//                              case "en" => origWord
+//                              case "hi" => devafiedWord
+////                              case _ =>
+////                                println(s"tagDistString=[$tagDistString]")
+////                                "xxxx"
+//                            }
+                            conllOrigwordOut.writeLine(f"${i+1}\t$origWord\t$origWord\t$goldPos\t$goldPos\tOriginal=$origWord|Devafied=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
+                            //conllNormwordOut.writeLine(f"${i+1}\t$normWord\t$normWord\t$goldPos\t$goldPos\tOriginal=$origWord|Devafied=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
+                            //conllNormwordOut.writeLine(f"${i+1}\t$guessedLang:$normWord\t$guessedLang:$normWord\t$goldPos\t$goldPos\tOriginal=$origWord|DevaWord=$devafiedWord|LangDist=$tagDistString|GoldLang=$goldTag")
                                   
-                            f"$originalWord|$goldTag|$tagDistString|$devafiedWord"
-                        }.mkString(" "))
-                        conllOut.writeLine()
-                        conllOracleOut.writeLine()
+                            f"$origWord|$goldTag|$tagDistString|$devafiedWord"
+                        }.mkString(" ")
+                        //splOut.writeLine(splOutLine)
+                        conllOrigwordOut.writeLine()
+                        //conllNormwordOut.writeLine()
                       }
                     }
                   }
-                	 }
-                	 }
+                	 //}
+                	 //}
                 }
               }
             }
