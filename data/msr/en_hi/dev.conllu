@@ -11,6 +11,7 @@
 10	kr	kr	VERB	VERB	Lang=hi
 11	le	le	VERB	VERB	Lang=hi
 12	kya	kya	PRON	PRON	Lang=hi
+
 0	Ldki	Ldki	NOUN	NOUN	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	dusri	dusri	ADJ	ADJ	Lang=hi
@@ -24,6 +25,7 @@
 10	:	:	.	.	Lang=univ
 11	->	->	X	X	Lang=univ
 12	pgle	pgle	NOUN	NOUN	Lang=hi
+
 0	Kadr	Kadr	PRT	PRT	Lang=hi
 1	us	us	PRON	PRON	Lang=hi
 2	chabi	chabi	NOUN	NOUN	Lang=hi
@@ -49,6 +51,7 @@
 22	..	..	.	.	Lang=univ
 23	bete	bete	NOUN	NOUN	Lang=hi
 24	..	..	.	.	Lang=univ
+
 0	Hawas	Hawas	NOUN	NOUN	Lang=hi
 1	ke	ke	ADP	ADP	Lang=hi
 2	pujari	pujari	NOUN	NOUN	Lang=hi
@@ -67,6 +70,7 @@
 15	me	me	ADP	ADP	Lang=hi
 16	kya	kya	PRON	PRON	Lang=hi
 17	krega	krega	VERB	VERB	Lang=hi
+
 0	Koi	Koi	PRON	PRON	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	rok	rok	VERB	VERB	Lang=hi
@@ -78,6 +82,7 @@
 8	tabah	tabah	ADJ	ADJ	Lang=hi
 9	kr	kr	VERB	VERB	Lang=hi
 10	dega	dega	VERB	VERB	Lang=hi
+
 0	bona	bona	NOUN	NOUN	Lang=hi
 1	mazze	mazze	NOUN	NOUN	Lang=hi
 2	lene	lene	VERB	VERB	Lang=hi
@@ -89,6 +94,7 @@
 8	gya	gya	VERB	VERB	Lang=hi
 9	aur	aur	CONJ	CONJ	Lang=hi
 10	kya	kya	PRON	PRON	Lang=hi
+
 0	yr	yr	NOUN	NOUN	Lang=hi
 1	aakh	aakh	NOUN	NOUN	Lang=hi
 2	khule	khule	VERB	VERB	Lang=hi
@@ -101,6 +107,7 @@
 9	he	he	PRT	PRT	Lang=hi
 10	krab	krab	NOUN	NOUN	Lang=hi
 11	h	h	VERB	VERB	Lang=hi
+
 0	manna	manna	NOUN	NOUN	Lang=hi
 1	dey	dey	NOUN	NOUN	Lang=hi
 2	jaise	jaise	PRON	PRON	Lang=hi
@@ -113,6 +120,7 @@
 9	ho	ho	VERB	VERB	Lang=hi
 10	jaate	jaate	VERB	VERB	Lang=hi
 11	hain	hain	VERB	VERB	Lang=hi
+
 0	there	there	PRON	PRON	Lang=hi
 1	are	are	VERB	VERB	Lang=hi
 2	only	only	ADV	ADV	Lang=hi
@@ -122,6 +130,7 @@
 6	live	live	VERB	VERB	Lang=hi
 7	your	your	PRON	PRON	Lang=hi
 8	life	life	NOUN	NOUN	Lang=hi
+
 0	husn	husn	NOUN	NOUN	Lang=hi
 1	na	na	PRT	PRT	Lang=hi
 2	maang	maang	VERB	VERB	Lang=hi
@@ -130,6 +139,7 @@
 5	ae	ae	PRT	PRT	Lang=hi
 6	dost	dost	NOUN	NOUN	Lang=hi
 7	,	,	.	.	Lang=univ
+
 0	jholi	jholi	NOUN	NOUN	Lang=hi
 1	faila	faila	VERB	VERB	Lang=hi
 2	kar	kar	VERB	VERB	Lang=hi
@@ -137,9 +147,11 @@
 4	khuda	khuda	NOUN	NOUN	Lang=hi
 5	se	se	ADP	ADP	Lang=hi
 6	unhe	unhe	PRON	PRON	Lang=hi
+
 0	kya	kya	PRON	PRON	Lang=hi
 1	hal	hal	NOUN	NOUN	Lang=hi
 2	hai	hai	VERB	VERB	Lang=hi
+
 0	tum	tum	PRON	PRON	Lang=hi
 1	mujhe	mujhe	PRON	PRON	Lang=hi
 2	dhoondh	dhoondh	VERB	VERB	Lang=hi
@@ -155,17 +167,20 @@
 12	kar	kar	VERB	VERB	Lang=hi
 13	raha	raha	VERB	VERB	Lang=hi
 14	hu	hu	VERB	VERB	Lang=hi
+
 0	ishwar	ishwar	NOUN	NOUN	Lang=hi
 1	divangat	divangat	ADJ	ADJ	Lang=hi
 2	aatma	aatma	NOUN	NOUN	Lang=hi
 3	ko	ko	ADP	ADP	Lang=hi
 4	shanti	shanti	NOUN	NOUN	Lang=hi
 5	de	de	VERB	VERB	Lang=hi
+
 0	nibha	nibha	VERB	VERB	Lang=hi
 1	raha	raha	VERB	VERB	Lang=hi
 2	hai	hai	VERB	VERB	Lang=hi
 3	koi	koi	PRON	PRON	Lang=hi
 4	,	,	.	.	Lang=univ
+
 0	wale	wale	PRT	PRT	Lang=hi
 1	salo	salo	NOUN	NOUN	Lang=hi
 2	me	me	ADP	ADP	Lang=hi
@@ -175,17 +190,20 @@
 6	karege	karege	VERB	VERB	Lang=hi
 7	ki	ki	ADP	ADP	Lang=hi
 8	ek	ek	NUM	NUM	Lang=hi
+
 0	meri	meri	PRON	PRON	Lang=hi
 1	aawaaj	aawaaj	NOUN	NOUN	Lang=hi
 2	hi	hi	ADP	ADP	Lang=hi
 3	pahachaan	pahachaan	NOUN	NOUN	Lang=hi
 4	hai	hai	VERB	VERB	Lang=hi
+
 0	har	har	ADJ	ADJ	Lang=hi
 1	taraf	taraf	NOUN	NOUN	Lang=hi
 2	ab	ab	ADV	ADV	Lang=hi
 3	yahi	yahi	DET	DET	Lang=hi
 4	afsane	afsane	NOUN	NOUN	Lang=hi
 5	hain	hain	VERB	VERB	Lang=hi
+
 0	isiliye	isiliye	CONJ	CONJ	Lang=hi
 1	tum	tum	PRON	PRON	Lang=hi
 2	congressio	congressio	NOUN	NOUN	Lang=hi
@@ -197,6 +215,7 @@
 8	bhar	bhar	VERB	VERB	Lang=hi
 9	diya	diya	VERB	VERB	Lang=hi
 10	hai	hai	VERB	VERB	Lang=hi
+
 0	tum	tum	PRON	PRON	Lang=hi
 1	bhi	bhi	PRT	PRT	Lang=hi
 2	apne	apne	PRON	PRON	Lang=hi
@@ -204,6 +223,7 @@
 4	ki	ki	ADP	ADP	Lang=hi
 5	inteha	inteha	NOUN	NOUN	Lang=hi
 6	karna	karna	VERB	VERB	Lang=hi
+
 0	ghinoni	ghinoni	ADJ	ADJ	Lang=hi
 1	harkat	harkat	NOUN	NOUN	Lang=hi
 2	ka	ka	ADP	ADP	Lang=hi
@@ -218,6 +238,7 @@
 11	jay	jay	NOUN	NOUN	Lang=hi
 12	bharat	bharat	NOUN	NOUN	Lang=hi
 13	ma	ma	NOUN	NOUN	Lang=hi
+
 0	hathi	hathi	NOUN	NOUN	Lang=hi
 1	chale	chale	VERB	VERB	Lang=hi
 2	bich	bich	ADJ	ADJ	Lang=hi
@@ -225,6 +246,7 @@
 4	kutthe	kutthe	NOUN	NOUN	Lang=hi
 5	voke	voke	VERB	VERB	Lang=hi
 6	hazar	hazar	NUM	NUM	Lang=hi
+
 0	kuchh	kuchh	PRON	PRON	Lang=hi
 1	waqt	waqt	NOUN	NOUN	Lang=hi
 2	pahle	pahle	ADV	ADV	Lang=hi
@@ -241,6 +263,7 @@
 13	shan	shan	NOUN	NOUN	Lang=hi
 14	hai	hai	VERB	VERB	Lang=hi
 15	pyaz	pyaz	NOUN	NOUN	Lang=hi
+
 0	ab	ab	ADV	ADV	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	phenktay	phenktay	VERB	VERB	Lang=hi
@@ -251,6 +274,7 @@
 7	ane	ane	VERB	VERB	Lang=hi
 8	lagi	lagi	VERB	VERB	Lang=hi
 9	,	,	.	.	Lang=univ
+
 0	aab	aab	ADV	ADV	Lang=hi
 1	ke	ke	ADP	ADP	Lang=hi
 2	baad	baad	ADP	ADP	Lang=hi
@@ -269,16 +293,19 @@
 15	utar	utar	VERB	VERB	Lang=hi
 16	aayega	aayega	VERB	VERB	Lang=hi
 17	,	,	.	.	Lang=univ
+
 0	tu	tu	PRON	PRON	Lang=hi
 1	pappu	pappu	NOUN	NOUN	Lang=hi
 2	ka	ka	ADP	ADP	Lang=hi
 3	pappu	pappu	NOUN	NOUN	Lang=hi
 4	hi	hi	PRT	PRT	Lang=hi
 5	rahega	rahega	VERB	VERB	Lang=hi
+
 0	jindagi	jindagi	NOUN	NOUN	Lang=hi
 1	kaisi	kaisi	PRON	PRON	Lang=hi
 2	hai	hai	VERB	VERB	Lang=hi
 3	paheli	paheli	NOUN	NOUN	Lang=hi
+
 0	hum	hum	PRON	PRON	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	ye	ye	PRON	PRON	Lang=hi
@@ -286,6 +313,7 @@
 4	kar	kar	VERB	VERB	Lang=hi
 5	hi	hi	PRT	PRT	Lang=hi
 6	khush	khush	ADJ	ADJ	Lang=hi
+
 0	zindagi	zindagi	NOUN	NOUN	Lang=hi
 1	haseen	haseen	ADJ	ADJ	Lang=hi
 2	hai	hai	VERB	VERB	Lang=hi
@@ -294,6 +322,7 @@
 5	pyar	pyar	NOUN	NOUN	Lang=hi
 6	karo	karo	VERB	VERB	Lang=hi
 7	,	,	.	.	Lang=univ
+
 0	santa	santa	NOUN	NOUN	Lang=hi
 1	-	-	.	.	Lang=univ
 2	pandit	pandit	NOUN	NOUN	Lang=hi
@@ -304,6 +333,7 @@
 7	sikhaa	sikhaa	VERB	VERB	Lang=hi
 8	do	do	VERB	VERB	Lang=hi
 9	,	,	.	.	Lang=univ
+
 0	ab	ab	NOUN	NOUN	Lang=hi
 1	pure	pure	ADJ	ADJ	Lang=hi
 2	desh	desh	NOUN	NOUN	Lang=hi
@@ -312,6 +342,7 @@
 5	ga	ga	VERB	VERB	Lang=hi
 6	namo	namo	NOUN	NOUN	Lang=hi
 7	namo	namo	NOUN	NOUN	Lang=hi
+
 0	sabko	sabko	PRON	PRON	Lang=hi
 1	sath	sath	ADV	ADV	Lang=hi
 2	ke	ke	VERB	VERB	Lang=hi
@@ -323,6 +354,7 @@
 8	ka	ka	ADP	ADP	Lang=hi
 9	kahena	kahena	VERB	VERB	Lang=hi
 10	hi	hi	VERB	VERB	Lang=hi
+
 0	kasme	kasme	NOUN	NOUN	Lang=hi
 1	wade	wade	NOUN	NOUN	Lang=hi
 2	pyar	pyar	NOUN	NOUN	Lang=hi
@@ -333,6 +365,7 @@
 7	wado	wado	NOUN	NOUN	Lang=hi
 8	ka	ka	ADP	ADP	Lang=hi
 9	ky	ky	PRON	PRON	Lang=hi
+
 0	na	na	PRT	PRT	Lang=hi
 1	daga	daga	NOUN	NOUN	Lang=hi
 2	de	de	VERB	VERB	Lang=hi
@@ -341,6 +374,7 @@
 5	kare	kare	VERB	VERB	Lang=hi
 6	gaddari	gaddari	NOUN	NOUN	Lang=hi
 7	,	,	.	.	Lang=univ
+
 0	manna	manna	NOUN	NOUN	Lang=hi
 1	dey	dey	NOUN	NOUN	Lang=hi
 2	ji	ji	PRT	PRT	Lang=hi
@@ -351,6 +385,7 @@
 7	hamesha	hamesha	ADV	ADV	Lang=hi
 8	zinda	zinda	ADJ	ADJ	Lang=hi
 9	rehega	rehega	VERB	VERB	Lang=hi
+
 0	bhula	bhula	VERB	VERB	Lang=hi
 1	hu	hu	PRON	PRON	Lang=hi
 2	tere	tere	PRON	PRON	Lang=hi
@@ -358,6 +393,7 @@
 4	me	me	ADP	ADP	Lang=hi
 5	dunia	dunia	NOUN	NOUN	Lang=hi
 6	,	,	.	.	Lang=univ
+
 0	prince	prince	NOUN	NOUN	Lang=hi
 1	verma	verma	NOUN	NOUN	Lang=hi
 2	kya	kya	PRON	PRON	Lang=hi
@@ -372,6 +408,7 @@
 11	ke	ke	ADP	ADP	Lang=hi
 12	birodhi	birodhi	ADJ	ADJ	Lang=hi
 13	hain	hain	VERB	VERB	Lang=hi
+
 0	hm	hm	PRON	PRON	Lang=hi
 1	to	to	ADP	ADP	Lang=hi
 2	lut	lut	VERB	VERB	Lang=hi
@@ -385,16 +422,19 @@
 10	khber	khber	NOUN	NOUN	Lang=hi
 11	kb	kb	PRON	PRON	Lang=hi
 12	hogi	hogi	VERB	VERB	Lang=hi
+
 0	dukh	dukh	NOUN	NOUN	Lang=hi
 1	mein	mein	ADP	ADP	Lang=hi
 2	sab	sab	PRON	PRON	Lang=hi
 3	mukh	mukh	NOUN	NOUN	Lang=hi
 4	modenge	modenge	VERB	VERB	Lang=hi
+
 0	e	e	PRON	PRON	Lang=hi
 1	vipachh	vipachh	NOUN	NOUN	Lang=hi
 2	ki	ki	ADP	ADP	Lang=hi
 3	sajish	sajish	NOUN	NOUN	Lang=hi
 4	hai	hai	VERB	VERB	Lang=hi
+
 0	bhagwan	bhagwan	NOUN	NOUN	Lang=hi
 1	unki	unki	PRON	PRON	Lang=hi
 2	aatma	aatma	NOUN	NOUN	Lang=hi
@@ -402,6 +442,7 @@
 4	shanti	shanti	NOUN	NOUN	Lang=hi
 5	pradan	pradan	NOUN	NOUN	Lang=hi
 6	karen	karen	VERB	VERB	Lang=hi
+
 0	ab	ab	ADV	ADV	Lang=hi
 1	hogi	hogi	VERB	VERB	Lang=hi
 2	bhrashtachariyo	bhrashtachariyo	NOUN	NOUN	Lang=hi
@@ -414,6 +455,7 @@
 9	sarkar	sarkar	NOUN	NOUN	Lang=hi
 10	modi	modi	NOUN	NOUN	Lang=hi
 11	zindabad	zindabad	NOUN	NOUN	Lang=hi
+
 0	lage	lage	VERB	VERB	Lang=hi
 1	rahiye	rahiye	VERB	VERB	Lang=hi
 2	bade	bade	ADJ	ADJ	Lang=hi
@@ -422,17 +464,20 @@
 5	accha	accha	ADJ	ADJ	Lang=hi
 6	hi	hi	PRT	PRT	Lang=hi
 7	hoga	hoga	VERB	VERB	Lang=hi
+
 0	vijay	vijay	NOUN	NOUN	Lang=hi
 1	dina	dina	NOUN	NOUN	Lang=hi
 2	nath	nath	NOUN	NOUN	Lang=hi
 3	chuahaan	chuahaan	NOUN	NOUN	Lang=hi
 4	haiii	haiii	PRT	PRT	Lang=hi
+
 0	jai	jai	NOUN	NOUN	Lang=hi
 1	jai	jai	NOUN	NOUN	Lang=hi
 2	namo	namo	NOUN	NOUN	Lang=hi
 3	jai	jai	NOUN	NOUN	Lang=hi
 4	jai	jai	NOUN	NOUN	Lang=hi
 5	rajasthan	rajasthan	NOUN	NOUN	Lang=hi
+
 0	mane	mane	X	X	Lang=hi
 1	behad	behad	ADJ	ADJ	Lang=hi
 2	dukhad	dukhad	ADJ	ADJ	Lang=hi
@@ -443,6 +488,7 @@
 7	ko	ko	ADP	ADP	Lang=hi
 8	shanti	shanti	NOUN	NOUN	Lang=hi
 9	de	de	VERB	VERB	Lang=hi
+
 0	saif	saif	NOUN	NOUN	Lang=hi
 1	bhai	bhai	NOUN	NOUN	Lang=hi
 2	boliya	boliya	VERB	VERB	Lang=hi
@@ -458,6 +504,7 @@
 12	dekhai	dekhai	VERB	VERB	Lang=hi
 13	nai	nai	PRT	PRT	Lang=hi
 14	data	data	VERB	VERB	Lang=hi
+
 0	kuch	kuch	PRON	PRON	Lang=hi
 1	bhi	bhi	PRT	PRT	Lang=hi
 2	kar	kar	VERB	VERB	Lang=hi
@@ -467,6 +514,7 @@
 6	rukega	rukega	VERB	VERB	Lang=hi
 7	na	na	PRT	PRT	Lang=hi
 8	jhukega	jhukega	VERB	VERB	Lang=hi
+
 0	shaadi	shaadi	NOUN	NOUN	Lang=hi
 1	kaa	kaa	ADP	ADP	Lang=hi
 2	khayal	khayal	NOUN	NOUN	Lang=hi
@@ -475,6 +523,7 @@
 5	ja	ja	VERB	VERB	Lang=hi
 6	rahi	rahi	VERB	VERB	Lang=hi
 7	he	he	VERB	VERB	Lang=hi
+
 0	lekin	lekin	CONJ	CONJ	Lang=hi
 1	aaj	aaj	NOUN	NOUN	Lang=hi
 2	ye	ye	DET	DET	Lang=hi
@@ -488,6 +537,7 @@
 10	aa	aa	VERB	VERB	Lang=hi
 11	raha	raha	VERB	VERB	Lang=hi
 12	hai	hai	VERB	VERB	Lang=hi
+
 0	kasme	kasme	NOUN	NOUN	Lang=hi
 1	wade	wade	NOUN	NOUN	Lang=hi
 2	pyar	pyar	NOUN	NOUN	Lang=hi
@@ -498,6 +548,7 @@
 7	baaton	baaton	NOUN	NOUN	Lang=hi
 8	ka	ka	ADP	ADP	Lang=hi
 9	kya	kya	PRON	PRON	Lang=hi
+
 0	yr	yr	NOUN	NOUN	Lang=hi
 1	in	in	DET	DET	Lang=hi
 2	logo	logo	NOUN	NOUN	Lang=hi
@@ -505,11 +556,13 @@
 4	kahi	kahi	PRON	PRON	Lang=hi
 5	dekha	dekha	VERB	VERB	Lang=hi
 6	h	h	VERB	VERB	Lang=hi
+
 0	bhai	bhai	NOUN	NOUN	Lang=hi
 1	suru	suru	NOUN	NOUN	Lang=hi
 2	ho	ho	VERB	VERB	Lang=hi
 3	gya	gya	VERB	VERB	Lang=hi
 4	kya	kya	PRON	PRON	Lang=hi
+
 0	namo	namo	NOUN	NOUN	Lang=hi
 1	ke	ke	ADP	ADP	Lang=hi
 2	bhasan	bhasan	NOUN	NOUN	Lang=hi
@@ -518,11 +571,13 @@
 5	esa	esa	PRON	PRON	Lang=hi
 6	lagta	lagta	VERB	VERB	Lang=hi
 7	hai	hai	VERB	VERB	Lang=hi
+
 0	baar	baar	NOUN	NOUN	Lang=hi
 1	baar	baar	NOUN	NOUN	Lang=hi
 2	aajmaate	aajmaate	VERB	VERB	Lang=hi
 3	q	q	PRON	PRON	Lang=hi
 4	hai	hai	VERB	VERB	Lang=hi
+
 0	wafa	wafa	NOUN	NOUN	Lang=hi
 1	ki	ki	ADP	ADP	Lang=hi
 2	kimat	kimat	NOUN	NOUN	Lang=hi
@@ -530,6 +585,7 @@
 4	bewafai	bewafai	NOUN	NOUN	Lang=hi
 5	sasti	sasti	ADJ	ADJ	Lang=hi
 6	hai	hai	VERB	VERB	Lang=hi
+
 0	bharat	bharat	NOUN	NOUN	Lang=hi
 1	maa	maa	NOUN	NOUN	Lang=hi
 2	ki	ki	ADP	ADP	Lang=hi
@@ -539,6 +595,7 @@
 6	modi	modi	NOUN	NOUN	Lang=hi
 7	-	-	.	.	Lang=univ
 8	modi	modi	NOUN	NOUN	Lang=hi
+
 0	e	e	PRT	PRT	Lang=hi
 1	mere	mere	PRON	PRON	Lang=hi
 2	zohra	zohra	NOUN	NOUN	Lang=hi
@@ -546,6 +603,7 @@
 4	tumhe	tumhe	PRON	PRON	Lang=hi
 5	maloom	maloom	NOUN	NOUN	Lang=hi
 6	nahi	nahi	PRT	PRT	Lang=hi
+
 0	mujhe	mujhe	PRON	PRON	Lang=hi
 1	darde	darde	NOUN	NOUN	Lang=hi
 2	ishq	ishq	NOUN	NOUN	Lang=hi
@@ -566,13 +624,16 @@
 17	maloom	maloom	NOUN	NOUN	Lang=hi
 18	hai	hai	VERB	VERB	Lang=hi
 19	,	,	.	.	Lang=univ
+
 0	koi	koi	PRON	PRON	Lang=hi
 1	baat	baat	NOUN	NOUN	Lang=hi
 2	nahi	nahi	PRT	PRT	Lang=hi
 3	modi	modi	NOUN	NOUN	Lang=hi
+
 0	lage	lage	VERB	VERB	Lang=hi
 1	raho	raho	VERB	VERB	Lang=hi
 2	namoji	namoji	NOUN	NOUN	Lang=hi
+
 0	unki	unki	PRON	PRON	Lang=hi
 1	yaaden	yaaden	NOUN	NOUN	Lang=hi
 2	hamesha	hamesha	ADV	ADV	Lang=hi
@@ -585,6 +646,7 @@
 9	ko	ko	ADP	ADP	Lang=hi
 10	shanki	shanki	NOUN	NOUN	Lang=hi
 11	de	de	VERB	VERB	Lang=hi
+
 0	nitish	nitish	NOUN	NOUN	Lang=hi
 1	kumar	kumar	NOUN	NOUN	Lang=hi
 2	lalchi	lalchi	ADJ	ADJ	Lang=hi
@@ -596,6 +658,7 @@
 8	etihash	etihash	NOUN	NOUN	Lang=hi
 9	purana	purana	ADJ	ADJ	Lang=hi
 10	hai	hai	VERB	VERB	Lang=hi
+
 0	bs	bs	ADV	ADV	Lang=hi
 1	ldkiyo	ldkiyo	NOUN	NOUN	Lang=hi
 2	ki	ki	ADP	ADP	Lang=hi
@@ -609,6 +672,7 @@
 10	hdd	hdd	NOUN	NOUN	Lang=hi
 11	h	h	VERB	VERB	Lang=hi
 12	yr	yr	NOUN	NOUN	Lang=hi
+
 0	delhi	delhi	NOUN	NOUN	Lang=en
 1	university	university	NOUN	NOUN	Lang=en
 2	confessions	confessions	NOUN	NOUN	Lang=en
@@ -625,6 +689,7 @@
 13	ka	ka	ADP	ADP	Lang=hi
 14	naam	naam	NOUN	NOUN	Lang=hi
 15	...	...	.	.	Lang=univ
+
 0	humhe	humhe	PRON	PRON	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	loot	loot	VERB	VERB	Lang=hi
@@ -641,6 +706,7 @@
 13	ki	ki	ADP	ADP	Lang=hi
 14	bato	bato	NOUN	NOUN	Lang=hi
 15	ne	ne	ADP	ADP	Lang=hi
+
 0	Use	Use	PRON	PRON	Lang=hi
 1	realise	realise	VERB	VERB	Lang=en
 2	krwao	krwao	VERB	VERB	Lang=hi
@@ -657,6 +723,7 @@
 13	baten	baten	NOUN	NOUN	Lang=hi
 14	share	share	VERB	VERB	Lang=en
 15	karo	karo	VERB	VERB	Lang=hi
+
 0	Bechara	Bechara	NOUN	NOUN	Lang=hi
 1	last	last	ADJ	ADJ	Lang=en
 2	nyt	nyt	NOUN	NOUN	Lang=en
@@ -673,6 +740,7 @@
 13	maar	maar	VERB	VERB	Lang=hi
 14	di	di	VERB	VERB	Lang=hi
 15	...	...	.	.	Lang=univ
+
 0	Jitna	Jitna	PRON	PRON	Lang=hi
 1	likh	likh	VERB	VERB	Lang=hi
 2	k	k	VERB	VERB	Lang=hi
@@ -701,6 +769,7 @@
 25	kar	kar	VERB	VERB	Lang=hi
 26	chuka	chuka	VERB	VERB	Lang=hi
 27	hota	hota	VERB	VERB	Lang=hi
+
 0	Bhai	Bhai	NOUN	NOUN	Lang=hi
 1	tu	tu	PRON	PRON	Lang=hi
 2	delhi	delhi	NOUN	NOUN	Lang=en
@@ -745,6 +814,7 @@
 41	lkr	lkr	VERB	VERB	Lang=hi
 42	ata	ata	VERB	VERB	Lang=hi
 43	tha	tha	VERB	VERB	Lang=hi
+
 0	jis	jis	PRON	PRON	Lang=hi
 1	din	din	NOUN	NOUN	Lang=hi
 2	ye	ye	PRON	PRON	Lang=hi
@@ -763,6 +833,7 @@
 15	pakistan	pakistan	NOUN	NOUN	Lang=en
 16	niklega	niklega	VERB	VERB	Lang=hi
 17	...	...	.	.	Lang=univ
+
 0	Muslim	Muslim	NOUN	NOUN	Lang=en
 1	hone	hone	VERB	VERB	Lang=hi
 2	k	k	PRT	PRT	Lang=hi
@@ -778,6 +849,7 @@
 12	bada	bada	ADJ	ADJ	Lang=hi
 13	gunah	gunah	NOUN	NOUN	Lang=hi
 14	h	h	VERB	VERB	Lang=hi
+
 0	HAT	HAT	VERB	VERB	Lang=hi
 1	BC	BC	X	X	Lang=en
 2	ye	ye	PRON	PRON	Lang=hi
@@ -793,6 +865,7 @@
 12	le	le	VERB	VERB	Lang=hi
 13	na	na	VERB	VERB	Lang=hi
 14	pdega	pdega	VERB	VERB	Lang=hi
+
 0	ye	ye	PRON	PRON	Lang=hi
 1	post	post	VERB	VERB	Lang=en
 2	karke	karke	VERB	VERB	Lang=hi
@@ -805,6 +878,7 @@
 9	bhi	bhi	PRT	PRT	Lang=hi
 10	dubo	dubo	VERB	VERB	Lang=hi
 11	diya	diya	VERB	VERB	Lang=hi
+
 0	jo	jo	PRON	PRON	Lang=hi
 1	boy	boy	NOUN	NOUN	Lang=en
 2	sex	sex	NOUN	NOUN	Lang=en
@@ -817,6 +891,7 @@
 9	kar	kar	VERB	VERB	Lang=hi
 10	skta	skta	VERB	VERB	Lang=hi
 11	...	...	.	.	Lang=univ
+
 0	Kya	Kya	PRON	PRON	Lang=hi
 1	yaar	yaar	NOUN	NOUN	Lang=hi
 2	admin	admin	NOUN	NOUN	Lang=en
@@ -832,6 +907,7 @@
 12	posy	posy	VERB	VERB	Lang=en
 13	kiya	kiya	VERB	VERB	Lang=hi
 14	aapne	aapne	PRON	PRON	Lang=hi
+
 0	dadaji	dadaji	NOUN	NOUN	Lang=hi
 1	budaphe	budaphe	NOUN	NOUN	Lang=hi
 2	m	m	ADP	ADP	Lang=hi
@@ -844,6 +920,7 @@
 9	at	at	ADP	ADP	Lang=en
 10	any	any	DET	DET	Lang=en
 11	cost	cost	NOUN	NOUN	Lang=en
+
 0	aisa	aisa	ADV	ADV	Lang=hi
 1	kaise	kaise	ADV	ADV	Lang=hi
 2	ho	ho	VERB	VERB	Lang=hi
@@ -859,6 +936,7 @@
 12	post	post	VERB	VERB	Lang=en
 13	kar	kar	VERB	VERB	Lang=hi
 14	dete	dete	VERB	VERB	Lang=hi
+
 0	isse	isse	PRON	PRON	Lang=hi
 1	bettr	bettr	ADJ	ADJ	Lang=en
 2	hota	hota	VERB	VERB	Lang=hi
@@ -884,6 +962,7 @@
 22	sense	sense	NOUN	NOUN	Lang=en
 23	ni	ni	PRT	PRT	Lang=hi
 24	h	h	VERB	VERB	Lang=hi
+
 0	neki	neki	NOUN	NOUN	Lang=hi
 1	kar	kar	VERB	VERB	Lang=hi
 2	dariya	dariya	NOUN	NOUN	Lang=hi
@@ -906,6 +985,7 @@
 19	use	use	VERB	VERB	Lang=en
 20	kar	kar	VERB	VERB	Lang=hi
 21	paaye	paaye	VERB	VERB	Lang=hi
+
 0	abe	abe	NOUN	NOUN	Lang=hi
 1	ullu	ullu	ADJ	ADJ	Lang=hi
 2	ki	ki	ADP	ADP	Lang=hi
@@ -1048,6 +1128,7 @@
 139	rha	rha	VERB	VERB	Lang=hi
 140	h	h	VERB	VERB	Lang=hi
 141	...	...	.	.	Lang=univ
+
 0	tu	tu	PRON	PRON	Lang=hi
 1	pakka	pakka	ADV	ADV	Lang=hi
 2	usse	usse	PRON	PRON	Lang=hi
@@ -1067,6 +1148,7 @@
 16	ri	ri	VERB	VERB	Lang=hi
 17	h	h	VERB	VERB	Lang=hi
 18	:-P	:-P	X	X	Lang=en
+
 0	r8	r8	X	X	Lang=en
 1	esa	esa	PRON	PRON	Lang=hi
 2	hmari	hmari	PRON	PRON	Lang=hi
@@ -1086,6 +1168,7 @@
 16	above	above	ADP	ADP	Lang=en
 17	nh	nh	PRT	PRT	Lang=hi
 18	die	die	VERB	VERB	Lang=hi
+
 0	Itna	Itna	PRON	PRON	Lang=hi
 1	bhi	bhi	PRT	PRT	Lang=hi
 2	hum	hum	PRON	PRON	Lang=hi
@@ -1105,6 +1188,7 @@
 16	check	check	VERB	VERB	Lang=en
 17	karne	karne	NOUN	NOUN	Lang=hi
 18	mein	mein	ADP	ADP	Lang=hi
+
 0	Sale	Sale	NOUN	NOUN	Lang=hi
 1	kamine	kamine	ADJ	ADJ	Lang=hi
 2	fmly	fmly	NOUN	NOUN	Lang=en
@@ -1140,6 +1224,7 @@
 32	jinda	jinda	ADJ	ADJ	Lang=hi
 33	hote	hote	VERB	VERB	Lang=hi
 34	...!	...!	.	.	Lang=univ
+
 0	Bc	Bc	X	X	Lang=en
 1	apni	apni	PRON	PRON	Lang=hi
 2	bahaduri	bahaduri	NOUN	NOUN	Lang=hi
@@ -1156,6 +1241,7 @@
 13	teer	teer	NOUN	NOUN	Lang=hi
 14	maari	maari	VERB	VERB	Lang=hi
 15	ho	ho	VERB	VERB	Lang=hi
+
 0	Are	Are	NOUN	NOUN	Lang=hi
 1	bhai	bhai	NOUN	NOUN	Lang=hi
 2	nokia	nokia	NOUN	NOUN	Lang=en
@@ -1172,6 +1258,7 @@
 13	se	se	ADP	ADP	Lang=hi
 14	chutkara	chutkara	NOUN	NOUN	Lang=hi
 15	pao	pao	VERB	VERB	Lang=hi
+
 0	bc	bc	X	X	Lang=en
 1	..	..	.	.	Lang=univ
 2	kya	kya	PRON	PRON	Lang=hi
@@ -1188,6 +1275,7 @@
 13	naseeb	naseeb	NOUN	NOUN	Lang=hi
 14	na	na	PRT	PRT	Lang=hi
 15	huye	huye	VERB	VERB	Lang=hi
+
 0	Kabhi	Kabhi	PRON	PRON	Lang=hi
 1	indian	indian	ADJ	ADJ	Lang=en
 2	things	things	NOUN	NOUN	Lang=en
@@ -1204,6 +1292,7 @@
 13	ni	ni	PRT	PRT	Lang=hi
 14	milega	milega	VERB	VERB	Lang=hi
 15	tumhe	tumhe	PRON	PRON	Lang=hi
+
 0	english	english	NOUN	NOUN	Lang=en
 1	me	me	ADP	ADP	Lang=hi
 2	baapu	baapu	NOUN	NOUN	Lang=hi
@@ -1220,6 +1309,7 @@
 13	Ch***yapa	Ch***yapa	NOUN	NOUN	Lang=hi
 14	khte	khte	VERB	VERB	Lang=hi
 15	h	h	VERB	VERB	Lang=hi
+
 0	acha	acha	ADJ	ADJ	Lang=hi
 1	hua	hua	VERB	VERB	Lang=hi
 2	gf	gf	NOUN	NOUN	Lang=en
@@ -1236,6 +1326,7 @@
 13	me	me	ADP	ADP	Lang=hi
 14	lagega	lagega	VERB	VERB	Lang=hi
 15	....	....	.	.	Lang=univ
+
 0	bhai	bhai	NOUN	NOUN	Lang=hi
 1	totlly	totlly	ADV	ADV	Lang=en
 2	phadu	phadu	ADJ	ADJ	Lang=hi
@@ -1268,6 +1359,7 @@
 29	tk	tk	ADP	ADP	Lang=hi
 30	ajayegi	ajayegi	VERB	VERB	Lang=hi
 31	....	....	.	.	Lang=univ
+
 0	beta	beta	NOUN	NOUN	Lang=hi
 1	hum	hum	PRON	PRON	Lang=hi
 2	bhi	bhi	PRT	PRT	Lang=hi
@@ -1281,6 +1373,7 @@
 10	rahe	rahe	VERB	VERB	Lang=hi
 11	h	h	VERB	VERB	Lang=hi
 12	:P	:P	X	X	Lang=en
+
 0	beta	beta	NOUN	NOUN	Lang=hi
 1	kisi	kisi	PRON	PRON	Lang=hi
 2	aur	aur	CONJ	CONJ	Lang=hi
@@ -1294,6 +1387,7 @@
 10	jaega	jaega	VERB	VERB	Lang=hi
 11	...	...	.	.	Lang=univ
 12	:p	:p	X	X	Lang=en
+
 0	Tere	Tere	PRON	PRON	Lang=hi
 1	jaise	jaise	ADV	ADV	Lang=hi
 2	bande	bande	NOUN	NOUN	Lang=hi
@@ -1307,6 +1401,7 @@
 10	likhte	likhte	VERB	VERB	Lang=hi
 11	h	h	VERB	VERB	Lang=hi
 12	.	.	.	.	Lang=univ
+
 0	Apne	Apne	PRON	PRON	Lang=hi
 1	lips	lips	NOUN	NOUN	Lang=en
 2	pe	pe	ADP	ADP	Lang=hi
@@ -1320,6 +1415,7 @@
 10	maza	maza	NOUN	NOUN	Lang=hi
 11	ata	ata	VERB	VERB	Lang=hi
 12	..	..	.	.	Lang=univ
+
 0	Mummy	Mummy	NOUN	NOUN	Lang=en
 1	tea	tea	NOUN	NOUN	Lang=en
 2	me	me	ADP	ADP	Lang=hi
@@ -1333,6 +1429,7 @@
 10	diya	diya	VERB	VERB	Lang=hi
 11	...	...	.	.	Lang=univ
 12	#boaring	#boaring	X	X	Lang=en
+
 0	sala	sala	NOUN	NOUN	Lang=hi
 1	pyr	pyr	NOUN	NOUN	Lang=hi
 2	bi	bi	PRT	PRT	Lang=hi
@@ -1346,6 +1443,7 @@
 10	....	....	.	.	Lang=univ
 11	causal	causal	ADJ	ADJ	Lang=en
 12	type	type	NOUN	NOUN	Lang=en
+
 0	baaki	baaki	ADJ	ADJ	Lang=hi
 1	sab	sab	PRON	PRON	Lang=hi
 2	ko	ko	ADP	ADP	Lang=hi
@@ -1359,6 +1457,7 @@
 10	chcken	chcken	NOUN	NOUN	Lang=en
 11	khya	khya	VERB	VERB	Lang=hi
 12	ha	ha	VERB	VERB	Lang=en
+
 0	so	so	VERB	VERB	Lang=hi
 1	jao	jao	VERB	VERB	Lang=hi
 2	du	du	NOUN	NOUN	Lang=en
@@ -1372,6 +1471,7 @@
 10	kar	kar	VERB	VERB	Lang=hi
 11	jaoge	jaoge	VERB	VERB	Lang=hi
 12	.	.	.	.	Lang=univ
+
 0	hota	hota	VERB	VERB	Lang=hi
 1	h	h	VERB	VERB	Lang=hi
 2	yr	yr	NOUN	NOUN	Lang=hi
@@ -1385,6 +1485,7 @@
 10	hota	hota	VERB	VERB	Lang=hi
 11	h	h	VERB	VERB	Lang=hi
 12	....	....	.	.	Lang=univ
+
 0	Hello	Hello	NOUN	NOUN	Lang=en
 1	koi	koi	PRON	PRON	Lang=hi
 2	mere	mere	PRON	PRON	Lang=hi
@@ -1398,6 +1499,7 @@
 10	nai	nai	PRT	PRT	Lang=hi
 11	raha	raha	VERB	VERB	Lang=hi
 12	jata	jata	VERB	VERB	Lang=hi
+
 0	Tere	Tere	PRON	PRON	Lang=hi
 1	liye	liye	ADP	ADP	Lang=hi
 2	ladka	ladka	NOUN	NOUN	Lang=hi
@@ -1424,6 +1526,7 @@
 23	ladki	ladki	NOUN	NOUN	Lang=hi
 24	se	se	ADP	ADP	Lang=hi
 25	....	....	.	.	Lang=univ
+
 0	hahaaaa	hahaaaa	X	X	Lang=en
 1	police	police	NOUN	NOUN	Lang=en
 2	wali	wali	PRT	PRT	Lang=hi
@@ -1437,6 +1540,7 @@
 10	sasural	sasural	NOUN	NOUN	Lang=hi
 11	kaisa	kaisa	PRON	PRON	Lang=hi
 12	laga	laga	VERB	VERB	Lang=hi
+
 0	Are	Are	NOUN	NOUN	Lang=hi
 1	phle	phle	ADJ	ADJ	Lang=hi
 2	to	to	PRT	PRT	Lang=hi
@@ -1450,6 +1554,7 @@
 10	aivi	aivi	ADV	ADV	Lang=hi
 11	bakne	bakne	VERB	VERB	Lang=hi
 12	lga	lga	VERB	VERB	Lang=hi
+
 0	nw	nw	ADV	ADV	Lang=en
 1	new1	new1	X	X	Lang=en
 2	is	is	PRON	PRON	Lang=hi
@@ -1463,6 +1568,7 @@
 10	jao	jao	VERB	VERB	Lang=hi
 11	yojna	yojna	NOUN	NOUN	Lang=hi
 12	:P	:P	X	X	Lang=en
+
 0	Aisa	Aisa	ADV	ADV	Lang=hi
 1	kar	kar	VERB	VERB	Lang=hi
 2	uska	uska	PRON	PRON	Lang=hi
@@ -1476,6 +1582,7 @@
 10	u'll	u'll	PRON	PRON	Lang=en
 11	feel	feel	VERB	VERB	Lang=en
 12	fantastic	fantastic	ADJ	ADJ	Lang=en
+
 0	muh	muh	NOUN	NOUN	Lang=hi
 1	utha	utha	VERB	VERB	Lang=hi
 2	ke	ke	ADP	ADP	Lang=hi
@@ -1489,6 +1596,7 @@
 10	h	h	VERB	VERB	Lang=hi
 11	#jije	#jije	X	X	Lang=en
 12	?	?	.	.	Lang=univ
+
 0	bevkoof	bevkoof	ADJ	ADJ	Lang=hi
 1	ladke	ladke	NOUN	NOUN	Lang=hi
 2	ye	ye	PRON	PRON	Lang=hi
@@ -1502,6 +1610,7 @@
 10	h	h	VERB	VERB	Lang=hi
 11	yha	yha	ADV	ADV	Lang=hi
 12	...	...	.	.	Lang=univ
+
 0	Ek	Ek	NUM	NUM	Lang=hi
 1	baat	baat	NOUN	NOUN	Lang=hi
 2	toh	toh	PRT	PRT	Lang=hi
@@ -1528,6 +1637,7 @@
 23	up	up	VERB	VERB	Lang=en
 24	things	things	NOUN	NOUN	Lang=en
 25	:p	:p	X	X	Lang=en
+
 0	come	come	VERB	VERB	Lang=en
 1	on	on	PRT	PRT	Lang=en
 2	yaar	yaar	NOUN	NOUN	Lang=hi
@@ -1564,6 +1674,7 @@
 33	a	a	DET	DET	Lang=en
 34	crap	crap	NOUN	NOUN	Lang=en
 35	!!	!!	.	.	Lang=univ
+
 0	bhaiiiii	bhaiiiii	NOUN	NOUN	Lang=hi
 1	wo	wo	PRON	PRON	Lang=hi
 2	is	is	PRON	PRON	Lang=hi
@@ -1587,6 +1698,7 @@
 20	flw	flw	NOUN	NOUN	Lang=en
 21	kiya	kiya	VERB	VERB	Lang=hi
 22	..............	..............	X	X	Lang=univ
+
 0	Yr	Yr	NOUN	NOUN	Lang=hi
 1	confesr	confesr	NOUN	NOUN	Lang=en
 2	aisa	aisa	ADV	ADV	Lang=hi
@@ -1610,6 +1722,7 @@
 20	range	range	NOUN	NOUN	Lang=en
 21	ovr	ovr	NOUN	NOUN	Lang=en
 22	pakad	pakad	VERB	VERB	Lang=hi
+
 0	bhai	bhai	NOUN	NOUN	Lang=hi
 1	sahi	sahi	ADV	ADV	Lang=hi
 2	keh	keh	VERB	VERB	Lang=hi
@@ -1633,6 +1746,7 @@
 20	chuka	chuka	VERB	VERB	Lang=hi
 21	hai	hai	VERB	VERB	Lang=hi
 22	page	page	NOUN	NOUN	Lang=en
+
 0	Are	Are	NOUN	NOUN	Lang=hi
 1	mujhe	mujhe	PRON	PRON	Lang=hi
 2	pta	pta	VERB	VERB	Lang=hi
@@ -1729,6 +1843,7 @@
 93	sab	sab	PRON	PRON	Lang=hi
 94	pta	pta	VERB	VERB	Lang=hi
 95	lagega	lagega	VERB	VERB	Lang=hi
+
 0	tuje	tuje	PRON	PRON	Lang=hi
 1	moka	moka	NOUN	NOUN	Lang=hi
 2	ni	ni	PRT	PRT	Lang=hi
@@ -1749,6 +1864,7 @@
 17	ni	ni	PRT	PRT	Lang=hi
 18	h	h	VERB	VERB	Lang=hi
 19	kya	kya	PRON	PRON	Lang=hi
+
 0	Yr	Yr	NOUN	NOUN	Lang=hi
 1	glti	glti	ADJ	ADJ	Lang=hi
 2	to	to	PRT	PRT	Lang=hi
@@ -1789,6 +1905,7 @@
 37	ho	ho	VERB	VERB	Lang=hi
 38	gya	gya	VERB	VERB	Lang=hi
 39	.	.	.	.	Lang=univ
+
 0	ye	ye	PRON	PRON	Lang=hi
 1	sb	sb	PRON	PRON	Lang=hi
 2	tune	tune	PRON	PRON	Lang=hi
@@ -1820,6 +1937,7 @@
 28	badal	badal	VERB	VERB	Lang=hi
 29	sakta	sakta	VERB	VERB	Lang=hi
 30	..	..	.	.	Lang=univ
+
 0	Bhai	Bhai	NOUN	NOUN	Lang=hi
 1	ye	ye	PRON	PRON	Lang=hi
 2	f	f	X	X	Lang=en
@@ -1834,6 +1952,7 @@
 11	ni	ni	PRT	PRT	Lang=hi
 12	kar	kar	VERB	VERB	Lang=hi
 13	raha	raha	VERB	VERB	Lang=hi
+
 0	end	end	NOUN	NOUN	Lang=en
 1	wala	wala	PRT	PRT	Lang=hi
 2	paragraph	paragraph	NOUN	NOUN	Lang=en
@@ -1848,6 +1967,7 @@
 11	revenge	revenge	NOUN	NOUN	Lang=en
 12	ni	ni	PRT	PRT	Lang=hi
 13	leti	leti	VERB	VERB	Lang=hi
+
 0	Ek	Ek	NUM	NUM	Lang=hi
 1	bottle	bottle	NOUN	NOUN	Lang=en
 2	old	old	NOUN	NOUN	Lang=en
@@ -1862,6 +1982,7 @@
 11	take	take	ADP	ADP	Lang=hi
 12	khul	khul	VERB	VERB	Lang=hi
 13	jwnge	jwnge	X	X	Lang=hi
+
 0	admin	admin	NOUN	NOUN	Lang=en
 1	ab	ab	ADV	ADV	Lang=hi
 2	is	is	PRON	PRON	Lang=hi
@@ -1876,6 +1997,7 @@
 11	nai	nai	PRT	PRT	Lang=hi
 12	bacha	bacha	VERB	VERB	Lang=hi
 13	kya	kya	PRON	PRON	Lang=hi
+
 0	bhai	bhai	NOUN	NOUN	Lang=hi
 1	itne	itne	PRON	PRON	Lang=hi
 2	me	me	ADP	ADP	Lang=hi
@@ -1890,6 +2012,7 @@
 11	jati	jati	VERB	VERB	Lang=hi
 12	h	h	VERB	VERB	Lang=hi
 13	...	...	.	.	Lang=univ
+
 0	Miranda	Miranda	NOUN	NOUN	Lang=en
 1	chodkr	chodkr	VERB	VERB	Lang=hi
 2	kuch	kuch	PRON	PRON	Lang=hi
@@ -1911,6 +2034,7 @@
 18	h	h	VERB	VERB	Lang=hi
 19	uff	uff	PRON	PRON	Lang=hi
 20	...	...	.	.	Lang=univ
+
 0	Ole	Ole	ADV	ADV	Lang=hi
 1	ole	ole	ADV	ADV	Lang=hi
 2	Har	Har	NUM	NUM	Lang=hi
@@ -1925,6 +2049,7 @@
 11	kuch	kuch	ADJ	ADJ	Lang=hi
 12	nai	nai	PRT	PRT	Lang=hi
 13	sikhaya	sikhaya	VERB	VERB	Lang=hi
+
 0	bhai	bhai	NOUN	NOUN	Lang=hi
 1	phle	phle	ADV	ADV	Lang=hi
 2	use	use	PRON	PRON	Lang=hi
@@ -1974,6 +2099,7 @@
 46	yr	yr	NOUN	NOUN	Lang=hi
 47	tm	tm	PRON	PRON	Lang=hi
 48	log	log	NOUN	NOUN	Lang=hi
+
 0	Ha	Ha	PRT	PRT	Lang=hi
 1	thk	thk	ADJ	ADJ	Lang=hi
 2	kha	kha	VERB	VERB	Lang=hi
@@ -2009,6 +2135,7 @@
 32	ladkiya	ladkiya	NOUN	NOUN	Lang=hi
 33	dhokebaj	dhokebaj	ADJ	ADJ	Lang=hi
 34	h	h	VERB	VERB	Lang=hi
+
 0	Delhi	Delhi	NOUN	NOUN	Lang=en
 1	University	University	NOUN	NOUN	Lang=en
 2	Confessions	Confessions	NOUN	NOUN	Lang=en
@@ -2034,6 +2161,7 @@
 22	se	se	ADP	ADP	Lang=hi
 23	change	change	VERB	VERB	Lang=en
 24	gud	gud	ADJ	ADJ	Lang=en
+
 0	Ye	Ye	PRON	PRON	Lang=hi
 1	kya	kya	PRON	PRON	Lang=hi
 2	tha	tha	VERB	VERB	Lang=hi
@@ -2059,6 +2187,7 @@
 22	crush	crush	VERB	VERB	Lang=en
 23	kar	kar	VERB	VERB	Lang=hi
 24	dunga	dunga	VERB	VERB	Lang=hi
+
 0	auto	auto	NOUN	NOUN	Lang=en
 1	rikshaw	rikshaw	NOUN	NOUN	Lang=en
 2	wale	wale	PRT	PRT	Lang=hi
@@ -2084,6 +2213,7 @@
 22	hi	hi	VERB	VERB	Lang=hi
 23	beti	beti	NOUN	NOUN	Lang=hi
 24	thi	thi	VERB	VERB	Lang=hi
+
 0	nw	nw	ADV	ADV	Lang=en
 1	feelng	feelng	VERB	VERB	Lang=en
 2	lucky	lucky	ADJ	ADJ	Lang=en
@@ -2102,6 +2232,7 @@
 15	de	de	VERB	VERB	Lang=hi
 16	rhi	rhi	VERB	VERB	Lang=hi
 17	hoti	hoti	VERB	VERB	Lang=hi
+
 0	Abbe	Abbe	NOUN	NOUN	Lang=hi
 1	subah	subah	NOUN	NOUN	Lang=hi
 2	subah	subah	NOUN	NOUN	Lang=hi
@@ -2120,6 +2251,7 @@
 15	v	v	PRT	PRT	Lang=hi
 16	pine	pine	VERB	VERB	Lang=hi
 17	de	de	VERB	VERB	Lang=hi
+
 0	ap	ap	PRON	PRON	Lang=hi
 1	use	use	PRON	PRON	Lang=hi
 2	bol	bol	VERB	VERB	Lang=hi
@@ -2138,6 +2270,7 @@
 15	krti	krti	VERB	VERB	Lang=hi
 16	h	h	VERB	VERB	Lang=hi
 17	to	to	PRT	PRT	Lang=hi
+
 0	sale	sale	ADJ	ADJ	Lang=hi
 1	kutiya	kutiya	ADJ	ADJ	Lang=hi
 2	si	si	X	X	Lang=hi
@@ -2156,6 +2289,7 @@
 15	hori	hori	VERB	VERB	Lang=hi
 16	teri	teri	PRON	PRON	Lang=hi
 17	...	...	.	.	Lang=univ
+
 0	kitne	kitne	PRON	PRON	Lang=hi
 1	din	din	NOUN	NOUN	Lang=hi
 2	tk	tk	ADP	ADP	Lang=hi
@@ -2174,6 +2308,7 @@
 15	de	de	VERB	VERB	Lang=hi
 16	bhai	bhai	NOUN	NOUN	Lang=hi
 17	:P	:P	X	X	Lang=en
+
 0	this	this	PRON	PRON	Lang=en
 1	is	is	VERB	VERB	Lang=en
 2	lesson	lesson	NOUN	NOUN	Lang=en
@@ -2192,6 +2327,7 @@
 15	hoga	hoga	VERB	VERB	Lang=hi
 16	tu	tu	PRON	PRON	Lang=hi
 17	bhagega	bhagega	VERB	VERB	Lang=hi
+
 0	Kya	Kya	PRON	PRON	Lang=hi
 1	ukhad	ukhad	VERB	VERB	Lang=hi
 2	lega	lega	VERB	VERB	Lang=hi
@@ -2210,6 +2346,7 @@
 15	vo	vo	PRON	PRON	Lang=hi
 16	b	b	PRT	PRT	Lang=hi
 17	h	h	VERB	VERB	Lang=hi
+
 0	sholy	sholy	NOUN	NOUN	Lang=en
 1	muje	muje	PRON	PRON	Lang=hi
 2	smj	smj	NOUN	NOUN	Lang=hi
@@ -2228,6 +2365,7 @@
 15	kr	kr	VERB	VERB	Lang=hi
 16	die	die	VERB	VERB	Lang=hi
 17	..	..	.	.	Lang=univ
+
 0	kaun	kaun	PRON	PRON	Lang=hi
 1	sa	sa	PRT	PRT	Lang=hi
 2	prfume	prfume	NOUN	NOUN	Lang=en
@@ -2246,6 +2384,7 @@
 15	chali	chali	VERB	VERB	Lang=hi
 16	gyi	gyi	VERB	VERB	Lang=hi
 17	...???	...???	.	.	Lang=univ
+
 0	Agar	Agar	CONJ	CONJ	Lang=hi
 1	govt	govt	NOUN	NOUN	Lang=en
 2	ek	ek	ADJ	ADJ	Lang=hi
@@ -2282,6 +2421,7 @@
 33	h	h	VERB	VERB	Lang=hi
 34	.	.	.	.	Lang=univ
 35	.	.	.	.	Lang=univ
+
 0	usse	usse	PRON	PRON	Lang=hi
 1	english	english	NOUN	NOUN	Lang=en
 2	me	me	ADP	ADP	Lang=hi
@@ -2311,6 +2451,7 @@
 26	k	k	ADP	ADP	Lang=hi
 27	..	..	.	.	Lang=univ
 28	:)	:)	X	X	Lang=univ
+
 0	Hdh	Hdh	NOUN	NOUN	Lang=hi
 1	h	h	VERB	VERB	Lang=hi
 2	tumhe	tumhe	PRON	PRON	Lang=hi
@@ -2344,6 +2485,7 @@
 30	h	h	VERB	VERB	Lang=hi
 31	tumhe	tumhe	PRON	PRON	Lang=hi
 32	.	.	.	.	Lang=univ
+
 0	Meri	Meri	PRON	PRON	Lang=hi
 1	man	man	NOUN	NOUN	Lang=hi
 2	phle	phle	NOUN	NOUN	Lang=hi
@@ -2366,6 +2508,7 @@
 19	b	b	PRT	PRT	Lang=hi
 20	yahi	yahi	PRON	PRON	Lang=hi
 21	kia	kia	VERB	VERB	Lang=hi
+
 0	tere	tere	PRON	PRON	Lang=hi
 1	sir	sir	NOUN	NOUN	Lang=hi
 2	pe	pe	ADP	ADP	Lang=hi
@@ -2388,6 +2531,7 @@
 19	b	b	PRT	PRT	Lang=hi
 20	discriminate	discriminate	VERB	VERB	Lang=en
 21	karega	karega	VERB	VERB	Lang=hi
+
 0	deshraj	deshraj	NOUN	NOUN	Lang=en
 1	raghav	raghav	NOUN	NOUN	Lang=en
 2	is	is	PRON	PRON	Lang=hi
@@ -2399,6 +2543,7 @@
 8	in	in	ADP	ADP	Lang=en
 9	uttam	uttam	NOUN	NOUN	Lang=en
 10	nagar	nagar	NOUN	NOUN	Lang=en
+
 0	But	But	CONJ	CONJ	Lang=en
 1	you	you	PRON	PRON	Lang=en
 2	must	must	VERB	VERB	Lang=en
@@ -2410,6 +2555,7 @@
 8	kya	kya	PRON	PRON	Lang=hi
 9	buraai	buraai	NOUN	NOUN	Lang=hi
 10	thi	thi	VERB	VERB	Lang=hi
+
 0	sabse	sabse	ADV	ADV	Lang=hi
 1	badi	badi	ADJ	ADJ	Lang=hi
 2	galti	galti	NOUN	NOUN	Lang=hi
@@ -2421,6 +2567,7 @@
 8	bf	bf	NOUN	NOUN	Lang=en
 9	bnakar	bnakar	VERB	VERB	Lang=hi
 10	ki	ki	VERB	VERB	Lang=hi
+
 0	Bhak	Bhak	ADJ	ADJ	Lang=hi
 1	sale	sale	ADJ	ADJ	Lang=hi
 2	place	place	NOUN	NOUN	Lang=en
@@ -2432,6 +2579,7 @@
 8	h	h	VERB	VERB	Lang=hi
 9	kya	kya	PRON	PRON	Lang=hi
 10	mujhe	mujhe	PRON	PRON	Lang=hi
+
 0	Pe	Pe	VERB	VERB	Lang=hi
 1	kar	kar	VERB	VERB	Lang=hi
 2	out	out	ADP	ADP	Lang=en
@@ -2443,6 +2591,7 @@
 8	tu	tu	PRON	PRON	Lang=hi
 9	aaj	aaj	ADV	ADV	Lang=hi
 10	admin	admin	NOUN	NOUN	Lang=en
+
 0	yaha	yaha	PRON	PRON	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	black	black	NOUN	NOUN	Lang=en
@@ -2454,6 +2603,7 @@
 8	to	to	CONJ	CONJ	Lang=hi
 9	sahi	sahi	ADJ	ADJ	Lang=hi
 10	...	...	.	.	Lang=univ
+
 0	bhai	bhai	NOUN	NOUN	Lang=hi
 1	unblock	unblock	NOUN	NOUN	Lang=en
 2	kr	kr	VERB	VERB	Lang=hi
@@ -2465,6 +2615,7 @@
 8	fake	fake	ADJ	ADJ	Lang=en
 9	nahi	nahi	PRT	PRT	Lang=hi
 10	h	h	VERB	VERB	Lang=hi
+
 0	teri	teri	PRON	PRON	Lang=hi
 1	desires	desires	NOUN	NOUN	Lang=en
 2	m	m	PRON	PRON	Lang=hi
@@ -2476,6 +2627,7 @@
 8	krana	krana	VERB	VERB	Lang=hi
 9	chahte	chahte	VERB	VERB	Lang=hi
 10	h	h	VERB	VERB	Lang=hi
+
 0	dkhiye	dkhiye	VERB	VERB	Lang=hi
 1	mam	mam	NOUN	NOUN	Lang=en
 2	ladkiya	ladkiya	NOUN	NOUN	Lang=hi
@@ -2531,6 +2683,7 @@
 52	girl	girl	NOUN	NOUN	Lang=en
 53	or	or	CONJ	CONJ	Lang=en
 54	boy	boy	NOUN	NOUN	Lang=en
+
 0	tum	tum	PRON	PRON	Lang=hi
 1	ple	ple	NOUN	NOUN	Lang=hi
 2	aisa	aisa	ADV	ADV	Lang=hi
@@ -2590,6 +2743,7 @@
 56	my	my	DET	DET	Lang=en
 57	rqust	rqust	NOUN	NOUN	Lang=en
 58	ple	ple	ADV	ADV	Lang=en
+
 0	fattu	fattu	ADJ	ADJ	Lang=hi
 1	tu	tu	PRON	PRON	Lang=hi
 2	apne	apne	PRON	PRON	Lang=hi
@@ -2616,6 +2770,7 @@
 23	**yapa	**yapa	ADJ	ADJ	Lang=en
 24	nhi	nhi	PRT	PRT	Lang=hi
 25	h	h	VERB	VERB	Lang=hi
+
 0	Kya	Kya	PRON	PRON	Lang=hi
 1	pagalpanti	pagalpanti	ADJ	ADJ	Lang=hi
 2	h	h	VERB	VERB	Lang=hi
@@ -2642,6 +2797,7 @@
 23	sab	sab	PRON	PRON	Lang=hi
 24	ko	ko	ADP	ADP	Lang=hi
 25	.	.	.	.	Lang=univ
+
 0	Kkhh	Kkhh	NOUN	NOUN	Lang=en
 1	:	:	.	.	Lang=univ
 2	-	-	X	X	Lang=univ
@@ -2720,6 +2876,7 @@
 75	favt	favt	ADJ	ADJ	Lang=en
 76	dialought	dialought	NOUN	NOUN	Lang=en
 77	..	..	.	.	Lang=univ
+
 0	Aj	Aj	ADV	ADV	Lang=hi
 1	kal	kal	ADV	ADV	Lang=hi
 2	k	k	ADP	ADP	Lang=hi
@@ -2732,6 +2889,7 @@
 9	chhodte	chhodte	VERB	VERB	Lang=hi
 10	yar	yar	NOUN	NOUN	Lang=hi
 11	huhh	huhh	NOUN	NOUN	Lang=en
+
 0	Tumhe	Tumhe	PRON	PRON	Lang=hi
 1	politicians	politicians	NOUN	NOUN	Lang=en
 2	ko	ko	ADP	ADP	Lang=hi
@@ -2750,6 +2908,7 @@
 15	vo	vo	PRON	PRON	Lang=hi
 16	hain	hain	VERB	VERB	Lang=hi
 17	..	..	.	.	Lang=univ
+
 0	to	to	CONJ	CONJ	Lang=hi
 1	hum	hum	PRON	PRON	Lang=hi
 2	kya	kya	PRON	PRON	Lang=hi
@@ -2774,6 +2933,7 @@
 21	kr	kr	VERB	VERB	Lang=hi
 22	..	..	.	.	Lang=univ
 23	:P	:P	X	X	Lang=en
+
 0	seriously	seriously	ADV	ADV	Lang=en
 1	yr	yr	NOUN	NOUN	Lang=hi
 2	ullu	ullu	ADJ	ADJ	Lang=hi
@@ -2786,6 +2946,7 @@
 9	ko	ko	ADP	ADP	Lang=hi
 10	huhhh	huhhh	NOUN	NOUN	Lang=en
 11	......	......	.	.	Lang=univ
+
 0	ye	ye	PRON	PRON	Lang=hi
 1	digvijay	digvijay	NOUN	NOUN	Lang=en
 2	singh	singh	NOUN	NOUN	Lang=en
@@ -2810,6 +2971,7 @@
 21	.	.	.	.	Lang=univ
 22	Namo	Namo	NOUN	NOUN	Lang=hi
 23	india	india	NOUN	NOUN	Lang=en
+
 0	me	me	PRON	PRON	Lang=hi
 1	sochta	sochta	VERB	VERB	Lang=hi
 2	hu	hu	VERB	VERB	Lang=hi
@@ -2822,6 +2984,7 @@
 9	h	h	VERB	VERB	Lang=hi
 10	?	?	.	.	Lang=univ
 11	:-/	:-/	X	X	Lang=univ
+
 0	Tumne	Tumne	PRON	PRON	Lang=hi
 1	apne	apne	PRON	PRON	Lang=hi
 2	words	words	NOUN	NOUN	Lang=en
@@ -2834,6 +2997,7 @@
 9	@	@	X	X	Lang=univ
 10	Komal	Komal	NOUN	NOUN	Lang=en
 11	Singh	Singh	NOUN	NOUN	Lang=en
+
 0	toh	toh	CONJ	CONJ	Lang=hi
 1	dekha	dekha	VERB	VERB	Lang=hi
 2	aapne	aapne	PRON	PRON	Lang=hi
@@ -2864,6 +3028,7 @@
 27	kijiye	kijiye	VERB	VERB	Lang=hi
 28	..	..	.	.	Lang=univ
 29	:D	:D	X	X	Lang=en
+
 0	2014	2014	NUM	NUM	Lang=en
 1	me	me	ADP	ADP	Lang=hi
 2	badla	badla	VERB	VERB	Lang=hi
@@ -2876,6 +3041,7 @@
 9	r	r	VERB	VERB	Lang=en
 10	with	with	ADP	ADP	Lang=en
 11	Sikhs	Sikhs	NOUN	NOUN	Lang=en
+
 0	huppppp	huppppp	X	X	Lang=en
 1	....	....	.	.	Lang=univ
 2	jab	jab	PRON	PRON	Lang=hi
@@ -2894,6 +3060,7 @@
 15	paise	paise	NOUN	NOUN	Lang=hi
 16	lgte	lgte	VERB	VERB	Lang=hi
 17	h	h	VERB	VERB	Lang=hi
+
 0	Parents	Parents	NOUN	NOUN	Lang=en
 1	ko	ko	ADP	ADP	Lang=hi
 2	bolo	bolo	VERB	VERB	Lang=hi
@@ -2906,6 +3073,7 @@
 9	family	family	NOUN	NOUN	Lang=en
 10	pbms	pbms	NOUN	NOUN	Lang=en
 11	!!	!!	.	.	Lang=univ
+
 0	SOL	SOL	NOUN	NOUN	Lang=en
 1	wale	wale	PRT	PRT	Lang=hi
 2	k	k	ADP	ADP	Lang=hi
@@ -2918,6 +3086,7 @@
 9	chaie	chaie	VERB	VERB	Lang=hi
 10	tha	tha	VERB	VERB	Lang=hi
 11	:P	:P	X	X	Lang=en
+
 0	jeena	jeena	VERB	VERB	Lang=hi
 1	nhi	nhi	PRT	PRT	Lang=hi
 2	h	h	VERB	VERB	Lang=hi
@@ -2930,6 +3099,7 @@
 9	sir	sir	NOUN	NOUN	Lang=en
 10	g	g	PRT	PRT	Lang=hi
 11	...	...	.	.	Lang=univ
+
 0	tujhe	tujhe	PRON	PRON	Lang=hi
 1	kya	kya	PRON	PRON	Lang=hi
 2	laga	laga	VERB	VERB	Lang=hi
@@ -2942,6 +3112,7 @@
 9	pitt	pitt	NOUN	NOUN	Lang=en
 10	Ayega	Ayega	VERB	VERB	Lang=hi
 11	??	??	.	.	Lang=univ
+
 0	haa	haa	PRT	PRT	Lang=hi
 1	ab	ab	ADV	ADV	Lang=hi
 2	bs	bs	PRT	PRT	Lang=hi
@@ -2954,6 +3125,7 @@
 9	nam	nam	NOUN	NOUN	Lang=hi
 10	pr	pr	ADP	ADP	Lang=hi
 11	:-P	:-P	X	X	Lang=en
+
 0	ladki	ladki	NOUN	NOUN	Lang=hi
 1	ko	ko	ADP	ADP	Lang=hi
 2	kya	kya	PRON	PRON	Lang=hi
@@ -2966,6 +3138,7 @@
 9	tha	tha	VERB	VERB	Lang=hi
 10	..	..	.	.	Lang=univ
 11	:-P	:-P	X	X	Lang=en
+
 0	Tension	Tension	NOUN	NOUN	Lang=en
 1	mat	mat	PRT	PRT	Lang=hi
 2	lo	lo	VERB	VERB	Lang=hi
@@ -2984,6 +3157,7 @@
 15	..	..	.	.	Lang=univ
 16	pakka	pakka	PRT	PRT	Lang=hi
 17	..	..	.	.	Lang=univ
+
 0	dil	dil	NOUN	NOUN	Lang=hi
 1	garden	garden	NOUN	NOUN	Lang=en
 2	gardn	gardn	NOUN	NOUN	Lang=en
@@ -2996,6 +3170,7 @@
 9	for	for	ADP	ADP	Lang=en
 10	parents	parents	NOUN	NOUN	Lang=en
 11	<3	<3	NUM	NUM	Lang=en
+
 0	Kahape	Kahape	ADV	ADV	Lang=hi
 1	join	join	VERB	VERB	Lang=en
 2	karey	karey	VERB	VERB	Lang=hi
@@ -3008,6 +3183,7 @@
 9	asking	asking	VERB	VERB	Lang=en
 10	support	support	NOUN	NOUN	Lang=en
 11	:/	:/	X	X	Lang=univ
+
 0	shadi	shadi	NOUN	NOUN	Lang=hi
 1	apne	apne	PRON	PRON	Lang=hi
 2	bf	bf	NOUN	NOUN	Lang=en
@@ -3026,6 +3202,7 @@
 15	kra	kra	VERB	VERB	Lang=hi
 16	denge	denge	VERB	VERB	Lang=hi
 17	:-P	:-P	X	X	Lang=en
+
 0	yaar	yaar	NOUN	NOUN	Lang=hi
 1	confess	confess	VERB	VERB	Lang=en
 2	karte	karte	VERB	VERB	Lang=hi
@@ -3038,6 +3215,7 @@
 9	bada	bada	ADJ	ADJ	Lang=hi
 10	confession	confession	NOUN	NOUN	Lang=en
 11	:/	:/	X	X	Lang=univ
+
 0	d	d	DET	DET	Lang=en
 1	guy	guy	NOUN	NOUN	Lang=en
 2	cmmtd	cmmtd	VERB	VERB	Lang=en
@@ -3056,6 +3234,7 @@
 15	d	d	DET	DET	Lang=en
 16	crcmtances	crcmtances	NOUN	NOUN	Lang=en
 17	.....	.....	.	.	Lang=univ
+
 0	ua	ua	DET	DET	Lang=en
 1	bf	bf	NOUN	NOUN	Lang=en
 2	ch***ya	ch***ya	ADJ	ADJ	Lang=hi
@@ -3074,6 +3253,7 @@
 15	h	h	VERB	VERB	Lang=hi
 16	:-P	:-P	X	X	Lang=en
 17	:-D	:-D	X	X	Lang=en
+
 0	near	near	ADV	ADV	Lang=en
 1	pari	pari	NOUN	NOUN	Lang=en
 2	chowk	chowk	NOUN	NOUN	Lang=en
@@ -3086,6 +3266,7 @@
 9	thi	thi	VERB	VERB	Lang=hi
 10	kya	kya	PRON	PRON	Lang=hi
 11	??	??	.	.	Lang=univ
+
 0	Parso	Parso	ADV	ADV	Lang=hi
 1	hi	hi	PRT	PRT	Lang=hi
 2	19	19	NUM	NUM	Lang=en
@@ -3122,6 +3303,7 @@
 33	pyar	pyar	NOUN	NOUN	Lang=hi
 34	tha	tha	VERB	VERB	Lang=hi
 35	:P	:P	X	X	Lang=en
+
 0	Tu	Tu	PRON	PRON	Lang=hi
 1	ek	ek	NUM	NUM	Lang=hi
 2	short	short	ADJ	ADJ	Lang=en
@@ -3158,6 +3340,7 @@
 33	oggy	oggy	NOUN	NOUN	Lang=en
 34	does	does	VERB	VERB	Lang=en
 35	...	...	.	.	Lang=univ
+
 0	Sirf	Sirf	ADV	ADV	Lang=hi
 1	confession	confession	NOUN	NOUN	Lang=en
 2	pages	pages	NOUN	NOUN	Lang=en
@@ -3170,6 +3353,7 @@
 9	kyu	kyu	PRON	PRON	Lang=hi
 10	rakhte	rakhte	VERB	VERB	Lang=hi
 11	ae	ae	VERB	VERB	Lang=hi
+
 0	kb	kb	ADV	ADV	Lang=hi
 1	tak	tak	ADP	ADP	Lang=hi
 2	indian	indian	NOUN	NOUN	Lang=en
@@ -3182,6 +3366,7 @@
 9	rhoge	rhoge	VERB	VERB	Lang=hi
 10	hm	hm	PRON	PRON	Lang=hi
 11	.	.	.	.	Lang=univ
+
 0	bhagwan	bhagwan	NOUN	NOUN	Lang=hi
 1	esi	esi	ADV	ADV	Lang=hi
 2	gf	gf	NOUN	NOUN	Lang=en
@@ -3194,6 +3379,7 @@
 9	mjhse	mjhse	PRON	PRON	Lang=hi
 10	kre	kre	VERB	VERB	Lang=hi
 11	:p	:p	X	X	Lang=en
+
 0	Its	Its	PRON	PRON	Lang=en
 1	jst	jst	ADV	ADV	Lang=en
 2	a	a	DET	DET	Lang=en
@@ -3206,6 +3392,7 @@
 9	ni	ni	PRT	PRT	Lang=hi
 10	hota	hota	VERB	VERB	Lang=hi
 11	!!!!	!!!!	.	.	Lang=univ
+
 0	koi	koi	PRON	PRON	Lang=hi
 1	muje	muje	PRON	PRON	Lang=hi
 2	btayega	btayega	VERB	VERB	Lang=hi
@@ -3218,6 +3405,7 @@
 9	off	off	PRT	PRT	Lang=en
 10	kab	kab	ADV	ADV	Lang=hi
 11	ayegi	ayegi	VERB	VERB	Lang=hi
+
 0	Hindi	Hindi	NOUN	NOUN	Lang=en
 1	me	me	ADP	ADP	Lang=hi
 2	conf	conf	NOUN	NOUN	Lang=en
@@ -3236,6 +3424,7 @@
 15	honge	honge	VERB	VERB	Lang=hi
 16	#pravachanbaba	#pravachanbaba	X	X	Lang=en
 17	spotted	spotted	VERB	VERB	Lang=en
+
 0	Dimag	Dimag	NOUN	NOUN	Lang=hi
 1	fir	fir	ADJ	ADJ	Lang=hi
 2	gya	gya	VERB	VERB	Lang=hi
@@ -3254,6 +3443,7 @@
 15	Abvp	Abvp	NOUN	NOUN	Lang=en
 16	,	,	.	.	Lang=univ
 17	huh	huh	ADJ	ADJ	Lang=en
+
 0	Visit	Visit	NOUN	NOUN	Lang=en
 1	to	to	ADP	ADP	Lang=en
 2	gynae	gynae	NOUN	NOUN	Lang=en
@@ -3278,6 +3468,7 @@
 21	ku	ku	PRON	PRON	Lang=hi
 22	h	h	VERB	VERB	Lang=hi
 23	?!	?!	.	.	Lang=univ
+
 0	hadd	hadd	NOUN	NOUN	Lang=hi
 1	h	h	VERB	VERB	Lang=hi
 2	yr	yr	ADJ	ADJ	Lang=hi
@@ -3290,6 +3481,7 @@
 9	...	...	.	.	Lang=univ
 10	:-/	:-/	X	X	Lang=univ
 11	:-\\	:-\\	X	X	Lang=univ
+
 0	kal	kal	ADV	ADV	Lang=hi
 1	job	job	NOUN	NOUN	Lang=en
 2	interview	interview	NOUN	NOUN	Lang=en
@@ -3302,6 +3494,7 @@
 9	jau	jau	VERB	VERB	Lang=hi
 10	mein	mein	PRON	PRON	Lang=hi
 11	:p	:p	X	X	Lang=en
+
 0	tu	tu	PRON	PRON	Lang=hi
 1	such	such	NOUN	NOUN	Lang=hi
 2	me	me	ADP	ADP	Lang=hi
@@ -3326,6 +3519,7 @@
 21	start	start	VERB	VERB	Lang=en
 22	kr	kr	VERB	VERB	Lang=hi
 23	....	....	.	.	Lang=univ
+
 0	bilkul	bilkul	ADV	ADV	Lang=hi
 1	sahi	sahi	ADV	ADV	Lang=hi
 2	kaha	kaha	VERB	VERB	Lang=hi
@@ -3350,6 +3544,7 @@
 21	finger	finger	NOUN	NOUN	Lang=en
 22	to	to	ADP	ADP	Lang=en
 23	dem	dem	PRON	PRON	Lang=en
+
 0	so	so	ADP	ADP	Lang=en
 1	he	he	PRON	PRON	Lang=en
 2	kissed	kissed	VERB	VERB	Lang=en
@@ -3374,6 +3569,7 @@
 21	tha	tha	VERB	VERB	Lang=hi
 22	kya	kya	PRON	PRON	Lang=hi
 23	?	?	.	.	Lang=univ
+
 0	1316	1316	NUM	NUM	Lang=en
 1	.	.	.	.	Lang=univ
 2	.	.	.	.	Lang=univ
@@ -3549,6 +3745,7 @@
 172	.	.	.	.	Lang=univ
 173	.	.	.	.	Lang=univ
 174	#Hansraj	#Hansraj	X	X	Lang=en
+
 0	Chutiya	Chutiya	ADJ	ADJ	Lang=hi
 1	panti	panti	ADJ	ADJ	Lang=hi
 2	mt	mt	PRT	PRT	Lang=hi
@@ -3646,6 +3843,7 @@
 94	hua	hua	VERB	VERB	Lang=hi
 95	tha	tha	VERB	VERB	Lang=hi
 96	.	.	.	.	Lang=univ
+
 0	u	u	PRON	PRON	Lang=en
 1	must	must	VERB	VERB	Lang=en
 2	accept	accept	VERB	VERB	Lang=en
@@ -3719,6 +3917,7 @@
 70	Sauda	Sauda	NOUN	NOUN	Lang=hi
 71	nahin	nahin	PRT	PRT	Lang=hi
 72	hota	hota	VERB	VERB	Lang=hi
+
 0	1049	1049	NUM	NUM	Lang=en
 1	.	.	.	.	Lang=univ
 2	.	.	.	.	Lang=univ
@@ -3940,6 +4139,7 @@
 218	.	.	.	.	Lang=univ
 219	\	\	.	.	Lang=univ
 220	"	"	X	X	Lang=univ
+
 0	Dekh	Dekh	VERB	VERB	Lang=hi
 1	yar	yar	NOUN	NOUN	Lang=hi
 2	reservatn	reservatn	NOUN	NOUN	Lang=en
@@ -4001,6 +4201,7 @@
 58	what	what	PRON	PRON	Lang=en
 59	I	I	PRON	PRON	Lang=en
 60	feel	feel	VERB	VERB	Lang=en
+
 0	yR	yR	NOUN	NOUN	Lang=hi
 1	u	u	PRON	PRON	Lang=en
 2	shUD	shUD	VERB	VERB	Lang=en
@@ -4050,6 +4251,7 @@
 46	chaHe	chaHe	VERB	VERB	Lang=hi
 47	tOw	tOw	X	X	Lang=en
 48	:/	:/	X	X	Lang=univ
+
 0	Lettr	Lettr	NOUN	NOUN	Lang=en
 1	to	to	PRT	PRT	Lang=hi
 2	jayega	jayega	VERB	VERB	Lang=hi
@@ -4087,6 +4289,7 @@
 34	pkka	pkka	ADV	ADV	Lang=hi
 35	h	h	VERB	VERB	Lang=hi
 36	.	.	.	.	Lang=univ
+
 0	u	u	PRON	PRON	Lang=en
 1	made	made	VERB	VERB	Lang=en
 2	your	your	DET	DET	Lang=en
@@ -4180,6 +4383,7 @@
 90	lagne	lagne	VERB	VERB	Lang=hi
 91	lagega	lagega	VERB	VERB	Lang=hi
 92	.......	.......	.	.	Lang=univ
+
 0	Maine	Maine	PRON	PRON	Lang=hi
 1	sabhi	sabhi	PRON	PRON	Lang=hi
 2	k	k	ADP	ADP	Lang=hi
@@ -4354,6 +4558,7 @@
 171	dekhna	dekhna	VERB	VERB	Lang=hi
 172	chahta	chahta	VERB	VERB	Lang=hi
 173	hu	hu	VERB	VERB	Lang=hi
+
 0	bf	bf	NOUN	NOUN	Lang=en
 1	chnge	chnge	VERB	VERB	Lang=en
 2	kr	kr	VERB	VERB	Lang=hi
@@ -4379,6 +4584,7 @@
 22	h	h	VERB	VERB	Lang=hi
 23	bhen	bhen	NOUN	NOUN	Lang=hi
 24	yeh	yeh	PRON	PRON	Lang=hi
+
 0	thankgod	thankgod	VERB	VERB	Lang=en
 1	me	me	PRON	PRON	Lang=hi
 2	bach	bach	VERB	VERB	Lang=hi
@@ -4404,6 +4610,7 @@
 22	llo	llo	VERB	VERB	Lang=hi
 23	or	or	CONJ	CONJ	Lang=hi
 24	lo	lo	VERB	VERB	Lang=hi
+
 0	Income	Income	NOUN	NOUN	Lang=en
 1	base	base	NOUN	NOUN	Lang=en
 2	pr	pr	ADP	ADP	Lang=hi
@@ -4429,6 +4636,7 @@
 22	adms	adms	NOUN	NOUN	Lang=en
 23	milna	milna	VERB	VERB	Lang=hi
 24	chaiye	chaiye	VERB	VERB	Lang=hi
+
 0	hadd	hadd	NOUN	NOUN	Lang=hi
 1	h	h	VERB	VERB	Lang=hi
 2	abi	abi	ADV	ADV	Lang=hi
@@ -4454,6 +4662,7 @@
 22	krle	krle	VERB	VERB	Lang=hi
 23	..	..	.	.	Lang=univ
 24	:p	:p	X	X	Lang=en
+
 0	whn	whn	ADV	ADV	Lang=en
 1	u	u	PRON	PRON	Lang=en
 2	dnt	dnt	VERB	VERB	Lang=en
@@ -4473,6 +4682,7 @@
 16	tum	tum	PRON	PRON	Lang=hi
 17	ho	ho	VERB	VERB	Lang=hi
 18	shyd	shyd	ADV	ADV	Lang=hi
+
 0	dono	dono	ADJ	ADJ	Lang=hi
 1	ladkia	ladkia	NOUN	NOUN	Lang=hi
 2	tuj	tuj	PRON	PRON	Lang=hi
@@ -4492,6 +4702,7 @@
 16	side	side	NOUN	NOUN	Lang=en
 17	kr	kr	VERB	VERB	Lang=hi
 18	deti	deti	VERB	VERB	Lang=hi
+
 0	Phli	Phli	ADV	ADV	Lang=hi
 1	line	line	NOUN	NOUN	Lang=en
 2	padh	padh	ADP	ADP	Lang=hi
@@ -4511,6 +4722,7 @@
 16	gya	gya	VERB	VERB	Lang=hi
 17	!	!	.	.	Lang=univ
 18	#	#	X	X	Lang=univ
+
 0	superhero	superhero	NOUN	NOUN	Lang=en
 1	kitna	kitna	PRON	PRON	Lang=hi
 2	bi	bi	PRT	PRT	Lang=hi
@@ -4530,6 +4742,7 @@
 16	the	the	VERB	VERB	Lang=hi
 17	....	....	.	.	Lang=univ
 18	:-p	:-p	X	X	Lang=en
+
 0	wind	wind	NOUN	NOUN	Lang=en
 1	in	in	ADP	ADP	Lang=en
 2	:P	:P	X	X	Lang=en
@@ -4568,6 +4781,7 @@
 35	ol	ol	ADJ	ADJ	Lang=en
 36	dis	dis	DET	DET	Lang=en
 37	!	!	.	.	Lang=univ
+
 0	mjhe	mjhe	PRON	PRON	Lang=hi
 1	to	to	PRT	PRT	Lang=hi
 2	lgta	lgta	VERB	VERB	Lang=hi
@@ -4587,6 +4801,7 @@
 16	nahi	nahi	PRT	PRT	Lang=hi
 17	hai	hai	VERB	VERB	Lang=hi
 18	:-p	:-p	X	X	Lang=en
+
 0	Namo	Namo	NOUN	NOUN	Lang=en
 1	.....,	.....,	.	.	Lang=univ
 2	iss	iss	PRON	PRON	Lang=hi
@@ -4606,6 +4821,7 @@
 16	nhi	nhi	PRT	PRT	Lang=hi
 17	hoga	hoga	VERB	VERB	Lang=hi
 18	..	..	.	.	Lang=univ
+
 0	padai	padai	NOUN	NOUN	Lang=hi
 1	likhai	likhai	NOUN	NOUN	Lang=hi
 2	sb	sb	ADJ	ADJ	Lang=hi
@@ -4625,6 +4841,7 @@
 16	12th	12th	NUM	NUM	Lang=en
 17	mai	mai	ADP	ADP	Lang=hi
 18	?	?	.	.	Lang=univ
+
 0	tumhe	tumhe	PRON	PRON	Lang=hi
 1	yaad	yaad	NOUN	NOUN	Lang=hi
 2	karte	karte	VERB	VERB	Lang=hi
@@ -4644,6 +4861,7 @@
 16	dialogue	dialogue	NOUN	NOUN	Lang=en
 17	.	.	.	.	Lang=univ
 18	:P	:P	X	X	Lang=en
+
 0	y	y	ADV	ADV	Lang=en
 1	u	u	PRON	PRON	Lang=en
 2	wana	wana	VERB	VERB	Lang=en
@@ -4663,6 +4881,7 @@
 16	h	h	VERB	VERB	Lang=hi
 17	kya	kya	PRON	PRON	Lang=hi
 18	????	????	.	.	Lang=univ
+
 0	Rahul	Rahul	NOUN	NOUN	Lang=en
 1	Gandhi	Gandhi	NOUN	NOUN	Lang=en
 2	Campaning	Campaning	NOUN	NOUN	Lang=en
@@ -4683,6 +4902,7 @@
 17	Brad	Brad	NOUN	NOUN	Lang=en
 18	Pitt	Pitt	NOUN	NOUN	Lang=en
 19	....	....	.	.	Lang=univ
+
 0	modi	modi	NOUN	NOUN	Lang=en
 1	i	i	PRON	PRON	Lang=en
 2	don't	don't	VERB	VERB	Lang=en
@@ -4690,12 +4910,14 @@
 4	fear	fear	NOUN	NOUN	Lang=en
 5	of	of	ADP	ADP	Lang=en
 6	death	death	NOUN	NOUN	Lang=en
+
 0	check	check	ADJ	ADJ	Lang=en
 1	out	out	ADJ	ADJ	Lang=en
 2	this	this	DET	DET	Lang=en
 3	link	link	NOUN	NOUN	Lang=en
 4	start	start	VERB	VERB	Lang=en
 5	earning	earning	VERB	VERB	Lang=en
+
 0	not	not	PRT	PRT	Lang=en
 1	been	been	VERB	VERB	Lang=en
 2	seen	seen	VERB	VERB	Lang=en
@@ -4705,8 +4927,10 @@
 6	see	see	VERB	VERB	Lang=en
 7	cool	cool	ADJ	ADJ	Lang=en
 8	air	air	NOUN	NOUN	Lang=en
+
 0	hiii	hiii	PRT	PRT	Lang=en
 1	sir	sir	NOUN	NOUN	Lang=en
+
 0	i	i	PRON	PRON	Lang=en
 1	salute	salute	VERB	VERB	Lang=en
 2	people	people	NOUN	NOUN	Lang=en
@@ -4720,17 +4944,20 @@
 10	while	while	CONJ	CONJ	Lang=en
 11	blast	blast	NOUN	NOUN	Lang=en
 12	happened	happened	VERB	VERB	Lang=en
+
 0	plzz	plzz	NOUN	NOUN	Lang=en
 1	like	like	VERB	VERB	Lang=en
 2	page	page	NOUN	NOUN	Lang=en
 3	and	and	CONJ	CONJ	Lang=en
 4	share	share	VERB	VERB	Lang=en
 5	it	it	PRON	PRON	Lang=en
+
 0	6	6	NUM	NUM	Lang=en
 1	enjoy	enjoy	VERB	VERB	Lang=en
 2	your	your	PRON	PRON	Lang=en
 3	friend	friend	NOUN	NOUN	Lang=en
 4	requestsin	requestsin	NOUN	NOUN	Lang=en
+
 0	best	best	ADJ	ADJ	Lang=en
 1	of	of	ADP	ADP	Lang=en
 2	luck	luck	NOUN	NOUN	Lang=en
@@ -4738,6 +4965,7 @@
 4	ur	ur	PRON	PRON	Lang=en
 5	new	new	ADJ	ADJ	Lang=en
 6	movie	movie	NOUN	NOUN	Lang=en
+
 0	sir	sir	NOUN	NOUN	Lang=en
 1	it	it	PRON	PRON	Lang=en
 2	is	is	VERB	VERB	Lang=en
@@ -4750,14 +4978,17 @@
 9	betwen	betwen	CONJ	CONJ	Lang=en
 10	rich	rich	ADJ	ADJ	Lang=en
 11	poor	poor	ADJ	ADJ	Lang=en
+
 0	may	may	VERB	VERB	Lang=en
 1	his	his	PRON	PRON	Lang=en
 2	soul	soul	NOUN	NOUN	Lang=en
 3	rest	rest	VERB	VERB	Lang=en
 4	in	in	ADP	ADP	Lang=en
 5	peace	peace	NOUN	NOUN	Lang=en
+
 0	tooo	tooo	ADV	ADV	Lang=en
 1	slow	slow	ADJ	ADJ	Lang=en
+
 0	u	u	PRON	PRON	Lang=en
 1	r	r	VERB	VERB	Lang=en
 2	superb	superb	ADJ	ADJ	Lang=en
@@ -4766,6 +4997,7 @@
 5	u	u	PRON	PRON	Lang=en
 6	gud	gud	ADJ	ADJ	Lang=en
 7	nyt	nyt	NOUN	NOUN	Lang=en
+
 0	end	end	ADJ	ADJ	Lang=en
 1	of	of	ADP	ADP	Lang=en
 2	an	an	DET	DET	Lang=en
@@ -4777,6 +5009,7 @@
 8	be	be	VERB	VERB	Lang=en
 9	echoing	echoing	VERB	VERB	Lang=en
 10	rip	rip	VERB	VERB	Lang=en
+
 0	yeah	yeah	PRT	PRT	Lang=en
 1	it	it	PRON	PRON	Lang=en
 2	will	will	VERB	VERB	Lang=en
@@ -4790,9 +5023,11 @@
 10	stop	stop	VERB	VERB	Lang=en
 11	winning	winning	VERB	VERB	Lang=en
 12	goal	goal	NOUN	NOUN	Lang=en
+
 0	u	u	PRON	PRON	Lang=en
 1	r	r	VERB	VERB	Lang=en
 2	super	super	ADJ	ADJ	Lang=en
+
 0	such	such	ADV	ADV	Lang=en
 1	a	a	DET	DET	Lang=en
 2	magical	magical	ADJ	ADJ	Lang=en
@@ -4803,17 +5038,20 @@
 7	manna	manna	NOUN	NOUN	Lang=en
 8	dey	dey	NOUN	NOUN	Lang=en
 9	rip	rip	VERB	VERB	Lang=en
+
 0	miss	miss	VERB	VERB	Lang=en
 1	u	u	PRON	PRON	Lang=en
 2	manna	manna	NOUN	NOUN	Lang=en
 3	day	day	NOUN	NOUN	Lang=en
 4	sir	sir	NOUN	NOUN	Lang=en
+
 0	may	may	ADP	ADP	Lang=en
 1	his	his	PRON	PRON	Lang=en
 2	soul	soul	NOUN	NOUN	Lang=en
 3	rest	rest	VERB	VERB	Lang=en
 4	in	in	ADP	ADP	Lang=en
 5	peace	peace	NOUN	NOUN	Lang=en
+
 0	i	i	PRON	PRON	Lang=en
 1	want	want	VERB	VERB	Lang=en
 2	to	to	ADP	ADP	Lang=en
@@ -4825,25 +5063,30 @@
 8	call	call	VERB	VERB	Lang=en
 9	me	me	PRON	PRON	Lang=en
 10	09838709391	09838709391	NUM	NUM	Lang=en
+
 0	so	so	ADV	ADV	Lang=en
 1	sad	sad	ADJ	ADJ	Lang=en
 2	,	,	.	.	Lang=univ
 3	rip	rip	VERB	VERB	Lang=en
 4	manna	manna	NOUN	NOUN	Lang=en
 5	dey	dey	NOUN	NOUN	Lang=en
+
 0	only	only	ADJ	ADJ	Lang=en
 1	modi	modi	NOUN	NOUN	Lang=en
 2	ji	ji	PRT	PRT	Lang=en
 3	pm	pm	NOUN	NOUN	Lang=en
 4	candidate	candidate	NOUN	NOUN	Lang=en
+
 0	young	young	ADJ	ADJ	Lang=en
 1	uttrakhand	uttrakhand	NOUN	NOUN	Lang=en
+
 0	i	i	PRON	PRON	Lang=en
 1	want	want	VERB	VERB	Lang=en
 2	to	to	ADP	ADP	Lang=en
 3	share	share	VERB	VERB	Lang=en
 4	1	1	NUM	NUM	Lang=en
 5	topic	topic	NOUN	NOUN	Lang=en
+
 0	king	king	NOUN	NOUN	Lang=en
 1	of	of	ADP	ADP	Lang=en
 2	romance	romance	NOUN	NOUN	Lang=en
@@ -4858,22 +5101,26 @@
 11	last	last	ADJ	ADJ	Lang=en
 12	100	100	NUM	NUM	Lang=en
 13	years	years	NOUN	NOUN	Lang=en
+
 0	please	please	PRT	PRT	Lang=en
 1	like	like	VERB	VERB	Lang=en
 2	my	my	PRON	PRON	Lang=en
 3	page	page	NOUN	NOUN	Lang=en
 4	friend	friend	NOUN	NOUN	Lang=en
+
 0	vote	vote	VERB	VERB	Lang=en
 1	for	for	ADP	ADP	Lang=en
 2	congress	congress	NOUN	NOUN	Lang=en
 3	phirse	phirse	ADP	ADP	Lang=en
 4	congress	congress	NOUN	NOUN	Lang=en
+
 0	the	the	DET	DET	Lang=en
 1	name	name	NOUN	NOUN	Lang=en
 2	is	is	VERB	VERB	Lang=en
 3	enough	enough	ADJ	ADJ	Lang=en
 4	narendra	narendra	NOUN	NOUN	Lang=en
 5	modi	modi	NOUN	NOUN	Lang=en
+
 0	actor	actor	NOUN	NOUN	Lang=en
 1	,	,	.	.	Lang=univ
 2	model	model	NOUN	NOUN	Lang=en
@@ -4891,6 +5138,7 @@
 14	,	,	.	.	Lang=univ
 15	brother	brother	NOUN	NOUN	Lang=en
 16	mentor	mentor	NOUN	NOUN	Lang=en
+
 0	because	because	CONJ	CONJ	Lang=en
 1	you	you	PRON	PRON	Lang=en
 2	are	are	VERB	VERB	Lang=en
@@ -4907,6 +5155,7 @@
 13	to	to	PRT	PRT	Lang=en
 14	acquit	acquit	VERB	VERB	Lang=en
 15	you	you	PRON	PRON	Lang=en
+
 0	hello	hello	PRT	PRT	Lang=en
 1	every	every	ADJ	ADJ	Lang=en
 2	one	one	PRON	PRON	Lang=en
@@ -4934,6 +5183,7 @@
 24	will	will	VERB	VERB	Lang=en
 25	love	love	VERB	VERB	Lang=en
 26	it	it	PRON	PRON	Lang=en
+
 0	congress	congress	NOUN	NOUN	Lang=en
 1	issues	issues	VERB	VERB	Lang=en
 2	clarification	clarification	NOUN	NOUN	Lang=en
@@ -4951,6 +5201,7 @@
 14	the	the	DET	DET	Lang=en
 15	intelligence	intelligence	NOUN	NOUN	Lang=en
 16	bureau	bureau	NOUN	NOUN	Lang=en
+
 0	we	we	PRON	PRON	Lang=en
 1	all	all	ADJ	ADJ	Lang=en
 2	pray	pray	VERB	VERB	Lang=en
@@ -4964,11 +5215,13 @@
 10	this	this	DET	DET	Lang=en
 11	distress	distress	NOUN	NOUN	Lang=en
 12	time	time	NOUN	NOUN	Lang=en
+
 0	sir	sir	NOUN	NOUN	Lang=en
 1	u	u	PRON	PRON	Lang=en
 2	r	r	VERB	VERB	Lang=en
 3	right	right	ADJ	ADJ	Lang=en
 4	sir	sir	NOUN	NOUN	Lang=en
+
 0	same	same	ADJ	ADJ	Lang=en
 1	as	as	ADP	ADP	Lang=en
 2	u	u	PRON	PRON	Lang=en
@@ -4993,6 +5246,7 @@
 21	whole	whole	ADJ	ADJ	Lang=en
 22	day	day	NOUN	NOUN	Lang=en
 23	sir	sir	NOUN	NOUN	Lang=en
+
 0	first	first	ADJ	ADJ	Lang=en
 1	time	time	NOUN	NOUN	Lang=en
 2	in	in	ADP	ADP	Lang=en
@@ -5009,11 +5263,13 @@
 13	a	a	DET	DET	Lang=en
 14	politician	politician	NOUN	NOUN	Lang=en
 15	,	,	.	.	Lang=univ
+
 0	very	very	ADV	ADV	Lang=en
 1	srry	srry	ADJ	ADJ	Lang=en
 2	4	4	ADP	ADP	Lang=en
 3	manna	manna	NOUN	NOUN	Lang=en
 4	dey	dey	NOUN	NOUN	Lang=en
+
 0	stupid	stupid	ADJ	ADJ	Lang=en
 1	people	people	NOUN	NOUN	Lang=en
 2	fighting	fighting	VERB	VERB	Lang=en
@@ -5044,6 +5300,7 @@
 27	him	him	PRON	PRON	Lang=en
 28	common	common	ADJ	ADJ	Lang=en
 29	sense	sense	NOUN	NOUN	Lang=en
+
 0	omg	omg	PRT	PRT	Lang=en
 1	,	,	.	.	Lang=univ
 2	my	my	PRON	PRON	Lang=en
@@ -5065,11 +5322,13 @@
 18	manna	manna	NOUN	NOUN	Lang=en
 19	dey	dey	NOUN	NOUN	Lang=en
 20	rip	rip	X	X	Lang=en
+
 0	good	good	ADJ	ADJ	Lang=en
 1	morning	morning	NOUN	NOUN	Lang=en
 2	sir	sir	NOUN	NOUN	Lang=en
 3	to	to	ADP	ADP	Lang=en
 4	you	you	PRON	PRON	Lang=en
+
 0	another	another	ADJ	ADJ	Lang=en
 1	great	great	ADJ	ADJ	Lang=en
 2	loss	loss	NOUN	NOUN	Lang=en
@@ -5082,6 +5341,7 @@
 9	love	love	VERB	VERB	Lang=en
 10	his	his	PRON	PRON	Lang=en
 11	songs	songs	NOUN	NOUN	Lang=en
+
 0	only	only	ADJ	ADJ	Lang=en
 1	namo	namo	NOUN	NOUN	Lang=en
 2	can	can	VERB	VERB	Lang=en
@@ -5104,6 +5364,7 @@
 19	of	of	ADP	ADP	Lang=en
 20	the	the	DET	DET	Lang=en
 21	world	world	NOUN	NOUN	Lang=en
+
 0	always	always	ADV	ADV	Lang=en
 1	alive	alive	NOUN	NOUN	Lang=en
 2	in	in	ADP	ADP	Lang=en
@@ -5114,6 +5375,7 @@
 7	with	with	ADP	ADP	Lang=en
 8	his	his	PRON	PRON	Lang=en
 9	songs	songs	NOUN	NOUN	Lang=en
+
 0	what	what	PRON	PRON	Lang=en
 1	education	education	NOUN	NOUN	Lang=en
 2	?	?	.	.	Lang=univ
@@ -5131,11 +5393,13 @@
 14	not	not	PRT	PRT	Lang=en
 15	support	support	VERB	VERB	Lang=en
 16	you	you	PRON	PRON	Lang=en
+
 0	fans	fans	NOUN	NOUN	Lang=en
 1	of	of	ADP	ADP	Lang=en
 2	shah	shah	NOUN	NOUN	Lang=en
 3	rukh	rukh	NOUN	NOUN	Lang=en
 4	khan	khan	NOUN	NOUN	Lang=en
+
 0	we	we	PRON	PRON	Lang=en
 1	support	support	VERB	VERB	Lang=en
 2	him	him	PRON	PRON	Lang=en
@@ -5144,12 +5408,14 @@
 5	fight	fight	VERB	VERB	Lang=en
 6	against	against	ADP	ADP	Lang=en
 7	poverty	poverty	NOUN	NOUN	Lang=en
+
 0	kejriwal	kejriwal	NOUN	NOUN	Lang=en
 1	-	-	.	.	Lang=univ
 2	i	i	PRON	PRON	Lang=en
 3	wl	wl	VERB	VERB	Lang=en
 4	mak	mak	VERB	VERB	Lang=en
 5	system	system	NOUN	NOUN	Lang=en
+
 0	rahul	rahul	NOUN	NOUN	Lang=en
 1	u	u	PRON	PRON	Lang=en
 2	are	are	VERB	VERB	Lang=en
@@ -5168,6 +5434,7 @@
 15	modi	modi	NOUN	NOUN	Lang=en
 16	future	future	ADJ	ADJ	Lang=en
 17	pm	pm	NOUN	NOUN	Lang=en
+
 0	slow	slow	ADJ	ADJ	Lang=en
 1	and	and	CONJ	CONJ	Lang=en
 2	steady	steady	ADJ	ADJ	Lang=en
@@ -5193,6 +5460,7 @@
 22	but	but	CONJ	CONJ	Lang=en
 23	be	be	VERB	VERB	Lang=en
 24	careful	careful	ADJ	ADJ	Lang=en
+
 0	at	at	ADP	ADP	Lang=en
 1	first	first	ADJ	ADJ	Lang=en
 2	tamilnadu	tamilnadu	NOUN	NOUN	Lang=en
@@ -5200,6 +5468,7 @@
 4	should	should	ADP	ADP	Lang=en
 5	be	be	VERB	VERB	Lang=en
 6	surelyakanum	surelyakanum	NOUN	NOUN	Lang=en
+
 0	his	his	PRON	PRON	Lang=en
 1	all	all	ADJ	ADJ	Lang=en
 2	songs	songs	NOUN	NOUN	Lang=en
@@ -5213,6 +5482,7 @@
 10	rest	rest	VERB	VERB	Lang=en
 11	in	in	ADP	ADP	Lang=en
 12	peace	peace	NOUN	NOUN	Lang=en
+
 0	draws	draws	VERB	VERB	Lang=en
 1	a	a	DET	DET	Lang=en
 2	loud	loud	ADJ	ADJ	Lang=en
@@ -5220,6 +5490,7 @@
 4	from	from	ADP	ADP	Lang=en
 5	his	his	PRON	PRON	Lang=en
 6	audience	audience	NOUN	NOUN	Lang=en
+
 0	hi	hi	PRT	PRT	Lang=en
 1	sir	sir	NOUN	NOUN	Lang=en
 2	hw	hw	PRON	PRON	Lang=en
@@ -5234,12 +5505,14 @@
 11	spl	spl	ADV	ADV	Lang=en
 12	for	for	ADP	ADP	Lang=en
 13	u	u	PRON	PRON	Lang=en
+
 0	inc	inc	NOUN	NOUN	Lang=en
 1	is	is	VERB	VERB	Lang=en
 2	the	the	DET	DET	Lang=en
 3	dna	dna	NOUN	NOUN	Lang=en
 4	of	of	ADP	ADP	Lang=en
 5	india	india	NOUN	NOUN	Lang=en
+
 0	congress	congress	NOUN	NOUN	Lang=en
 1	vice	vice	NOUN	NOUN	Lang=en
 2	president	president	NOUN	NOUN	Lang=en
@@ -5255,6 +5528,7 @@
 12	isi	isi	NOUN	NOUN	Lang=en
 13	see	see	VERB	VERB	Lang=en
 14	more	more	ADJ	ADJ	Lang=en
+
 0	poor	poor	ADJ	ADJ	Lang=en
 1	hindu	hindu	NOUN	NOUN	Lang=en
 2	and	and	CONJ	CONJ	Lang=en
@@ -5273,6 +5547,7 @@
 15	to	to	PRT	PRT	Lang=en
 16	fight	fight	VERB	VERB	Lang=en
 17	poverty	poverty	NOUN	NOUN	Lang=en
+
 0	hi	hi	PRT	PRT	Lang=en
 1	friends	friends	NOUN	NOUN	Lang=en
 2	support	support	VERB	VERB	Lang=en
@@ -5293,6 +5568,7 @@
 17	it	it	PRON	PRON	Lang=en
 18	thank	thank	VERB	VERB	Lang=en
 19	you	you	PRON	PRON	Lang=en
+
 0	sheila	sheila	NOUN	NOUN	Lang=en
 1	is	is	VERB	VERB	Lang=en
 2	the	the	DET	DET	Lang=en
@@ -5300,6 +5576,7 @@
 4	cm	cm	NOUN	NOUN	Lang=en
 5	among	among	ADP	ADP	Lang=en
 6	all	all	PRON	PRON	Lang=en
+
 0	their	their	PRON	PRON	Lang=en
 1	is	is	ADP	ADP	Lang=en
 2	huge	huge	ADJ	ADJ	Lang=en
@@ -5308,6 +5585,7 @@
 5	indians	indians	NOUN	NOUN	Lang=en
 6	against	against	ADP	ADP	Lang=en
 7	congress	congress	NOUN	NOUN	Lang=en
+
 0	yes	yes	PRT	PRT	Lang=en
 1	yes	yes	PRT	PRT	Lang=en
 2	u	u	PRON	PRON	Lang=en
@@ -5315,12 +5593,14 @@
 4	like	like	VERB	VERB	Lang=en
 5	this	this	DET	DET	Lang=en
 6	page	page	NOUN	NOUN	Lang=en
+
 0	we	we	PRON	PRON	Lang=en
 1	have	have	VERB	VERB	Lang=en
 2	lost	lost	VERB	VERB	Lang=en
 3	a	a	DET	DET	Lang=en
 4	melodeous	melodeous	ADJ	ADJ	Lang=en
 5	singer	singer	NOUN	NOUN	Lang=en
+
 0	what	what	PRON	PRON	Lang=en
 1	it	it	PRON	PRON	Lang=en
 2	costs	costs	VERB	VERB	Lang=en
@@ -5328,6 +5608,7 @@
 4	today	today	ADV	ADV	Lang=en
 5	the	the	DET	DET	Lang=en
 6	costliest	costliest	ADJ	ADJ	Lang=en
+
 0	my	my	PRON	PRON	Lang=en
 1	mental	mental	ADJ	ADJ	Lang=en
 2	condition	condition	NOUN	NOUN	Lang=en
@@ -5347,17 +5628,20 @@
 16	/	/	.	.	Lang=univ
 17	singers	singers	NOUN	NOUN	Lang=en
 18	,,,	,,,	.	.	Lang=univ
+
 0	may	may	PRT	PRT	Lang=en
 1	his	his	PRON	PRON	Lang=en
 2	soul	soul	NOUN	NOUN	Lang=en
 3	rest	rest	VERB	VERB	Lang=en
 4	in	in	ADP	ADP	Lang=en
 5	peace	peace	ADV	ADV	Lang=en
+
 0	look	look	VERB	VERB	Lang=en
 1	mr	mr	PRT	PRT	Lang=en
 2	rahul	rahul	NOUN	NOUN	Lang=en
 3	our	our	PRON	PRON	Lang=en
 4	lion	lion	NOUN	NOUN	Lang=en
+
 0	no	no	PRT	PRT	Lang=en
 1	we	we	PRON	PRON	Lang=en
 2	expect	expect	VERB	VERB	Lang=en
@@ -5371,6 +5655,7 @@
 10	d	d	DET	DET	Lang=en
 11	upcoming	upcoming	ADJ	ADJ	Lang=en
 12	election	election	NOUN	NOUN	Lang=en
+
 0	very	very	ADV	ADV	Lang=en
 1	sad	sad	ADJ	ADJ	Lang=en
 2	news	news	NOUN	NOUN	Lang=en
@@ -5381,6 +5666,7 @@
 7	soul	soul	NOUN	NOUN	Lang=en
 8	in	in	ADP	ADP	Lang=en
 9	peace	peace	NOUN	NOUN	Lang=en
+
 0	it	it	PRON	PRON	Lang=en
 1	s	s	VERB	VERB	Lang=en
 2	a	a	DET	DET	Lang=en
@@ -5396,6 +5682,7 @@
 12	rest	rest	VERB	VERB	Lang=en
 13	in	in	ADP	ADP	Lang=en
 14	peace	peace	NOUN	NOUN	Lang=en
+
 0	beauty	beauty	NOUN	NOUN	Lang=en
 1	gets	gets	VERB	VERB	Lang=en
 2	the	the	DET	DET	Lang=en
@@ -5405,6 +5692,7 @@
 6	gets	gets	VERB	VERB	Lang=en
 7	the	the	DET	DET	Lang=en
 8	heart	heart	NOUN	NOUN	Lang=en
+
 0	beautiful	beautiful	ADJ	ADJ	Lang=en
 1	songs	songs	NOUN	NOUN	Lang=en
 2	he	he	PRON	PRON	Lang=en
@@ -5419,6 +5707,7 @@
 11	rest	rest	VERB	VERB	Lang=en
 12	in	in	ADP	ADP	Lang=en
 13	peace	peace	NOUN	NOUN	Lang=en
+
 0	srk	srk	NOUN	NOUN	Lang=en
 1	is	is	VERB	VERB	Lang=en
 2	jst	jst	ADV	ADV	Lang=en
@@ -5428,6 +5717,7 @@
 6	nd	nd	CONJ	CONJ	Lang=en
 7	evry	evry	PRON	PRON	Lang=en
 8	look	look	NOUN	NOUN	Lang=en
+
 0	sir	sir	NOUN	NOUN	Lang=en
 1	what	what	PRON	PRON	Lang=en
 2	about	about	PRT	PRT	Lang=en
@@ -5444,18 +5734,21 @@
 13	old	old	ADJ	ADJ	Lang=en
 14	age	age	NOUN	NOUN	Lang=en
 15	?	?	.	.	Lang=univ
+
 0	a	a	DET	DET	Lang=en
 1	wonderfully	wonderfully	ADJ	ADJ	Lang=en
 2	grt	grt	ADJ	ADJ	Lang=en
 3	feelings	feelings	NOUN	NOUN	Lang=en
 4	-	-	.	.	Lang=univ
 5	light	light	NOUN	NOUN	Lang=en
+
 0	he	he	PRON	PRON	Lang=en
 1	will	will	VERB	VERB	Lang=en
 2	live	live	VERB	VERB	Lang=en
 3	in	in	ADP	ADP	Lang=en
 4	his	his	PRON	PRON	Lang=en
 5	songs	songs	NOUN	NOUN	Lang=en
+
 0	congrats	congrats	PRT	PRT	Lang=en
 1	to	to	ADP	ADP	Lang=en
 2	all	all	ADJ	ADJ	Lang=en
@@ -5464,11 +5757,13 @@
 5	workers	workers	NOUN	NOUN	Lang=en
 6	of	of	ADP	ADP	Lang=en
 7	bjp	bjp	NOUN	NOUN	Lang=en
+
 0	king	king	NOUN	NOUN	Lang=en
 1	of	of	ADP	ADP	Lang=en
 2	all	all	ADJ	ADJ	Lang=en
 3	the	the	DET	DET	Lang=en
 4	world	world	NOUN	NOUN	Lang=en
+
 0	i	i	PRON	PRON	Lang=en
 1	want	want	VERB	VERB	Lang=en
 2	c	c	VERB	VERB	Lang=en
@@ -5485,6 +5780,7 @@
 13	to	to	ADP	ADP	Lang=en
 14	hell	hell	NOUN	NOUN	Lang=en
 15	congress	congress	NOUN	NOUN	Lang=en
+
 0	narendra	narendra	NOUN	NOUN	Lang=en
 1	modi	modi	NOUN	NOUN	Lang=en
 2	a	a	DET	DET	Lang=en
@@ -5496,6 +5792,7 @@
 8	minister	minister	NOUN	NOUN	Lang=en
 9	of	of	ADP	ADP	Lang=en
 10	india	india	NOUN	NOUN	Lang=en
+
 0	but	but	CONJ	CONJ	Lang=en
 1	you	you	PRON	PRON	Lang=en
 2	have	have	VERB	VERB	Lang=en
@@ -5505,6 +5802,7 @@
 6	that	that	PRON	PRON	Lang=en
 7	are	are	VERB	VERB	Lang=en
 8	intolerable	intolerable	ADJ	ADJ	Lang=en
+
 0	namo	namo	NOUN	NOUN	Lang=en
 1	my	my	PRON	PRON	Lang=en
 2	foot	foot	NOUN	NOUN	Lang=en
@@ -5525,6 +5823,7 @@
 17	vote	vote	VERB	VERB	Lang=en
 18	for	for	PRON	PRON	Lang=en
 19	aap	aap	NOUN	NOUN	Lang=en
+
 0	my	my	PRON	PRON	Lang=en
 1	6	6	NUM	NUM	Lang=en
 2	yrs	yrs	NOUN	NOUN	Lang=en
@@ -5536,6 +5835,7 @@
 8	than	than	ADP	ADP	Lang=en
 9	umesh	umesh	NOUN	NOUN	Lang=en
 10	yadav	yadav	NOUN	NOUN	Lang=en
+
 0	only	only	ADJ	ADJ	Lang=en
 1	to	to	PRT	PRT	Lang=en
 2	get	get	VERB	VERB	Lang=en
@@ -5551,6 +5851,7 @@
 12	love	love	VERB	VERB	Lang=en
 13	u	u	PRON	PRON	Lang=en
 14	sir	sir	NOUN	NOUN	Lang=en
+
 0	sir	sir	NOUN	NOUN	Lang=en
 1	all	all	ADJ	ADJ	Lang=en
 2	gals	gals	NOUN	NOUN	Lang=en
@@ -5579,6 +5880,7 @@
 25	bloody	bloody	ADJ	ADJ	Lang=en
 26	gandhi	gandhi	NOUN	NOUN	Lang=en
 27	family	family	NOUN	NOUN	Lang=en
+
 0	this	this	DET	DET	Lang=en
 1	will	will	VERB	VERB	Lang=en
 2	always	always	ADV	ADV	Lang=en
@@ -5592,22 +5894,27 @@
 10	day	day	NOUN	NOUN	Lang=en
 11	by	by	ADP	ADP	Lang=en
 12	day	day	NOUN	NOUN	Lang=en
+
 0	great	great	ADJ	ADJ	Lang=en
 1	to	to	PRT	PRT	Lang=en
 2	see	see	VERB	VERB	Lang=en
 3	you	you	PRON	PRON	Lang=en
 4	sir	sir	NOUN	NOUN	Lang=en
+
 0	keep	keep	VERB	VERB	Lang=en
 1	it	it	PRON	PRON	Lang=en
 2	up	up	PRT	PRT	Lang=en
+
 0	anywz	anywz	CONJ	CONJ	Lang=en
 1	gud	gud	ADJ	ADJ	Lang=en
 2	nyt	nyt	NOUN	NOUN	Lang=en
 3	sir	sir	NOUN	NOUN	Lang=en
 4	take	take	VERB	VERB	Lang=en
 5	care	care	VERB	VERB	Lang=en
+
 0	very	very	ADV	ADV	Lang=en
 1	nice	nice	ADJ	ADJ	Lang=en
+
 0	mr	mr	PRT	PRT	Lang=en
 1	narendrabhai	narendrabhai	NOUN	NOUN	Lang=en
 2	modi	modi	NOUN	NOUN	Lang=en
@@ -5622,6 +5929,7 @@
 11	of	of	ADP	ADP	Lang=en
 12	people	people	NOUN	NOUN	Lang=en
 13	there	there	ADV	ADV	Lang=en
+
 0	we	we	PRON	PRON	Lang=en
 1	the	the	DET	DET	Lang=en
 2	fans	fans	NOUN	NOUN	Lang=en
@@ -5629,6 +5937,7 @@
 4	you	you	PRON	PRON	Lang=en
 5	,	,	.	.	Lang=univ
 6	sirji	sirji	NOUN	NOUN	Lang=en
+
 0	shahrukh	shahrukh	NOUN	NOUN	Lang=en
 1	khan	khan	NOUN	NOUN	Lang=en
 2	amir	amir	NOUN	NOUN	Lang=en
@@ -5650,6 +5959,7 @@
 18	of	of	ADP	ADP	Lang=en
 19	amitabh	amitabh	NOUN	NOUN	Lang=en
 20	bachchan	bachchan	NOUN	NOUN	Lang=en
+
 0	dear	dear	ADJ	ADJ	Lang=en
 1	sir	sir	NOUN	NOUN	Lang=en
 2	i	i	PRON	PRON	Lang=en
@@ -5668,12 +5978,14 @@
 15	are	are	PRON	PRON	Lang=en
 16	awesome	awesome	ADJ	ADJ	Lang=en
 17	artist	artist	NOUN	NOUN	Lang=en
+
 0	may	may	VERB	VERB	Lang=en
 1	his	his	PRON	PRON	Lang=en
 2	soul	soul	NOUN	NOUN	Lang=en
 3	rest	rest	VERB	VERB	Lang=en
 4	in	in	ADP	ADP	Lang=en
 5	peace	peace	NOUN	NOUN	Lang=en
+
 0	we	we	PRON	PRON	Lang=en
 1	lost	lost	VERB	VERB	Lang=en
 2	another	another	DET	DET	Lang=en
@@ -5683,6 +5995,7 @@
 6	collections	collections	NOUN	NOUN	Lang=en
 7	so	so	ADV	ADV	Lang=en
 8	sad	sad	ADJ	ADJ	Lang=en
+
 0	modi	modi	NOUN	NOUN	Lang=en
 1	real	real	ADJ	ADJ	Lang=en
 2	hero	hero	NOUN	NOUN	Lang=en
@@ -5696,6 +6009,7 @@
 10	help	help	VERB	VERB	Lang=en
 11	to	to	ADP	ADP	Lang=en
 12	modiji	modiji	NOUN	NOUN	Lang=en
+
 0	vote	vote	VERB	VERB	Lang=en
 1	for	for	ADP	ADP	Lang=en
 2	the	the	DET	DET	Lang=en
