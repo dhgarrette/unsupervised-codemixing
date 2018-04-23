@@ -238,9 +238,9 @@ val deva2latnTranslitDists =
   	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
   	  val translits = translitsString.lsplit(",")
                         .map(_.rsplit(":", 2).map(_.trim))
-                        .collect { case Vector(word, prob) => (word, prob.toDouble) }
+                        .collect { case Vector(word, prob) if word.nonEmpty => (word, prob.toDouble) }
                         .toVector
-    if (translits.nonEmpty)
+    if (translits.nonEmpty && deva.nonEmpty)
       Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
     else
       None
@@ -251,15 +251,15 @@ val latn2devaTranslitDists =
   	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
   	  val translits = translitsString.lsplit(",")
                         .map(_.lsplit(":").map(_.trim))
-                        .collect { case Vector(word, prob) => (word, prob.toDouble) }
+                        .collect { case Vector(word, prob) if word.nonEmpty => (word, prob.toDouble) }
                         .toVector
-    if (translits.nonEmpty)
+    if (translits.nonEmpty && deva.nonEmpty)
       Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
     else
       None
   }.toMap
 
-val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
+val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.filter(_.nonEmpty).flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
   
 for (embset <- Vector("polyglot", "polyglot-shared")) {
   val devaEmbeddings: Map[String, String] =
@@ -295,7 +295,7 @@ for (embset <- Vector("polyglot", "polyglot-shared")) {
       }
     }
     for ((latnWord, embDist) <- variantEmbSamplers) {
-      if (!ConstantTypes.contains(latnWord)) {
+      if (!ConstantTypes.contains(latnWord) && latnWord.nonEmpty) {
     	    f.writeLine(s"$latnWord ${embDist.sample()}")
       }
     }
@@ -339,8 +339,9 @@ for (set <- Vector("train", "dev", "test")) {
       else {
         val splitLine = line.lsplit("\t", 4)
         val originalWord = splitLine(1)
+        //val Vector(goldTranslit) = splitLine.last.lsplit("\\|").map(_.lsplit("=")).collectFirst { case Vector("Translit", value) => value }
         val variant = originalWord match {
-          case OkayRe() => originalWord 
+          case OkayRe() => originalWord
           case _ => deva2latnTranslitDists.get(originalWord).map(_._2.sample()).getOrElse{println("no translit: "+originalWord); "<UNK>"}
         }
         f.writeLine(s"${splitLine(0)}\t$variant\t$variant\t${splitLine.drop(3).mkString("\t")}|Original=$originalWord")
@@ -392,4 +393,57 @@ for (langdir <- Vector("UD_English-EWT-master", "UD_Hindi-HDTB-master_Latn")) {
       }
     }
   }
+}
+
+
+
+////////////////////////////////////////////////////////////
+// CHECK TO SEE IF THE SAME TAGSET IS USED EVERYWHERE
+//val ValidPos = "., ADJ, ADP, ADV, AUX, CCONJ, CONJ, DET, INTJ, NOUN, NUM, PART, PRON, PROPN, PRT, PUNCT, SCONJ, SYM, VERB, X".lsplit(", ")   // 20
+  val ValidPos =    "ADJ, ADP, ADV, AUX, CCONJ,       DET, INTJ, NOUN, NUM, PART, PRON, PROPN,      PUNCT, SCONJ, SYM, VERB, X".lsplit(", *")  // 17
+val filePosCounts: Vector[(String, Map[String, Int])] =
+  Vector(
+//      "icon/en_hi/dev.conllu",
+//      "icon/en_hi/test.conllu",
+      "irshad/en_hi/dev.conllu",
+      "irshad/en_hi/test.conllu",
+      "irshad/en_hi_normalized_oracle/dev.conllu",
+      "irshad/en_hi_normalized_oracle/test.conllu",
+//      "msr/en_hi/dev.conllu",
+//      "msr/en_hi/test.conllu",
+      "ud/en_hi/train.conllu",
+      "ud/en-hi_latn/train.conllu",
+      "ud/UD_English-EWT-master/train.conllu",
+      "ud/UD_English-EWT-master/dev.conllu",
+      "ud/UD_English-EWT-master/test.conllu",
+      "ud/UD_Hindi-HDTB-master/train.conllu",
+      "ud/UD_Hindi-HDTB-master/dev.conllu",
+      "ud/UD_Hindi-HDTB-master/test.conllu",
+      "ud/UD_Hindi-HDTB-master_Latn/train.conllu",
+      "ud/UD_Hindi-HDTB-master_Latn/dev.conllu",
+      "ud/UD_Hindi-HDTB-master_Latn/test.conllu",
+//      "ud/UD_Spanish-GSD-master/train.conllu",
+//      "ud/UD_Spanish-GSD-master/dev.conllu",
+//      "ud/UD_Spanish-GSD-master/test.conllu",
+  ).mapTo { fn =>
+    File(s"data/$fn").readLines.zipWithIndex.filterNot(_._1.startsWith("#")).filter(_._1.nonEmpty).map { case (line, i) =>
+      val pos = line.splitWhitespace.apply(3) match {
+//        case "." => "PUNCT"
+        case p => p
+      }
+      if (!ValidPos.contains(pos)) {
+        println(s"$fn :: ${i+1} :: $line")
+      }
+      pos
+    }.counts
+  }
+val allPos: Vector[String] = filePosCounts.flatMap(_._2.keySet).sorted.distinct
+{
+println(f"${""}%-45s${allPos.map(pos => f"$pos%5s").mkString(" ")}")
+filePosCounts.foreach { case (fn: String, posCounts: Map[String, Int]) =>
+  println(f"$fn%-45s${allPos.map { pos: String =>
+    val pctOpt: Option[Double] = posCounts.normalizeValues.get(pos)
+    f"${pctOpt.map(v => f"$v%.2f").getOrElse("0")}%5s"
+  }.mkString(" ")}")
+}
 }
