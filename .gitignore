@@ -1,4 +1,4 @@
-/data/emb/
+/data/emb*/
 /data/*/*/unsup-*.conllu
 
 *.class

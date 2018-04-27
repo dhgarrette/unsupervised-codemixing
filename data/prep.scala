@@ -8,26 +8,60 @@ val DevaRe = raw"[\d\p{Punct}${devaChars}]*[${devaChars}][\d\p{Punct}${devaChars
 val LatnRe = raw"[\d\p{Punct}A-za-z]*[A-za-z][\d\p{Punct}A-za-z]*".r
 val NumRe = raw"\d+".r
 val datadir = "/Users/dhgarrette/workspace/unsupervised-codemixing/data"
-val ConstantTypes = Vector("<UNK>", "<S>", "</S>", "<PAD>")
+val ConstantTypes = Vector("<UNK>", "<S>", "</S>", "<PAD>").map(_.toLowerCase)
 
 def removePunc(s: String) = s.toLowerCase.replaceAll(raw"[\d\p{Punct}।]", "")
 
 
 ////////////////////////////////////////////////////////////////////////
+// 0. LOWERCASE EMBEDDINGS
+//  Inputs:
+//      DATA/emb-mixedcase/polyglot/{en,hi}.emb           // Downloaded.
+//      DATA/emb-mixedcase/polyglot-shared/{en,hi}.emb    // Downloaded.
+//  Outputs:
+//      DATA/emb/polyglot/{en,hi}.emb
+//      DATA/emb/polyglot-shared/{en,hi}.emb
+for {
+  ext <- Vector("", "-shared")
+  lang <- Vector("en", "hi")
+} {
+	val grouped: Map[String, Vector[(String, String)]] =
+			File(s"$datadir/emb-mixedcase/polyglot${ext}/${lang}.emb").readLines.filter(_.splitWhitespace.size > 2).map { (line: String) =>
+    		  val Vector(word, emb) = line.lsplit("\\s+", 2)
+    			val group =
+      			  if (word == line.toLowerCase) "lower"
+      				else if (word == line.toUpperCase) "allcaps"
+      				else "mixedcase"
+    		  (group, (word.toLowerCase, emb))
+	    }.toVector.groupByKey
+  val cleanEmbs = grouped.getOrElse("allcaps", Vector.empty).toMap ++ grouped.getOrElse("mixedcase", Vector.empty) ++ grouped.getOrElse("lower", Vector.empty)
+  writeUsing(File(s"$datadir/emb/polyglot${ext}/${lang}.emb")) { outputFile =>
+    for (word <- ConstantTypes) {
+      cleanEmbs.get(word).foreach { emb =>
+        outputFile.writeLine(s"$word $emb")
+      }
+    }
+    for ((word, emb) <- (cleanEmbs -- ConstantTypes).toVector.sorted) {
+      outputFile.writeLine(s"$word $emb")
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////
 // 1. IRSHAD STUFF
 //  Inputs:
 //      DATA/irshad/en_hi/TWEETS-{dev,test}-v2_utf.conllu     // Provided by Kelsey originally.
-//      DATA/irshad/en_hi/original-{train,dev,test}.conllu    // Provided by Kelsey recently; 'train' treated as extra 'test' data.
+//      DATA/irshad/en_hi/original-{train,dev,test}.conllu    // Provided by Kelsey recently.
 //  Outputs:
-//      DATA/irshad/en_hi/{dev,test}.conllu
-//      DATA/irshad/en_hi/{dev,test}.langid.spl
+//      DATA/irshad/en_hi/{train,dev,test}.conllu
+//      DATA/irshad/en_hi/{train,dev,test}.langid.spl
 //      DATA/irshad/en_hi_normalized_oracle/{dev,test}.conllu
 //      DATA/irshad/en_hi_normalized_oracle/{dev,test}.langid.spl
 for (evalset <- Vector("dev", "test")) {
   writeUsing(File(s"$datadir/irshad/en_hi/${evalset}.conllu")) { outputFile =>
   writeUsing(File(s"$datadir/irshad/en_hi_normalized_oracle/${evalset}.conllu")) { normOutputFile =>
-    val conlluSentences = File(s"$datadir/irshad/en_hi/TWEETS-${evalset}-v2_utf.conllu").readLines.filterNot(_.startsWith("#")).splitWhere(_.isEmpty).filter(_.nonEmpty)
-    val kelseySentences = File(s"$datadir/irshad/en_hi/original-${evalset}.conllu").readLines.filterNot(_.startsWith("#")).splitWhere(_.isEmpty).filter(_.nonEmpty)
+    val conlluSentences = File(s"$datadir/irshad/en_hi/TWEETS-${evalset}-v2_utf.conllu").readLines.map(_.toLowerCase).filterNot(_.startsWith("#")).splitWhere(_.isEmpty).filter(_.nonEmpty)
+    val kelseySentences = File(s"$datadir/irshad/en_hi/original-${evalset}.conllu").readLines.map(_.toLowerCase).filterNot(_.startsWith("#")).splitWhere(_.isEmpty).filter(_.nonEmpty)
     for ((conlluSentenceLines, kelseySentenceLines) <- (conlluSentences zipSafe kelseySentences)) {
       assert(conlluSentenceLines.size == kelseySentenceLines.size,
              s"conlluSentenceLines.size=${conlluSentenceLines.size} != kelseySentenceLines.size=${kelseySentenceLines.size}\n${kelseySentenceLines.mkString("\n")}\n${kelseySentenceLines.mkString("\n")}")
@@ -35,47 +69,32 @@ for (evalset <- Vector("dev", "test")) {
         val Vector(ci, cnormWordOrGarbage, corigWord, cpos, _, _, chead, cdep, clangAndBio, _) = conlluLine.splitWhitespace
         val Vector(ki, korigWord, knormWordOrGarbage, kpos, _, _, khead, kdep, klangTag, _) = kelseyLine.splitWhitespace
 
-        val Vector(clangTag, clangCode) = clangAndBio.lsplit("\\|(B|I)-")
-        val lang = (klangTag, clangCode) match { case ("en",_) => "en"; case ("hi",_) => "hi"; case (_,"E") => "en"; case (_,"H") => "hi" }
+        val Vector(clangTag, clangCode) = clangAndBio.lsplit("\\|(b|i)-")
+        val lang = (klangTag, clangCode) match { case ("en",_) => "en"; case ("hi",_) => "hi"; case (_,"e") => "en"; case (_,"h") => "hi" }
         //val coutputWord = lang match { case "en" => corigWord; case "hi" => cnormWordOrGarbage }
         val knormOutputWord = knormWordOrGarbage match { case LatnRe() => korigWord; case _ => knormWordOrGarbage }
         
         assert(ci == ki, s"ci != ki\n$conlluLine\n$kelseyLine")
         assert(corigWord == korigWord, s"corigWord != korigWord\n$conlluLine\n$kelseyLine")
 
-        outputFile.writeLine(s"$ki\t$korigWord\t$korigWord\t$kpos\t_\t_\t$khead\t$kdep\t$clangTag\tLang=$lang")
-        normOutputFile.writeLine(s"$ki\t$knormOutputWord\t$knormOutputWord\t$kpos\t_\t_\t$khead\t$kdep\t$clangTag\tLang=$lang")
+        outputFile.writeLine(s"$ki\t$korigWord\t$korigWord\t$kpos\t_\t_\t$khead\t$kdep\t$clangTag\tlang=$lang")
+        normOutputFile.writeLine(s"$ki\t$knormOutputWord\t$knormOutputWord\t$kpos\t_\t_\t$khead\t$kdep\t$clangTag\tlang=$lang")
       }
       outputFile.writeLine()
       normOutputFile.writeLine()
     }
-//    if (evalset == "test") {
-//      val kelseySentences = File(s"$datadir/irshad/en_hi/original-train.conllu").readLines.filterNot(_.startsWith("#")).splitWhere(_.isEmpty).filter(_.nonEmpty)
-//      for (kelseySentenceLines <- kelseySentences) {
-//        for (kelseyLine <- kelseySentenceLines) {
-//          val Vector(ki, korigWord, knormWordOrGarbage, kpos, _, _, khead, kdep, klangTag, _) = kelseyLine.splitWhitespace
-//  
-//          val knormOutputWord = knormWordOrGarbage match { case LatnRe() => korigWord; case _ => knormWordOrGarbage }
-//          
-//          outputFile.writeLine(s"$ki\t$korigWord\t$korigWord\t$kpos\t_\t_\t$khead\t$kdep\t_")
-//          normOutputFile.writeLine(s"$ki\t$knormOutputWord\t$knormOutputWord\t$kpos\t_\t_\t$khead\t$kdep\t_")
-//        }
-//        outputFile.writeLine()
-//        normOutputFile.writeLine()
-//      }
-//    }
   }
   }
   for (dataset <- Vector("en_hi", "en_hi_normalized_oracle")) {
     writeUsing(File(s"$datadir/irshad/$dataset/$evalset.langid.spl")) { w =>
-      for (sentenceLines <- File(s"$datadir/irshad/$dataset/${evalset}.conllu").readLines.splitWhere(_.isEmpty).filter(_.nonEmpty)) {
+      for (sentenceLines <- File(s"$datadir/irshad/$dataset/${evalset}.conllu").readLines.map(_.toLowerCase).splitWhere(_.isEmpty).filter(_.nonEmpty)) {
         val outputTokens: Vector[Option[String]] =
             sentenceLines.map(_.splitWhitespace).map { cols =>
                 Option(cols.last)
                     .filter(_ != "_")
                     .flatMap { _.lsplit(",")
                                 .map(_.rsplit("=").toTuple2)
-                                .toMap.get("Lang")
+                                .toMap.get("lang")
                     }
                     .map(lang => s"${cols(1)}|$lang")
             }
@@ -83,6 +102,18 @@ for (evalset <- Vector("dev", "test")) {
           w.writeLine(outputTokens.flatten.mkString(" "))
         }
       }
+    }
+  }
+}
+for (dataset <- Vector("en_hi")) {
+  writeUsing(File(s"$datadir/irshad/$dataset/train.conllu")) { w =>
+    for (line <- File(s"$datadir/irshad/$dataset/original-train.conllu").readLines.map(_.toLowerCase)) {
+      w.writeLine(line)
+    }
+  }
+  writeUsing(File(s"$datadir/irshad/$dataset/train.langid.spl")) { w =>
+    for (sentenceLines <- File(s"$datadir/irshad/$dataset/original-train.conllu").readLines.map(_.toLowerCase).splitWhere(_.isEmpty).filter(_.nonEmpty)) {
+      w.writeLine(sentenceLines.map(_.splitWhitespace).map { cols => s"${cols(1)}|${cols(8)}" }.mkString(" "))
     }
   }
 }
@@ -96,11 +127,11 @@ for (evalset <- Vector("dev", "test")) {
 //      DATA/{icon,msr}/en_hi/{dev,test}.langid.spl
 for (dataset <- Vector("icon", "msr")) {
 for (evalset <- Vector("dev", "test")) {
-  writeUsing(File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/$dataset/en_hi/$evalset.conllu")) { conllOut =>
-  writeUsing(File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/$dataset/en_hi/$evalset.langid.spl")) { langidSplOut =>
-    for (line <- File(s"/Users/dhgarrette/workspace/unsupervised-codemixing/data/$dataset/en_hi/tagged-$dataset-hi_en-orig-coarse-$evalset.txt").readLines) {
+  writeUsing(File(s"$datadir/$dataset/en_hi/$evalset.conllu")) { conllOut =>
+  writeUsing(File(s"$datadir/$dataset/en_hi/$evalset.langid.spl")) { langidSplOut =>
+    for (line <- File(s"$datadir/$dataset/en_hi/tagged-$dataset-hi_en-orig-coarse-$evalset.txt").readLines.map(_.toLowerCase)) {
       for ((Vector(word, lang, pos), i) <- line.splitWhitespace.map(_.rsplit("\\|")).zipWithIndex) {
-        conllOut.writeLine(s"$i\t$word\t$word\t$pos\t$pos\tLang=$lang")
+        conllOut.writeLine(s"$i\t$word\t$word\t$pos\t$pos\tlang=$lang")
       }
       conllOut.writeLine()
       langidSplOut.writeLine(line.splitWhitespace.map(_.rsplit("\\|")).map { case Vector(word, lang, pos) => s"$word|$lang" }.mkString(" "))
@@ -131,7 +162,7 @@ writeUsing(File(s"$datadir/translit/latn_vocab.txt")) { f =>
           s"$datadir/emb/polyglot/en.emb",
           s"$datadir/emb/polyglot-shared/en.emb"
       )
-      line <- File(fn).readLines
+      line <- File(fn).readLines.map(_.toLowerCase)
       word = line.splitWhitespace.apply(0)
       if LatnRe.matches(word)
     } yield word
@@ -151,7 +182,7 @@ writeUsing(File(s"$datadir/translit/latn_vocab.txt")) { f =>
           s"$datadir/msr/en_hi/dev.langid.spl",
           s"$datadir/msr/en_hi/test.langid.spl",
       )
-      line <- File(fn).readLines
+      line <- File(fn).readLines.map(_.toLowerCase)
       item <- line.splitWhitespace
       Vector(word, lang) = item.rsplit("\\|", 2)
       if LatnRe.matches(word)
@@ -162,7 +193,7 @@ writeUsing(File(s"$datadir/translit/latn_vocab.txt")) { f =>
       fn <- Vector(
           s"$datadir/ud/UD_English-EWT-master/$dataset.conllu",
       )
-      line <- File(fn).readLines
+      line <- File(fn).readLines.map(_.toLowerCase)
       if line.nonEmpty
       if !line.startsWith("#")
       word = line.splitWhitespace.apply(1)
@@ -185,7 +216,7 @@ writeUsing(File(s"$datadir/translit/deva_vocab.txt")) { f =>
           s"$datadir/emb/polyglot/hi.emb",
           s"$datadir/emb/polyglot-shared/hi.emb",
       )
-      line <- File(fn).readLines
+      line <- File(fn).readLines.map(_.toLowerCase)
       word = line.splitWhitespace.apply(0)
       if DevaRe.matches(word)
     } yield word
@@ -196,7 +227,7 @@ writeUsing(File(s"$datadir/translit/deva_vocab.txt")) { f =>
           s"$datadir/irshad/en_hi_normalized_oracle/test.langid.spl",
           s"$datadir/irshad/en_hi_normalized_oracle/train.langid.spl",
       )
-      line <- File(fn).readLines
+      line <- File(fn).readLines.map(_.toLowerCase)
       item <- line.splitWhitespace
       Vector(word, lang) = item.rsplit("\\|", 2)
       if DevaRe.matches(word)
@@ -207,7 +238,7 @@ writeUsing(File(s"$datadir/translit/deva_vocab.txt")) { f =>
       fn <- Vector(
           s"$datadir/ud/UD_Hindi-HDTB-master/$dataset.conllu",
       )
-      line <- File(fn).readLines
+      line <- File(fn).readLines.map(_.toLowerCase)
       if line.nonEmpty
       if !line.startsWith("#")
       word = line.splitWhitespace.apply(1)
@@ -239,8 +270,17 @@ val Vector(deva2latnTranslitDists, latn2devaTranslitDists) =
       val allLines = File(s"$datadir/translit/$fn.txt").readLines ++
                      (if (fn=="deva2latn") Vector("। .:1") else Vector.empty) ++
                      ConstantTypes.map(w => s"$w $w|1")
-      allLines.flatMap { line =>
-      	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
+    	val grouped: Map[String, Vector[(String, String)]] =
+    			allLines.map { (line: String) =>
+      		  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
+      			val group =
+        			  if (deva == line.toLowerCase) "lower"
+        				else if (deva == line.toUpperCase) "allcaps"
+        				else "mixedcase"
+      		  (group, (deva.toLowerCase, translitsString.toLowerCase))
+    	    }.toVector.groupByKey
+      val cleanLines = grouped.getOrElse("allcaps", Vector.empty).toMap ++ grouped.getOrElse("mixedcase", Vector.empty) ++ grouped.getOrElse("lower", Vector.empty)
+      cleanLines.flatMap { case (deva, translitsString) =>
       	  val translits: Vector[(String, Double)] =
       	      translitsString.lsplit(",")
                 .map(_.rsplit(":", 2).map(_.trim))
@@ -252,13 +292,13 @@ val Vector(deva2latnTranslitDists, latn2devaTranslitDists) =
       }.toMap
     }
 
-//val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.filter(_.nonEmpty).flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
+//val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.map(_.toLowerCase).filter(_.nonEmpty).flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
   
 val Vector(enTrainWords, hiTrainWords, hiLatnTrainWords) =
     Vector("ud/UD_English-EWT-master",
            "ud/UD_Hindi-HDTB-master",
            "ud/UD_Hindi-HDTB-master_Latn").map { fn =>
-      File(s"data/$fn/train.conllu").readLines.filter(_.nonEmpty).filterNot(_.startsWith("#")).map(_.splitWhitespace.apply(1)).toSet
+      File(s"data/$fn/train.conllu").readLines.map(_.toLowerCase).filter(_.nonEmpty).filterNot(_.startsWith("#")).map(_.splitWhitespace.apply(1)).toSet
     }
 
 def makeVariantSamplers(devaWords: Map[String, String]) = { 
@@ -296,18 +336,17 @@ def makeVariantSamplers(devaWords: Map[String, String]) = {
 }
 
 for (embset <- Vector("polyglot", "polyglot-shared")) {
-  val devaEmbeddings: Map[String, String] =
-    File(s"$datadir/emb/$embset/hi.emb").readLines.filter(_.splitWhitespace.size > 2).map { line =>
-      	line.lsplit("\\s+", 2).toTuple2
-    }.toMap
-
   // Make a mapping from all Deva words with embeddings to their chosen Latn transliterations.
   //   In this block, each Latn word (a generated transliteration) copies the embedding of exactly one Deva word.
   //   This means that a Deva word can be mapped to multiple Latn words, but no Latn word will be mapped to by multiple Deva words.
   //   It is not necessarily the case that every Deva word will appear.
   val latn2DevaEmbMapping: Map[String, String] = {
+	  val devaEmbeddings: Map[String, String] =
+		  File(s"$datadir/emb/$embset/hi.emb").readLines.filter(_.splitWhitespace.size > 2).map { line =>
+		    line.lsplit("\\s+", 2).toTuple2
+      }.toMap
+	  val variantEmbSamplers = makeVariantSamplers(devaEmbeddings)
     writeUsing(File(s"$datadir/emb/$embset/hi_latn.emb")) { f =>
-      val variantEmbSamplers = makeVariantSamplers(devaEmbeddings)
       for (latnWord <- ConstantTypes) {
         variantEmbSamplers.get(latnWord).foreach { embDist =>
           val (devaWord, emb) = embDist.sample()
@@ -328,7 +367,7 @@ for (embset <- Vector("polyglot", "polyglot-shared")) {
   val latn2DevaTrainWordMapping: Map[String, String] = {
     val variantTrainWordSamplers = makeVariantSamplers(hiTrainWords.mapToVal("").toMap)
     for {
-      (latnWord, embDist) <- variantEmbSamplers
+      (latnWord, embDist) <- variantTrainWordSamplers
       if latnWord.nonEmpty
       if !ConstantTypes.contains(latnWord)
       if !latn2DevaEmbMapping.contains(latnWord)
@@ -337,16 +376,16 @@ for (embset <- Vector("polyglot", "polyglot-shared")) {
   	    (latnWord, devaWord)
     }
   }
-  val enEmbWords: Set[String] = File(s"$datadir/emb/$embset/en.emb").readLines.filter(_.splitWhitespace.size > 2).map(_.lsplit("\\s+", 2).head).toSet
+  val enEmbWords: Set[String] = File(s"$datadir/emb/$embset/en.emb").readLines.map(_.toLowerCase).filter(_.splitWhitespace.size > 2).map(_.lsplit("\\s+", 2).head).toSet
+  val constantWords: Map[String, Set[String]] =
+      ConstantTypes.mapTo(Set(_)).toMap ++
+    		ConstantTypes.map(w => ("hi:"+w) -> Set(w)) ++
+    		ConstantTypes.map(w => ("en:"+w) -> Set(w))
+	val mappings: Map[String, Set[String]] = 
+      (hiLatnTrainWords.map(w => ("hi:"+w) -> Set(w)).toMap ++
+      (latn2DevaTrainWordMapping ++ latn2DevaEmbMapping).toSet[(String,String)].map(_.swap).groupByKey.mapKeys("hi:"+_) ++
+      (enTrainWords ++ enEmbWords).map(w => ("en:"+w) -> Set(w))) -- constantWords.keys
   writeUsing(File(s"$datadir/emb/$embset/translit_mapping.txt")) { mapping_file =>
-    val constantWords: Map[String, Set[String]] =
-        ConstantTypes.mapTo(Set(_)).toMap ++
-      		ConstantTypes.map(w => ("hi:"+w) -> Set(w)) ++
-      		ConstantTypes.map(w => ("en:"+w) -> Set(w))
-  		val mappings: Map[String, Set[String]] = 
-		    (hiLatnTrainWords.map(w => ("hi:"+w) -> Set(w)).toMap ++
-         (latn2DevaTrainWordMapping ++ latn2DevaEmbMapping).toSet[(String,String)].map(_.swap).groupByKey.mapKeys("hi:"+_) ++
-         (enTrainWords ++ enEmbWords).map(w => ("en:"+w) -> Set(w))) -- constantWords.keys
     for ((origWord, translits) <- Vector(constantWords, mappings).map(_.toVector.sortBy(_._1)).flatten) {
       mapping_file.writeLine(s"$origWord ${translits.toVector.sorted.mkString(" ")}")
     }
@@ -362,10 +401,10 @@ for {
                                  ("hi", "hi_latn"))
   dir <- Vector("polyglot", "polyglot-shared")
 } {
-  writeUsing(File(s"$datadir/emb/$dir/$langdir-prefixed.emb")) { f =>
+  writeUsing(File(s"$datadir/emb/$dir/$langdir-prefixed.emb")) { f =>  // Note that -prefixed.emb files are always all-lowercase
     val inputFile = s"$datadir/emb/$dir/$langdir.emb"
     println(inputFile)
-    for (line <- File(inputFile).readLines.filter(_.splitWhitespace.size > 2)) {
+    for (line <- File(inputFile).readLines.map(_.toLowerCase).filter(_.splitWhitespace.size > 2)) {
       f.writeLine(lang_code + ":" + line)
     }
   }
@@ -389,7 +428,7 @@ for {
     val Vector(en, hi) =
       Vector(s"$datadir/emb/$embset/en$pref.emb",
              s"$datadir/emb/$embset/hi$ext$pref.emb").map(File(_))
-          .map(_.readLines.filter(_.splitWhitespace.size > 2).map(_.lsplit("\\s+",2).toTuple2).toMap)
+          .map(_.readLines.map(_.toLowerCase).filter(_.splitWhitespace.size > 2).map(_.lsplit("\\s+",2).toTuple2).toMap)
     val averagedConstLines = ConstantTypes.mapTo { w =>
       (en(if (pref=="-prefixed") "en:"+w else w).splitWhitespace zipSafe hi(if (pref=="-prefixed") "hi:"+w else w).splitWhitespace)
           .map { case (ee, he) => f"${(ee.toDouble + he.toDouble) / 2}%.7f" }
@@ -408,7 +447,7 @@ for {
 val OkayRe = raw"[\d\p{Punct}]+".r
 for (set <- Vector("train", "dev", "test")) {
   writeUsing(File(s"$datadir/ud/UD_Hindi-HDTB-master_Latn/$set.conllu")) { f =>
-    for (line <- File(s"$datadir/ud/UD_Hindi-HDTB-master/$set.conllu").readLines) {
+    for (line <- File(s"$datadir/ud/UD_Hindi-HDTB-master/$set.conllu").readLines.map(_.toLowerCase)) {
       if (line.startsWith("#")) f.writeLine(line)
       else if (line.trim().isEmpty) f.writeLine(line)
       else {
@@ -417,9 +456,9 @@ for (set <- Vector("train", "dev", "test")) {
         //val Vector(goldTranslit) = splitLine.last.lsplit("\\|").map(_.lsplit("=")).collectFirst { case Vector("Translit", value) => value }
         val variant = originalWord match {
           case OkayRe() => originalWord
-          case _ => deva2latnTranslitDists.get(originalWord).map(_._2.sample()).getOrElse{println("no translit: "+originalWord); "<UNK>"}
+          case _ => deva2latnTranslitDists.get(originalWord).map(_._2.sample()).getOrElse{println("no translit: "+originalWord); "<unk>"}
         }
-        f.writeLine(s"${splitLine(0)}\t$variant\t$variant\t${splitLine.drop(3).mkString("\t")}|Original=$originalWord")
+        f.writeLine(s"${splitLine(0)}\t$variant\t$variant\t${splitLine.drop(3).mkString("\t")}|original=$originalWord")
       }
     }
   }
@@ -480,7 +519,7 @@ for {
 } {
   writeUsing(File(outFile)) { f =>
     Vector(enFile, hiFile).map(File(_))
-        .flatMap(_.readLines.splitWhere(_.isEmpty).toVector)
+        .flatMap(_.readLines.map(_.toLowerCase).splitWhere(_.isEmpty).toVector)
         .shuffled
         .foreach(s => f.writeLine(s.mkString("\n")+"\n"))
   }
@@ -498,7 +537,7 @@ for (langdir <- Vector("UD_English-EWT-master", "UD_Hindi-HDTB-master_Latn")) {
   writeUsing(File(s"$datadir/ud/$langdir/train_latn.spl")) { f =>
     Vector(s"$datadir/ud/$langdir/train.conllu").foreach { fn =>
       println(fn)
-      File(fn).readLines.filterNot(_.startsWith("#")).splitWhere(_.trim.isEmpty).foreach { sentenceLines => 
+      File(fn).readLines.map(_.toLowerCase).filterNot(_.startsWith("#")).splitWhere(_.trim.isEmpty).foreach { sentenceLines => 
         f.writeLine(sentenceLines.map(_.splitWhitespace.apply(1).toLowerCase).mkString(" "))
       }
     }
@@ -534,7 +573,7 @@ val filePosCounts: Vector[(String, Map[String, Int])] =
 //      "ud/UD_Spanish-GSD-master/dev.conllu",
 //      "ud/UD_Spanish-GSD-master/test.conllu",
   ).mapTo { fn =>
-    File(s"data/$fn").readLines.zipWithIndex.filterNot(_._1.startsWith("#")).filter(_._1.nonEmpty).map { case (line, i) =>
+    File(s"data/$fn").readLines.map(_.toLowerCase).zipWithIndex.filterNot(_._1.startsWith("#")).f.readLines.map(_.toLowerCase).nonEmpty).map { case (line, i) =>
       val pos = line.splitWhitespace.apply(3) match {
 //        case "." => "PUNCT"
         case p => p
