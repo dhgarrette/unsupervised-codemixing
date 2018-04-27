@@ -230,90 +230,126 @@ writeUsing(File(s"$datadir/translit/deva_vocab.txt")) { f =>
 //  Inputs:
 //      DATA/translit/deva2latn.txt
 //      DATA/translit/latn2deva.txt
-//      DATA/translit/latn_vocab.txt
+//      //DATA/translit/latn_vocab.txt
 //      DATA/emb/{polyglot,polyglot-shared}/hi.emb
 //  Outputs:
 //      DATA/emb/{polyglot,polyglot-shared}/hi_latn.emb
-val deva2latnTranslitDists =
-  (File(s"$datadir/translit/deva2latn.txt").readLines ++ Vector("। .:1") ++ ConstantTypes.map(w => s"$w $w|1")).flatMap { line =>
-  	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
-  	  val translits = translitsString.lsplit(",")
-                        .map(_.rsplit(":", 2).map(_.trim))
-                        .collect { case Vector(word, prob) if word.nonEmpty => (word, prob.toDouble) }
-                        .toVector
-    if (translits.nonEmpty && deva.nonEmpty)
-      Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
-    else
-      None
-  }.toMap
+val Vector(deva2latnTranslitDists, latn2devaTranslitDists) =
+    Vector("deva2latn", "latn2deva").map { fn =>
+      val allLines = File(s"$datadir/translit/$fn.txt").readLines ++
+                     (if (fn=="deva2latn") Vector("। .:1") else Vector.empty) ++
+                     ConstantTypes.map(w => s"$w $w|1")
+      allLines.flatMap { line =>
+      	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
+      	  val translits: Vector[(String, Double)] =
+      	      translitsString.lsplit(",")
+                .map(_.rsplit(":", 2).map(_.trim))
+                .collect { case Vector(word, prob) if word.nonEmpty => (word, prob.toDouble) }
+        if (translits.nonEmpty && deva.nonEmpty)
+          Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
+        else
+          None
+      }.toMap
+    }
 
-val latn2devaTranslitDists =
-  (File(s"$datadir/translit/latn2deva.txt").readLines ++ ConstantTypes.map(w => s"$w $w|1")).flatMap { line =>
-  	  val Vector(deva, translitsString) = line.lsplit("\\s+", 2)
-  	  val translits = translitsString.lsplit(",")
-                        .map(_.lsplit(":").map(_.trim))
-                        .collect { case Vector(word, prob) if word.nonEmpty => (word, prob.toDouble) }
-                        .toVector
-    if (translits.nonEmpty && deva.nonEmpty)
-      Some(deva -> ((translits, new SimpleExpProbabilityDistribution(translits.toMap))))
-    else
-      None
-  }.toMap
-
-val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.filter(_.nonEmpty).flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
+//val latnVocab: Set[String] = File(s"$datadir/translit/latn_vocab.txt").readLines.filter(_.nonEmpty).flatMap(w => Set(w, w.toLowerCase, removePunc(w))).toSet
   
+val Vector(enTrainWords, hiTrainWords, hiLatnTrainWords) =
+    Vector("ud/UD_English-EWT-master",
+           "ud/UD_Hindi-HDTB-master",
+           "ud/UD_Hindi-HDTB-master_Latn").map { fn =>
+      File(s"data/$fn/train.conllu").readLines.filter(_.nonEmpty).filterNot(_.startsWith("#")).map(_.splitWhitespace.apply(1)).toSet
+    }
+
+def makeVariantSamplers(devaWords: Map[String, String]) = { 
+	val variants: Vector[(String, ((String, String), Double))] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word}
+  		devaWords.toVector.flatMap { case (devaWord, emb) =>
+    		devaWord match {
+    			case _ if ConstantTypes.contains(devaWord) =>
+    		    	Set(devaWord -> ((devaWord, emb), 100.0))
+    			case LatnRe() =>
+      			//if (latnVocab(devaWord))
+      			Set(devaWord -> ((devaWord, emb), 100.0))
+      			//else
+      			//   Set.empty[(String, (String, Double))]
+    			case _ =>
+      			deva2latnTranslitDists.get(devaWord).map { case (ts, d) =>
+        			ts.zipWithIndex.flatCollect { case ((v, p), i) => //if latnVocab.contains(v) =>
+          			// transliteratedLatnWord -> ((originalDevaWord, originalDevaWord's emb (if known)), transliterationProbability)
+          			val wordEmbProb = Some(v -> ((devaWord, emb), p)) 
+          			if (i == 0) {
+          				// Always take the top transliteration
+          				wordEmbProb
+          			} else {
+          				// For the rest, do a weighted coin flip for each weighted variant produced by the transliteration model.
+          				val bernoulli = new SimpleExpProbabilityDistribution(Map(wordEmbProb -> p, None -> (100-p)))
+          						bernoulli.sample()
+          			}
+        			}.toSet
+      			}.getOrElse(Set.empty)
+		  }
+    }
+  val variantsGrouped: Map[String, Vector[((String, String), Double)]] = variants.groupByKey
+  val variantEmbSamplers: Map[String, SimpleExpProbabilityDistribution[(String, String)]] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
+  		  variantsGrouped.mapVals(variantEmbs => new SimpleExpProbabilityDistribution(variantEmbs.toMap))
+  variantEmbSamplers
+}
+
 for (embset <- Vector("polyglot", "polyglot-shared")) {
   val devaEmbeddings: Map[String, String] =
     File(s"$datadir/emb/$embset/hi.emb").readLines.filter(_.splitWhitespace.size > 2).map { line =>
       	line.lsplit("\\s+", 2).toTuple2
     }.toMap
 
-  val deva2latnMapping: Map[String, Vector[String]] =
+  // Make a mapping from all Deva words with embeddings to their chosen Latn transliterations.
+  //   In this block, each Latn word (a generated transliteration) copies the embedding of exactly one Deva word.
+  //   This means that a Deva word can be mapped to multiple Latn words, but no Latn word will be mapped to by multiple Deva words.
+  //   It is not necessarily the case that every Deva word will appear.
+  val latn2DevaEmbMapping: Map[String, String] = {
     writeUsing(File(s"$datadir/emb/$embset/hi_latn.emb")) { f =>
-      val variants: Iterator[(String, ((String, String), Double))] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
-        devaEmbeddings.iterator.flatMap { case (devaWord, emb) =>
-          devaWord match {
-          	  case _ if ConstantTypes.contains(devaWord) =>
-          	    Set(devaWord -> ((devaWord, emb), 100.0))
-            case LatnRe() =>
-              //if (latnVocab(devaWord))
-                Set(devaWord -> ((devaWord, emb), 100.0))
-              //else
-              //   Set.empty[(String, (String, Double))]
-            case _ =>
-              deva2latnTranslitDists.get(devaWord).map { case (ts, d) =>
-                ts.flatCollect { case (v, p) => //if latnVocab.contains(v) =>
-                  // Do a weighted coin flip for each weighted variant produced by the transliteration model.
-                  new SimpleExpProbabilityDistribution(Map(Some(v -> ((devaWord, emb), p)) -> p, None -> (100-p))).sample()
-                }
-              }.getOrElse(Set.empty)
-          }
-        }
-      val variantEmbSamplers: Map[String, SimpleExpProbabilityDistribution[(String, String)]] =  // latn -> {dist over embeddings from deva words that can be transliterated to the latn word} 
-          variants.groupByKey.mapVals(variantEmbs => new SimpleExpProbabilityDistribution(variantEmbs.toMap))
+      val variantEmbSamplers = makeVariantSamplers(devaEmbeddings)
       for (latnWord <- ConstantTypes) {
-        variantEmbSamplers.get(latnWord).foreach { d =>
-      	    f.writeLine(s"$latnWord ${d.sample()}")
-        }
-      }
-      for ((latnWord, embDist) <- variantEmbSamplers.toVector) yield {
-        if (!ConstantTypes.contains(latnWord) && latnWord.nonEmpty) {
+        variantEmbSamplers.get(latnWord).foreach { embDist =>
           val (devaWord, emb) = embDist.sample()
       	    f.writeLine(s"$latnWord $emb")
-      	    Some((devaWord, latnWord))
-        } else {
-          None
         }
       }
-    }.flatten.groupByKey
-
+      for {
+        (latnWord, embDist) <- variantEmbSamplers
+        if latnWord.nonEmpty
+        if !ConstantTypes.contains(latnWord)
+      } yield {
+        val (devaWord, emb) = embDist.sample()
+    	    f.writeLine(s"$latnWord $emb")
+    	    (latnWord, devaWord)
+      }
+    }
+  }
+  val latn2DevaTrainWordMapping: Map[String, String] = {
+    val variantTrainWordSamplers = makeVariantSamplers(hiTrainWords.mapToVal("").toMap)
+    for {
+      (latnWord, embDist) <- variantEmbSamplers
+      if latnWord.nonEmpty
+      if !ConstantTypes.contains(latnWord)
+      if !latn2DevaEmbMapping.contains(latnWord)
+    } yield {
+      val (devaWord, emb) = embDist.sample()
+  	    (latnWord, devaWord)
+    }
+  }
+  val enEmbWords: Set[String] = File(s"$datadir/emb/$embset/en.emb").readLines.filter(_.splitWhitespace.size > 2).map(_.lsplit("\\s+", 2).head).toSet
   writeUsing(File(s"$datadir/emb/$embset/translit_mapping.txt")) { mapping_file =>
-    for ((origWord, translits) <-
-            (ConstantTypes.mapTo(Set(_)) ++
-             deva2latnMapping.map { case (devaWord, latnWords) => ("hi:"+devaWord) -> latnWords.toSet }.toVector.sortBy(_._1) ++
-             ConstantTypes.map(w => ("hi"+w) -> Set(w)) ++
-             File(s"$datadir/emb/$embset/en.emb").readLines.filter(_.splitWhitespace.size > 2).map(_.splitWhitespace.head).map(w => ("en:"+w) -> Set(w)).toVector.sortBy(_._1)))
-    mapping_file.writeLine(s"$origWord ${translits.toVector.sorted.mkString(" ")}")
+    val constantWords: Map[String, Set[String]] =
+        ConstantTypes.mapTo(Set(_)).toMap ++
+      		ConstantTypes.map(w => ("hi:"+w) -> Set(w)) ++
+      		ConstantTypes.map(w => ("en:"+w) -> Set(w))
+  		val mappings: Map[String, Set[String]] = 
+		    (hiLatnTrainWords.map(w => ("hi:"+w) -> Set(w)).toMap ++
+         (latn2DevaTrainWordMapping ++ latn2DevaEmbMapping).toSet[(String,String)].map(_.swap).groupByKey.mapKeys("hi:"+_) ++
+         (enTrainWords ++ enEmbWords).map(w => ("en:"+w) -> Set(w))) -- constantWords.keys
+    for ((origWord, translits) <- Vector(constantWords, mappings).map(_.toVector.sortBy(_._1)).flatten) {
+      mapping_file.writeLine(s"$origWord ${translits.toVector.sorted.mkString(" ")}")
+    }
   }
 }
 
@@ -394,7 +430,7 @@ for (set <- Vector("train", "dev", "test")) {
 for ((lang_code, langdir) <- Vector(("en", "UD_English-EWT-master"),
                                     ("hi", "UD_Hindi-HDTB-master"),
                                     ("hi", "UD_Hindi-HDTB-master_Latn"))) {
-  for (dataset <- Vector("train")) {
+  for (dataset <- Vector("train", "dev", "test")) {
     writeUsing(File(s"$datadir/ud/$langdir/$dataset-prefixed.conllu")) { f =>
       val inputFile = s"$datadir/ud/$langdir/$dataset.conllu"
       println(inputFile)
@@ -418,23 +454,30 @@ for ((lang_code, langdir) <- Vector(("en", "UD_English-EWT-master"),
 //      DATA/ud/UD_English-EWT-master/train.conllu
 //      DATA/ud/UD_Hindi-HDTB-master/train.conllu
 //      DATA/ud/UD_Hindi-HDTB-master_Latn/train.conllu
+//      DATA/ud/UD_English-EWT-master/train-prefixed.conllu
+//      DATA/ud/UD_Hindi-HDTB-master/train-prefixed.conllu
+//      DATA/ud/UD_Hindi-HDTB-master_Latn/train-prefixed.conllu
 //  Outputs:
 //      DATA/ud/en_hi/train.conllu
 //      DATA/ud/en-hi_latn/train.conllu
-for ((outFile, enFile, hiFile) <-
-    Vector((s"$datadir/ud/en_hi/train.conllu",
-            s"$datadir/ud/UD_English-EWT-master/train.conllu",
-            s"$datadir/ud/UD_Hindi-HDTB-master/train.conllu"),
-           (s"$datadir/ud/en-hi_latn/train.conllu",
-            s"$datadir/ud/UD_English-EWT-master/train.conllu",
-            s"$datadir/ud/UD_Hindi-HDTB-master_Latn/train.conllu"),
-           (s"$datadir/ud/en_hi/train-prefixed.conllu",
-            s"$datadir/ud/UD_English-EWT-master/train-prefixed.conllu",
-            s"$datadir/ud/UD_Hindi-HDTB-master/train-prefixed.conllu"),
-           (s"$datadir/ud/en-hi_latn/train-prefixed.conllu",
-            s"$datadir/ud/UD_English-EWT-master/train-prefixed.conllu",
-            s"$datadir/ud/UD_Hindi-HDTB-master_Latn/train-prefixed.conllu"),
-)) {
+//      DATA/ud/en_hi/train-prefixed.conllu
+//      DATA/ud/en-hi_latn/train-prefixed.conllu
+for {
+  dataset <- Vector("train", "dev", "test")
+  (outFile, enFile, hiFile) <-
+    Vector((s"$datadir/ud/en_hi/$dataset.conllu",
+            s"$datadir/ud/UD_English-EWT-master/$dataset.conllu",
+            s"$datadir/ud/UD_Hindi-HDTB-master/$dataset.conllu"),
+           (s"$datadir/ud/en-hi_latn/$dataset.conllu",
+            s"$datadir/ud/UD_English-EWT-master/$dataset.conllu",
+            s"$datadir/ud/UD_Hindi-HDTB-master_Latn/$dataset.conllu"),
+           (s"$datadir/ud/en_hi/$dataset-prefixed.conllu",
+            s"$datadir/ud/UD_English-EWT-master/$dataset-prefixed.conllu",
+            s"$datadir/ud/UD_Hindi-HDTB-master/$dataset-prefixed.conllu"),
+           (s"$datadir/ud/en-hi_latn/$dataset-prefixed.conllu",
+            s"$datadir/ud/UD_English-EWT-master/$dataset-prefixed.conllu",
+            s"$datadir/ud/UD_Hindi-HDTB-master_Latn/$dataset-prefixed.conllu"))
+} {
   writeUsing(File(outFile)) { f =>
     Vector(enFile, hiFile).map(File(_))
         .flatMap(_.readLines.splitWhere(_.isEmpty).toVector)
