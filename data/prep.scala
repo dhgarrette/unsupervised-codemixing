@@ -257,7 +257,7 @@ writeUsing(File(s"$datadir/translit/deva_vocab.txt")) { f =>
 //////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
-// 6. WORDLISTS FOR TRANSLITERATION PRE-COMPUTATION
+// 6. GENERATE WEMB FILE FOR TRANSLITERATED HINDI 
 //  Inputs:
 //      DATA/translit/deva2latn.txt
 //      DATA/translit/latn2deva.txt
